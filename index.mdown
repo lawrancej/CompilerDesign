@@ -7,7 +7,7 @@ What is this course about?
 --------------------------
 Although we have all used compilers, to make the most of them we should understand how they work.
 
-In this course we will make contributions that matter.
+In this course we will make [contributions that matter](#what-will-i-contribute).
 
 - [Free compiler course materials](http://www.saylor.org/courses/cs304/).
 - [Parsing with derivatives](http://matt.might.net/articles/parsing-with-derivatives/).
@@ -96,10 +96,7 @@ We all will work on two projects:
 - A [parser combinator/parser generator](#what-is-a-parser-combinator-parser-generator).
 - [Open educational resources](#what-are-open-educational-resources).
 
-Why? To develop:
-- Autonomy
-- Mastery
-- Purpose
+Why? To develop: [Autonomy, mastery, and purpose](http://www.youtube.com/watch?v=u6XAPnuFjJc)
 
 What are open educational resources?
 ------------------------------------
@@ -181,14 +178,15 @@ What is a compiler?
 A compiler translates from a source [language](#what-is-a-language) to a target language.
 
 Examples:
+
 - GCC, Clang, Visual C++ translate C into machine code
 - LaTeX, Pandoc translate document markup into PDF, HTML, etc.
 
 What is a language?
 -------------------
-A set of strings.
+A [set](#what-is-a-set) of [strings](#what-is-a-string).
 
-Examples:
+Examples and counterexamples:
 
 - "I love you dearly!" is in English.
 - "Love I dearly you!" is not in English, despite the English words.
