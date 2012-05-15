@@ -33,13 +33,15 @@ Principles:
 - Teaching is feedback.
 - [Assignments should matter](http://www.sethgodin.com/sg/docs/StopStealingDreamsSCREEN.pdf).
 - Textbooks [should be free](http://whyopenedmatters.org/) in every sense of the word.
-- [Question authority](http://www.johntaylorgatto.com/underground/prologue.htm). [Question the hierarchy]().
+- [Question authority](http://www.johntaylorgatto.com/underground/prologue.htm). [Question the hierarchy](http://www.unwelcomeguests.net/Disciplined_Minds).
 - [Test beforehand](http://www.agiledata.org/essays/tdd.html), not just afterward.
 - We all can and should [teach and learn from each other](http://mazur.harvard.edu/research/detailspage.php?rowid=8).
 
 What would you do if you knew you could not fail?
 -------------------------------------------------
-Besides nothing, of course? Make the world better, not worse.
+Besides nothing, of course.
+
+As long as you contribute to this class, you cannot and will not fail.
 
 Pre-requisites
 ==============
@@ -47,7 +49,7 @@ What should I know already?
 ---------------------------
 - The ACM [Body of Knowledge](http://www.acm.org/education/curricula/ComputerScience2008.pdf)
 - [How to be a programmer](http://samizdat.mines.edu/howto/HowToBeAProgrammer.html)
-- Background knowledge
+- [Background knowledge](#what-background-do-i-need-to-write-a-compiler)
 
 What do I need to do?
 ---------------------
