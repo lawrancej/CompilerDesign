@@ -110,6 +110,7 @@ What is a set?
 An unordered, possibly infinite, collection of unique objects.
 
 Examples:
+
 - {apple,pear,banana} is a set.
 - {apple,apple,pear} is not a set, because apple is not unique.
 - The integers form an infinite set.
