@@ -25,23 +25,45 @@ I am originally from Texas.
 
 What is the professor's teaching philosophy?
 --------------------------------------------
-[Higher education is broken](http://www.davidtinapple.com/illich/1970_deschooling.html). Let's do better.
 
-Principles:
+- [Higher education is broken](http://www.davidtinapple.com/illich/1970_deschooling.html).
+- [Schools kill creativity](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
+- [Lectures don't work](http://www.consulting-business.com/why-schools-are-broken-and-reading-sucks-how-to-really-learn.html).
+
+Let's do better. Principles:
 
 - [Learning is doing](http://www.engines4ed.org/hyperbook/nodes/NODE-120-pg.html).
-- Teaching is feedback.
+- Teaching is feedback that [addresses misconceptions](http://www.veritasium.org/).
 - [Assignments should matter](http://www.sethgodin.com/sg/docs/StopStealingDreamsSCREEN.pdf).
 - Textbooks [should be free](http://whyopenedmatters.org/) in every sense of the word.
 - [Question authority](http://www.johntaylorgatto.com/underground/prologue.htm). [Question the hierarchy](http://www.unwelcomeguests.net/Disciplined_Minds).
 - [Test beforehand](http://www.agiledata.org/essays/tdd.html), not just afterward.
 - We all can and should [teach and learn from each other](http://mazur.harvard.edu/research/detailspage.php?rowid=8).
 
-What would you do if you knew you could not fail?
--------------------------------------------------
-Besides nothing, of course.
+What would you attempt to do if you knew you could not fail?
+------------------------------------------------------------
+Besides nothing, of course? [If you are not prepared to be wrong, you will never come up with anything original](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
+
+[Make the world better](#how-do-i-make-the-world-better), not worse.
 
 As long as you contribute to this class, you cannot and will not fail.
+
+The [fear of failure prevents us from doing great things](http://www.ted.com/talks/regina_dugan_from_mach_20_glider_to_humming_bird_drone.html).
+
+How do I make the world better?
+-------------------------------
+Contribute something that matters. Don't just sit there.
+
+Don't know what to contribute? [The professor has some ideas](#what-will-i-contribute).
+
+- Ask yourself. What do you wish was better?
+- Ask around. What do other people want?
+
+Don't know how to do it? 
+
+- Research online and offline.
+- Find people who know how.
+- Do it, and share what you learn ([especially what didn't work](https://www.youtube.com/watch?v=cY_o4A1wzsg)).
 
 Pre-requisites
 ==============
@@ -80,7 +102,7 @@ Why? To develop:
 
 What are open educational resources?
 ------------------------------------
-Creative-commons licensed material to promote learning.
+[Creative Commons](http://creativecommons.org/) licensed material for teaching and learning.
 
 - <http://www.saylor.org/open-textbook-challenge-peer-review-criteria/>
 
