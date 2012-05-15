@@ -32,11 +32,12 @@ What is the professor's teaching philosophy?
 
 Let's do better. Principles:
 
+- Information is abundundant. Attention is scarce. To get the most from information, act on it.
 - [Learning is doing](http://www.engines4ed.org/hyperbook/nodes/NODE-120-pg.html).
 - Teaching is feedback that [addresses misconceptions](http://www.veritasium.org/).
 - [Assignments should matter](http://www.sethgodin.com/sg/docs/StopStealingDreamsSCREEN.pdf).
 - Textbooks [should be free](http://whyopenedmatters.org/) in every sense of the word.
-- [Question authority](http://www.johntaylorgatto.com/underground/prologue.htm). [Question the hierarchy](http://www.unwelcomeguests.net/Disciplined_Minds).
+- [Always question authority](http://www.johntaylorgatto.com/underground/prologue.htm). [Always suestion the hierarchy](http://www.unwelcomeguests.net/Disciplined_Minds).
 - [Test beforehand](http://www.agiledata.org/essays/tdd.html), not just afterward.
 - We all can and should [teach and learn from each other](http://mazur.harvard.edu/research/detailspage.php?rowid=8).
 
