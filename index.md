@@ -72,6 +72,7 @@ We all will work on two projects:
 - [Open educational resources](#what-are-open-educational-resources).
 
 Why? To develop:
+
 - Autonomy
 - Mastery
 - Purpose
@@ -110,6 +111,7 @@ What is a set?
 An unordered, possibly infinite, collection of unique objects.
 
 Examples:
+
 - {apple,pear,banana} is a set.
 - {apple,apple,pear} is not a set, because apple is not unique.
 - The integers form an infinite set.
@@ -120,6 +122,7 @@ What is a string?
 A sequence of characters.
 
 For example:
+
 - "This is a string"
 - "Strings are surrounded by quote marks"
 - "This string" is not "this string." Case and punctuation matter.
@@ -129,6 +132,7 @@ What is a sequence?
 An ordered collection of objects.
 
 Examples:
+
 - {apple,pear, banana} is a sequence.
 - {apple, apple, pear} is a sequence, because objects need not be unique.
 - {1,2,3} is different from {3,1,2}, because order matters.
