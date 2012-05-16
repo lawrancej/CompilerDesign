@@ -1,10 +1,15 @@
-% Compiler Design
-% Joseph Lawrance <lawrancej@wit.edu>
+Compiler Design
+===============
+Joseph Lawrance <lawrancej@wit.edu>
+
+Assessment
+----------
+
+<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFhGcklySG5VQWh4cWlWNlNRclZfM3c6MQ" width="760" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 About the course
-================
-What is this course about?
---------------------------
+----------------
+### What is this course about?
 Although we have all used compilers, to make the most of them we should understand how they work.
 
 In this course we will make [contributions that matter](#what-will-i-contribute).
@@ -12,24 +17,24 @@ In this course we will make [contributions that matter](#what-will-i-contribute)
 - [Free compiler course materials](http://www.saylor.org/courses/cs304/).
 - [Parsing with derivatives](http://matt.might.net/articles/parsing-with-derivatives/).
 
-Who is the professor?
----------------------
+### Who is the professor?
 I am Joey Lawrance.
 I have been an assistant professor at Wentworth since Fall 2010.
-I am learning how to teach.
+I am [learning how to teach on the job](#what-is-the-professors-teaching-philosophy).
 
+I have been in school all my life.
 Previously, I was a postdoc at MIT.
 At Oregon State University, I earned my Master's and Ph.D in Computer Science.
 At Lawrence University in Appleton, Wisconsin, I earned a B.A. in Math and Computer Science.
 I am originally from Texas.
 
-What is the professor's teaching philosophy?
---------------------------------------------
+### What is the professor's teaching philosophy?
+> Tell me and I'll forget; show me and I may remember; involve me and I'll understand. --- Chinese proverb
 
 - [Schools are broken](http://www.youtube.com/watch?v=zDZFcDGpL4U).
+- [Lectures don't work](http://www.consulting-business.com/why-schools-are-broken-and-reading-sucks-how-to-really-learn.html).
 - [Higher education is broken](http://www.davidtinapple.com/illich/1970_deschooling.html).
 - [Schools kill creativity](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
-- [Lectures don't work](http://www.consulting-business.com/why-schools-are-broken-and-reading-sucks-how-to-really-learn.html).
 
 Let's do better. Principles:
 
@@ -42,18 +47,20 @@ Let's do better. Principles:
 - [Test beforehand](http://www.agiledata.org/essays/tdd.html), not just afterward.
 - We all can and should [teach and learn from each other](http://mazur.harvard.edu/research/detailspage.php?rowid=8).
 
-What would you attempt to do if you knew you could not fail?
-------------------------------------------------------------
-Besides nothing, of course? [If you are not prepared to be wrong, you will never come up with anything original](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
+### What would you attempt to do if you knew you could not fail?
+> [The fear of failure prevents us from doing great things](http://www.ted.com/talks/regina_dugan_from_mach_20_glider_to_humming_bird_drone.html).
+> --- Regina Duncan
 
-[Make the world better](#how-do-i-make-the-world-better), not worse.
+> If you're not failing 90% of the time, then you're probably not working on sufficiently challenging problems. --- Alan Kay
 
-As long as you contribute to this class, you cannot and will not fail.
+As long as you [contribute to this class](#what-will-i-contribute), you cannot and will not fail.
 
-The [fear of failure prevents us from doing great things](http://www.ted.com/talks/regina_dugan_from_mach_20_glider_to_humming_bird_drone.html).
+Of course, the first time we try anything, we tend to suck at it. So, to [do great things](#how-do-i-make-the-world-better), be prepared to be wrong.
 
-How do I make the world better?
--------------------------------
+> [If you are not prepared to be wrong, you will never come up with anything original](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity.html).
+> --- Kevin Robinson
+
+### How do I make the world better?
 Contribute something that matters. Don't just sit there.
 
 Don't know what to contribute? [The professor has some ideas](#what-will-i-contribute).
@@ -68,30 +75,26 @@ Don't know how to do it?
 - Do it, and share what you learn ([especially what didn't work](https://www.youtube.com/watch?v=cY_o4A1wzsg)).
 
 Pre-requisites
-==============
-What should I know already?
----------------------------
+--------------
+### What should I know already?
 - The ACM [Body of Knowledge](http://www.acm.org/education/curricula/ComputerScience2008.pdf)
 - [How to be a programmer](http://samizdat.mines.edu/howto/HowToBeAProgrammer.html)
 - [Background knowledge](#what-background-do-i-need-to-write-a-compiler)
 
-What do I need to do?
----------------------
+### What do I need to do?
 1. [Install Software](#what-software-do-i-need).
-2. [Contribute](#what-do-i-contribute).
+2. [Contribute](#what-will-i-contribute).
 3. [Solicit and share feedback](#how-do-i-solicit-and-share-feedback).
 4. Go to 2.
 
-What software do I need?
-------------------------
+### What software do I need?
 - A compiler (Visual Studio, Xcode, GCC, MinGW, or Clang)
 - Version control (Git)
 - Build tool (CMake)
 - Testing tool (Clar)
 - Documentation tool (Doxygen)
 
-What will I contribute?
----------------------
+### What will I contribute?
 We all will work on two projects:
 
 - A [parser combinator/parser generator](#what-is-a-parser-combinator-parser-generator).
@@ -99,14 +102,12 @@ We all will work on two projects:
 
 Why? To develop: [Autonomy, mastery, and purpose](http://www.youtube.com/watch?v=u6XAPnuFjJc)
 
-What are open educational resources?
-------------------------------------
+### What are open educational resources?
 [Creative Commons](http://creativecommons.org/) licensed material for teaching and learning.
 
 - <http://www.saylor.org/open-textbook-challenge-peer-review-criteria/>
 
-What background do I need to write a compiler?
-----------------------------------------------
+### What background do I need to write a compiler?
 A strong background in discrete structures is necessary.
 
 - What is the difference between [sets](#what-is-a-set), [sequences](#what-is-a-sequence), and [bags](#what-is-a-bag)?
@@ -117,19 +118,13 @@ Knowledge of some design patterns helps.
 - [What are design patterns?](#what-are-design-patterns)
 - [What is the visitor design pattern?](#what-is-the-visitor-design-pattern)
 
-What are design patterns?
--------------------------
+### What are design patterns?
 
-What is the visitor design pattern?
------------------------------------
+### What is the visitor design pattern?
 
+### What does discrete mean?
 
-What does discrete mean?
-------------------------
-
-
-What is a set?
---------------
+### What is a set?
 An unordered, possibly infinite, collection of unique objects.
 
 Examples and counterexamples:
@@ -139,43 +134,41 @@ Examples and counterexamples:
 - The integers form an infinite set.
 - {1,2,3} is the same set as {3,1,2}, because order does not matter.
 
-What is a string?
------------------
+### What is a string?
 A sequence of characters.
 
-For example:
+Examples:
+
 - "This is a string"
 - "Strings are surrounded by quote marks"
 - "This string" is not "this string." Case and punctuation matter.
 
-What is a sequence?
--------------------
+### What is a sequence?
 An ordered collection of objects.
 
 Examples:
+
 - {apple,pear, banana} is a sequence.
 - {apple, apple, pear} is a sequence, because objects need not be unique.
 - {1,2,3} is different from {3,1,2}, because order matters.
 
-What is a character?
---------------------
+### What is a character?
 A symbol in an alphabet.
 
-What is an alphabet?
---------------------
+### What is an alphabet?
 A finite set (of symbols).
 
 Examples:
+
 - Roman, Greek alphabet
 - Numerals
 - ASCII
 - Unicode
 
 Compilers
-=========
+---------
 
-What is a compiler?
--------------------
+### What is a compiler?
 A compiler translates from a source [language](#what-is-a-language) to a target language.
 
 Examples:
@@ -183,8 +176,7 @@ Examples:
 - GCC, Clang, Visual C++ translate C into machine code
 - LaTeX, Pandoc translate document markup into PDF, HTML, etc.
 
-What is a language?
--------------------
+### What is a language?
 A [set](#what-is-a-set) of [strings](#what-is-a-string).
 
 Examples and counterexamples:
@@ -193,23 +185,18 @@ Examples and counterexamples:
 - "Love I dearly you!" is not in English, despite the English words.
 - "int main() { return 0; }" is in C.
 
-What is an interpreter?
------------------------
+### What is an interpreter?
 
-The C compiler is written in C. How can that be?
-------------------------------------------------
+### The C compiler is written in C. How can that be?
 
-How do compilers work?
-----------------------
+### How do compilers work?
 
 Regular languages
-=================
-What is a regular language?
----------------------------
+-----------------
 
+### What is a regular language?
 
-What is a regular expression?
------------------------------
+### What is a regular expression?
 The empty set, empty string, and character are regular expressions.
 If a and b are regular expressions, then:
 
@@ -217,12 +204,9 @@ If a and b are regular expressions, then:
 - a|b is a regular expression that matches a or b
 - a* is a regular expression that matches a zero or more times
 
-What is a finite automaton?
----------------------------
+### What is a finite automaton?
 
-What is an nondeterministic finite automaton?
----------------------------------------------
+### What is an nondeterministic finite automaton?
 
-What is a deterministic finite automaton?
------------------------------------------
+### What is a deterministic finite automaton?
 
