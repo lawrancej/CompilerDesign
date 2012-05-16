@@ -100,7 +100,7 @@ We all will work on two projects:
 - A [parser combinator/parser generator](#what-is-a-parser-combinator-parser-generator).
 - [Open educational resources](#what-are-open-educational-resources).
 
-Why? To develop: [Autonomy, mastery, and purpose](http://www.youtube.com/watch?v=u6XAPnuFjJc)
+Why? To develop: [Autonomy, mastery, and purpose](http://www.youtube.com/watch?v=u6XAPnuFjJc).
 
 ### What are open educational resources?
 [Creative Commons](http://creativecommons.org/) licensed material for teaching and learning.
