@@ -36,14 +36,24 @@ Regular languages
 -----------------
 
 ### What is a regular language?
+[Regular expressions](#what-is-a-regular-expression) define the regular languages.
 
 ### What is a regular expression?
-The empty set, empty string, and character are regular expressions.
-If a and b are regular expressions, then:
+Regular expressions consist of:
 
-- ab is a regular expression that matches a followed by b
-- a|b is a regular expression that matches a or b
-- a* is a regular expression that matches a zero or more times
+Primitives:
+
+- $\emptySet$. The empty set. Reject everything.
+- $\epsilon$. The empty string. Match the empty string.
+- c. Character. Match a single character
+
+Operations:
+
+If a and b are regular expressions, then the following are regular expressions:
+
+- ab. Catenation.  Match a followed by b.
+- a|b. Alternation. Match a or b.
+- a*. Kleene closure. Matches a zero or more times.
 
 ### What is a finite automaton?
 
