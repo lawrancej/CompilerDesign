@@ -57,6 +57,7 @@ If a and b are regular expressions, then the following are regular expressions:
 
 ### What is a finite automaton?
 
+
 ### What is an nondeterministic finite automaton?
 
 ### What is a deterministic finite automaton?
