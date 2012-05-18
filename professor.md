@@ -5,7 +5,7 @@ Joey Lawrance
 I have been an assistant professor at Wentworth since Fall 2010.
 I am [learning how to teach on the job](#what-is-the-professors-teaching-philosophy).
 
-- [My story]
+- [My story](#my-story)
 - [My teaching philosophy](#what-is-the-professors-teaching-philosophy)
 - [My grading philosophy](#what-would-you-attempt-to-do-if-you-knew-you-could-not-fail)
 - [Reminders to myself and my students](#how-can-i-make-the-world-better)
