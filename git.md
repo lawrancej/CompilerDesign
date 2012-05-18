@@ -8,7 +8,7 @@ Git it? Let's see how to git r done.
 
 What is git?
 ------------
-Git is a popular [distributed] [version control system](#what-are-version-control-systems).
+Git is a popular [distributed](#what-are-distributed-version-control-systems) [version control system](#what-are-version-control-systems).
 
 ### What are version control systems?
 Version control systems store changes to a project over time.
@@ -53,23 +53,29 @@ Using git
 Typically your use of git will involve (assuming you're on your master branch):
 
 Make a change to `some_file`
+
     git add some_file
 
 Make a change to `another_file`
+
     git add another_file
 
 What did I do?
+
     git status    # Show the status of the index, staging area, and untracked files
     gitk --all &  # Show a graphical timeline of commits
     git diff      # Show uncommitted changes to tracked files
 
 It's working now!
+
     git commit -m "Changed some_file and another_file. It works now."
 
 Post your commit to github
+
     git push origin master
 
 Pull commits from github
+
     git pull origin master
 
 There are many excellent resources available on git.
