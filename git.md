@@ -80,5 +80,6 @@ Pull commits from github
 
 There are many excellent resources available on git.
 
+- [External Git links](http://git-scm.com/doc/ext)
 - [Pro Git](http://git-scm.com/book/index.html)
 - [Git cheat sheets](http://help.github.com/git-cheat-sheets/)
