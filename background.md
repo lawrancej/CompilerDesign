@@ -37,12 +37,17 @@ An unordered, possibly infinite, collection of unique objects.
 Examples and counterexamples:
 
 - {apple,pear,banana} is a set.
-- {apple,apple,pear} is not a set, because apple is not unique.
+- {apple,apple,pear} is not a set, because apple is not unique. It's a [bag](#what-is-a-bag).
 - The integers form an infinite set.
 - {1,2,3} is the same set as {3,1,2}, because order does not matter.
 
 ### What is a bag?
+An unordered, possibly infinite, collection of objects.
 
+Examples:
+
+- {apple,apple,pear} is a bag.
+- {1,2,1} is the same bag as {1,1,2}, because order does not matter.
 
 ### What is a sequence?
 An ordered collection of objects.
