@@ -65,7 +65,7 @@ There will be the following backends:
 - Documentation tool (Doxygen)
 
 ## What will I contribute?
-Test cases, documentation, code.
+Test cases, documentation, code, language bindings.
 
 ## How do I solicit and share feedback?
 Via github.
