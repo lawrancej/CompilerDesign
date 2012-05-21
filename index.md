@@ -1,11 +1,6 @@
 Compiler Design
 ===============
 
-Assessment
-----------
-
-<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFhGcklySG5VQWh4cWlWNlNRclZfM3c6MQ" width="760" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-
 Compilers
 ---------
 
@@ -26,11 +21,16 @@ Examples and counterexamples:
 - "Love I dearly you!" is not in English, despite the English words.
 - "int main() { return 0; }" is in C.
 
+### What is Chomsky's hierarchy?
+
 ### What is an interpreter?
 
 ### The C compiler is written in C. How can that be?
 
-### How do compilers work?
+### What are the phases of a compiler?
+List the phases here. Briefly describe what each phase does. Give examples.
+
+### Who is Grace Hopper?
 
 Regular languages
 -----------------
@@ -62,3 +62,68 @@ If a and b are regular expressions, then the following are regular expressions:
 
 ### What is a deterministic finite automaton?
 
+### How to convert an NFA to a DFA?
+
+### What is the derivative of a regular expression?
+
+### What is a scanner (lexical analyzer)?
+
+Context-free languages
+----------------------
+### What is a context-free language?
+
+### What is the difference between a regular language and a context free language?
+
+### What is a grammar?
+
+### What is a derivation?
+Give examples.
+### What is a leftmost derivation?
+
+### What is a rightmost derivation?
+
+### What is an ambiguous grammar?
+
+### What is a LL(k) grammar?
+
+### What is a LR(k) grammar?
+
+### What is a pushdown automaton?
+
+### What is a deterministic pushdown automaton?
+
+### What is a nondeterministic pushdown automaton?
+
+### What is a parser?
+
+### What is a parse tree?
+
+Abstract Syntax Trees
+---------------------
+### What is an abstract syntax tree?
+
+### What is the difference between an abstract syntax tree and a parse tree?
+
+### What is the visitor design pattern?
+
+Optimization
+------------
+### What is optimization?
+
+### What is the point of optimization?
+
+### What is peephole optimization?
+
+### What is single static assignment (SSA)?
+
+### What is loop unrolling?
+
+### What is method inlining?
+
+Code generation
+---------------
+### What is code generation?
+
+Interpretation
+--------------
+### What is interpretation?
