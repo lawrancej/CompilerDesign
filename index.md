@@ -1,6 +1,8 @@
 Compiler Design
 ===============
 
+[Coordinate here](https://docs.google.com/document/d/1g7SXO8BSL5rq2cJVqp_9XfWkzNyi9ZWKKl2Heb_nS1g/edit)
+
 Compilers
 ---------
 
