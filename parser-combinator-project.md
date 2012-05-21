@@ -88,14 +88,14 @@ Language bindings will make use of GObject introspection. This library will targ
 4. Go to 2.
 
 ## What software do I need?
-- A compiler (Visual Studio, Xcode, GCC, MinGW, or Clang)
+- A compiler (Visual Studio, Xcode, GCC, [MinGW](http://sourceforge.net/projects/mingw/files/latest/download?source=files), or Clang)
 - Version control (Git)
-- Build tool (CMake)
+- Build tool ([CMake](http://www.cmake.org/cmake/resources/software.html))
 - Testing tool (Clar)
 - Documentation tool (Doxygen)
 
 ## What will I contribute?
-Test cases, documentation, code, language bindings.
+Test cases, documentation, and code.
 
 ## How do I solicit and share feedback?
 Via github.
