@@ -43,13 +43,43 @@ Proposed example usage:
 ## How will this work?
 This library will use [GObject](http://developer.gnome.org/gobject/stable/) internally.
 
-The grammar will be separate from the parsing backend, of which there will be multiple choices.
+We will employ test-first pair programming in the development of parsed. (By the way, if you have a better name for this, I’m all ears.)
 
-There will be the following backends:
+Testing and documentation first ensures that we consider the usage of this library before we develop it. It also helps track development progress by test completion and coverage.
+
+Pair programming ensures that we learn from each other.
+
+The library will consist of the following components:
+
+- [Regular expression engine](#what-is-the-regular-expression-engine)
+- [Scanner](#what-is-the-scanner-component)
+- [Parser](#what-is-the-parser-component)
+- [Language bindings](#what-are-the-language-bindings)
+
+### What is the regular expression engine?
+The regular expression engine will be swappable:
+
+- NFA backend
+- DFA backend
+- Derivative backend
+- PCRE backend
+
+### What is the scanner component?
+The scanner requires a regular expression engine to work.
+
+### What is the parser component?
+The parser construction will be separate from the swappable parsing backends:
 
 - Recursive descent parser.
 - [Derivative based parser](http://matt.might.net/articles/parsing-with-derivatives/).
 - GLR parser, if time permits.
+
+### What are the language bindings?
+Language bindings will make use of GObject introspection. This library will target support for:
+
+- Python
+- C++
+- Java
 
 ## What do I need to do?
 1. [Install Software](#what-software-do-i-need).
@@ -58,14 +88,14 @@ There will be the following backends:
 4. Go to 2.
 
 ## What software do I need?
-- A compiler (Visual Studio, Xcode, GCC, MinGW, or Clang)
+- A compiler (Visual Studio, Xcode, GCC, [MinGW](http://sourceforge.net/projects/mingw/files/latest/download?source=files), or Clang)
 - Version control (Git)
-- Build tool (CMake)
+- Build tool ([CMake](http://www.cmake.org/cmake/resources/software.html))
 - Testing tool (Clar)
 - Documentation tool (Doxygen)
 
 ## What will I contribute?
-Test cases, documentation, code, language bindings.
+Test cases, documentation, and code.
 
 ## How do I solicit and share feedback?
 Via github.
