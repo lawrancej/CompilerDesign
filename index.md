@@ -24,9 +24,10 @@ Examples and counterexamples:
 - "int main() { return 0; }" is in C.
 
 ### What is Chomsky's hierarchy?
-The Chomsky hierarchy (occasionally referred to as Chomsky–Schützenberger hierarchy) is a containment hierarchy of classes of formal grammars.
+The Chomsky hierarchy as the name implies, is a containment hierarchy of classes of formal grammars.
 The hierarchy consists of four levels. Type-0 grammars (unrestricted grammars), Type-1 grammas (context sensitive grammars),
-Type-2 grammars (contect-free grammars), and Type-3 grammars (regular grammars).
+Type-2 grammars (context-free grammars), and Type-3 grammars (regular grammars).
+
 ### What is an interpreter?
 
 ### The C compiler is written in C. How can that be?
