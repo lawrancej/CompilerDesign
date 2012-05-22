@@ -56,15 +56,19 @@ Typically your use of git will involve (assuming you're on your master branch):
 
     git diff # This will show changes that you've made.
 
-Make a change to `some_file`
+### How do I create a new branch?
 
-    git add some_file
+    git checkout -b some_new_branch
 
-Make a change to `another_file`
+### How do I add a new file to git?
 
-    git add another_file
+    git add new_file
 
-What did I do?
+### How do I add all changes I've made to the current commit?
+
+    git commit -a -m "Message goes here"
+
+### What did I do?
 
     git status    # Show the status of the index, staging area, and untracked files
     gitk --all &  # Show a graphical timeline of commits

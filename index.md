@@ -32,7 +32,7 @@ Examples and counterexamples:
 ### What are the phases of a compiler?
 List the phases here. Briefly describe what each phase does. Give examples.
 
-### Who is (Grace Hopper)[http://www.smbc-comics.com/?id=2516]?
+### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 
 #### Military Career
 
