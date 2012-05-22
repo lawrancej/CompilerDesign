@@ -27,6 +27,8 @@ Examples and counterexamples:
 
 ### What is an interpreter?
 
+An interpreter is a type of compiler that simply executes the code directly without translating it to a lower level.
+
 ### The C compiler is written in C. How can that be?
 
 ### What are the phases of a compiler?
