@@ -32,9 +32,18 @@ Examples and counterexamples:
 ### What are the phases of a compiler?
 List the phases here. Briefly describe what each phase does. Give examples.
 
-### Who is (Grace Hopper)[http://www.smbc-comics.com/?id=2516]?
+### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 
 #### Military Career
+ - Sworn into the United States Navy Reserve in 1943.
+ - - Volunteered to serve in the WAVES.
+ - Trained at the Smith College in Northampton, MA.
+ - - Graduated first in her class in 1944.
+ - Assigned to the Bureau of Ships Computation Project at Harvard University as a lieutenant.
+ - Served on the Mark I computer programming staff.
+ - Was declined entry to the standard Navy due to her age.
+ - - Continued serving in the Navy Reserve.
+ - Continued working in the Harvard Computation Lab until 1949 under a Navy Contract.
 
 #### Contributions to Computer Science
  - Developed the first compiler for a computer programming language.
