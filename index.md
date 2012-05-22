@@ -32,8 +32,18 @@ Examples and counterexamples:
 ### What are the phases of a compiler?
 List the phases here. Briefly describe what each phase does. Give examples.
 
-### Who is Grace Hopper?
+### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 
+#### Military Career
+
+#### Contributions to Computer Science
+ - Developed the first compiler for a computer programming language.
+ - Conceptualized machine-independent programming languages.
+ - Popularized the term "debugging."
+ 
+#### Honors
+ - "Computer Sciences Man of the Year" award from the Data Processing Management Association in 1969
+ 
 Regular languages
 -----------------
 
