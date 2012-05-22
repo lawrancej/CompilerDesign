@@ -124,7 +124,29 @@ Optimization
 
 ### What is the point of optimization?
 
-### What is peephole optimization?
+### What is peephole optimization?(Kyle, Dariush)
+Peephole optimization is a type of optimization that covers a trivial set of instructions in generated code. The set of instructions that the optimization operates on is called the "Peephole" or "window". The basic task for the peephole optimizer (for most optimizers) is to recognize a set of instructions that can be replaced by a shorter or faster set.
+
+Example #1 - Redundant Operations
+Consider the following code:
+foo = bar + d;
+foobar = foo + a;
+
+In Assembly, it would be translate to:
+MOV bar, AL 	#move B into the EAX Register
+ADD d, AL   	#Add D to the EAX Register = bar + d
+MOV AL,foo  	#move the result of the add to the foo variable
+MOV foo,AL  	#now move foo into AL to be operated on
+ADD a, AL   	#Add A to foo = foo + a
+MOV foobar, AL	#move the result of foo + a into foobar
+
+This can be optimized by using algebraic rules to simplify the operation from two operations with memory manipulation ( a = b + c; d = a + e;) to a two step operation without an intermediate storage step (d = b + c  + e):
+
+MOV bar, AL # Copy bar to the register 
+ADD d, AL # Add d to the register, which is now bar+d 
+MOV AL, foo # Copy the register to foo
+ADD a, AL # Add a to the register, which is now b+c+e 
+MOV AL, foobar # Copy the register to foobar
 
 ### What is single static assignment (SSA)?
 
