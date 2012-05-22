@@ -26,6 +26,12 @@ Examples and counterexamples:
 ### What is Chomsky's hierarchy?
 
 ### What is an interpreter?
+In computer science, an interpreter normally means a computer program that executes, i.e. performs,
+instructions written in a programming language. An interpreter may be a program that either
+
+- excecutes the source code directly
+- translates source code into some efficient intemediate representation(code) and immediately executes this
+- explicitly executes stored precompiled code made by a compiler which is part of the interpreter system
 
 ### The C compiler is written in C. How can that be?
 
