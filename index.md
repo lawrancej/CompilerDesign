@@ -98,6 +98,8 @@ Give examples.
 
 ### What is a parser?
 
+A parser first tokenizes the source code depending on its syntax. It takes the structure of the code and uses said tokens to convert it to object code. After evaluation it will convert it to ASM code if there are no syntax errors.
+
 ### What is a parse tree?
 
 Abstract Syntax Trees
