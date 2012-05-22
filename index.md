@@ -136,6 +136,11 @@ Code generation
 ---------------
 ### What is code generation?
 
+Code Generation is the process which a compiler's code generator converts some
+source code to something that can be readily execuated by the machine you running in.
+
+It consists of a parse tree. This tree will be converted into a linear sequence of instructions (intermediate language)
+
 Interpretation
 --------------
 ### What is interpretation?
