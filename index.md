@@ -36,13 +36,13 @@ List the phases here. Briefly describe what each phase does. Give examples.
 
 #### Military Career
  - Sworn into the United States Navy Reserve in 1943.
- - - Volunteered to serve in the WAVES.
+ -- Volunteered to serve in the WAVES.
  - Trained at the Smith College in Northampton, MA.
- - - Graduated first in her class in 1944.
+ -- Graduated first in her class in 1944.
  - Assigned to the Bureau of Ships Computation Project at Harvard University as a lieutenant.
  - Served on the Mark I computer programming staff.
  - Was declined entry to the standard Navy due to her age.
- - - Continued serving in the Navy Reserve.
+ -- Continued serving in the Navy Reserve.
  - Continued working in the Harvard Computation Lab until 1949 under a Navy Contract.
 
 #### Contributions to Computer Science
