@@ -52,6 +52,10 @@ Using git
 ---------
 Typically your use of git will involve (assuming you're on your master branch):
 
+### How do I know what I changed?
+
+    git diff # This will show changes that you've made.
+
 Make a change to `some_file`
 
     git add some_file
