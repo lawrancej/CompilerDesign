@@ -27,6 +27,13 @@ Examples and counterexamples:
 
 ### What is an interpreter?
 
+An interpreter is designed to read in statements of code and execute them immediately, implementing the results of the code on the fly. 
+When using a high level language to program, and interpreter is a necessary intermediate between what runs at the system level and what is written by a programmer at the code level.
+The interpreter translates the high level statements into an interpreted form that can be understood by the system each time that the code is executed. 
+Usually this happens in one of three forms - The interpreter processes the code and executes it directly (early versions of LISP, Python, Perl); Translates the source code into an intermediate form (like java bytecode) and executes the intermediate form directly; Or executes precompiled code as part of a compiler-interpreter system.
+Due to the nature of an interpreter reading in code line by line, processing it, and doing so every time the code is executed, interpreted code usually runs slower than code executed only by a compiler.
+
+
 ### The C compiler is written in C. How can that be?
 
 ### What are the phases of a compiler?
