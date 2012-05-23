@@ -112,6 +112,9 @@ Abstract Syntax Trees
 Optimization
 ------------
 ### What is optimization?
+It is the process of modifying a software system to make some parts of it work more efficiently.
+Example: The same task takes less time due to code not causing extra resources to be used.
+Counterexample: The same task takes extra time due to code calling extra resources.
 
 ### What is the point of optimization?
 
