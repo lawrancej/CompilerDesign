@@ -154,7 +154,12 @@ Parsers DO NOT:
 - [Tokenize source code](#what-is-a-scaner) (unless the parser is scanner-less)
 - [Produce assembly or object code](#what-is-code-generation)
 
+Follow ups:
+- [How do parsers work](#how-do-parsers-work)?
+
 ### What is a parse tree?
+
+### How do parsers work?
 
 Abstract Syntax Trees
 ---------------------
