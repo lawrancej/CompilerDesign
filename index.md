@@ -14,6 +14,11 @@ Examples:
 - GCC, Clang, Visual C++ translate C into machine code
 - LaTeX, Pandoc translate document markup into PDF, HTML, etc.
 
+Follow-up:
+
+- [How do compilers work](#what-are-the-phases-of-a-compiler)?
+- [Who developed the first compiler](#who-is-grace-hopper)?
+
 ### What is a language?
 A [set](background.md#what-is-a-set) of [strings](background.md#what-is-a-string).
 
@@ -26,11 +31,37 @@ Examples and counterexamples:
 ### What is Chomsky's hierarchy?
 
 ### What is an interpreter?
+Interpreters execute programs without producing a binary or executable.
+
+Examples:
+
+- Debuggers
+- Scripting languages
+
+Follow-up:
+
+- [How do interpreters work]?
 
 ### The C compiler is written in C. How can that be?
 
 ### What are the phases of a compiler?
-List the phases here. Briefly describe what each phase does. Give examples.
+Compilers operate around these phases:
+
+Front end (process source language):
+
+- [Scanner (Lexical analyzer)](#what-is-a-scanner). Split source code (a [string](background.md#what-is-a-string)) into a token sequence.
+- [Parser (Syntactic analyzer)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+- [Type checker (Semantic analyzer)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
+
+Middle end (an intermediate representation):
+- [Translator](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-are-intermediate-representations).
+- [Optimizer](#what-is-optimization). Improves IR code by eliminating redundancy and [dead code](#what-is-dead-code).
+
+Back end (generate target language):
+- [Code generator](#what-is-code-generation). Produces machine code.
+
+### How do interpreters work?
+Interpreters consist of the exact [same phases of a compiler](#what-are-the-phases-of-a-compiler), but execute programs instead of [generating machine code](#what-is-code-generation).
 
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 
@@ -121,6 +152,22 @@ Abstract Syntax Trees
 
 ### What is the visitor design pattern?
 
+Semantics
+---------
+### What is semantics?
+
+### What is static semantics?
+
+### What is runtime semantics?
+
+### What is type-checking?
+
+Intermediate representations
+----------------------------
+### What are intermediate representations?
+
+### What is a translator?
+
 Optimization
 ------------
 ### What is optimization?
@@ -134,6 +181,8 @@ Optimization
 ### What is loop unrolling?
 
 ### What is method inlining?
+
+### What is dead code?
 
 Code generation
 ---------------
