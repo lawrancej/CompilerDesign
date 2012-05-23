@@ -177,6 +177,41 @@ Optimization
 
 ### What is loop unrolling?
 
+Loop unrolling, also known as loop unwinding, is the process of optimizing the resulting code by removing or precalculating the control operations. The optimization comes at the cost of space complexity.
+
+This optimizations can be achieved in a variety of ways.
+
+- Precalculating the end of loop condition
+- Precalculating pointer increments
+- Optimizing memory access
+- Running independent iterations in parallel
+
+For Example:
+
+Original Code
+
+```C#
+int Count = 0;
+for (int i = 0; i < 500; i++)
+{
+
+  Count += i;
+
+}
+```
+
+Unrolled Loop
+
+```C#
+int Count = 0;
+
+Count += 1;
+Count += 1;
+Count += 1;//Repeated 500 times.
+//Results in optimizing all of the i < 500 condition checks
+
+```
+
 ### What is method inlining?
 
 ### What is dead code?
