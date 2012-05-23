@@ -145,6 +145,9 @@ Give examples.
 
 ### What is a pushdown automaton?
 
+Pushdown Automaton (PDA) - It is a finite state machine that is equipped with a memory device. 
+In addition, it manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
+
 ### What is a deterministic pushdown automaton?
 
 ### What is a nondeterministic pushdown automaton?
