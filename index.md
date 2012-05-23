@@ -165,6 +165,8 @@ Intermediate representations
 
 ### What is a translator?
 
+It is a comupter program that translates a source program (high level language) into object program (machine level language).
+
 Optimization
 ------------
 ### What is optimization?
