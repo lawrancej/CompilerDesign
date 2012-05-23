@@ -98,6 +98,7 @@ Think as you type this out (replace your_colleague and ProjectNameHere). Do not 
 ### I need more help!
 Ask around. Use excellent resources available on git. Update this with what you discover.
 
+- [Git Reference](http://gitref.org/index.html)
 - [External Git links](http://git-scm.com/doc/ext)
 - [Pro Git](http://git-scm.com/book/index.html)
 - [Git cheat sheets](http://help.github.com/git-cheat-sheets/)
