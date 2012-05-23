@@ -16,6 +16,7 @@ Writing a compiler requires familiarity with discrete structures.
 - What does [discrete](#what-does-discrete-mean) mean?
 - What is the difference between [sets](#what-is-a-set), [sequences](#what-is-a-sequence), and [bags](#what-is-a-bag)?
 - What is the difference between an [alphabet](#what-is-an-alphabet), a [string](#what-is-a-string), and a [character](#what-is-a-character)?
+- What is a [stack](#what-is-a-stack)?
 
 ### What does discrete mean?
 Discrete means:
@@ -40,6 +41,8 @@ Examples and counterexamples:
 - {apple,apple,pear} is not a set, because apple is not unique. It's a [bag](#what-is-a-bag).
 - The integers form an infinite set.
 - {1,2,3} is the same set as {3,1,2}, because order does not matter.
+
+### What is a stack?
 
 ### What is a bag?
 An unordered, possibly infinite, collection of objects.

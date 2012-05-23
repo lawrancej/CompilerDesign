@@ -144,9 +144,14 @@ Give examples.
 ### What is a LR(k) grammar?
 
 ### What is a pushdown automaton?
+A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
+It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
 
-Pushdown Automaton (PDA) - It is a finite state machine that is equipped with a memory device. 
-In addition, it manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
+Followup:
+
+- [Show me an example pushdown automaton](#what-does-a-pushdown-automaton-look-like)?
+
+#### What does a pushdown automaton look like?
 
 ### What is a deterministic pushdown automaton?
 
