@@ -138,8 +138,17 @@ Give examples.
 ### What is a nondeterministic pushdown automaton?
 
 ### What is a parser?
+A parser checks for syntax errors and constructs a [parse tree](#what-is-a-parse-tree) or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) sequence.
+However, scanner-less parsers convert source code directly into a parse tree or abstract syntax tree.
 
-A parser first tokenizes the source code depending on its syntax. It takes the structure of the code and uses said tokens to convert it to object code. After evaluation it will convert it to ASM code if there are no syntax errors.
+Parsers DO:
+- Check for syntax errors.
+- Produce parse trees or abstract syntax trees.
+
+Parsers DO NOT:
+- [Tokenize source code](#what-is-a-scaner) (unless the parser is scanner-less)
+- [Produce assembly or object code](#what-is-code-generation)
 
 ### What is a parse tree?
 
