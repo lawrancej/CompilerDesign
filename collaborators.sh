@@ -1,6 +1,6 @@
 #!/bin/bash
 
-collaborators=( "lawrancej" "UnZinkable" "mrpengin7" "CyDrive" "jcamps" "powersa2" "AllTheAction" "lapatink" "tannerd01" "kirip" "tomleo" "garciaa1" "KBVuong1" "RoboCafaz" "LynxStar" "theCompanyDream" "aghon" "SoxMax" "nhogan11" "finna" "CyaSteve" "sthdips09" "torosianj" "vafaeed" "cantrellk" "dalswaimil" )
+collaborators=( "lawrancej" "UnZinkable" "mrpenguin7" "CyDrive" "jcamps" "powersa2" "AllTheAction" "lapatink" "tannerd01" "kirip" "tomleo" "garciaa1" "KBVuong1" "RoboCafaz" "LynxStar" "theCompanyDream" "aghon" "SoxMax" "nhogan11" "finna" "CyaSteve" "sthdips09" "torosianj" "vafaeed" "cantrellk" "dalswaimil" )
 
 if [ $# = 0 ]; then
 	echo "Do git commands for all collaborators."
@@ -19,7 +19,7 @@ else
 		elif [ $1 = "clean" ]; then
 			git remote rm $collaborator
 		elif [ $1 = "fetch" ]; then
-			git fetch $collaborator
+			git fetch --all
 		fi
 	done
 fi
