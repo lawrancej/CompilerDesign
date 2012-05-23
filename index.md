@@ -154,6 +154,8 @@ Lets look at another example piece of grammar.
 
 B->hB
 
+If we look at this example of grammar, we notice that it has no end. This means that the we will never be able to convert to just symbols on the left hand side, making the language not context free.
+
 ### What is the difference between a regular language and a context free language?
 
 ### What is a grammar?
