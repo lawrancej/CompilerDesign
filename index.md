@@ -208,8 +208,43 @@ int Count = 0;
 Count += 1;
 Count += 1;
 Count += 1;//Repeated 500 times.
-//Results in optimizing all of the i < 500 condition checks
+//Results in optimizing out all of the i < 500 condition checks
 
+```
+
+Loop unrolling can work with conditional code that controls what executes each time.
+
+For Example:
+
+Original Code
+
+```C#
+for (int i = 0; i < 10; i++)
+{
+
+  if (i == 0)
+    Console.WriteLine("I'm the beginning");
+  else if (i % 2 == 0)
+    Console.Writeline("I'm even");
+  else
+    Console.Writeline("I'm odd");
+
+}
+```
+
+Unrolled Loop
+
+```C#
+Console.Writeline("I'm the beginning");//i = 0
+Console.Writeline("I'm odd");//i = 1
+Console.Writeline("I'm even");//i = 2
+Console.Writeline("I'm odd");//i = 3
+Console.Writeline("I'm even");//i = 4
+Console.Writeline("I'm odd");//i = 5
+Console.Writeline("I'm even");//i = 6
+Console.Writeline("I'm odd");//i = 7
+Console.Writeline("I'm even");//i = 8
+Console.Writeline("I'm odd");//i = 9
 ```
 
 ### What is method inlining?
