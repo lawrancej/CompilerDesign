@@ -31,7 +31,7 @@ Examples and counterexamples:
 ### What is Chomsky's hierarchy?
 
 ### What is an interpreter?
-Interpreters execute programs without producing a binary or executable.
+An interpreter is a type of compiler that simply executes the code directly without translating it to a lower level.
 
 Examples:
 
@@ -40,7 +40,7 @@ Examples:
 
 Follow-up:
 
-- [How do interpreters work]?
+- [How do interpreters work](#how-do-interpreters-work)?
 
 ### The C compiler is written in C. How can that be?
 
