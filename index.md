@@ -115,6 +115,34 @@ Context-free languages
 ----------------------
 ### What is a context-free language?
 
+When a language is context free, it means that when reading the language a word or token can be only thing. A good example of this si the English language. "The boy bought the basketball." When we look at this sentence boy and baskeball are only defined as nouns and bought is defines as a verb. Since we require no context when we see those words to understand what they are, the language is context free. An example of a context based language would be most Asian based languages. A single symbol can be many things depending on the rest of the sentence. Since we rely on the context of the rest of the sentence to understand it, the language is not context free.
+
+So what is a context free language in programming? A context free language is one that is made up using context free grammar. The simplest way to understand this is by looking at some basic examples.
+
+B->hB
+B->
+
+If we look at the grammar above, we can see that it is context free. We know this because it meets two simple conditions.
+
+1. It has one symbol on the left hand side.
+2. It is not infinitly recursive.
+
+Why does more than one symbol on the left hand side make a language context free?
+
+In order to explain this lets look at some grammar in which that occurs.
+
+A->h
+B->k
+AB->Asd
+
+Now if we look at the language and we have AB, do we mean that we have A and B or do we mean that we have AB? This cannot be determined simply by just using the rules of the grammar. We would need other information. This means that the language is not context free.
+
+Why can the language not be infinitly recursive?
+
+Lets look at another example piece of grammar.
+
+B->hB
+
 ### What is the difference between a regular language and a context free language?
 
 ### What is a grammar?
