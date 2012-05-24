@@ -238,7 +238,7 @@ Intermediate representations
 
 ### What is a translator?
 
-It is a comupter program that translates a source program (high level language) into object program (machine level language).
+Within a compiler, a translator converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
 
 Optimization
 ------------
