@@ -53,7 +53,11 @@ An interpreter executes souce code without producing an executable.
 Interpreters consist of the exact [same phases of a compiler](#what-are-the-phases-of-a-compiler), but execute programs instead of [generating machine code](#what-is-code-generation).
 
 ### The C compiler is written in C. How can that be?
-With the exception of the first ever C compiler, it is very possible to write C compilers and then compile them using another compiler. This is mostly due to the fact there is no Ԕhe C CompilerԻ there are a multitude of compilers. Additionally you could compile a compiler in the same language by bootstrapping. Which is a series of steps that slowly builds up the compiler.
+With the exception of the first C compiler, it is possible to write a C compiler in C and then compile it using another existing C compiler.
+Writing the first C compiler in C is known as [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
+
+### What is bootstrapping and how does it work?
+Bootstrapping is a series of steps that slowly builds up a self-hosting compiler.
 
 ### What are the phases of a compiler?
 Compilers operate around these phases:
@@ -70,7 +74,6 @@ Middle end (an intermediate representation):
 
 Back end (generate target language):
 - [Code generator](#what-is-code-generation). Produces machine code.
-
 
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 
