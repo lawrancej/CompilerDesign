@@ -267,59 +267,29 @@ Therefore, optimization can make programs:
 ### What is single static assignment (SSA)?
 
 ### What is loop unrolling?
+Loop unrolling, or loop unwinding, removes or precalculates control operations.
+The optimization comes at the cost of space complexity.
 
-Loop unrolling, also known as loop unwinding, is the process of optimizing the resulting code by removing or precalculating the control operations. The optimization comes at the cost of space complexity.
-
-This optimizations can be achieved in a variety of ways.
+This optimization works several ways.
 
 - Precalculating the end of loop condition
 - Precalculating pointer increments
 - Optimizing memory access
 - Running independent iterations in parallel
 
-For Example:
-
-Original Code
-
-```C#
-int Count = 0;
-for (int i = 0; i < 500; i++)
-{
-
-  Count += i;
-
-}
-```
-
-Unrolled Loop
-
-```C#
-int Count = 0;
-
-Count += 1;
-Count += 1;
-Count += 1;//Repeated 500 times.
-//Results in optimizing out all of the i < 500 condition checks
-
-```
-
-Loop unrolling can work with conditional code that controls what executes each time.
-
-For Example:
+#### Loop unrolling example
 
 Original Code
 
 ```C#
 for (int i = 0; i < 10; i++)
 {
-
   if (i == 0)
     Console.WriteLine("I'm the beginning");
   else if (i % 2 == 0)
     Console.Writeline("I'm even");
   else
     Console.Writeline("I'm odd");
-
 }
 ```
 
