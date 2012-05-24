@@ -239,14 +239,20 @@ A common intermediate representation simplifies the construction of compilers su
 
 ### What is a translator?
 
-A translator is a [compiler phase](#what-is-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
+A translator is a [compiler phase](#what-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
 
 Optimization
 ------------
 ### What is optimization?
-It is the process of modifying a software system to make some parts of it work more efficiently.
-Example: The same task takes less time due to code not causing extra resources to be used.
-Counterexample: The same task takes extra time due to code calling extra resources.
+Optimization is the penultimate [compiler phase](#what-are-the-phases-of-a-compiler).
+Optimizers improve code performance, size, and efficiency toward an optimum.
+
+Example optimizations:
+
+- [Peephole optimization](#what-is-peephole-optimization)
+- [Loop unrolling](#what-is-loop-unrolling)
+- [Method inlining](#what-is-method-inlining)
+- [Dead code](#what-is-dead-code) elimination
 
 ### What is the point of optimization?
 Unoptimized programs do not fully exploit underlying hardware capabilities, since [high-level languages](#what-is-a-high-level-langauge) abstract away from machine code.
