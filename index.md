@@ -238,9 +238,12 @@ Optimization
 ### What is optimization?
 
 ### What is the point of optimization?
- - It makes things faster.
- - It can 'possibly' make things more efficient.
- - Can reduce the number of lines of code in a program.
+Unoptimized programs do not fully exploit underlying hardware capabilities, since [high-level languages](#what-is-a-high-level-langauge) abstract away from machine code.
+Therefore, optimization can make programs:
+
+ - Faster.
+ - More efficient.
+ - Smaller.
 
 ### What is peephole optimization?
 
