@@ -238,6 +238,8 @@ Intermediate representations
 
 ### What is a translator?
 
+It is a comupter program that translates a source program (high level language) into object program (machine level language).
+
 Optimization
 ------------
 ### What is optimization?
@@ -269,6 +271,11 @@ Examples:
 Code generation
 ---------------
 ### What is code generation?
+
+Code Generation is the process which a compiler's code generator converts some
+source code to something that can be readily execuated by the machine you running in.
+
+It consists of a parse tree. This tree will be converted into a linear sequence of instructions (intermediate language)
 
 Interpretation
 --------------
