@@ -161,20 +161,19 @@ Followup:
 ### What is a nondeterministic pushdown automaton?
 
 ### What is a parser?
-A parser checks for syntax errors and constructs a [parse tree](#what-is-a-parse-tree) or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
-Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) sequence.
-However, scanner-less parsers convert source code directly into a parse tree or abstract syntax tree.
+A parser:
+- Checks for [syntax errors](#what-is-a-syntax-error)
+- Constructs a [parse tree](#what-is-a-parse-tree) or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
-Parsers DO:
-- Check for syntax errors.
-- Produce parse trees or abstract syntax trees.
+Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) [sequence](background.md#what-is-a-sequence).
+However, scanner-less parsers tokenize source code while parsing.
 
-Parsers DO NOT:
-- [Tokenize source code](#what-is-a-scaner) (unless the parser is scanner-less)
-- [Produce assembly or object code](#what-is-code-generation)
+Except for the most trivial compilers, parsers do not [produce assembly or object code](#what-is-code-generation) directly.
 
 Follow ups:
 - [How do parsers work](#how-do-parsers-work)?
+
+### What is a syntax error?
 
 ### What is a parse tree?
 
