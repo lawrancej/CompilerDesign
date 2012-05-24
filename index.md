@@ -43,6 +43,7 @@ Follow-up:
 - [How do interpreters work](#how-do-interpreters-work)?
 
 ### The C compiler is written in C. How can that be?
+With the exception of the first ever C compiler, it is very possible to write C compilers and then compile them using another compiler. This is mostly due to the fact there is no “The C Compiler”; there are a multitude of compilers. Additionally you could compile a compiler in the same language by bootstrapping. Which is a series of steps that slowly builds up the compiler.
 
 ### What are the phases of a compiler?
 Compilers operate around these phases:
