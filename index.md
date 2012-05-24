@@ -259,8 +259,12 @@ Therefore, optimization can make programs:
 ### What is method inlining?
 
 ### What is dead code?
- - Dead code is any source code whose result is never used in the program.
- - Dead code is considered to be a waste of resources.
+Dead code is any code whose result is never used, and therefore a waste of resources.
+
+Examples:
+- Definitions of uncalled functions
+- Computations that do not affect output
+- `if (false) { /* Dead code */ }`
 
 Code generation
 ---------------
