@@ -244,6 +244,9 @@ A translator is a [compiler phase](#what-is-are-the-phases-of-a-compiler) which 
 Optimization
 ------------
 ### What is optimization?
+It is the process of modifying a software system to make some parts of it work more efficiently.
+Example: The same task takes less time due to code not causing extra resources to be used.
+Counterexample: The same task takes extra time due to code calling extra resources.
 
 ### What is the point of optimization?
 Unoptimized programs do not fully exploit underlying hardware capabilities, since [high-level languages](#what-is-a-high-level-langauge) abstract away from machine code.
