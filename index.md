@@ -38,7 +38,7 @@ The hierarchy consists of four levels:
 4. [Regular grammars](#what-is-a-regular-grammar).
 
 ### What is an interpreter?
-An interpreter is a type of compiler that simply executes the code directly without translating it to a lower level.
+An interpreter executes souce code without producing an executable.
 
 Examples:
 
