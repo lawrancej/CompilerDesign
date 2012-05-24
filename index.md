@@ -165,10 +165,10 @@ A parser:
 - Checks for [syntax errors](#what-is-a-syntax-error)
 - Constructs a [parse tree](#what-is-a-parse-tree) or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
-Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) [sequence](background.md#what-is-a-sequence).
-However, scanner-less parsers tokenize source code while parsing.
+Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) [sequence](background.md#what-is-a-sequence) that the parser reads as input.
+However, scanner-less parsers work directly with source code as input.
 
-Except for the most trivial compilers, parsers do not [produce assembly or object code](#what-is-code-generation) directly.
+Parsers do not [produce assembly or object code](#what-is-code-generation).
 
 Follow ups:
 - [How do parsers work](#how-do-parsers-work)?
