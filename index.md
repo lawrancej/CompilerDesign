@@ -235,10 +235,11 @@ Semantics
 Intermediate representations
 ----------------------------
 ### What are intermediate representations?
+A common intermediate representation simplifies the construction of compilers supporting multiple source and target languages.
 
 ### What is a translator?
 
-Within a compiler, a translator converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
+A translator is a [compiler phase](#what-is-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
 
 Optimization
 ------------
@@ -271,11 +272,10 @@ Examples:
 Code generation
 ---------------
 ### What is code generation?
+Code generation is the final [compiler phase](#what-are-the-phases-of-a-compiler).
+It produces code in the target language, which is typically a machine language (e.g., x86, arm), but may be assembly or even a high-level language.
 
-Code Generation is the process which a compiler's code generator converts some
-source code to something that can be readily execuated by the machine you running in.
-
-It consists of a parse tree. This tree will be converted into a linear sequence of instructions (intermediate language)
+The code generator is distinct from the [parser](#what-is-a-parser) and the [translator](#what-is-a-translator).
 
 Interpretation
 --------------
