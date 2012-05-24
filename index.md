@@ -73,6 +73,15 @@ Interpreters consist of the exact [same phases of a compiler](#what-are-the-phas
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 
 #### Military Career
+ - Sworn into the United States Navy Reserve in 1943.
+     - Volunteered to serve in the WAVES.
+ - Trained at the Smith College in Northampton, MA.
+     - Graduated first in her class in 1944.
+ - Assigned to the Bureau of Ships Computation Project at Harvard University as a lieutenant.
+ - Served on the Mark I computer programming staff.
+ - Was declined entry to the standard Navy due to her age.
+     - Continued serving in the Navy Reserve.
+ - Continued working in the Harvard Computation Lab until 1949 under a Navy Contract.
 
 #### Contributions to Computer Science
  - Developed the first compiler for a computer programming language.
@@ -80,7 +89,12 @@ Interpreters consist of the exact [same phases of a compiler](#what-are-the-phas
  - Popularized the term "debugging."
  
 #### Honors
- - "Computer Sciences Man of the Year" award from the Data Processing Management Association in 1969
+ - Computer Sciences Man of the Year award from the Data Processing Management Association in 1969
+ - Made a Distinguished Fellow of the British Computer Society in 1973.
+ - Defense Distinguished Service Medal in 1986.
+ - Computer History Museum Fellow Award in 1987.
+ - Golden Gavel Award at the Toastmasters International convention in 1988.
+ - National Medal of Technology in 1991.
  
 Regular languages
 -----------------
@@ -189,6 +203,8 @@ Follow ups:
 
 ### What is a syntax error?
 
+A parser first tokenizes the source code depending on its syntax. It takes the structure of the code and uses said tokens to convert it to object code. After evaluation it will convert it to ASM code if there are no syntax errors.
+
 ### What is a parse tree?
 
 ### How do parsers work?
@@ -222,6 +238,9 @@ Optimization
 ### What is optimization?
 
 ### What is the point of optimization?
+ - It makes things faster.
+ - It can 'possibly' make things more efficient.
+ - Can reduce the number of lines of code in a program.
 
 ### What is peephole optimization?
 
