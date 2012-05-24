@@ -259,6 +259,8 @@ Therefore, optimization can make programs:
 ### What is method inlining?
 
 ### What is dead code?
+ - Dead code is any source code whose result is never used in the program.
+ - Dead code is considered to be a waste of resources.
 
 Code generation
 ---------------
