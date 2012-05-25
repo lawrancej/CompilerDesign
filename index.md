@@ -183,12 +183,6 @@ Give examples.
 A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
 It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
 
-Followup:
-
-- [Show me an example pushdown automaton](#what-does-a-pushdown-automaton-look-like)?
-
-#### What does a pushdown automaton look like?
-
 ### What is a deterministic pushdown automaton?
 
 ### What is a nondeterministic pushdown automaton?
