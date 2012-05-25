@@ -68,12 +68,12 @@ Front end (process source language):
 - [Parser (Syntactic analyzer)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 - [Type checker (Semantic analyzer)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
 
-Middle end (an intermediate representation):
-- [Translator](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-are-intermediate-representations).
-- [Optimizer](#what-is-optimization). Improves IR code by eliminating redundancy and [dead code](#what-is-dead-code).
+Middle end (intermediate representation):
+- [Translator](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-is-an-intermediate-representation).
+- [Optimizer](#what-is-optimization). Improves [intermediate representation](#what-is-an-intermediate-representation) code.
 
 Back end (generate target language):
-- [Code generator](#what-is-code-generation). Produces machine code.
+- [Code generator](#what-is-code-generation). Produces machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 
@@ -228,12 +228,13 @@ Semantics
 
 Intermediate representations
 ----------------------------
-### What are intermediate representations?
+### What is an intermediate representation?
+An intermediate representation is a target language internal to the compiler (like machine code).
 A common intermediate representation simplifies the construction of compilers supporting multiple source and target languages.
 
 ### What is a translator?
 
-A translator is a [compiler phase](#what-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
+A translator is a [compiler phase](#what-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-an-intermediate-representation).
 
 Optimization
 ------------
