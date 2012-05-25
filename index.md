@@ -81,6 +81,8 @@ Regular languages
 ### What is a regular language?
 [Regular expressions](#what-is-a-regular-expression) define the regular languages.
 
+
+
 ### What is a regular expression?
 Regular expressions consist of:
 
@@ -99,6 +101,7 @@ If a and b are regular expressions, then the following are regular expressions:
 - a*. Kleene closure. Matches a zero or more times.
 
 ### What is a finite automaton?
+	A finite automaton can also be called a Finite State Machine (or State Machine.) A finite automaton can only be in a finite number of states in which it transititons between. An example is that when an automaton sees a symbol for input. It then transititons to another state in which it works based on the symbol inputted. 
 
 
 ### What is an nondeterministic finite automaton?
