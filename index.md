@@ -273,16 +273,16 @@ with this faster code (left bit shift is faster than generic multiplication):
 
 ### What is loop unrolling?
 Loop unrolling, or loop unwinding, removes or precalculates control operations.
-The optimization comes at the cost of space complexity.
+The optimization improves speed by removing expensive branches, but comes at the cost of space complexity.
 
-This optimization works several ways.
+Loop unrolling includes these optimizations:
 
 - Precalculating the end of loop condition
 - Precalculating pointer increments
 - Optimizing memory access
 - Running independent iterations in parallel
 
-#### Loop unrolling example
+#### Example
 
 Original Code
 
