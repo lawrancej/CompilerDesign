@@ -21,6 +21,7 @@ Follow-up:
 
 ### What is a language?
 A [set](background.md#what-is-a-set) of [strings](background.md#what-is-a-string).
+Typically, a [formal grammar](#what-is-a-grammar) defines the language.
 
 Examples and counterexamples:
 
@@ -28,14 +29,46 @@ Examples and counterexamples:
 - "Love I dearly you!" is not in English, despite the English words.
 - "int main() { return 0; }" is in C.
 
+### What is a grammar?
+A grammar consists of:
+
+- A set of [productions](#what-is-a-production).
+- A set of terminals
+- A set of nonterminals
+- A start symbol (a nonterminal)
+
+#### Example
+This two production grammar (written in a variant of [Backus Naur Form](#what-is-backus-naur-form)) matches balanced parentheses.
+
+$Parens \to (Parens)*$
+$Parens \to [^()]*$
+
+### What is a production?
+A production, or rewriting rule, consists of a left hand side (LHS) and a right hand side (RHS).
+
+$LHS \to RHS$
+
+[Depending on the class of grammar](#what-is-chomskys-hierarchy), the left hand side and right hand side can be sequences of [terminals](#what-is-a-terminal) and [nonterminals](#what-is-a-nonterminal).
+
+### What is a Nonterminal?
+A nonterminal is anything in a grammar that can be replaced, and corresponds to [parent nodes](background.md#what-is-a-parent-node) in a [parse tree](#what-is-a-parse-tree).
+
+### What is a Terminal?
+A terminal is a primitive unit in a grammar (a [symbol](background.md#what-is-a-symbol) or [token](#what-is-a-token)) that corresponds to the [leaf nodes](background.md#what-is-a-leaf-node) in a [parse tree](#what-is-a-parse-tree).
+
 ### What is Chomsky's hierarchy?
 The Chomsky hierarchy, as the name implies, is a containment hierarchy of classes of [formal grammars](#what-is-a-grammar).
 The hierarchy consists of four levels:
 
-1. [Unrestricted grammars](#what-is-an-unrestricted-grammar).
-2. [Context sensitive grammars](#what-is-a-context-sensitive-grammar).
-3. [Context-free grammars](#what-is-a-context-free-grammar).
-4. [Regular grammars](#what-is-a-regular-grammar).
+1. [Unrestricted grammars](#what-is-an-unrestricted-grammar). Recognized by [Turing machines](#what-is-a-turing-machine).
+2. [Context sensitive grammars](#what-is-a-context-sensitive-grammar). Recognized by a [bounded Turing machine](#what-is-a-bounded-turing-machine).
+3. [Context-free grammars](#what-is-a-context-free-grammar). Recognized by a [pushdown automaton](#what-is-a-pushdown-automaton).
+4. [Regular grammars](#what-is-a-regular-grammar). Recognized by a [finite state machine](#what-is-a-finite-automaton).
+
+### What is an unrestricted grammar?
+An unrestricted grammar's productions can include terminals and nonterminals in both the left and right hand sides of productions.
+
+### What is a context-sensitive grammar?
 
 ### What is an interpreter?
 An interpreter executes souce code without producing an executable.
@@ -160,13 +193,6 @@ Example:
 
 - The [language](#what-is-a-language) of balanced parentheses is context-free, but not regular. Thus, it is impossible to construct a regular expression (but possible to construct a context-free grammar) that matches balanced parentheses.
 
-### What is a Nonterminal?
-
-### What is a Terminal?
-Terminals correspond to [tokens](#what-is-a-token).
-
-### What is a grammar?
-
 ### What is a derivation?
 Give examples.
 ### What is a leftmost derivation?
@@ -182,6 +208,8 @@ Give examples.
 ### What is a pushdown automaton?
 A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
 It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
+
+> TODO: It'd be nice to have a picture of a pushdown automaton, in a vector format such as SVG.
 
 ### What is a deterministic pushdown automaton?
 
