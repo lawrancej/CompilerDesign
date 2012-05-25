@@ -188,3 +188,5 @@ Code generation
 Interpretation
 --------------
 ### What is interpretation?
+
+-Interpretation is the assignment of meaning to the symbols of a formal languate. Many formal languages used in theroretical computer science are defined in solely syntactic terms and do not have any meaning until they are given some interpretaation.
