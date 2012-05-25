@@ -66,7 +66,7 @@ The hierarchy consists of four levels:
 4. [Regular grammars](#what-is-a-regular-grammar). Recognized by a [finite state machine](#what-is-a-finite-automaton).
 
 ### What is an unrestricted grammar?
-An unrestricted grammar's productions can include terminals and nonterminals in both the left and right hand sides of productions.
+An unrestricted grammar's productions can include sequences of terminals and nonterminals in both the left and right hand sides of productions.
 
 ### What is a context-sensitive grammar?
 
