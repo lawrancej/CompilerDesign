@@ -74,20 +74,31 @@ Typically your use of git will involve (assuming you're on your master branch):
     gitk --all &  # Show a graphical timeline of commits
     git diff      # Show uncommitted changes to tracked files
 
-It's working now!
+### It's working now!
+Great, record your changes locally. Here's how:
 
-    git commit -m "Changed some_file and another_file. It works now."
+    git commit -a -m "Changed some_file and added new_file. It works now."
 
-Post your commit to github
+### I recorded my changes, but github didn't change.
+You need to push your commit to github if you want to share them.
 
     git push origin master
 
-Pull commits from github
+### I need to pull commits from github
 
     git pull origin master
 
-There are many excellent resources available on git.
+### I want changes from a colleague, not my own local repository!
+Think as you type this out (replace your_colleague and ProjectNameHere). Do not copy paste.
 
+    git remote add your_colleague git@github.com:your_colleague/ProjectNameHere
+    git fetch your_colleague
+    git merge remotes/your_colleauge/master master
+	
+### I need more help!
+Ask around. Use excellent resources available on git. Update this with what you discover.
+
+- [Git Reference](http://gitref.org/index.html)
 - [External Git links](http://git-scm.com/doc/ext)
 - [Pro Git](http://git-scm.com/book/index.html)
 - [Git cheat sheets](http://help.github.com/git-cheat-sheets/)
