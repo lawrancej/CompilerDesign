@@ -1,9 +1,22 @@
-Parser combinator library
-=========================
+CompilerKit library
+===================
+CompilerKit streamlines developing software deriving tree structures from sequences, including compilers and interpreters.
+
+## Why does this library exist?
+This library solves these problems in existing compiler construction tools:
+
+- Require learning a new syntax (e.g., lex, yacc, Bison)
+- Add complexity to the build process (e.g., lex, yacc, Bison)
+- Do not handle all possible context free grammars (e.g., lex, yacc)
+- Work with only one language (e.g., lex, yacc)
+- Produce blocking code (e.g., lex)
+- Produce non thread-safe code (e.g., lex)
+- Do not work well with Unicode
+
 ## Where can I contribute to this?
 Here:
 
-<https://github.com/lawrancej/parsed>
+<https://github.com/lawrancej/CompilerKit>
 
 ## What is a [parser combinator](http://en.wikipedia.org/wiki/Parser_combinator)?
 A parser combinator is a higher-order function that creates parsers from parsers.
