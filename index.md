@@ -183,12 +183,6 @@ Give examples.
 A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
 It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
 
-Followup:
-
-- [Show me an example pushdown automaton](#what-does-a-pushdown-automaton-look-like)?
-
-#### What does a pushdown automaton look like?
-
 ### What is a deterministic pushdown automaton?
 
 ### What is a nondeterministic pushdown automaton?
@@ -239,11 +233,20 @@ A common intermediate representation simplifies the construction of compilers su
 
 ### What is a translator?
 
-A translator is a [compiler phase](#what-is-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
+A translator is a [compiler phase](#what-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-are-intermediate-representations).
 
 Optimization
 ------------
 ### What is optimization?
+Optimization is the penultimate [compiler phase](#what-are-the-phases-of-a-compiler).
+Optimizers improve code performance, size, and efficiency toward an optimum.
+
+Example optimizations:
+
+- [Peephole optimization](#what-is-peephole-optimization)
+- [Loop unrolling](#what-is-loop-unrolling)
+- [Method inlining](#what-is-method-inlining)
+- [Dead code](#what-is-dead-code) elimination
 
 ### What is the point of optimization?
 Unoptimized programs do not fully exploit underlying hardware capabilities, since [high-level languages](#what-is-a-high-level-langauge) abstract away from machine code.
@@ -254,10 +257,61 @@ Therefore, optimization can make programs:
  - Smaller.
 
 ### What is peephole optimization?
+Peephole optimizers replace small subsequences of instructions with fewer or faster instructions.
+The sequence of instructions that the optimization operates on is called the "peephole" or "window". 
+
+#### Example
+Depending on the target language, a peephole optimizer would replace the following code:
+
+    j = i * 16;
+
+with this faster code (left bit shift is faster than generic multiplication):
+
+    j = i << 4;
 
 ### What is single static assignment (SSA)?
 
 ### What is loop unrolling?
+Loop unrolling, or loop unwinding, removes or precalculates control operations.
+The optimization comes at the cost of space complexity.
+
+This optimization works several ways.
+
+- Precalculating the end of loop condition
+- Precalculating pointer increments
+- Optimizing memory access
+- Running independent iterations in parallel
+
+#### Loop unrolling example
+
+Original Code
+
+```C#
+for (int i = 0; i < 10; i++)
+{
+  if (i == 0)
+    Console.WriteLine("I'm the beginning");
+  else if (i % 2 == 0)
+    Console.Writeline("I'm even");
+  else
+    Console.Writeline("I'm odd");
+}
+```
+
+Unrolled Loop
+
+```C#
+Console.Writeline("I'm the beginning");//i = 0
+Console.Writeline("I'm odd");//i = 1
+Console.Writeline("I'm even");//i = 2
+Console.Writeline("I'm odd");//i = 3
+Console.Writeline("I'm even");//i = 4
+Console.Writeline("I'm odd");//i = 5
+Console.Writeline("I'm even");//i = 6
+Console.Writeline("I'm odd");//i = 7
+Console.Writeline("I'm even");//i = 8
+Console.Writeline("I'm odd");//i = 9
+```
 
 ### What is method inlining?
 
