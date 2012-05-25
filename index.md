@@ -302,16 +302,16 @@ for (int i = 0; i < 10; i++)
 Unrolled Loop
 
 ```C#
-Console.Writeline("I'm the beginning");//i = 0
-Console.Writeline("I'm odd");//i = 1
-Console.Writeline("I'm even");//i = 2
-Console.Writeline("I'm odd");//i = 3
-Console.Writeline("I'm even");//i = 4
-Console.Writeline("I'm odd");//i = 5
-Console.Writeline("I'm even");//i = 6
-Console.Writeline("I'm odd");//i = 7
-Console.Writeline("I'm even");//i = 8
-Console.Writeline("I'm odd");//i = 9
+Console.Writeline("I'm the beginning"); //i = 0
+Console.Writeline("I'm odd"); //i = 1
+Console.Writeline("I'm even"); //i = 2
+Console.Writeline("I'm odd"); //i = 3
+Console.Writeline("I'm even"); //i = 4
+Console.Writeline("I'm odd"); //i = 5
+Console.Writeline("I'm even"); //i = 6
+Console.Writeline("I'm odd"); //i = 7
+Console.Writeline("I'm even"); //i = 8
+Console.Writeline("I'm odd"); //i = 9
 ```
 
 ### What is method inlining?
