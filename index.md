@@ -214,6 +214,9 @@ If a and b are regular expressions, then the following are regular expressions:
 - a*. Kleene closure. Matches a zero or more times.
 
 ### What is a finite automaton?
+A finite automaton, or finite state machine, can only be in a finite number of states in which it transititons between. 
+An example is that when an automaton sees a symbol for input.
+It then transititons to another state based on the next input symbol. 
 
 ### What is an nondeterministic finite automaton?
 
