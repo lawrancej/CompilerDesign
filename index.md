@@ -1,7 +1,14 @@
 Compiler Design
 ===============
+About this book
+---------------
+This textbook is meant to be:
 
-[Coordinate here](https://github.com/lawrancej/CompilerDesign/issues)
+- An [open educational resource](open-educational-resources.md).<br/><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br />Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+- A [collaborative effort](https://github.com/lawrancej/CompilerDesign/issues).
+  - Version control is not a substitute for communication, so [open an issue and review existing issues](https://github.com/lawrancej/CompilerDesign/issues) before you proceed.
+- Short in its definitions and explanations.
+- Long in its examples, follow-up questions.
 
 Compilers
 ---------
