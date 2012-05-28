@@ -42,15 +42,19 @@ Followup:
 How can I evaluate my own work?
 -------------------------------
 Do:
-- Answer questions
+- Check spelling, grammar, punctuation.
+- Use active voice. For example: the professor wrote this document.
+- Use the appropriate tense.
 - Work together
-- Ask questions
+- Ask and answer questions
 
 Avoid:
-- Spelling errors
-- Passive voice
-- Plagiarism (misrepresenting someone else's work as your own)
+- Weasel words, filler phrases. Examples: "the process of", "considered to be"
+- Spelling, grammar, and punctuation errors
+- Passive voice. For example, this document was written by the professor.
+- Plagiarism (misrepresenting someone else's work as your own). For example, copying from Wikipedia.
 - Adding [generated files](#what-are-generated-files) into [version control](git.md)
+- Second person. Say "you" only when absolutely necessary.
 
 Follow:
 - Strunk & White. Elements of Style.
