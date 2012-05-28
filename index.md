@@ -71,7 +71,7 @@ An unrestricted grammar's productions can include sequences of terminals and non
 ### What is a context-sensitive grammar?
 
 ### What is an interpreter?
-An interpreter executes souce code without producing an executable.
+An interpreter reads in souce code and executes immediately without producing an executable.
 
 #### Examples:
 
@@ -81,41 +81,58 @@ An interpreter executes souce code without producing an executable.
 #### Follow-up:
 
 - [How do interpreters work](#how-do-interpreters-work)?
+- [Which is better, compilers or interpreters](#which-is-better-compilers-or-interpreters)?
 
 ### How do interpreters work?
-Interpreters consist of the exact [same phases of a compiler](#what-are-the-phases-of-a-compiler), but execute programs instead of [generating machine code](#what-is-code-generation).
+Interpreters share many [phases of a compiler](#what-are-the-phases-of-a-compiler), but execute instead of [generating machine code](#what-is-code-generation).
+Interpreter implementations vary:
 
-An interpreter is designed to read in statements of code and execute them immediately, implementing the results of the code on the fly. 
-When using a high level language to program, and interpreter is a necessary intermediate between what runs at the system level and what is written by a programmer at the code level.
-The interpreter translates the high level statements into an interpreted form that can be understood by the system each time that the code is executed. 
-Usually this happens in one of three forms - The interpreter processes the code and executes it directly (early versions of LISP, Python, Perl); Translates the source code into an intermediate form (like java bytecode) and executes the intermediate form directly; Or executes precompiled code as part of a compiler-interpreter system.
-Due to the nature of an interpreter reading in code line by line, processing it, and doing so every time the code is executed, interpreted code usually runs slower than code executed only by a compiler.
+- Trivial interpreters execute code while parsing (e.g., early versions of Lisp, Python, Perl, Basic)
+- Traditional interpreters omit the code generator, and execute the intermediate representation.
+- Complex interpreters execute precompiled code as part of a compiler-interpreter system.
 
+### Which is better, compilers or interpreters?
+It depends.
+
+Because interpreters do not produce an executable, interpreters must process source code every time.
+Therefore, interpreted code can be slower than compiled machine code.
+However, interpreted code is never out of date.
 
 ### The C compiler is written in C. How can that be?
 With the exception of the first C compiler, it is possible to write a C compiler in C and then compile it using another existing C compiler.
-Writing the first C compiler in C is known as [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
+Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
 
 ### What is bootstrapping and how does it work?
 Bootstrapping is a series of steps that slowly builds up a self-hosting compiler.
 
 ### What are the phases of a compiler?
-Compilers operate around these phases:
+Compilers consist of several distinct phases split among the front and back end.
 
-Front end (process source language):
+#### Front end
+The front end processes the source language and consists of these phases:
 
-- [Scanner (Lexical analyzer)](#what-is-a-scanner). Split source code (a [string](background.md#what-is-a-string)) into a token sequence.
-- [Parser (Syntactic analyzer)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
-- [Type checker (Semantic analyzer)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
+- [Scanning (Lexical analysis)](#what-is-a-scanner). Split source code (a [string](background.md#what-is-a-string)) into a token sequence.
+- [Parsing (Syntactic analysis)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+- [Type checking (Semantic analysis)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
 
-Middle end (intermediate representation):
-- [Translator](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-is-an-intermediate-representation).
-- [Optimizer](#what-is-optimization). Improves [intermediate representation](#what-is-an-intermediate-representation) code.
+#### Back end
+The back end generates the target language and consists of these phases:
 
-Back end (generate target language):
-- [Code generator](#what-is-code-generation). Produces machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+- [Translation](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-is-an-intermediate-representation).
+- [Analysis](#what-is-analysis). Collect information necessary for optimization. 
+- [Optimization](#what-is-optimization). Improve [intermediate representation](#what-is-an-intermediate-representation) code.
+- [Code generation](#what-is-code-generation). Produce machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
+Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
+In addition to her [contributions to computer science](#contributions-to-computer-science), she had a [distinguished naval career](#military-career).
+
+#### Contributions to computer science
+ - Conceptualized machine-independent programming languages.
+ - Coined the term "compiler".
+ - Popularized the term "debugging".
+ - Influenced the design of COBOL.
+ - Guided the standardization of Fortran and COBOL.
 
 #### Military Career
  - Sworn into the United States Navy Reserve in 1943.
@@ -127,14 +144,9 @@ Back end (generate target language):
  - Was declined entry to the standard Navy due to her age.
      - Continued serving in the Navy Reserve.
  - Continued working in the Harvard Computation Lab until 1949 under a Navy Contract.
-
-#### Contributions to Computer Science
- - Developed the first compiler for a computer programming language.
- - Conceptualized machine-independent programming languages.
- - Popularized the term "debugging."
  
 #### Honors
- - Computer Sciences Man of the Year award from the Data Processing Management Association in 1969
+ - Computer Sciences Man of the Year award from the Data Processing Management Association in 1969.
  - Made a Distinguished Fellow of the British Computer Society in 1973.
  - Defense Distinguished Service Medal in 1986.
  - Computer History Museum Fellow Award in 1987.
