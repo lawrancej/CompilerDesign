@@ -8,7 +8,7 @@ This textbook is meant to be:
 - A [collaborative effort](https://github.com/lawrancej/CompilerDesign/issues).
   - Version control is not a substitute for communication, so [open an issue and review existing issues](https://github.com/lawrancej/CompilerDesign/issues) before you proceed.
 - Short in its definitions and explanations.
-- Long in its examples, follow-up questions.
+- Long in its examples, follow-up questions, addressing misconceptions.
 
 Compilers
 ---------
@@ -122,9 +122,8 @@ Interpreter implementations vary:
 ### Which is better, compilers or interpreters?
 It depends.
 
-Because interpreters do not produce an executable, interpreters must process source code every time.
-Therefore, interpreted code can be slower than compiled machine code.
-However, interpreted code is never out of date.
+Because an interpreter never produces an executable, interpreted code is always up to date.
+However, an interpreter must process source code every time it executes, thus it can be slower than compiled machine code.
 
 ### The C compiler is written in C. How can that be?
 With the exception of the first C compiler, it is possible to write a C compiler in C and then compile it using another existing C compiler.
@@ -132,6 +131,8 @@ Writing the first C compiler in C required [bootstrapping](#what-is-bootstrappin
 
 ### What is bootstrapping and how does it work?
 Bootstrapping is a series of steps that slowly builds up a self-hosting compiler.
+
+> TODO: expand this so to answer how it works.
 
 ### What are the phases of a compiler?
 Compilers consist of several distinct phases split among the front and back end.
@@ -153,16 +154,25 @@ The back end generates the target language and consists of these phases:
 
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
-In addition to her [contributions to computer science](#contributions-to-computer-science), she had a [distinguished naval career](#military-career).
+Her [distinguished naval career](#what-did-grace-hoppers-naval-career-have-to-do-with-compilers) led to her [contributions to computer science](#what-did-grace-hopper-contribute-to-computer-science).
 
-#### Contributions to computer science
+#### Follow-up questions
+
+- [What did Grace Hopper contribute to computer science](#what-did-grace-hopper-contribute-to-computer-science)?
+- [What did Grace Hopper's naval career have to do with compilers](#what-did-grace-hoppers-naval-career-have-to-do-with-compilers)?
+
+### What did Grace Hopper contribute to computer science?
+Grace Hopper:
+
  - Conceptualized machine-independent programming languages.
  - Coined the term "compiler".
  - Popularized the term "debugging".
  - Influenced the design of COBOL.
  - Guided the standardization of Fortran and COBOL.
 
-#### Military Career
+#### What did Grace Hopper's naval career have to do with compilers?
+> TODO: answer the question above
+
  - Sworn into the United States Navy Reserve in 1943.
      - Volunteered to serve in the WAVES.
  - Trained at the Smith College in Northampton, MA.
@@ -183,9 +193,23 @@ In addition to her [contributions to computer science](#contributions-to-compute
  
 Regular languages
 -----------------
-
 ### What is a regular language?
 [Regular expressions](#what-is-a-regular-expression) define the regular languages.
+[Regular grammars](#what-is-a-regular-grammar) and [finite automata](#what-is-a-finite-automaton) recognize regular languages.
+
+#### Follow-up questions
+- [What is a regular expression](#what-is-a-regular-expression)?
+- [How can you tell if a language is regular](#how-can-you-tell-if-a-language-is-regular)?
+- [What is a finite automaton](#what-is-a-finite-automaton)?
+- [What is a regular grammar](#what-is-a-regular-grammar)?
+
+### How can you tell if a language is regular?
+> TODO: see Pumping lemma for regular languages
+
+[If the language is finite, it is regular](#why-are-all-finite-languages-regular)?
+
+### Why are all finite languages regular?
+> TODO: prove this 
 
 ### What is a regular grammar?
 A regular grammar is a [formal grammar](#what-is-a-grammar) limited to productions of the following forms:
@@ -199,19 +223,19 @@ Regular grammars also define the regular languages.
 ### What is a regular expression?
 Regular expressions consist of:
 
-Primitives:
+#### Primitives:
 
 - $\emptySet$. The empty set. Reject everything.
-- $\epsilon$. The empty string. Match the empty string.
-- c. Character. Match a single character
+- $\epsilon$. The empty string. Match the empty string: ""
+- `c`. Character. Match a single character.
 
-Operations:
+#### Operations:
 
-If a and b are regular expressions, then the following are regular expressions:
+If `a` and `b` are regular expressions, then the following are regular expressions:
 
-- ab. Catenation.  Match a followed by b.
-- a|b. Alternation. Match a or b.
-- a*. Kleene closure. Matches a zero or more times.
+- `ab`. Catenation.  Match `a` followed by `b`.
+- `a|b`. Alternation. Match `a` or `b`.
+- `a*`. Kleene closure. Matches `a` zero or more times.
 
 ### What is a finite automaton?
 A finite automaton, or finite state machine, can only be in a finite number of states in which it transititons between. 
@@ -255,9 +279,12 @@ $S \to \epsilon$
 
 #### Follow-up questions
 
+- [How can you tell if a language is context-free](#how-can-you-tell-if-a-language-is-context-free)?
 - [Is English context-free](http://cs.haifa.ac.il/~shuly/teaching/08/nlp/complexity.pdf)?
 - [When a language is context free, do terminals have only one meaning](#what-are-the-implications-of-chomskys-hierarchy)?
 - [Is infinite recursion allowed in context-free grammars](#what-is-left-recursion)?
+
+### How can you tell if a language is context-free?
 
 ### What is left recursion?
 
@@ -268,12 +295,13 @@ and can be accepted by [deterministic and non-deterministic](#what-is-the-differ
 Regular languages also do not accept arbitrary nesting, like [recursion](background.md#what-is-recursion).
 [Context-free grammars](#what-is-a-context-free-grammar) define context-free languages, and can be accepted by [pushdown automata](#what-is-a-pushdown-automaton) 
 
-Example:
+#### Example:
 
 - The [language](#what-is-a-language) of balanced parentheses is context-free, but not regular. Thus, it is impossible to construct a regular expression (but possible to construct a context-free grammar) that matches balanced parentheses.
 
 ### What is a derivation?
 Give examples.
+
 ### What is a leftmost derivation?
 
 ### What is a rightmost derivation?
@@ -310,6 +338,7 @@ Follow ups:
 - [How do parsers work](#how-do-parsers-work)?
 
 ### What is a syntax error?
+> TODO: this section needs fixing. state what a syntax error is.
 
 A parser first tokenizes the source code depending on its syntax. It takes the structure of the code and uses said tokens to convert it to object code. After evaluation it will convert it to ASM code if there are no syntax errors.
 
@@ -351,7 +380,7 @@ Optimization
 Optimization is the penultimate [compiler phase](#what-are-the-phases-of-a-compiler).
 Optimizers improve code performance, size, and efficiency toward an optimum.
 
-Example optimizations:
+#### Example optimizations:
 
 - [Peephole optimization](#what-is-peephole-optimization)
 - [Loop unrolling](#what-is-loop-unrolling)
