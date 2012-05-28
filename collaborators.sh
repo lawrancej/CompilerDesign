@@ -1,6 +1,6 @@
 #!/bin/bash
 
-collaborators=( "lawrancej" "UnZinkable" "mrpenguin7" "CyDrive" "jcamps" "powersa2" "AllTheAction" "lapatink" "tannerd01" "kirip" "tomleo" "garciaa1" "KBVuong1" "RoboCafaz" "LynxStar" "theCompanyDream" "aghon" "SoxMax" "nhogan11" "finna" "CyaSteve" "sthdips09" "torosianj" "vafaeed" "cantrellk" "dalswaimil" )
+collaborators=(  $(< "AUTHORS" ) )
 
 if [ $# = 0 ]; then
 	echo "Do git commands for all collaborators."
