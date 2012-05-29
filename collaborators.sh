@@ -1,6 +1,6 @@
 #!/bin/bash
 
-collaborators=( "lawrancej" "UnZinkable" "mrpenguin7" "CyDrive" "jcamps" "powersa2" "AllTheAction" "lapatink" "tannerd01" "kirip" "tomleo" "garciaa1" "KBVuong1" "RoboCafaz" "LynxStar" "theCompanyDream" "aghon" "SoxMax" "nhogan11" "finna" "CyaSteve" "sthdips09" "torosianj" "vafaeed" "cantrellk" "dalswaimil" )
+collaborators=(  $(< "AUTHORS" ) )
 
 if [ $# = 0 ]; then
 	echo "Do git commands for all collaborators."
@@ -11,6 +11,7 @@ if [ $# = 0 ]; then
 	echo "setup       Do git remote add for all collaborators"
 	echo "fetch       Do git fetch for all collaborators"
 	echo "clean       Do git remote rm for all collaborators"
+	echo "list        Show a list of collaborators"
 	echo ""
 	echo "Example: $0 setup"
 elif [ $1 = "fetch" ]; then
@@ -22,6 +23,8 @@ else
 			git remote add $collaborator https://github.com/$collaborator/CompilerDesign.git
 		elif [ $1 = "clean" ]; then
 			git remote rm $collaborator
+		elif [ $1 = "list" ]; then
+			echo $collaborator
 		fi
 	done
 fi

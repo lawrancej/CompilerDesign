@@ -2,9 +2,9 @@ Git to the point
 ================
 Git it? Let's see how to git r done.
 
-- [What is git](#what-is-git)?
-- [How do I set up git](#git-setup)?
-- [How do I use git](#using-git)?
+- [What is git?](#what-is-git)
+- [How do I set up git?](#git-setup)
+- [How do I use git?](#using-git)
 
 What is git?
 ------------
@@ -60,6 +60,17 @@ Typically your use of git will involve (assuming you're on your master branch):
 
     git checkout -b some_new_branch
 
+### I pushed my new branch to github. How do I remove that remote branch?
+Suppose you did the following:
+
+    git checkout -b some_new_branch
+    git commit -a -m "Changes."
+    git push origin some_new_branch
+
+If you want to remove remotes/origin/some_new_branch, do the following:
+
+    git push origin :some_new_branch
+
 ### How do I add a new file to git?
 
     git add new_file
@@ -93,7 +104,7 @@ Think as you type this out (replace your_colleague and ProjectNameHere). Do not 
 
     git remote add your_colleague git@github.com:your_colleague/ProjectNameHere
     git fetch your_colleague
-    git merge remotes/your_colleauge/master master
+    git merge remotes/your_colleauge/master
 	
 ### I need more help!
 Ask around. Use excellent resources available on git. Update this with what you discover.
