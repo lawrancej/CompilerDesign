@@ -60,6 +60,17 @@ Typically your use of git will involve (assuming you're on your master branch):
 
     git checkout -b some_new_branch
 
+### I pushed my new branch to github. How do I remove that remote branch?
+Suppose you did the following:
+
+    git checkout -b some_new_branch
+    git commit -a -m "Changes."
+    git push origin some_new_branch
+
+If you want to remove remotes/origin/some_new_branch, do the following:
+
+    git push origin :some_new_branch
+
 ### How do I add a new file to git?
 
     git add new_file
