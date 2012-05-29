@@ -2,9 +2,9 @@ Git to the point
 ================
 Git it? Let's see how to git r done.
 
-- [What is git](#what-is-git)?
-- [How do I set up git](#git-setup)?
-- [How do I use git](#using-git)?
+- [What is git?](#what-is-git)
+- [How do I set up git?](#git-setup)
+- [How do I use git?](#using-git)
 
 What is git?
 ------------
@@ -93,7 +93,7 @@ Think as you type this out (replace your_colleague and ProjectNameHere). Do not 
 
     git remote add your_colleague git@github.com:your_colleague/ProjectNameHere
     git fetch your_colleague
-    git merge remotes/your_colleauge/master master
+    git merge remotes/your_colleauge/master
 	
 ### I need more help!
 Ask around. Use excellent resources available on git. Update this with what you discover.
