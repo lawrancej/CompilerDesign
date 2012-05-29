@@ -1,27 +1,28 @@
 Compiler Design
 ===============
 
-[Coordinate here](https://docs.google.com/document/d/1g7SXO8BSL5rq2cJVqp_9XfWkzNyi9ZWKKl2Heb_nS1g/edit)
+`Coordinate
+here <[https://docs.google.com/document/d/1g7SXO8BSL5rq2cJVqp_9XfWkzNyi9ZWKKl2Heb_nS1g/edit](https://docs.google.com/document/d/1g7SXO8BSL5rq2cJVqp_9XfWkzNyi9ZWKKl2Heb_nS1g/edit)>`_
 
 Compilers
 ---------
 
-### What is a compiler?
-A compiler translates from a source [language](#what-is-a-language) to a target language.
+### What is a compiler? A compiler translates from a source
+`language <#what-is-a-language>`_ to a target language.
 
 Examples:
 
-- GCC, Clang, Visual C++ translate C into machine code
-- LaTeX, Pandoc translate document markup into PDF, HTML, etc.
+-  GCC, Clang, Visual C++ translate C into machine code
+-  LaTeX, Pandoc translate document markup into PDF, HTML, etc.
 
-### What is a language?
-A [set](background.md#what-is-a-set) of [strings](background.md#what-is-a-string).
+### What is a language? A `set <background.md#what-is-a-set>`_ of
+`strings <background.md#what-is-a-string>`_.
 
 Examples and counterexamples:
 
-- "I love you dearly!" is in English.
-- "Love I dearly you!" is not in English, despite the English words.
-- "int main() { return 0; }" is in C.
+-  "I love you dearly!" is in English.
+-  "Love I dearly you!" is not in English, despite the English words.
+-  "int main() { return 0; }" is in C.
 
 ### What is Chomsky's hierarchy?
 
@@ -29,40 +30,46 @@ Examples and counterexamples:
 
 ### The C compiler is written in C. How can that be?
 
-### What are the phases of a compiler?
-List the phases here. Briefly describe what each phase does. Give examples.
+### What are the phases of a compiler? List the phases here. Briefly
+describe what each phase does. Give examples.
 
 ### Who is Grace Hopper?
 
 Regular languages
 -----------------
 
-### What is a regular language?
-[Regular expressions](#what-is-a-regular-expression) define the regular languages.
+### What is a regular language? `Regular
+expressions <#what-is-a-regular-expression>`_ define the regular
+languages.
 
-### What is a regular expression?
-Regular expressions consist of:
+### What is a regular expression? Regular expressions consist of:
 
 Primitives:
 
-- $\emptySet$. The empty set. Reject everything.
-- $\epsilon$. The empty string. Match the empty string.
-- c. Character. Match a single character
+-  $emptySet$. The empty set. Reject everything.
+-  $epsilon$. The empty string. Match the empty string.
+-  
+
+   c. Character. Match a single character
 
 Operations:
 
-If a and b are regular expressions, then the following are regular expressions:
+If a and b are regular expressions, then the following are regular
+expressions:
 
-- ab. Catenation.  Match a followed by b.
-- a|b. Alternation. Match a or b.
-- a*. Kleene closure. Matches a zero or more times.
+-  ab. Catenation. Match a followed by b.
+-  a\|b. Alternation. Match a or b.
+-  a\*. Kleene closure. Matches a zero or more times.
 
 ### What is a finite automaton?
-
 
 ### What is an nondeterministic finite automaton?
 
 ### What is a deterministic finite automaton?
+
+A deterministic finite automaton (DFA) always has a unique transition. A
+transition is a move from one state to another. In a DFA transitions are
+represented using a transition table.
 
 ### How to convert an NFA to a DFA?
 
@@ -72,15 +79,16 @@ If a and b are regular expressions, then the following are regular expressions:
 
 Context-free languages
 ----------------------
+
 ### What is a context-free language?
 
-### What is the difference between a regular language and a context free language?
+### What is the difference between a regular language and a context free
+language?
 
 ### What is a grammar?
 
-### What is a derivation?
-Give examples.
-### What is a leftmost derivation?
+### What is a derivation? Give examples. ### What is a leftmost
+derivation?
 
 ### What is a rightmost derivation?
 
@@ -102,14 +110,17 @@ Give examples.
 
 Abstract Syntax Trees
 ---------------------
+
 ### What is an abstract syntax tree?
 
-### What is the difference between an abstract syntax tree and a parse tree?
+### What is the difference between an abstract syntax tree and a parse
+tree?
 
 ### What is the visitor design pattern?
 
 Optimization
 ------------
+
 ### What is optimization?
 
 ### What is the point of optimization?
@@ -124,8 +135,10 @@ Optimization
 
 Code generation
 ---------------
+
 ### What is code generation?
 
 Interpretation
 --------------
+
 ### What is interpretation?
