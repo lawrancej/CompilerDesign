@@ -4,9 +4,11 @@ About this book
 ---------------
 This textbook is meant to be:
 
-- An [open educational resource](open-educational-resources.md). <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+- An [open educational resource](open-educational-resources.md). (<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a>)
 - A [collaborative effort](https://github.com/lawrancej/CompilerDesign/issues).
-  - Version control is not a substitute for communication, so [open an issue and review existing issues](https://github.com/lawrancej/CompilerDesign/issues) before you proceed.
+  1. [Pick a piece to own from the compiler course mapping outline](http://www.saylor.org/content/coursemapping/CourseMappingFormCS304.xls)
+  2. Since version control is not a substitute for communication, so [open an issue and review existing issues](https://github.com/lawrancej/CompilerDesign/issues) before you proceed.
+  3. Ask and answer questions.
 - Short in its definitions and explanations.
 - Long in its examples, follow-up questions, addressing misconceptions.
 
