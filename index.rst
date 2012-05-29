@@ -65,6 +65,10 @@ expressions:
 
 \#\#\# What is a deterministic finite automaton?
 
+A deterministic finite automaton (DFA) always has a unique transition. A
+transition is a move from one state to another. In a DFA transitions are
+represented using a transition table.
+
 \#\#\# How to convert an NFA to a DFA?
 
 \#\#\# What is the derivative of a regular expression?
