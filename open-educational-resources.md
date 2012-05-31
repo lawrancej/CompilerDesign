@@ -33,7 +33,36 @@ The professor asks questions in class to collect misconceptions (and take attend
 
 How will I be graded on my contributions?
 -----------------------------------------
-You won't be. Instead, you will receive feedback based on [this criteria](http://www.saylor.org/open-textbook-challenge-peer-review-criteria/).
+You won't be. Instead, you will receive feedback. Of course, if you contribute nothing, you cannot pass or receive feedback.
+
+Followup:
+
+- [How can I evaluate my own work](#how-can-i-evaluate-my-own-work)?
+
+How can I evaluate my own work?
+-------------------------------
+Do:
+- Check spelling, grammar, punctuation.
+- Use active voice. For example: the professor wrote this document.
+- Use the appropriate tense.
+- Work together
+- Ask and answer questions
+
+Avoid:
+- Weasel words, filler phrases. Examples: "the process of", "considered to be"
+- Spelling, grammar, and punctuation errors
+- Passive voice. For example, this document was written by the professor.
+- Plagiarism (misrepresenting someone else's work as your own). For example, copying from Wikipedia.
+- Adding [generated files](#what-are-generated-files) into [version control](git.md)
+- Second person. Say "you" only when absolutely necessary.
+
+Follow:
+- Strunk & White. Elements of Style.
+- [These criteria](http://www.saylor.org/open-textbook-challenge-peer-review-criteria/).
+
+What are generated files?
+-------------------------
+The output of a compiler (e.g., binary or executable files).
 
 What's the point?
 -----------------
