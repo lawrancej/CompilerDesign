@@ -124,7 +124,8 @@ Counterexample: The same task takes extra time due to code calling extra resourc
 
 ### What is loop unrolling?
 
-### What is method inlining?
+### What is method inlining?(Philip)
+Compiler optimization that replaces a function call with the body of the caller(i'm not very sure what this part means). This optimization may improve time and space usage when ran, but might make the program bigger.
 
 Code generation
 ---------------
