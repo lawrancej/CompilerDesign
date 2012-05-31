@@ -255,6 +255,8 @@ It then transititons to another state based on the next input symbol.
 ### What is the derivative of a regular expression?
 
 ### What is a scanner (lexical analyzer)?
+A program or function which can parse a sequence of characters into usable tokens.
+Sequences are typically delimited in some way using characters (i.e. [,],[|],[~])
 
 Context-free languages
 ----------------------
