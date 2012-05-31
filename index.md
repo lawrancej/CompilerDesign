@@ -255,6 +255,9 @@ It then transititons to another state based on the next input symbol.
 ### What is the derivative of a regular expression?
 
 ### What is a scanner (lexical analyzer)?
+A Scanner is used within lexical analysis to match token character strings that
+are passed through it. Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
+so they may quickly process large amounts of data.
 
 Context-free languages
 ----------------------
