@@ -145,6 +145,12 @@ Abstract Syntax Trees
 ---------------------
 ### What is an abstract syntax tree?
 
+An [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) is simply a tree representation of the structure of source code. Each node of the tree represents a part of the code.
+
+The "abstract" part of the AST comes from the fact that the tree does not represent the syntax down to the character level. Tokens like parenthesis and brackets are not nodes on the tree, and are instead represented implicitly by the structure of the tree itself.
+
+If the code cannot be represented accurately as a tree, the parsed language is not [context-free](#what-is-a-context-free-language).
+
 ### What is the difference between an abstract syntax tree and a parse tree?
 
 ### What is the visitor design pattern?
