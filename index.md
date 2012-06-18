@@ -244,9 +244,21 @@ A finite automaton, or finite state machine, can only be in a finite number of s
 An example is that when an automaton sees a symbol for input.
 It then transititons to another state based on the next input symbol. 
 
+It has:
+- A start state
+- A set of states
+- A set of accepting states
+- A set of transitions from (state, character) -> something
+
 ### What is an nondeterministic finite automaton?
+It is a finite automaton in which we have a choice of where to go next.
+
+The set of transitions is from (state, character) -> set of states.
 
 ### What is a deterministic finite automaton?
+It is a finite automaton in which we have only one possible next state.
+
+The set of transitions is from (state, character) -> state.
 
 ### What is the difference between deterministic and nondeterministic?
 
