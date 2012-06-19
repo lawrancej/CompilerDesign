@@ -478,5 +478,5 @@ Interpretation
 --------------
 ### What is interpretation?
 
-Interpretation is when source code is executed directly, translated into some efficient intermediate representation (code) and immediately executes this, or explicitly executes stored precompiled code made by a compiler which is part of the interpreter system
+Interpretation is when source code is executed directly, translated into some efficient intermediate representation (code) and immediately executed, or stored precompiled code made by a compiler is explicity executed (part of the interpreter system)
 
