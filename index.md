@@ -4,11 +4,13 @@ About this book
 ---------------
 This textbook is meant to be:
 
-- An [open educational resource](open-educational-resources.md). <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
-- A [collaborative effort](https://github.com/lawrancej/CompilerDesign/issues).
-  - Version control is not a substitute for communication, so [open an issue and review existing issues](https://github.com/lawrancej/CompilerDesign/issues) before you proceed.
+- An [open educational resource](open-educational-resources.md). (<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a>)
 - Short in its definitions and explanations.
 - Long in its examples, follow-up questions, addressing misconceptions.
+- A [collaborative effort](https://github.com/lawrancej/CompilerDesign/issues).
+  1. [Pick a piece to own from the compiler course mapping outline](http://www.saylor.org/content/coursemapping/CourseMappingFormCS304.xls)
+  2. Since version control is not a substitute for communication, [open an issue and review existing issues](https://github.com/lawrancej/CompilerDesign/issues) before you proceed.
+  3. Ask and answer questions.
 
 Compilers
 ---------
@@ -247,9 +249,21 @@ A finite automaton, or finite state machine, can only be in a finite number of s
 An example is that when an automaton sees a symbol for input.
 It then transititons to another state based on the next input symbol. 
 
+It has:
+- A start state
+- A set of states
+- A set of accepting states
+- A set of transitions from (state, character) -> something
+
 ### What is an nondeterministic finite automaton?
+It is a finite automaton in which we have a choice of where to go next.
+
+The set of transitions is from (state, character) -> set of states.
 
 ### What is a deterministic finite automaton?
+It is a finite automaton in which we have only one possible next state.
+
+The set of transitions is from (state, character) -> state.
 
 A deterministic finite automaton (DFA) always has a unique transition. A
 transition is a move from one state to another. In a DFA transitions are

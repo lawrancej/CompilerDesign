@@ -3,9 +3,15 @@ Git to the point
 
 Git it? Let's see how to git r done.
 
+<<<<<<< HEAD
 -  `What is git <#what-is-git>`_?
 -  `How do I set up git <#git-setup>`_?
 -  `How do I use git <#using-git>`_?
+=======
+- [What is git?](#what-is-git)
+- [How do I set up git?](#git-setup)
+- [How do I use git?](#using-git)
+>>>>>>> c3d0954174922341f7f8201ad0ab8cba2f415441
 
 What is git?
 ------------
@@ -70,6 +76,17 @@ Make a change to \`another\_file\`
 
     git add another\_file
 
+### I pushed my new branch to github. How do I remove that remote branch?
+Suppose you did the following:
+
+    git checkout -b some_new_branch
+    git commit -a -m "Changes."
+    git push origin some_new_branch
+
+If you want to remove remotes/origin/some_new_branch, do the following:
+
+    git push origin :some_new_branch
+
 ### How do I add a new file to git?
 
     git add new_file
@@ -103,7 +120,7 @@ Think as you type this out (replace your_colleague and ProjectNameHere). Do not 
 
     git remote add your_colleague git@github.com:your_colleague/ProjectNameHere
     git fetch your_colleague
-    git merge remotes/your_colleauge/master master
+    git merge remotes/your_colleauge/master
 	
 -  `External Git
    links <[http://git-scm.com/doc/ext](http://git-scm.com/doc/ext)>`_
