@@ -351,6 +351,23 @@ A parser first tokenizes the source code depending on its syntax. It takes the s
 Abstract Syntax Trees
 ---------------------
 ### What is an abstract syntax tree?
+An abstract Syntax Tree is the data structure compilers/interpreters use in order to perform the actual code generation. It represents the hirearchy of the programmers code. An important note is that not all syntax of the code is displayed in the tree in the case of grouping paranthesis.
+
+Example
+int doSomething(int a)
+{
+	if(a > 10)
+		a = a % 10;
+	return a;
+}
+
+					[program]
+					/       \
+				  [if] 		[return]
+				  /			   \
+				[-]			   [a]
+				/ \
+			  [a] [10]
 
 An [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) is simply a tree representation of the structure of source code. Each node of the tree represents a part of the code.
 
