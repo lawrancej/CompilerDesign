@@ -375,7 +375,33 @@ The "abstract" part of the AST comes from the fact that the tree does not repres
 
 If the code cannot be represented accurately as a tree, the parsed language is not [context-free](#what-is-a-context-free-language).
 
+An abstract syntax tree (AST) is a tree representation of the abstract syntactic structure of the code written in any language. 
+Also, it is the output of a parser. Every node is a structure of a particular type of node. 
+Each node is created by creating a function which will return a pointer to a structure that will signify that node. 
+Example: 
+=========
+struct Signature
+	{
+	struct AttributeList *attributes;
+	struct Identifier *name;
+	struct DeclarationList *arguments;
+	struct TerminationSet *responses;
+	};
+extern struct Signature *node_signature (
+	struct AttributeList *attributes,
+	struct Identifier *name,
+	struct DeclarationList *arguments,
+	struct TerminationSet *responses);
+	
+	The example above is from the following website: 
+	http://www.ansa.co.uk/ANSATech/95/Primary/155101.pdf
+
 ### What is the difference between an abstract syntax tree and a parse tree?
+
+Parse Tree: are the rules to match the input text where as a syntax tree record the structure of the input. 
+
+Syntax Tree: It will be less sensitivity from the "Parse tree" as it focuses more on the structure of the language not the grammar.
+
 
 ### What is the visitor design pattern?
 
