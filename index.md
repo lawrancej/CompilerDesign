@@ -269,6 +269,17 @@ The set of transitions is from (state, character) -> state.
 ### What is a scanner (lexical analyzer)?
 Scanner, also know as Lexical analyzer or Lexer is a program which performs lexical analysis. It converts a sequence of characters into string of characters with a collective meaning following some rules. These rules contain identifier, assignment operator, number etc. The lexical analyzer takes a source program as input, and produces a stream of tokens as output.
 
+Source Program -----> Lexical Analyzer ---------> Token stream
+                           |
+                           |
+                           |
+                     Error Message
+
+
+
+#### Follow-up:
+### What is a token?
+
 Context-free languages
 ----------------------
 ### What is a context-free language?
