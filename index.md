@@ -250,9 +250,21 @@ An example is that when an automaton sees a symbol for input.
 It then transititons to another state based on the next input symbol. 
 >>>>>>> 8f6036ee816a188cfba51d12a6f8292cba3c1b49
 
+It has:
+- A start state
+- A set of states
+- A set of accepting states
+- A set of transitions from (state, character) -> something
+
 ### What is an nondeterministic finite automaton?
+It is a finite automaton in which we have a choice of where to go next.
+
+The set of transitions is from (state, character) -> set of states.
 
 ### What is a deterministic finite automaton?
+It is a finite automaton in which we have only one possible next state.
+
+The set of transitions is from (state, character) -> state.
 
 ### What is the difference between deterministic and nondeterministic?
 
