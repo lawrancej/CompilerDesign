@@ -322,6 +322,14 @@ Give examples.
 
 ### What is Backus-Naur Form?
 
+A BNF specification is a set of derivation rules, written as
+
+ <symbol> ::= __expression__
+
+where <symbol> is a nonterminal, and the __expression__ consists of one or more sequences of symbols; more sequences are separated by the vertical bar, '|', indicating a choice, the whole being a possible substitution for the symbol on the left. Symbols that never appear on a left side are terminals. On the other hand, symbols that appear on a left side are non-terminals and are always enclosed between the pair <>.
+
+The '::=' means that the symbol on the left must be replaced with the expression on the right
+
 ### What is a pushdown automaton?
 A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
 It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
