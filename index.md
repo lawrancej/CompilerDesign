@@ -262,6 +262,8 @@ The set of transitions is from (state, character) -> state.
 
 ### What is the difference between deterministic and nondeterministic?
 
+Simple put the difference between a DFA and an NFA is that a DFA has no epilsons between the transitional states. The reasons that this makes a difference is that when we place an epsilon between our states it is not always possible to figure out the correct path to go without looking aheard in the current string we are parsing. This means that we are using something that is nondeterminsitic. Where as if we know the correct path to go at all times, it is determnistic.
+
 ### How to convert an NFA to a DFA?
 
 ### What is the derivative of a regular expression?
@@ -275,6 +277,26 @@ source program is read from left-to-right and grouped into tokens. Tokens are se
 of characters with a collective meaning. There are usually only a small number of tokens
 for a programming language: constants (integer, double, char, string, etc.), operators
 (arithmetic, relational, logical), punctuation, and reserved words.
+
+A lexical analyzer is a piece of software that takes in a string as input, from that string it generates tokens based off of pre-defined rules. This is done to help for the actual compilation proccess later, as well as error checking.
+
+Lets take a look at some basic code with some basic rules.
+int a = sum(7,3)
+
+We define the rules as.
+VARIABLE_TYPE = int | float | double | char
+ASSIGNMENT_OPERATOR = =
+OPEN_PARANTHESIS = (
+CLOSE_PARANTHESIS = )
+DIVIDER = ,
+NUMBER = all numbers
+NAME = any that remain
+
+Using these rules we can now figure out what everything in this piece of code is.
+
+VARIABLE_TYPE NAME ASSIGNMENT_OPERATOR NAME OPEN_PARENTHESIS NUMBER DIVIDER NUMBER CLOSE_PARANTHESIS
+
+We can pass that on to the next step of the compilation proccess and it will now know what each of those words/symbols means.
 
 Context-free languages
 ----------------------
@@ -379,6 +401,23 @@ A parser first tokenizes the source code depending on its syntax. It takes the s
 Abstract Syntax Trees
 ---------------------
 ### What is an abstract syntax tree?
+An abstract Syntax Tree is the data structure compilers/interpreters use in order to perform the actual code generation. It represents the hirearchy of the programmers code. An important note is that not all syntax of the code is displayed in the tree in the case of grouping paranthesis.
+
+Example
+int doSomething(int a)
+{
+	if(a > 10)
+		a = a % 10;
+	return a;
+}
+
+					[program]
+					/       \
+				  [if] 		[return]
+				  /			   \
+				[-]			   [a]
+				/ \
+			  [a] [10]
 
 ### What is the difference between an abstract syntax tree and a parse tree?
 
