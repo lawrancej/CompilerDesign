@@ -267,6 +267,8 @@ The set of transitions is from (state, character) -> state.
 ### What is the derivative of a regular expression?
 
 ### What is a scanner (lexical analyzer)?
+> TODO: Merge these two
+A scanner is a program in a parser that converts characters into tokens. This already has the information it needs about whatever characters that can be tokenized. This then matches any string that was put in to possible tokens and processes said information.
 
 Lexical analysis or scanning is the process where the stream of characters making up the
 source program is read from left-to-right and grouped into tokens. Tokens are sequences
