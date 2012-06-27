@@ -268,6 +268,12 @@ The set of transitions is from (state, character) -> state.
 
 ### What is a scanner (lexical analyzer)?
 
+Lexical analysis or scanning is the process where the stream of characters making up the
+source program is read from left-to-right and grouped into tokens. Tokens are sequences
+of characters with a collective meaning. There are usually only a small number of tokens
+for a programming language: constants (integer, double, char, string, etc.), operators
+(arithmetic, relational, logical), punctuation, and reserved words.
+
 Context-free languages
 ----------------------
 ### What is a context-free language?
@@ -328,6 +334,14 @@ Give examples.
 
 ### What is Backus-Naur Form?
 
+A BNF specification is a set of derivation rules, written as
+
+ <symbol> ::= __expression__
+
+where <symbol> is a nonterminal, and the __expression__ consists of one or more sequences of symbols; more sequences are separated by the vertical bar, '|', indicating a choice, the whole being a possible substitution for the symbol on the left. Symbols that never appear on a left side are terminals. On the other hand, symbols that appear on a left side are non-terminals and are always enclosed between the pair <>.
+
+The '::=' means that the symbol on the left must be replaced with the expression on the right
+
 ### What is a pushdown automaton?
 A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
 It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
@@ -371,6 +385,8 @@ Abstract Syntax Trees
 Semantics
 ---------
 ### What is semantics?
+
+Semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages. It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved. In such a case that the evaluation would be of syntactically illegal strings, the result would be non-computation. Semantics describes the processes a computer follows when executing a program in that specific language.
 
 ### What is static semantics?
 
@@ -487,3 +503,6 @@ The code generator is distinct from the [parser](#what-is-a-parser) and the [tra
 Interpretation
 --------------
 ### What is interpretation?
+
+Interpretation is when source code is executed directly, translated into some efficient intermediate representation (code) and immediately executed, or stored precompiled code made by a compiler is explicity executed (part of the interpreter system)
+
