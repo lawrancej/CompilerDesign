@@ -64,7 +64,11 @@ A nonterminal is anything in a grammar that can be replaced, and corresponds to 
 
 ### What is a Terminal?
 A terminal is a primitive unit in a grammar (a [symbol](background.md#what-is-a-symbol) or [token](#what-is-a-token)) that corresponds to the [leaf nodes](background.md#what-is-a-leaf-node) in a [parse tree](#what-is-a-parse-tree).
-
+Terminal Symbols/Tokens cannot be broken down.
+Example:
+1. s can become sg
+2. s can become gs
+G is terminal because no rule can change the s. S however is nonterminal because there are two rules that can modify the s in the lexical analysis portion.
 ### What is Chomsky's hierarchy?
 The Chomsky hierarchy, as the name implies, is a containment hierarchy of classes of [formal grammars](#what-is-a-grammar).
 The hierarchy consists of four levels:
