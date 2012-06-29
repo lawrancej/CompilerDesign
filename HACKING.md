@@ -2,7 +2,6 @@ Hacking CompilerDesign
 ======================
 ## Getting started
 1. Install the dependencies (Git, Pandoc, LaTeX, SVG diagramming software) for your platform.
-
     - [Windows](#what-to-install-on-windows)
     - [Linux](#what-to-install-on-linux)
     - [Mac](#what-to-install-on-mac)
