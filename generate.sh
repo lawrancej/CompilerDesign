@@ -8,7 +8,6 @@ if [ $# = 0 ]; then
 	echo "Where COMMAND is one of the following:"
 	echo "book      Builds CompilerDesign."
     echo "rebuild   Clean and rebuild CompilerDesign."
-#	echo "chapter   Builds a single chapter only."
 	echo "clean     Removes the existing generated files."
 #    echo "check     Generate spelling, diction, style report."
 	echo ""
@@ -21,7 +20,8 @@ else
 	fi
 	if [ $1 = "book" ] || [ $1 = "rebuild" ]; then
 		echo "Building CompilerDesign"
-        pandoc -S -o build/CompilerDesign.epub --toc textbook/*
+        pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub --toc textbook/*
         pandoc -S -o build/CompilerDesign.pdf  --toc textbook/*
+        pandoc -S -o build/CompilerDesign.html --toc textbook/*
     fi
 fi
