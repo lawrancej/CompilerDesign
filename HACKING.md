@@ -67,7 +67,7 @@ Version control is not a substitute for communication, so we use github's issue 
    * Pro tip: pair up and split the work on an issue with someone else. E.g., you write, they proofread.
    * [Follow the conventions.](CONVENTIONS.md)
 
- - [Open new issues.](https://github.com/lawrancej/CompilerKit/issues/new)
+ - [Open new issues.](https://github.com/lawrancej/CompilerDesign/issues/new)
    * [Examine the compiler course mapping outline for deficiencies](http://www.saylor.org/content/coursemapping/CourseMappingFormCS304.xls)
 
 ### Review contributions
