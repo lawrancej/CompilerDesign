@@ -220,7 +220,7 @@ Regular expressions consist of:
 
 #### Primitives:
 
-- $\emptySet$. The empty set. Reject everything.
+- $\emptyset$. The empty set. Reject everything.
 - $\epsilon$. The empty string. Match the empty string: ""
 - `c`. Character. Match a single character.
 
