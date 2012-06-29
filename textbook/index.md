@@ -18,7 +18,7 @@ Follow-up:
 - [Who developed the first compiler](#who-is-grace-hopper)?
 
 ### What is a language?
-A [set](background.md#what-is-a-set) of [strings](background.md#what-is-a-string).
+A [set](#what-is-a-set) of [strings](#what-is-a-string).
 Typically, a [formal grammar](#what-is-a-grammar) defines the language.
 
 Examples and counterexamples:
@@ -49,10 +49,10 @@ $LHS \to RHS$
 [Depending on the class of grammar](#what-is-chomskys-hierarchy), the left hand side and right hand side can be sequences of [terminals](#what-is-a-terminal) and [nonterminals](#what-is-a-nonterminal).
 
 ### What is a Nonterminal?
-A nonterminal is anything in a grammar that can be replaced, and corresponds to [parent nodes](background.md#what-is-a-parent-node) in a [parse tree](#what-is-a-parse-tree).
+A nonterminal is anything in a grammar that can be replaced, and corresponds to [parent nodes](#what-is-a-parent-node) in a [parse tree](#what-is-a-parse-tree).
 
 ### What is a Terminal?
-A terminal is a primitive unit in a grammar (a [symbol](background.md#what-is-a-symbol) or [token](#what-is-a-token)) that corresponds to the [leaf nodes](background.md#what-is-a-leaf-node) in a [parse tree](#what-is-a-parse-tree).
+A terminal is a primitive unit in a grammar (a [symbol](#what-is-a-symbol) or [token](#what-is-a-token)) that corresponds to the [leaf nodes](#what-is-a-leaf-node) in a [parse tree](#what-is-a-parse-tree).
 Terminal Symbols/Tokens cannot be broken down.
 Example:
 1. s can become sg
@@ -85,9 +85,9 @@ Why does more than one symbol on the left hand side make a language context free
 
 In order to explain this lets look at some grammar in which that occurs.
 
-A->h
-B->k
-AB->Asd
+$A\to h$
+$B\to k$
+$AB \to Asd$
 
 Now if we look at the language and we have AB, do we mean that we have A and B or do we mean that we have AB?
 This cannot be determined simply by just using the rules of the grammar. We would need other information. This means that the language is not context free.
@@ -135,7 +135,7 @@ Compilers consist of several distinct phases split among the front and back end.
 #### Front end
 The front end processes the source language and consists of these phases:
 
-- [Scanning (Lexical analysis)](#what-is-a-scanner). Split source code (a [string](background.md#what-is-a-string)) into a token sequence.
+- [Scanning (Lexical analysis)](#what-is-a-scanner). Split source code (a [string](#what-is-a-string)) into a token sequence.
 - [Parsing (Syntactic analysis)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 - [Type checking (Semantic analysis)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
 
@@ -241,17 +241,17 @@ It has:
 - A start state
 - A set of states
 - A set of accepting states
-- A set of transitions from (state, character) -> something
+- A set of transitions from (state, character) to something
 
 ### What is an nondeterministic finite automaton?
 It is a finite automaton in which we have a choice of where to go next.
 
-The set of transitions is from (state, character) -> set of states.
+The set of transitions is from (state, character) to set of states.
 
 ### What is a deterministic finite automaton?
 It is a finite automaton in which we have only one possible next state.
 
-The set of transitions is from (state, character) -> state.
+The set of transitions is from (state, character) to state.
 
 ### What is the difference between deterministic and nondeterministic?
 Deterministic finite automaton's (DFA's) are specific in regard to the input that they accept and the output yielded
@@ -318,8 +318,9 @@ are passed through it. Scanners use finite-state machines (FSM) to hold all poss
 so they may quickly process large amounts of data.
 
 #### Follow-up:
+Examples
+
 ### What is a token?
-=======
 
 Context-free languages
 ----------------------
@@ -359,7 +360,7 @@ $S \to \epsilon$
 
 [Formal regular expressions](#what-is-a-regular-expression) define [regular languages](#what-is-a-regular-language),
 and can be accepted by [deterministic and non-deterministic](#what-is-the-difference-between-deterministic-and-nondeterministic) [finite state machines](#what-is-a-finite-automaton).
-Regular languages also do not accept arbitrary nesting, like [recursion](background.md#what-is-recursion).
+Regular languages also do not accept arbitrary nesting, like [recursion](#what-is-recursion).
 [Context-free grammars](#what-is-a-context-free-grammar) define context-free languages, and can be accepted by [pushdown automata](#what-is-a-pushdown-automaton) 
 
 #### Example:
@@ -390,7 +391,7 @@ where <symbol> is a nonterminal, and the __expression__ consists of one or more 
 The '::=' means that the symbol on the left must be replaced with the expression on the right
 
 ### What is a pushdown automaton?
-A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
+A pushdown automaton (PDA) is a finite state machine with [stack](#what-is-a-stack) memory. 
 It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
 
 > TODO: It'd be nice to have a picture of a pushdown automaton, in a vector format such as SVG.
@@ -404,7 +405,7 @@ A parser:
 - Checks for [syntax errors](#what-is-a-syntax-error)
 - Constructs a [parse tree](#what-is-a-parse-tree) or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
-Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) [sequence](background.md#what-is-a-sequence) that the parser reads as input.
+Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) [sequence](#what-is-a-sequence) that the parser reads as input.
 However, scanner-less parsers work directly with source code as input.
 
 Parsers do not [produce assembly or object code](#what-is-code-generation).
@@ -563,32 +564,28 @@ Loop unrolling includes these optimizations:
 
 Original Code
 
-```C#
-for (int i = 0; i < 10; i++)
-{
-  if (i == 0)
-    Console.WriteLine("I'm the beginning");
-  else if (i % 2 == 0)
-    Console.Writeline("I'm even");
-  else
-    Console.Writeline("I'm odd");
-}
-```
+    for (int i = 0; i < 5; i++)
+    {
+        if (i == 0)
+            Console.WriteLine("I'm the beginning");
+        else if (i % 2 == 0)
+            Console.Writeline("I'm even");
+        else
+            Console.Writeline("I'm odd");
+    }
 
 Unrolled Loop
 
-```C#
-Console.Writeline("I'm the beginning"); //i = 0
-Console.Writeline("I'm odd"); //i = 1
-Console.Writeline("I'm even"); //i = 2
-Console.Writeline("I'm odd"); //i = 3
-Console.Writeline("I'm even"); //i = 4
-Console.Writeline("I'm odd"); //i = 5
-Console.Writeline("I'm even"); //i = 6
-Console.Writeline("I'm odd"); //i = 7
-Console.Writeline("I'm even"); //i = 8
-Console.Writeline("I'm odd"); //i = 9
-```
+    // i = 0
+    Console.Writeline("I'm the beginning");
+    // i = 1
+    Console.Writeline("I'm odd");
+    // i = 2
+    Console.Writeline("I'm even");
+    // i = 3
+    Console.Writeline("I'm odd");
+    // i = 4
+    Console.Writeline("I'm even");
 
 ### What is method inlining?
 
