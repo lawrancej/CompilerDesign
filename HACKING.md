@@ -8,12 +8,12 @@ Hacking CompilerDesign
 
 2. [Fork the project here.](https://github.com/lawrancej/CompilerDesign/fork)
 
-         git clone https://github.com/YourNameGoesHereButDontTypeThisInLiterally/CompilerKit.git
-         cd CompilerKit
+         git clone https://github.com/YourNameGoesHereButDontTypeThisInLiterally/CompilerDesign.git
+         cd CompilerDesign
 
 3. Add me as upstream, and add in your collaborators, too.
 
-         git remote add upstream https://github.com/lawrancej/CompilerKit.git
+         git remote add upstream https://github.com/lawrancej/CompilerDesign.git
          ./collaborators.sh setup
 
 4. Build CompilerDesign.
