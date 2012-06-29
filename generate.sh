@@ -22,6 +22,6 @@ else
 		echo "Building CompilerDesign"
         pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub --toc textbook/*
         pandoc -S -o build/CompilerDesign.pdf  --toc textbook/*
-        pandoc -S -o build/CompilerDesign.html --toc textbook/*
+        pandoc -s -o build/CompilerDesign.html --toc textbook/*
     fi
 fi
