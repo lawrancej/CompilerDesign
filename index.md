@@ -269,7 +269,7 @@ Simple put the difference between a DFA and an NFA is that a DFA has no epilsons
 ### What is the derivative of a regular expression?
 
 ### What is a scanner (lexical analyzer)?
-> TODO: Merge these two
+> TODO: Merge these definitions
 A scanner is a program in a parser that converts characters into tokens. This already has the information it needs about whatever characters that can be tokenized. This then matches any string that was put in to possible tokens and processes said information.
 
 Lexical analysis or scanning is the process where the stream of characters making up the
@@ -279,6 +279,8 @@ for a programming language: constants (integer, double, char, string, etc.), ope
 (arithmetic, relational, logical), punctuation, and reserved words.
 
 A lexical analyzer is a piece of software that takes in a string as input, from that string it generates tokens based off of pre-defined rules. This is done to help for the actual compilation proccess later, as well as error checking.
+
+#### Example
 
 Lets take a look at some basic code with some basic rules.
 int a = sum(7,3)
@@ -297,6 +299,19 @@ Using these rules we can now figure out what everything in this piece of code is
 VARIABLE_TYPE NAME ASSIGNMENT_OPERATOR NAME OPEN_PARENTHESIS NUMBER DIVIDER NUMBER CLOSE_PARANTHESIS
 
 We can pass that on to the next step of the compilation proccess and it will now know what each of those words/symbols means.
+
+Scanner, also know as Lexical analyzer or Lexer is a program which performs lexical analysis. It converts a sequence of characters into string of characters with a collective meaning following some rules. These rules contain identifier, assignment operator, number etc. The lexical analyzer takes a source program as input, and produces a stream of tokens as output.
+
+Source Program -----> Lexical Analyzer ---------> Token stream
+                           |
+                           |
+                           |
+                     Error Message
+
+> TODO: Let's use SVG instead of ASCII art.
+
+#### Follow-up:
+### What is a token?
 
 Context-free languages
 ----------------------
