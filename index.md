@@ -283,7 +283,7 @@ A converted NFA will have N^2 the number of states when converted where N is the
 ### What is the derivative of a regular expression?
 
 ### What is a scanner (lexical analyzer)?
-> TODO: Merge these definitions
+> TODO: Merge these definitions. Some of these definitions are misconceptions, which we should include to address why they're wrong.
 A scanner is a program in a parser that converts characters into tokens. This already has the information it needs about whatever characters that can be tokenized. This then matches any string that was put in to possible tokens and processes said information.
 
 Lexical analysis or scanning is the process where the stream of characters making up the
@@ -324,8 +324,13 @@ Source Program -----> Lexical Analyzer ---------> Token stream
 
 > TODO: Let's use SVG instead of ASCII art.
 
+A Scanner is used within lexical analysis to match token character strings that
+are passed through it. Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
+so they may quickly process large amounts of data.
+
 #### Follow-up:
 ### What is a token?
+=======
 
 Context-free languages
 ----------------------
