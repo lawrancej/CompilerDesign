@@ -261,10 +261,20 @@ It is a finite automaton in which we have only one possible next state.
 The set of transitions is from (state, character) -> state.
 
 ### What is the difference between deterministic and nondeterministic?
+Deterministic finite automaton's (DFA's) are specific in regard to the input that they accept and the output yielded
+by the automaton. The next state that the machine goes to is literally determined by the input string it is given.
+A nondeterministic finite automaton is not as particular, and depending on its state and input, could change into a several 
+possible new states.
 
 Simple put the difference between a DFA and an NFA is that a DFA has no epilsons between the transitional states. The reasons that this makes a difference is that when we place an epsilon between our states it is not always possible to figure out the correct path to go without looking aheard in the current string we are parsing. This means that we are using something that is nondeterminsitic. Where as if we know the correct path to go at all times, it is determnistic.
 
 ### How to convert an NFA to a DFA?
+Since both automaton's only accept regular languages as input, an NFA is able to be simplified and converted to a DFA. 
+The process is called a powerset (or subset) construction and it takes the possible states of the NFA and translates them
+into a map of states accessible to a DFA. This process is not without a cost, since deterministic finite automaton's are 
+much less complex than their nondeterministic counterparts there will always be a loss of potential states in conversion.
+All of the states of the NFA will still exist, but they will be unreachable from the origin once converted and thus obsoleted.
+A converted NFA will have N^2 the number of states when converted where N is the number of states that the NFA originally had.
 
 ### What is the derivative of a regular expression?
 
