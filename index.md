@@ -267,6 +267,7 @@ It is a finite automaton in which we have only one possible next state.
 The set of transitions is from (state, character) -> state.
 
 ### What is the difference between deterministic and nondeterministic?
+Deterministic and nondeterministic are very similar and there is no huge difference between them. The main difference is that nondeterministic essentially chooses on a whim which state to go to while deterministic does not do this at random.
 
 ### How to convert an NFA to a DFA?
 
@@ -274,6 +275,7 @@ The set of transitions is from (state, character) -> state.
 
 ### What is a scanner (lexical analyzer)?
 A scanner is a program in a parser that converts characters into tokens. This already has the information it needs about whatever characters that can be tokenized. This then matches any string that was put in to possible tokens and processes said information.
+
 Context-free languages
 ----------------------
 ### What is a context-free language?
