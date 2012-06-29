@@ -35,7 +35,7 @@ While passive teaching methods (i.e., lectures, reading, demonstrations) convey 
 ### Open Textbook Challenge
 [Open educational resources matter.](http://whyopenedmatters.org/)
 
-The Saylor Foundation is offering a [$20,000 bounty](http://www.saylor.org/otc/) for a compiler textbook that [meets their criteria](http://www.saylor.org/open-textbook-challenge-peer-review-criteria/) and [covers these topics](http://www.saylor.org/content/coursemapping/CourseMappingFormCS304.xls) (see CourseMappingFormCS304).
+The Saylor Foundation is offering a [$20,000 bounty](http://www.saylor.org/otc/) for a compiler textbook that [meets their criteria](http://www.saylor.org/open-textbook-challenge-peer-review-criteria/) and [covers these topics](http://www.saylor.org/content/coursemapping/CourseMappingFormCS304.xls) (see CourseMappingFormCS304.xls).
 That foundation has developed a [free compiler course](http://www.saylor.org/courses/cs304/), but a Creative Commons licensed textbook is not yet available.
 
 ## What problems does this solve?
