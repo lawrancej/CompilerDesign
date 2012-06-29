@@ -24,6 +24,7 @@ Definitions or descriptions are insufficient.
 Human-human communication can be more challenging than human-machine communication.
 Therefore, writing well is just as important as programming well.
 
+ - One sentence per line, please.
  - Keep sentences short. Don't repeat yourself.
  - Choose words wisely. Avoid weasel words or filler phrases. Examples: "the process of", "considered to be"
  - Work together. Ask others to review contributions. Does the writing make sense?
