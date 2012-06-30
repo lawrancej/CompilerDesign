@@ -27,7 +27,7 @@ else
         pandoc -S -o build/CompilerDesign.pdf  --toc textbook/*
         pandoc -s -o build/CompilerDesign.html --toc textbook/*
     fi
-    if [ $1 = "board" ]; then
+    if [ $1 = "total" ]; then
         # Adapted from: http://stackoverflow.com/questions/4589731/git-blame-statistics
 
         git ls-tree -r HEAD|sed -E -e 's/^.{53}//'|while read filename; do file "$filename"; done|grep -E ': .*text'|sed -E -e 's/: .*//'|while read filename; do git blame -w "$filename"; done|sed -E -e 's/.*\((.*)[0-9]{4}-[0-9]{2}-[0-9]{2} .*/\1/' -e 's/ +$//'|sort|uniq -c|sort -nr
