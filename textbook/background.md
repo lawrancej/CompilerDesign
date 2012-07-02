@@ -6,7 +6,6 @@ What should I know already to write a compiler?
 - [How to be a programmer](http://samizdat.mines.edu/howto/HowToBeAProgrammer.html)
 - [Discrete structures](#discrete-structures)
 - [Algorithms and data structures](#algorithms-and-data-structures)
-- [C](#c)
 - [Software Engineering](#software-engineering)
 
 Discrete structures
@@ -16,6 +15,7 @@ Writing a compiler requires familiarity with discrete structures.
 - What does [discrete](#what-does-discrete-mean) mean?
 - What is the difference between [sets](#what-is-a-set), [sequences](#what-is-a-sequence), and [bags](#what-is-a-bag)?
 - What is the difference between an [alphabet](#what-is-an-alphabet), a [string](#what-is-a-string), and a [character](#what-is-a-character)?
+- What is a [stack](#what-is-a-stack)?
 
 ### What does discrete mean?
 Discrete means:
@@ -40,6 +40,8 @@ Examples and counterexamples:
 - {apple,apple,pear} is not a set, because apple is not unique. It's a [bag](#what-is-a-bag).
 - The integers form an infinite set.
 - {1,2,3} is the same set as {3,1,2}, because order does not matter.
+
+### What is a stack?
 
 ### What is a bag?
 An unordered, possibly infinite, collection of objects.
@@ -87,9 +89,19 @@ Writing a compiler requires working with trees.
 - What is a tree?
 - What is the difference between an inorder, preorder, and postorder traversal?
 
-C
--
-The parser combinator library will be in C.
+### What is code?
+A [sequence](#what-is-a-sequence) of [instructions](#what-is-an-instruction).
+
+### What is an instruction?
+A basic operation that a machine can perform.
+
+Examples:
+
+- Arithmetic instructions (e.g., addition, subtraction, multiplication, division)
+- Logic and bitwise instructions (e.g., and, or, not, exclusive or, shift-left, shift-right)
+- Control instructions (e.g., goto, jump)
+- Relational instructions (e.g., equal, less than, greater than)
+- Data movement instructions (e.g., move)
 
 Software Engineering
 --------------------
