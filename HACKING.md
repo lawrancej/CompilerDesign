@@ -20,7 +20,7 @@ Hacking CompilerDesign
 
         ./generate.sh
 
-5. [Learn how to contribute.](#how-to-contribute)
+5. [Learn how to contribute.](#how-to-contribute) See the [git cheat sheet](git.md)
 
         git pull upstream master          # Get the latest and greatest.
         git checkout -b issueXYZ          # Work on an issue in a new topic branch, based off of the upstream master branch.
