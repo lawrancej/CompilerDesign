@@ -344,9 +344,23 @@ Give examples.
 
 ### What is an ambiguous grammar?
 
+A gramar is considered to be ambiguous if it provides more than one way to parse a string.
+
+If we take a look at the grammer below we can see why it would be considered ambigious.
+
+S -> A* | B*
+A -> b | bB
+B -> bb | bA
+
+Now if we look at the string "bb" without the ability to look ahead we could have either parsed this intially as AA or B. Since we could have gone down multiple paths without any look ahead, this is considered to be ambigous grammar.
+
 ### What is a LL(k) grammar?
 
+Grammar is said to be LL{k} if it it can be read from left to right and be non-ambigous when creating a left most derivation with only the ability to look k characters ahead.
+
 ### What is a LR(k) grammar?
+
+Grammar is said to be LL{k} if it it can be read from left to right and be non-ambigous when creating a right most derivation with only the ability to look k characters ahead.
 
 ### What is Backus-Naur Form?
 
