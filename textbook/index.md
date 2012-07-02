@@ -1,16 +1,5 @@
 Compiler Design
 ===============
-About this book
----------------
-This textbook is meant to be:
-
-- An [open educational resource](open-educational-resources.md). (<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a>)
-- Short in its definitions and explanations.
-- Long in its examples, follow-up questions, addressing misconceptions.
-- A [collaborative effort](https://github.com/lawrancej/CompilerDesign/issues).
-  1. [Pick a piece to own from the compiler course mapping outline](http://www.saylor.org/content/coursemapping/CourseMappingFormCS304.xls)
-  2. Since version control is not a substitute for communication, [open an issue and review existing issues](https://github.com/lawrancej/CompilerDesign/issues) before you proceed.
-  3. Ask and answer questions.
 
 Compilers
 ---------
@@ -29,7 +18,7 @@ Follow-up:
 - [Who developed the first compiler](#who-is-grace-hopper)?
 
 ### What is a language?
-A [set](background.md#what-is-a-set) of [strings](background.md#what-is-a-string).
+A [set](#what-is-a-set) of [strings](#what-is-a-string).
 Typically, a [formal grammar](#what-is-a-grammar) defines the language.
 
 Examples and counterexamples:
@@ -60,11 +49,15 @@ $LHS \to RHS$
 [Depending on the class of grammar](#what-is-chomskys-hierarchy), the left hand side and right hand side can be sequences of [terminals](#what-is-a-terminal) and [nonterminals](#what-is-a-nonterminal).
 
 ### What is a Nonterminal?
-A nonterminal is anything in a grammar that can be replaced, and corresponds to [parent nodes](background.md#what-is-a-parent-node) in a [parse tree](#what-is-a-parse-tree).
+A nonterminal is anything in a grammar that can be replaced, and corresponds to [parent nodes](#what-is-a-parent-node) in a [parse tree](#what-is-a-parse-tree).
 
 ### What is a Terminal?
-A terminal is a primitive unit in a grammar (a [symbol](background.md#what-is-a-symbol) or [token](#what-is-a-token)) that corresponds to the [leaf nodes](background.md#what-is-a-leaf-node) in a [parse tree](#what-is-a-parse-tree).
-
+A terminal is a primitive unit in a grammar (a [symbol](#what-is-a-symbol) or [token](#what-is-a-token)) that corresponds to the [leaf nodes](#what-is-a-leaf-node) in a [parse tree](#what-is-a-parse-tree).
+Terminal Symbols/Tokens cannot be broken down.
+Example:
+1. s can become sg
+2. s can become gs
+G is terminal because no rule can change the s. S however is nonterminal because there are two rules that can modify the s in the lexical analysis portion.
 ### What is Chomsky's hierarchy?
 The Chomsky hierarchy, as the name implies, is a containment hierarchy of classes of [formal grammars](#what-is-a-grammar).
 The hierarchy consists of four levels:
@@ -92,9 +85,9 @@ Why does more than one symbol on the left hand side make a language context free
 
 In order to explain this lets look at some grammar in which that occurs.
 
-A->h
-B->k
-AB->Asd
+$A\to h$
+$B\to k$
+$AB \to Asd$
 
 Now if we look at the language and we have AB, do we mean that we have A and B or do we mean that we have AB?
 This cannot be determined simply by just using the rules of the grammar. We would need other information. This means that the language is not context free.
@@ -142,7 +135,7 @@ Compilers consist of several distinct phases split among the front and back end.
 #### Front end
 The front end processes the source language and consists of these phases:
 
-- [Scanning (Lexical analysis)](#what-is-a-scanner). Split source code (a [string](background.md#what-is-a-string)) into a token sequence.
+- [Scanning (Lexical analysis)](#what-is-a-scanner). Split source code (a [string](#what-is-a-string)) into a token sequence.
 - [Parsing (Syntactic analysis)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 - [Type checking (Semantic analysis)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
 
@@ -227,7 +220,7 @@ Regular expressions consist of:
 
 #### Primitives:
 
-- $\emptySet$. The empty set. Reject everything.
+- $\emptyset$. The empty set. Reject everything.
 - $\epsilon$. The empty string. Match the empty string: ""
 - `c`. Character. Match a single character.
 
@@ -248,25 +241,86 @@ It has:
 - A start state
 - A set of states
 - A set of accepting states
-- A set of transitions from (state, character) -> something
+- A set of transitions from (state, character) to something
 
 ### What is an nondeterministic finite automaton?
 It is a finite automaton in which we have a choice of where to go next.
 
-The set of transitions is from (state, character) -> set of states.
+The set of transitions is from (state, character) to set of states.
 
 ### What is a deterministic finite automaton?
 It is a finite automaton in which we have only one possible next state.
 
-The set of transitions is from (state, character) -> state.
+The set of transitions is from (state, character) to state.
 
 ### What is the difference between deterministic and nondeterministic?
+Deterministic finite automaton's (DFA's) are specific in regard to the input that they accept and the output yielded
+by the automaton. The next state that the machine goes to is literally determined by the input string it is given.
+A nondeterministic finite automaton is not as particular, and depending on its state and input, could change into a several 
+possible new states.
+
+Simple put the difference between a DFA and an NFA is that a DFA has no epilsons between the transitional states. The reasons that this makes a difference is that when we place an epsilon between our states it is not always possible to figure out the correct path to go without looking aheard in the current string we are parsing. This means that we are using something that is nondeterminsitic. Where as if we know the correct path to go at all times, it is determnistic.
 
 ### How to convert an NFA to a DFA?
+Since both automaton's only accept regular languages as input, an NFA is able to be simplified and converted to a DFA. 
+The process is called a powerset (or subset) construction and it takes the possible states of the NFA and translates them
+into a map of states accessible to a DFA. This process is not without a cost, since deterministic finite automaton's are 
+much less complex than their nondeterministic counterparts there will always be a loss of potential states in conversion.
+All of the states of the NFA will still exist, but they will be unreachable from the origin once converted and thus obsoleted.
+A converted NFA will have N^2 the number of states when converted where N is the number of states that the NFA originally had.
 
 ### What is the derivative of a regular expression?
 
 ### What is a scanner (lexical analyzer)?
+> TODO: Merge these definitions. Some of these definitions are misconceptions, which we should include to address why they're wrong.
+A scanner is a program in a parser that converts characters into tokens. This already has the information it needs about whatever characters that can be tokenized. This then matches any string that was put in to possible tokens and processes said information.
+
+Lexical analysis or scanning is the process where the stream of characters making up the
+source program is read from left-to-right and grouped into tokens. Tokens are sequences
+of characters with a collective meaning. There are usually only a small number of tokens
+for a programming language: constants (integer, double, char, string, etc.), operators
+(arithmetic, relational, logical), punctuation, and reserved words.
+
+A lexical analyzer is a piece of software that takes in a string as input, from that string it generates tokens based off of pre-defined rules. This is done to help for the actual compilation proccess later, as well as error checking.
+
+#### Example
+
+Lets take a look at some basic code with some basic rules.
+int a = sum(7,3)
+
+We define the rules as.
+VARIABLE_TYPE = int | float | double | char
+ASSIGNMENT_OPERATOR = =
+OPEN_PARANTHESIS = (
+CLOSE_PARANTHESIS = )
+DIVIDER = ,
+NUMBER = all numbers
+NAME = any that remain
+
+Using these rules we can now figure out what everything in this piece of code is.
+
+VARIABLE_TYPE NAME ASSIGNMENT_OPERATOR NAME OPEN_PARENTHESIS NUMBER DIVIDER NUMBER CLOSE_PARANTHESIS
+
+We can pass that on to the next step of the compilation proccess and it will now know what each of those words/symbols means.
+
+Scanner, also know as Lexical analyzer or Lexer is a program which performs lexical analysis. It converts a sequence of characters into string of characters with a collective meaning following some rules. These rules contain identifier, assignment operator, number etc. The lexical analyzer takes a source program as input, and produces a stream of tokens as output.
+
+Source Program -----> Lexical Analyzer ---------> Token stream
+                           |
+                           |
+                           |
+                     Error Message
+
+> TODO: Let's use SVG instead of ASCII art.
+
+A Scanner is used within lexical analysis to match token character strings that
+are passed through it. Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
+so they may quickly process large amounts of data.
+
+#### Follow-up:
+Examples
+
+### What is a token?
 
 Context-free languages
 ----------------------
@@ -306,7 +360,7 @@ $S \to \epsilon$
 
 [Formal regular expressions](#what-is-a-regular-expression) define [regular languages](#what-is-a-regular-language),
 and can be accepted by [deterministic and non-deterministic](#what-is-the-difference-between-deterministic-and-nondeterministic) [finite state machines](#what-is-a-finite-automaton).
-Regular languages also do not accept arbitrary nesting, like [recursion](background.md#what-is-recursion).
+Regular languages also do not accept arbitrary nesting, like [recursion](#what-is-recursion).
 [Context-free grammars](#what-is-a-context-free-grammar) define context-free languages, and can be accepted by [pushdown automata](#what-is-a-pushdown-automaton) 
 
 #### Example:
@@ -328,8 +382,16 @@ Give examples.
 
 ### What is Backus-Naur Form?
 
+A BNF specification is a set of derivation rules, written as
+
+ <symbol> ::= __expression__
+
+where <symbol> is a nonterminal, and the __expression__ consists of one or more sequences of symbols; more sequences are separated by the vertical bar, '|', indicating a choice, the whole being a possible substitution for the symbol on the left. Symbols that never appear on a left side are terminals. On the other hand, symbols that appear on a left side are non-terminals and are always enclosed between the pair <>.
+
+The '::=' means that the symbol on the left must be replaced with the expression on the right
+
 ### What is a pushdown automaton?
-A pushdown automaton (PDA) is a finite state machine with [stack](background.md#what-is-a-stack) memory. 
+A pushdown automaton (PDA) is a finite state machine with [stack](#what-is-a-stack) memory. 
 It manipulates a stack by choosing an indexing variable within the stack, a current state, and a symbol at the top of the stack. 
 
 > TODO: It'd be nice to have a picture of a pushdown automaton, in a vector format such as SVG.
@@ -343,7 +405,7 @@ A parser:
 - Checks for [syntax errors](#what-is-a-syntax-error)
 - Constructs a [parse tree](#what-is-a-parse-tree) or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
-Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) [sequence](background.md#what-is-a-sequence) that the parser reads as input.
+Typically, a [scanner](#what-is-a-scanner) first [tokenizes](#what-is-tokenization) the source code into a [token](#what-is-a-token) [sequence](#what-is-a-sequence) that the parser reads as input.
 However, scanner-less parsers work directly with source code as input.
 
 Parsers do not [produce assembly or object code](#what-is-code-generation).
@@ -358,13 +420,74 @@ A parser first tokenizes the source code depending on its syntax. It takes the s
 
 ### What is a parse tree?
 
+A parse tree for a grammar G is a tree where
+
+    -the root is the start symbol for G
+
+    -the interior nodes are the nonterminals of G
+
+    -the leaf nodes are the terminal symbols of G.
+
+    -the children of a node T (from left to right) correspond to the symbols on the right hand side of some production for T in G. 
+
+Every terminal string generated by a grammar has a corresponding parse tree; every valid parse tree represents a string generated by the grammar (called the yield of the parse tree). 
+
 ### How do parsers work?
 
 Abstract Syntax Trees
 ---------------------
 ### What is an abstract syntax tree?
+An abstract Syntax Tree is the data structure compilers/interpreters use in order to perform the actual code generation. It represents the hirearchy of the programmers code. An important note is that not all syntax of the code is displayed in the tree in the case of grouping paranthesis.
+
+Example
+int doSomething(int a)
+{
+	if(a > 10)
+		a = a % 10;
+	return a;
+}
+
+					[program]
+					/       \
+				  [if] 		[return]
+				  /			   \
+				[-]			   [a]
+				/ \
+			  [a] [10]
+
+An [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) is simply a tree representation of the structure of source code. Each node of the tree represents a part of the code.
+
+The "abstract" part of the AST comes from the fact that the tree does not represent the syntax down to the character level. Tokens like parenthesis and brackets are not nodes on the tree, and are instead represented implicitly by the structure of the tree itself.
+
+If the code cannot be represented accurately as a tree, the parsed language is not [context-free](#what-is-a-context-free-language).
+
+An abstract syntax tree (AST) is a tree representation of the abstract syntactic structure of the code written in any language. 
+Also, it is the output of a parser. Every node is a structure of a particular type of node. 
+Each node is created by creating a function which will return a pointer to a structure that will signify that node. 
+Example: 
+=========
+struct Signature
+	{
+	struct AttributeList *attributes;
+	struct Identifier *name;
+	struct DeclarationList *arguments;
+	struct TerminationSet *responses;
+	};
+extern struct Signature *node_signature (
+	struct AttributeList *attributes,
+	struct Identifier *name,
+	struct DeclarationList *arguments,
+	struct TerminationSet *responses);
+	
+	The example above is from the following website: 
+	http://www.ansa.co.uk/ANSATech/95/Primary/155101.pdf
 
 ### What is the difference between an abstract syntax tree and a parse tree?
+
+Parse Tree: are the rules to match the input text where as a syntax tree record the structure of the input. 
+
+Syntax Tree: It will be less sensitivity from the "Parse tree" as it focuses more on the structure of the language not the grammar.
+
 
 ### What is the visitor design pattern?
 
@@ -441,32 +564,28 @@ Loop unrolling includes these optimizations:
 
 Original Code
 
-```C#
-for (int i = 0; i < 10; i++)
-{
-  if (i == 0)
-    Console.WriteLine("I'm the beginning");
-  else if (i % 2 == 0)
-    Console.Writeline("I'm even");
-  else
-    Console.Writeline("I'm odd");
-}
-```
+    for (int i = 0; i < 5; i++)
+    {
+        if (i == 0)
+            Console.WriteLine("I'm the beginning");
+        else if (i % 2 == 0)
+            Console.Writeline("I'm even");
+        else
+            Console.Writeline("I'm odd");
+    }
 
 Unrolled Loop
 
-```C#
-Console.Writeline("I'm the beginning"); //i = 0
-Console.Writeline("I'm odd"); //i = 1
-Console.Writeline("I'm even"); //i = 2
-Console.Writeline("I'm odd"); //i = 3
-Console.Writeline("I'm even"); //i = 4
-Console.Writeline("I'm odd"); //i = 5
-Console.Writeline("I'm even"); //i = 6
-Console.Writeline("I'm odd"); //i = 7
-Console.Writeline("I'm even"); //i = 8
-Console.Writeline("I'm odd"); //i = 9
-```
+    // i = 0
+    Console.Writeline("I'm the beginning");
+    // i = 1
+    Console.Writeline("I'm odd");
+    // i = 2
+    Console.Writeline("I'm even");
+    // i = 3
+    Console.Writeline("I'm odd");
+    // i = 4
+    Console.Writeline("I'm even");
 
 ### What is method inlining?
 
