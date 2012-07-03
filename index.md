@@ -361,13 +361,13 @@ int doSomething(int a)
 	return a;
 }
 
-					[program]
+					[doSomething]
 					/       \
-				  [if] 		[return]
-				  /			   \
-				[-]			   [a]
-				/ \
-			  [a] [10]
+				     [if]     [return]
+				     / | \	   \
+				   [a][>][10]     [a]
+				   / \
+				  [%][10]
 
 An [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) is simply a tree representation of the structure of source code. Each node of the tree represents a part of the code.
 
