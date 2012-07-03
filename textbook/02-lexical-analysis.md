@@ -132,6 +132,9 @@ A Scanner is used within lexical analysis to match token character strings that
 are passed through it. Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
 so they may quickly process large amounts of data.
 
+A program or function which can parse a sequence of characters into usable tokens.
+Sequences are typically delimited in some way using characters (i.e. [,],[|],[~])
+
 #### Follow-up:
 Examples
 
