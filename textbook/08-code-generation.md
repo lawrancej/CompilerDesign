@@ -1,5 +1,9 @@
+
+\pagebreak
+
 Code generation
----------------
+===============
+
 ### What is code generation?
 Code generation is the final [compiler phase](#what-are-the-phases-of-a-compiler).
 It produces code in the target language, which is typically a machine language (e.g., x86, arm), but may be assembly or even a high-level language.

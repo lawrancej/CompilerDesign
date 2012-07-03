@@ -1,5 +1,8 @@
-Regular languages
------------------
+
+\pagebreak
+
+Lexical Analysis
+================
 ### What is a regular language?
 [Regular expressions](#what-is-a-regular-expression) define the regular languages.
 [Regular grammars](#what-is-a-regular-grammar) and [finite automata](#what-is-a-finite-automaton) recognize regular languages.

@@ -1,5 +1,9 @@
+
+\pagebreak
+
 Optimization
-------------
+============
+
 ### What is optimization?
 Optimization is the penultimate [compiler phase](#what-are-the-phases-of-a-compiler).
 Optimizers improve code performance, size, and efficiency toward an optimum.

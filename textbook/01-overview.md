@@ -1,5 +1,8 @@
-Compilers
----------
+
+\pagebreak
+
+Compiler Design Introduction
+============================
 
 ### What is a compiler?
 A compiler translates from a source [language](#what-is-a-language) to a target language.

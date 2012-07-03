@@ -1,5 +1,9 @@
+
+\pagebreak
+
 Intermediate representations
-----------------------------
+============================
+
 ### What is an intermediate representation?
 An intermediate representation is a target language internal to the compiler (like machine code).
 A common intermediate representation simplifies the construction of compilers supporting multiple source and target languages.
