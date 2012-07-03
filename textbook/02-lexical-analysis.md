@@ -1,4 +1,4 @@
-
+﻿
 \pagebreak
 
 Lexical Analysis
@@ -14,7 +14,18 @@ Lexical Analysis
 - [What is a regular grammar](#what-is-a-regular-grammar)?
 
 ### How can you tell if a language is regular?
-> TODO: see Pumping lemma for regular languages
+To find if a language is regular, one must employ a *pumping lemma*:
+
+- All sufficiently long words in a regular language may be "pumped."
+	- A middle sectio nof the word can be repeated any number of times to produce a new word which also lies within the same language.
+	- i.e. abc, abbc, abbbc, etc.
+- In a regular language *L*, there exists an integer *p* depending only on said language that every string *w* of "pumping length" *p* can be written as *w = xyz* satisfying the following conditions:
+	1. |y| ≥ 1
+	2. |xy| ≤ *p*
+	3. for all *i* ≥ 0, xy^i^z ∈ *L*
+	- Where *y* is the substring that can be pumped.
+
+
 
 [If the language is finite, it is regular](#why-are-all-finite-languages-regular)?
 
@@ -138,6 +149,7 @@ A program or function which can parse a sequence of characters into usable token
 Sequences are typically delimited in some way using characters (i.e. [,],[|],[~])
 
 #### Follow-up:
-Examples
+> TODO: Add some examples
 
 ### What is a token?
+> TODO: What is a token?
