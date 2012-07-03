@@ -29,7 +29,6 @@ else
             inkscape -f $image -A ${image%.svg}.pdf
         done
 
-#        sed -E -e "s/images\//..\/images\//" textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc
         sed -E -e "s/images\//build\/images\//" textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
         sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
         pandoc -s -o build/CompilerDesign.html --toc textbook/*
