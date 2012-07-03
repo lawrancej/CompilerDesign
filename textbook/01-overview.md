@@ -1,8 +1,10 @@
 
 \pagebreak
 
-Compiler Design Introduction
-============================
+Introduction
+============
+
+## Overview
 
 ### What is a compiler?
 A compiler translates from a source [language](#what-is-a-language) to a target language.
@@ -16,6 +18,62 @@ Follow-up:
 
 - [How do compilers work](#what-are-the-phases-of-a-compiler)?
 - [Who developed the first compiler](#who-is-grace-hopper)?
+
+### What are the phases of a compiler?
+Compilers consist of several distinct phases split among the front and back end.
+
+#### Front end
+The front end processes the source language and consists of these phases:
+
+- [Scanning (Lexical analysis)](#what-is-a-scanner). Split source code (a [string](#what-is-a-string)) into a token sequence.
+- [Parsing (Syntactic analysis)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+- [Type checking (Semantic analysis)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
+
+#### Back end
+The back end generates the target language and consists of these phases:
+
+- [Translation](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-is-an-intermediate-representation).
+- [Analysis](#what-is-analysis). Collect information necessary for optimization. 
+- [Optimization](#what-is-optimization). Improve [intermediate representation](#what-is-an-intermediate-representation) code.
+- [Code generation](#what-is-code-generation). Produce machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+
+### What is an interpreter?
+An interpreter reads in souce code and executes immediately without producing an executable.
+
+#### Examples:
+
+- Debuggers
+- Scripting languages
+
+#### Follow-up:
+
+- [How do interpreters work](#how-do-interpreters-work)?
+- [Which is better, compilers or interpreters](#which-is-better-compilers-or-interpreters)?
+
+### How do interpreters work?
+Interpreters share many [phases of a compiler](#what-are-the-phases-of-a-compiler), but execute instead of [generating machine code](#what-is-code-generation).
+Interpreter implementations vary:
+
+- Trivial interpreters execute code while parsing (e.g., early versions of Lisp, Python, Perl, Basic)
+- Traditional interpreters omit the code generator, and execute the intermediate representation.
+- Complex interpreters execute precompiled code as part of a compiler-interpreter system.
+
+### Which is better, compilers or interpreters?
+It depends.
+
+Because an interpreter never produces an executable, interpreted code is always up to date.
+However, an interpreter must process source code every time it executes, thus it can be slower than compiled machine code.
+
+### The C compiler is written in C. How can that be?
+With the exception of the first C compiler, it is possible to write a C compiler in C and then compile it using another existing C compiler.
+Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
+
+### What is bootstrapping and how does it work?
+Bootstrapping is a series of steps that slowly builds up a self-hosting compiler.
+
+> TODO: expand this so to answer how it works.
+
+## Theory of computation
 
 ### What is a language?
 A [set](#what-is-a-set) of [strings](#what-is-a-string).
@@ -58,6 +116,7 @@ Example:
 1. s can become sg
 2. s can become gs
 G is terminal because no rule can change the s. S however is nonterminal because there are two rules that can modify the s in the lexical analysis portion.
+
 ### What is Chomsky's hierarchy?
 The Chomsky hierarchy, as the name implies, is a containment hierarchy of classes of [formal grammars](#what-is-a-grammar).
 The hierarchy consists of four levels:
@@ -93,59 +152,7 @@ Now if we look at the language and we have AB, do we mean that we have A and B o
 This cannot be determined simply by just using the rules of the grammar. We would need other information. This means that the language is not context free.
 
 
-### What is an interpreter?
-An interpreter reads in souce code and executes immediately without producing an executable.
-
-#### Examples:
-
-- Debuggers
-- Scripting languages
-
-#### Follow-up:
-
-- [How do interpreters work](#how-do-interpreters-work)?
-- [Which is better, compilers or interpreters](#which-is-better-compilers-or-interpreters)?
-
-### How do interpreters work?
-Interpreters share many [phases of a compiler](#what-are-the-phases-of-a-compiler), but execute instead of [generating machine code](#what-is-code-generation).
-Interpreter implementations vary:
-
-- Trivial interpreters execute code while parsing (e.g., early versions of Lisp, Python, Perl, Basic)
-- Traditional interpreters omit the code generator, and execute the intermediate representation.
-- Complex interpreters execute precompiled code as part of a compiler-interpreter system.
-
-### Which is better, compilers or interpreters?
-It depends.
-
-Because an interpreter never produces an executable, interpreted code is always up to date.
-However, an interpreter must process source code every time it executes, thus it can be slower than compiled machine code.
-
-### The C compiler is written in C. How can that be?
-With the exception of the first C compiler, it is possible to write a C compiler in C and then compile it using another existing C compiler.
-Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
-
-### What is bootstrapping and how does it work?
-Bootstrapping is a series of steps that slowly builds up a self-hosting compiler.
-
-> TODO: expand this so to answer how it works.
-
-### What are the phases of a compiler?
-Compilers consist of several distinct phases split among the front and back end.
-
-#### Front end
-The front end processes the source language and consists of these phases:
-
-- [Scanning (Lexical analysis)](#what-is-a-scanner). Split source code (a [string](#what-is-a-string)) into a token sequence.
-- [Parsing (Syntactic analysis)](#what-is-a-parser). Check if token sequence conforms to language grammar and construct the [parse tree](#what-is-a-parse-tree) or [abstract syntax tree](#what-is-an-abstract-syntax-tree).
-- [Type checking (Semantic analysis)](#what-is-a-type-checker). Check if the program is [semantically valid](#what-is-semantics).
-
-#### Back end
-The back end generates the target language and consists of these phases:
-
-- [Translation](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-is-an-intermediate-representation).
-- [Analysis](#what-is-analysis). Collect information necessary for optimization. 
-- [Optimization](#what-is-optimization). Improve [intermediate representation](#what-is-an-intermediate-representation) code.
-- [Code generation](#what-is-code-generation). Produce machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+## History of compilers
 
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
