@@ -414,6 +414,20 @@ Follow ups:
 - [How do parsers work](#how-do-parsers-work)?
 
 ### What is a syntax error?
+
+	Syntax of the language is the rule that determines what is allowed in the language. It specifies how the program can be written using statements, loops and functions etc. This rule also applies to how different types of such loops, statements and functions are constructed. Basically, syntax of a programming language is a vocabulary of that language. A syntatically correct program can be sucessfully compiled and interpreted to a machine language. A syntatically incorrect program cannot be compiled and they are supposed to have syntax errors. Syntax errors are errors in the structure of the language. When writing a program, if syntax of the language is not followed, the program will have syntax error.
+	
+	For e.g, in java programming language, semicolon(;) is required at the end of every statement. If semicolon is not typed after every statement in java, you will get a syntax error while trying to compile your program. Let's see this in the real statement in java.
+	Let's say, a programmer wants to display "Hello World!" in his monitor using java programming language.
+
+	System.out.println("Hello Word!");
+
+	This statement displays "Hello Word!" in the monitor without quotations when executed even though programmer meant to type "Hello World!". This is syntatically correct statement and will compile without any error.
+
+	System.out.println("Hello World!")
+
+	In the second example, the program will get syntax error even though "Hello World!" is typed correctly. As we can see, the programmer forgot to type semicolon at the end of the statement. In java, semicolon at the end of the statement is part of its syntax. Hence, a program that doesn't follow the syntax of the language will get a compilation error as the program contains syntax error/s. So, A programmer has to have a detail knowledge of the syntax of the language to be expert in that programming language.	
+ 
 > TODO: this section needs fixing. state what a syntax error is.
 
 A parser first tokenizes the source code depending on its syntax. It takes the structure of the code and uses said tokens to convert it to object code. After evaluation it will convert it to ASM code if there are no syntax errors.
