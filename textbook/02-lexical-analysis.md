@@ -76,6 +76,8 @@ possible new states.
 
 Simple put the difference between a DFA and an NFA is that a DFA has no epilsons between the transitional states. The reasons that this makes a difference is that when we place an epsilon between our states it is not always possible to figure out the correct path to go without looking aheard in the current string we are parsing. This means that we are using something that is nondeterminsitic. Where as if we know the correct path to go at all times, it is determnistic.
 
+Deterministic and nondeterministic are very similar and there is no huge difference between them. The main difference is that nondeterministic essentially chooses on a whim which state to go to while deterministic does not do this at random.
+
 ### How to convert an NFA to a DFA?
 Since both automaton's only accept regular languages as input, an NFA is able to be simplified and converted to a DFA. 
 The process is called a powerset (or subset) construction and it takes the possible states of the NFA and translates them
