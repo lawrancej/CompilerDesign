@@ -1,7 +1,7 @@
 Hacking CompilerDesign
 ======================
 ## Getting started
-1. Install the dependencies (Git, Pandoc, LaTeX, SVG diagramming software) for your platform.
+1. Install the dependencies (Git, Pandoc, LaTeX, Inkscape) for your platform.
     - [Windows](#what-to-install-on-windows)
     - [Linux](#what-to-install-on-linux)
     - [Mac](#what-to-install-on-mac)
@@ -36,18 +36,22 @@ Therefore, verify everything is working first before generating the textbook.
  - [Git (version control).](http://git-scm.com/downloads)
  - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
  - [MiKTeX](http://miktex.org/2.9/setup)
+ - [Inkscape](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1.exe)
  - Visio
 
+Additionally, you must add `C:\Program Files\Inkscape\` to your system PATH.
+The `generate.sh` build script uses inkscape to convert svg source into pdf.
+
 ## What to install on Linux
-In the terminal, paste this in for your distribution. Generate SVG diagrams with Dia or LibreOffice draw
+In the terminal, paste this in for your distribution. Generate SVG diagrams with Inkscape, Dia or LibreOffice draw
 
 ### Red Hat:
 
-    sudo yum install git pandoc texlive texlive-latex dia libreoffice
+    sudo yum install git pandoc texlive texlive-latex inkscape dia libreoffice
 
 ### Debian, Ubuntu:
 
-    sudo apt-get install git pandoc texlive-latex-recommended dia libreoffice-draw
+    sudo apt-get install git pandoc texlive-latex-recommended inkscape dia libreoffice-draw
 
 ## What to install on Mac
 You will need to download and install everything manually.
@@ -55,7 +59,11 @@ You will need to download and install everything manually.
  - [Git (version control)](http://git-scm.com/downloads)
  - [Pandoc](http://johnmacfarlane.net/pandoc/installing.html)
  - [MacTeX](http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip) (1GB download)
+ - [Inkscape](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1-SNOWLEOPARD.dmg)
  - [LibreOffice Draw](http://www.libreoffice.org/download/)
+
+The `generate.sh` build script uses inkscape to convert svg source into pdf.
+You must be able to type `inkscape` at the Terminal to launch inkscape.
 
 ## How to contribute.
 The Saylor Foundation has compiled a [free compiler course](http://www.saylor.org/courses/cs304/), but a Creative Commons licensed textbook is not yet available.
