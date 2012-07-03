@@ -77,6 +77,7 @@ Unrolled Loop
     Console.Writeline("I'm even");
 
 ### What is method inlining?
+Compiler optimization that replaces a function call with the body of the caller(i'm not very sure what this part means). This optimization may improve time and space usage when ran, but might make the program bigger.
 
 ### What is dead code?
 Dead code is any code whose result is never used, and therefore a waste of resources.
