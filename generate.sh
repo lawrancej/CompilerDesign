@@ -23,16 +23,27 @@ else
     fi
     if [ $1 = "book" ] || [ $1 = "rebuild" ]; then
         echo "Building CompilerDesign"
-        pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub --toc textbook/*
-        pandoc -S -o build/CompilerDesign.pdf  --toc textbook/*
+        cp -R images build
+        # Convert SVG to PDF for PDF output
+        for image in `ls build/images/*.svg`; do
+            inkscape -f $image -A ${image%.svg}.pdf
+        done
+
+#        sed -E -e "s/images\//..\/images\//" textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc
+        sed -E -e "s/images\//build\/images\//" textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
+        sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
         pandoc -s -o build/CompilerDesign.html --toc textbook/*
     fi
     if [ $1 = "total" ]; then
         # Adapted from: http://stackoverflow.com/questions/4589731/git-blame-statistics
 
+        echo "Non-whitespace lines by author."
+        echo ""
         git ls-tree -r HEAD|sed -E -e 's/^.{53}//'|while read filename; do git blame -w "$filename"; done|sed -E -e 's/.*\((.*)[0-9]{4}-[0-9]{2}-[0-9]{2} .*/\1/' -e 's/ +$//'|sort|uniq -c|sort -nr
     fi
     if [ $1 = "lastweek" ]; then
+        echo "Last week's commits."
+        echo ""
         git shortlog --no-merges -s -n --since="(7days)"
     fi
     if [ $1 = "mergestats" ]; then
