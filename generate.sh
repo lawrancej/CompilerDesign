@@ -38,11 +38,21 @@ else
     elif [ $1 = "html" ]; then
         pandoc -s -o build/CompilerDesign.html --toc textbook/*
     elif [ $1 = "total" ]; then
-        # Adapted from: http://stackoverflow.com/questions/4589731/git-blame-statistics
-
-        echo "Non-whitespace lines by author."
+        echo "Non-whitespace lines added and removed by author."
         echo ""
-        git ls-tree -r HEAD|sed -E -e 's/^.{53}//'|while read filename; do git blame -w "$filename"; done|sed -E -e 's/.*\((.*)[0-9]{4}-[0-9]{2}-[0-9]{2} .*/\1/' -e 's/ +$//'|sort|uniq -c|sort -nr
+        SAVEIFS=$IFS
+        IFS=$(echo -en "\n\b")
+        authors=( $(git log --format="%aN" | sort -u ) )
+        for author in "${authors[@]}"; do
+            sum=0
+            LINES=`git log --author="$author" --no-merges --oneline --numstat --pretty=format:""| cut -f1,2|tr '\t' '
+'| tr -d '-' | sed '/^$/d'`
+            for line in $LINES; do
+                sum=$(($sum+$line))
+            done
+            echo -e "$sum\t$author"
+        done | sort -nr
+        IFS=$SAVEIFS
     elif [ $1 = "lastweek" ]; then
         echo "Last week's commits."
         echo ""
