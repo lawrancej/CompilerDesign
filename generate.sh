@@ -12,6 +12,7 @@ if [ $# = 0 ]; then
     echo "clean       Removes the existing generated files."
 #    echo "check       Generate spelling, diction, style report."
     echo "total       Generate leader board by total line contributions."
+    echo "total       Generate leader board by total commits."
     echo "lastweek    Generate leader board by commits within last week."
     echo "mergestats  Generate leader board by merges within last week."
     echo ""
@@ -45,7 +46,7 @@ else
         authors=( $(git log --format="%aN" | sort -u ) )
         for author in "${authors[@]}"; do
             sum=0
-            LINES=`git log --author="$author" --no-merges -C --numstat --pretty=format:""| cut -f1,2|tr '\t' '
+            LINES=`git log --author="$author" --no-merges -C -C --numstat --pretty=format:""| cut -f1,2|tr '\t' '
 '| tr -d '-' | sed '/^$/d'`
             for line in $LINES; do
                 sum=$(($sum+$line))
@@ -53,6 +54,8 @@ else
             echo -e "$sum\t$author"
         done | sort -nr
         IFS=$SAVEIFS
+    elif [ $1 = "totalcommits" ]; then
+        git shortlog --no-merges -s -n
     elif [ $1 = "lastweek" ]; then
         echo "Last week's commits."
         echo ""
