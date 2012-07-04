@@ -45,7 +45,7 @@ else
         authors=( $(git log --format="%aN" | sort -u ) )
         for author in "${authors[@]}"; do
             sum=0
-            LINES=`git log --author="$author" --no-merges --oneline --numstat --pretty=format:""| cut -f1,2|tr '\t' '
+            LINES=`git log --author="$author" --no-merges -C --numstat --pretty=format:""| cut -f1,2|tr '\t' '
 '| tr -d '-' | sed '/^$/d'`
             for line in $LINES; do
                 sum=$(($sum+$line))
