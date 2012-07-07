@@ -3,7 +3,8 @@
 Preface
 =======
 
-> Tell me and I'll forget; show me and I may remember; involve me and I'll understand. --- Chinese proverb
+> Tell me and I'll forget; show me and I may remember; involve me and I'll understand.
+--- Chinese proverb
 
 This book aims to teach the concepts of compiler design Socratically through questions and follow-up.
 It keeps definitions and explanations brief, because these alone do not teach.

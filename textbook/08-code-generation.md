@@ -12,4 +12,5 @@ The code generator is distinct from the [parser](#what-is-a-parser) and the [tra
 
 > TODO: Produces Machine Executable code
 > TODO: Input Parse Tree
-> TODO: Output machine code. maybe show examples here
+> TODO: Output machine code.
+maybe show examples here
