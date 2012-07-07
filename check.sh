@@ -69,7 +69,8 @@ grep -E -r -n -i "\\b(am|are|were|being|is|been|was|be)\
     echo "Passive voice: $line"
 done
 
-# Weasel word check, adapted from the same source
+# Weasel word check, adapted from the same source.
+# These words make prose worse.
 weasels="many|various|very|fairly|several|extremely\
 |exceedingly|quite|remarkably|few|surprisingly\
 |mostly|largely|huge|tiny|((are|is) a number)\
@@ -78,6 +79,16 @@ weasels="many|various|very|fairly|several|extremely\
   
 egrep -E -r -n -i "\\b($weasels)\\b" textbook | while read line; do
     echo "Weasel word: $line"
+done
+
+# Duplicate word check. Sentences should not repeat themselves.
+for file in `ls textbook/*`; do
+    cat -n "$file" | while read line; do
+        dupe=`echo "$line" | tr -s " ,.\!?" "\n" | sort -f | uniq -d | grep -E -v "a|as|an|the|is|in|it|was|were|to|from|of"`
+        if [ "$dupe" ]; then
+            echo "Duplicate words: $file: $line"
+        fi
+    done
 done
 
 # Warn about poor phrasing
