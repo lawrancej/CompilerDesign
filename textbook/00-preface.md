@@ -12,15 +12,14 @@ Instead, the book primarily focuses on showing examples, counterexamples, and id
 Examples and counterexamples illustrate terms so you may remember.
 Understanding material involves clearing misconceptions, which is why the book identifies them.
 
-This book a response to the Saylor Foundation's bounty for open textbooks.
-It is licensed under the [Creative Commons Attribution 3.0 Unported License.](http://creativecommons.org/licenses/by/3.0/)
+This book is a response to the Saylor Foundation's bounty for open textbooks.
+It is under the [Creative Commons Attribution 3.0 Unported License.](http://creativecommons.org/licenses/by/3.0/)
 Therefore, anyone may read, alter and improve upon this without charge.
 
-This book is dedicated to students everywhere who learn for the sake of learning.
 Undergraduate students wrote this book in a compiler design class.
 Without their contributions, this book would not be possible.
-
-On behalf of my coauthors, I hope you find this book useful, and would love [feedback](https://github.com/lawrancej/CompilerDesign) for improvements.
+On behalf of my coauthors, I dedicate this book to students everywhere who learn for the sake of learning.
+I hope you find this book useful, and would love [feedback](https://github.com/lawrancej/CompilerDesign) for improvements.
 
 [Joey Lawrance](mailto:joey.lawrance@gmail.com) (Editor), July 2012
 

@@ -65,7 +65,7 @@ It depends.
 Because an interpreter never produces an executable, interpreted code is always up to date.
 However, an interpreter must process source code every time it executes, thus it can be slower than compiled machine code.
 
-### The C compiler is written in C, how can that be?
+### The C compiler is in C; how can that be?
 With the exception of the first C compiler, it is possible to write a C compiler in C and then compile it using another existing C compiler.
 Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
 
