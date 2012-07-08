@@ -25,7 +25,7 @@ else
         exit
     elif [ $1 = "check" ]; then
         echo "Checking writing quality."
-        ./check.sh
+        ./check.sh all
         exit
     fi
     if [ $1 = "pdf" ] || [ $1 = "epub" ] || [ $1 = "html" ]; then
