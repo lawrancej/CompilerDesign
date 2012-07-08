@@ -47,11 +47,11 @@ In the terminal, paste this in for your distribution. Generate SVG diagrams with
 
 ### Red Hat:
 
-    sudo yum install git pandoc texlive texlive-latex inkscape dia libreoffice
+    sudo yum install git pandoc texlive texlive-latex inkscape dia libreoffice diction
 
 ### Debian, Ubuntu:
 
-    sudo apt-get install git pandoc texlive-latex-recommended inkscape dia libreoffice-draw
+    sudo apt-get install git pandoc texlive-latex-recommended inkscape dia libreoffice-draw diction
 
 ## What to install on Mac
 You will need to download and install everything manually.
@@ -61,6 +61,7 @@ You will need to download and install everything manually.
  - [MacTeX](http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip) (1GB download)
  - [Inkscape](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1-SNOWLEOPARD.dmg)
  - [LibreOffice Draw](http://www.libreoffice.org/download/)
+ - [Diction](http://www.moria.de/~michael/diction/)
 
 The `generate.sh` build script uses inkscape to convert svg source into pdf.
 You must be able to type `inkscape` at the Terminal to launch inkscape.
