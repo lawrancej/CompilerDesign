@@ -16,9 +16,10 @@ Hacking CompilerDesign
          git remote add upstream https://github.com/lawrancej/CompilerDesign.git
          ./collaborators.sh setup
 
-4. Build CompilerDesign.
+4. Build CompilerDesign, and check your section.
 
-        ./generate.sh
+        ./generate.sh pdf
+        ./check.sh all
 
 5. [Learn how to contribute.](#how-to-contribute) See the [git cheat sheet](git.md)
 
