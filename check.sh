@@ -101,22 +101,22 @@ elif [ $1 = "hyperlink" ]; then
     echo
     echo "Hyperlinks that appear only once."
     echo
-    grep -E -e "href=|id=" build/CompilerDesign.html | grep -v "TOC" | sed -E -e "s/.*(id|href)=\"[#]?([^\"]+)\".*/\2/" | sort | uniq -u
-
+    grep -E -e "href=|id=" build/CompilerDesign.html | grep -v "TOC" | sed -E -e "s/.*(id|href)=\"[#]?([^\"]+)\".*/\2/" | sort | uniq -u | grep -E -v -e "http|mailto"
+    echo
 # Passive voice check, adapted from:
 # http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 elif [ $1 = "passive" ]; then
     grep -E -r -n -i "\\b(am|are|were|being|is|been|was|be)\\b[ ]*(\w+ed|($irregulars))\\b" textbook/$section* | while read line; do
         echo "Passive voice: $line"
     done
-
+    echo
 # Weasel word check, adapted from the same source.
 # These words make prose worse.
 elif [ $1 = "weasel" ]; then
     egrep -E -r -n -i "\\b($weasels)\\b" textbook/$section* | while read line; do
         echo "Weasel word: $line"
     done
-
+    echo
 # Count sentence length. Sentences longer than 20 words are too long.
 elif [ $1 = "long" ]; then
     for file in `ls textbook/$section*`; do
@@ -127,7 +127,7 @@ elif [ $1 = "long" ]; then
             fi
         done
     done
-
+    echo
 # Duplicate word check. Sentences should not repeat themselves.
 elif [ $1 = "dupe" ]; then
     for file in `ls textbook/$section*`; do
@@ -140,7 +140,7 @@ elif [ $1 = "dupe" ]; then
             fi
         done
     done
-
+    echo
 # Warn about poor phrasing. Requires diction. http://www.gnu.org/software/diction/
 elif [ $1 = "diction" ]; then
     diction -b -s textbook/$section*
