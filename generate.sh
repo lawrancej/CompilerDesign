@@ -10,7 +10,7 @@ if [ $# = 0 ]; then
     echo "epub          Builds CompilerDesign EPUB."
     echo "html          Builds CompilerDesign HTML."
     echo "clean         Removes the existing generated files."
-#    echo "check         Generate spelling, diction, style report."
+    echo "check         Generate spelling, diction, style report."
     echo "total         Generate leader board by total line contributions."
     echo "totalcommits  Generate leader board by total commits."
     echo "lastweek      Generate leader board by commits within last week."
@@ -22,6 +22,10 @@ else
     if [ $1 = "clean" ]; then
         echo "Clearing build folder."
         rm build/* -r
+        exit
+    elif [ $1 = "check" ]; then
+        echo "Checking writing quality."
+        ./check.sh
         exit
     fi
     if [ $1 = "pdf" ] || [ $1 = "epub" ] || [ $1 = "html" ]; then
