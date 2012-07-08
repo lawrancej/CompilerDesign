@@ -92,16 +92,18 @@ else
 fi
 
 # Check for problems
-# Hyperlink check
 if [ $# = 0 ]; then
     usage
     exit
+# Hyperlink check
 elif [ $1 = "hyperlink" ]; then
     ./generate.sh html
     echo
-    echo "Hyperlinks that appear only once."
-    echo
-    grep -E -e "href=|id=" build/CompilerDesign.html | grep -v "TOC" | sed -E -e "s/.*(id|href)=\"[#]?([^\"]+)\".*/\2/" | sort | uniq -u | grep -E -v -e "http|mailto"
+    grep -E -e "href=|id=" build/CompilerDesign.html | grep -v "TOC" | sed -E -e "s/.*(id|href)=\"[#]?([^\"]+)\".*/\2/" | sort | uniq -u | grep -E -v -e "http|mailto" | while read line; do
+        grep -E -n -H -e "$line" textbook/$section* | while read innerline; do
+            echo "Broken hyperlink: $innerline"
+        done
+    done
     echo
 # Passive voice check, adapted from:
 # http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
