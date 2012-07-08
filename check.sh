@@ -1,7 +1,7 @@
 #!/bin/bash
 
 usage() {
-    echo "$0 COMMAND"
+    echo "$0 COMMAND [section]"
     echo ""
     echo "Where COMMAND is one of:"
     echo ""
@@ -12,6 +12,12 @@ usage() {
     echo "diction    Show sentences with poor phrasing."
     echo "long       Show sentences that are too long."
     echo "all        Perform all checks."
+    echo
+    echo "Examples:"
+    echo
+    echo "$0 all         Check all issues in all sections"
+    echo "$0 all 04      Check all issues in section 04"
+    echo "$0 passive 00  Check for passive voice in section 00"
 }
 
 irregulars="awoken|\
@@ -79,6 +85,12 @@ for file in `ls textbook`; do
     rm textbook/$file.bak
 done
 
+if [ $# = 2 ]; then
+    section=$2
+else
+    section=""
+fi
+
 # Check for problems
 # Hyperlink check
 if [ $# = 0 ]; then
@@ -94,22 +106,20 @@ elif [ $1 = "hyperlink" ]; then
 # Passive voice check, adapted from:
 # http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 elif [ $1 = "passive" ]; then
-    grep -E -r -n -i "\\b(am|are|were|being|is|been|was|be)\\b[ ]*(\w+ed|($irregulars))\\b" textbook | while read line; do
+    grep -E -r -n -i "\\b(am|are|were|being|is|been|was|be)\\b[ ]*(\w+ed|($irregulars))\\b" textbook/$section* | while read line; do
         echo "Passive voice: $line"
     done
 
 # Weasel word check, adapted from the same source.
 # These words make prose worse.
 elif [ $1 = "weasel" ]; then
-    egrep -E -r -n -i "\\b($weasels)\\b" textbook | while read line; do
+    egrep -E -r -n -i "\\b($weasels)\\b" textbook/$section* | while read line; do
         echo "Weasel word: $line"
     done
 
-# It'd be good to ensure this can work only on the most recent changes, as well as the whole book.
-
 # Count sentence length. Sentences longer than 20 words are too long.
 elif [ $1 = "long" ]; then
-    for file in `ls textbook/*`; do
+    for file in `ls textbook/$section*`; do
         cat -n "$file" | tr -d "[:punct:]" | while read line; do
             length=`echo "$line" | wc -w`
             if [ $length -gt 20 ]; then
@@ -120,7 +130,7 @@ elif [ $1 = "long" ]; then
 
 # Duplicate word check. Sentences should not repeat themselves.
 elif [ $1 = "dupe" ]; then
-    for file in `ls textbook/*`; do
+    for file in `ls textbook/$section*`; do
         cat -n  "$file" | tr -d "[:punct:]" | sed -E -e "s/\\b(a|as|an|and|the|is|in|it|was|were|to|from|of)\\b//gI" | while read line; do
             dupe=`echo "$line" | tr " " "\n" | sort -f | uniq -d`
             if [ "$dupe" ]; then
@@ -133,14 +143,14 @@ elif [ $1 = "dupe" ]; then
 
 # Warn about poor phrasing. Requires diction. http://www.gnu.org/software/diction/
 elif [ $1 = "diction" ]; then
-    diction -b -s textbook/*
+    diction -b -s textbook/$section*
 elif [ $1 = "all" ]; then
-    $0 hyperlink
-    $0 passive
-    $0 weasel
-    $0 dupe
-    $0 diction
-    $0 long
+    $0 hyperlink "$section"
+    $0 passive "$section"
+    $0 weasel "$section"
+    $0 dupe "$section"
+    $0 long "$section"
+    $0 diction "$section"
 else
     usage
 fi
