@@ -8,8 +8,8 @@ Preface
 
 This book aims to teach the concepts of compiler design Socratically through questions and follow-up.
 It keeps definitions and explanations brief, because these alone do not teach.
-Instead, the book primarily focuses on showing examples, counterexamples, and identifying misconceptions.
-Examples and counterexamples illustrate terms so you may remember.
+Instead, it focuses on showing examples, counterexamples, and identifying misconceptions.
+Examples and counterexamples illustrate terms to improve retention.
 Understanding material involves clearing misconceptions, which is why the book identifies them.
 
 This book is a response to the Saylor Foundation's bounty for open textbooks.
