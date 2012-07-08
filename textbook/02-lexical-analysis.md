@@ -35,22 +35,30 @@ Regular expressions consist of:
 
 #### Primitives:
 
-- $\emptyset$. The empty set. Reject everything.
-- $\epsilon$. The empty string. Match the empty string: ""
-- `c`. Character. Match a single character.
+- $\emptyset$. The empty set.
+Reject everything.
+- $\epsilon$. The empty string.
+Match the empty string: ""
+- `c`. Character.
+Match a single character.
 
 #### Operations:
 
 If `a` and `b` are regular expressions, then the following are regular expressions:
 
-- `ab`. Catenation.  Match `a` followed by `b`.
-- `a|b`. Alternation. Match `a` or `b`.
-- `a*`. Kleene closure. Matches `a` zero or more times.
+- `ab`. Catenation.
+ Match `a` followed by `b`.
+- `a|b`. Alternation.
+Match `a` or `b`.
+- `a*`. Kleene closure.
+Matches `a` zero or more times.
 
 ### What is a finite automaton?
-A finite automaton, or finite state machine, can only be in a finite number of states in which it transititons between. 
+A finite automaton, or finite state machine, can only be in a finite number of states in which it transititons between.
+
 An example is that when an automaton sees a symbol for input.
-It then transititons to another state based on the next input symbol. 
+It then transititons to another state based on the next input symbol.
+
 
 It has:
 - A start state
@@ -70,18 +78,25 @@ The set of transitions is from (state, character) to state.
 
 ### What is the difference between deterministic and nondeterministic?
 Deterministic finite automaton's (DFA's) are specific in regard to the input that they accept and the output yielded
-by the automaton. The next state that the machine goes to is literally determined by the input string it is given.
+by the automaton.
+The next state that the machine goes to is literally determined by the input string it is given.
 A nondeterministic finite automaton is not as particular, and depending on its state and input, could change into a several 
 possible new states.
 
-Simple put the difference between a DFA and an NFA is that a DFA has no epilsons between the transitional states. The reasons that this makes a difference is that when we place an epsilon between our states it is not always possible to figure out the correct path to go without looking aheard in the current string we are parsing. This means that we are using something that is nondeterminsitic. Where as if we know the correct path to go at all times, it is determnistic.
+Simple put the difference between a DFA and an NFA is that a DFA has no epilsons between the transitional states.
+The reasons that this makes a difference is that when we place an epsilon between our states it is not always possible to figure out the correct path to go without looking aheard in the current string we are parsing.
+This means that we are using something that is nondeterminsitic.
+Where as if we know the correct path to go at all times, it is determnistic.
 
-Deterministic and nondeterministic are very similar and there is no huge difference between them. The main difference is that nondeterministic essentially chooses on a whim which state to go to while deterministic does not do this at random.
+Deterministic and nondeterministic are very similar and there is no huge difference between them.
+The main difference is that nondeterministic essentially chooses on a whim which state to go to while deterministic does not do this at random.
 
 ### How to convert an NFA to a DFA?
-Since both automaton's only accept regular languages as input, an NFA is able to be simplified and converted to a DFA. 
+Since both automaton's only accept regular languages as input, an NFA is able to be simplified and converted to a DFA.
+
 The process is called a powerset (or subset) construction and it takes the possible states of the NFA and translates them
-into a map of states accessible to a DFA. This process is not without a cost, since deterministic finite automaton's are 
+into a map of states accessible to a DFA.
+This process is not without a cost, since deterministic finite automaton's are 
 much less complex than their nondeterministic counterparts there will always be a loss of potential states in conversion.
 All of the states of the NFA will still exist, but they will be unreachable from the origin once converted and thus obsoleted.
 A converted NFA will have N^2 the number of states when converted where N is the number of states that the NFA originally had.
@@ -89,16 +104,22 @@ A converted NFA will have N^2 the number of states when converted where N is the
 ### What is the derivative of a regular expression?
 
 ### What is a scanner (lexical analyzer)?
-> TODO: Merge these definitions. Some of these definitions are misconceptions, which we should include to address why they're wrong.
-A scanner is a program in a parser that converts characters into tokens. This already has the information it needs about whatever characters that can be tokenized. This then matches any string that was put in to possible tokens and processes said information.
+> TODO: Merge these definitions.
+Some of these definitions are misconceptions, which we should include to address why they're wrong.
+A scanner is a program in a parser that converts characters into tokens.
+This already has the information it needs about whatever characters that can be tokenized.
+This then matches any string that was put in to possible tokens and processes said information.
 
 Lexical analysis or scanning is the process where the stream of characters making up the
-source program is read from left-to-right and grouped into tokens. Tokens are sequences
-of characters with a collective meaning. There are usually only a small number of tokens
+source program is read from left-to-right and grouped into tokens.
+Tokens are sequences
+of characters with a collective meaning.
+There are usually only a small number of tokens
 for a programming language: constants (integer, double, char, string, etc.), operators
 (arithmetic, relational, logical), punctuation, and reserved words.
 
-A lexical analyzer is a piece of software that takes in a string as input, from that string it generates tokens based off of pre-defined rules. This is done to help for the actual compilation proccess later, as well as error checking.
+A lexical analyzer is a piece of software that takes in a string as input, from that string it generates tokens based off of pre-defined rules.
+This is done to help for the actual compilation proccess later, as well as error checking.
 
 #### Example
 
@@ -120,7 +141,10 @@ VARIABLE_TYPE NAME ASSIGNMENT_OPERATOR NAME OPEN_PARENTHESIS NUMBER DIVIDER NUMB
 
 We can pass that on to the next step of the compilation proccess and it will now know what each of those words/symbols means.
 
-Scanner, also know as Lexical analyzer or Lexer is a program which performs lexical analysis. It converts a sequence of characters into string of characters with a collective meaning following some rules. These rules contain identifier, assignment operator, number etc. The lexical analyzer takes a source program as input, and produces a stream of tokens as output.
+Scanner, also know as Lexical analyzer or Lexer is a program which performs lexical analysis.
+It converts a sequence of characters into string of characters with a collective meaning following some rules.
+These rules contain identifier, assignment operator, number etc.
+The lexical analyzer takes a source program as input, and produces a stream of tokens as output.
 
 Source Program -----> Lexical Analyzer ---------> Token stream
                            |
@@ -131,11 +155,13 @@ Source Program -----> Lexical Analyzer ---------> Token stream
 > TODO: Let's use SVG instead of ASCII art.
 
 A Scanner is used within lexical analysis to match token character strings that
-are passed through it. Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
+are passed through it.
+Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
 so they may quickly process large amounts of data.
 
 A program or function which can parse a sequence of characters into usable tokens.
-Sequences are typically delimited in some way using characters (i.e. [,],[|],[~])
+Sequences are typically delimited in some way using characters (i.e.
+[,],[|],[~])
 
 #### Follow-up:
 Examples
