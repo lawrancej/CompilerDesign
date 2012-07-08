@@ -8,6 +8,9 @@ done
 
 # Check for problems
 
+# Hyperlink check
+
+
 # Passive voice check, adapted from:
 # http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 
@@ -81,20 +84,19 @@ egrep -E -r -n -i "\\b($weasels)\\b" textbook | while read line; do
     echo "Weasel word: $line"
 done
 
+# It'd be good to ensure this can work only on the most recent changes, as well as the whole book.
+
+# Count sentence length. Sentences longer than 20 words are too long.
+
 # Duplicate word check. Sentences should not repeat themselves.
 for file in `ls textbook/*`; do
-    cat -n "$file" | while read line; do
-        dupe=`echo "$line" | tr -s " ,.\!?" "\n" | sort -f | uniq -d | grep -E -v "a|as|an|the|is|in|it|was|were|to|from|of"`
+    cat -n  "$file" | tr -d "[:punct:]" | sed -E -e "s/\\b(a|as|an|and|the|is|in|it|was|were|to|from|of)\\b//gI" | while read line; do
+        dupe=`echo "$line" | tr " " "\n" | sort -f | uniq -d`
         if [ "$dupe" ]; then
             echo "Duplicate words: $file: $line"
         fi
     done
 done
 
-# Warn about poor phrasing
-# "^There is|^There are"
-
-# Poor phrase check
-#phrases=( "in order to" "is that" )
-#replacements=( "to" ":" )
-
+# Warn about poor phrasing. Requires diction. http://www.gnu.org/software/diction/
+diction -b -s textbook/*
