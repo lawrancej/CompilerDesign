@@ -37,7 +37,7 @@ else
     elif [ $1 = "epub" ]; then
         sed -E -e "s/images\//build\/images\//" title.txt textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
     elif [ $1 = "html" ]; then
-        pandoc -s -o build/CompilerDesign.html --toc textbook/*
+        pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/*
     elif [ $1 = "total" ]; then
         echo "Non-whitespace lines added and removed by author."
         echo ""
