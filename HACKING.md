@@ -39,6 +39,9 @@ Therefore, verify everything is working first before generating the textbook.
  - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
  - [MiKTeX](http://miktex.org/2.9/setup)
  - [Inkscape](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1.exe)
+ - [Diction.](http://gnuwin32.sourceforge.net/packages/diction.htm) Extract binaries and dependencies into the same folder, and add to the path.
+   - [Binaries](http://gnuwin32.sourceforge.net/downlinks/diction-bin-zip.php)
+   - [Dependencies](http://gnuwin32.sourceforge.net/downlinks/diction-dep-zip.php)
  - Visio
 
 Additionally, you must add `C:\Program Files\Inkscape\` to your system PATH.
