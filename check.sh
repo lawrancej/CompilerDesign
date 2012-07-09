@@ -142,6 +142,7 @@ elif [ $1 = "dupe" ]; then
 # Warn about poor phrasing. Requires diction. http://www.gnu.org/software/diction/
 elif [ $1 = "diction" ]; then
     diction -b -s textbook/$section*
+# Check for uncovered topics. To indicate coverage, copy the topic line to wherever the text covers the topic.
 elif [ $1 = "uncovered" ]; then
     cat textbook/$section* | grep -E -e "^[0-9]\.[0-9]" | sort | uniq -u | while read line; do
         echo "Topic without coverage: $line"
