@@ -18,14 +18,14 @@ This command checks whether topic lines appear only once in a file.
 TOPICS:
 
 1.1 Introduction
-1.1.1 Definition of a Compiler --
-1.1.2 History and Purpose --
-1.1.2.1 Grace Hopper --
+1.1.1 Definition of a Compiler
+1.1.2 History and Purpose
+1.1.2.1 Grace Hopper
 1.1.2.2 Purpose
 1.1.2.2.1 Translate Source Language to Target Language
 1.1.2.2.2 Object Code and Executables
 1.1.2.2.3 Platform Independent Compilers
-1.1.3 Comparison between Compiler and Interpreter --
+1.1.3 Comparison between Compiler and Interpreter
 1.1.4 Hardware Compilation
 1.2 Compiler Design
 1.2.1 One-Pass vs Multi-Pass
