@@ -26,6 +26,7 @@ Hacking CompilerDesign
         git pull upstream master          # Get the latest and greatest.
         git checkout -b issueXYZ          # Work on an issue in a new topic branch, based off of the upstream master branch.
         ... Hack away ...                 # Your text is free from content, style, grammar and spelling errors, right?
+        ./check.sh all 03                 # Let's see if everything's good in section 03. (Replace the number as necessary.)
         git commit -a -m "Fixed issueXYZ" # Great! Commit your changes.
         git push origin issueXYZ          # Push your changes to your repo. Send in a pull request.
         git checkout master               # Switch back to master. Rinse and repeat.
