@@ -42,13 +42,42 @@ Images come in several formats, of which only three we will use: SVG, JPG, PNG.
 The type of image determines which format is best.
 
 ### Diagrams
-Diagrams include line drawings, charts, and most figures. Use Scalable Vector Graphics format. DO NOT use: ASCII art, PNG or JPG formats.
+Diagrams include line drawings, charts, and most figures.
+Use Scalable Vector Graphics format for diagrams.
+DO NOT use: ASCII art, PNG or JPG formats.
+
+#### Software to use
+
+All of these support SVG.
+Feel free to save diagrams to your working directory, but only commit SVG, not vsd, dia, or odg.
+Add only SVG to version control.
+
+ - Visio
+ - Dia
+ - Inkscape
+ - LibreOffice Draw
+
+#### Sizing
+
+In general, save images using US units.
+Images should be 6 inches (15.24 cm) wide by 4 inches (10.16) tall.
+
+ - In Visio, hold down CTRL, click and drag on a page corner.
+Line up against the ruler.
+ - In LibreOffice Draw, go to `Format -> Page...`
+Ender the width and height.
+ - In Dia, go to `File -> Page Setup`
+For Paper Size, Select `EuroPostcard`.
+Select Landscape.
 
 ### Photographs
-Photographs include anything sourced from a digital camera. Use JPG for photographs. Do not use PNG.
+Photographs include anything sourced from a digital camera.
+Use JPG for photographs.
+DO NOT use PNG.
 
 ### Screenshots
-For screenshots, use PNG. DO NOT use JPG.
+For screenshots, use PNG.
+DO NOT use JPG.
 
 ## Videos
 For screencasts, use [screencasting software](http://en.wikipedia.org/wiki/Comparison_of_screencasting_software).
