@@ -37,7 +37,7 @@ else
         for image in `ls build/images/*.svg`; do
             inkscape -f $image -A ${image%.svg}.pdf
         done
-        sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
+        sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" title.txt textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
     elif [ $1 = "epub" ]; then
         sed -E -e "s/images\//build\/images\//" title.txt textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
     elif [ $1 = "html" ]; then
