@@ -69,20 +69,20 @@ Every node is a structure of a particular type of node.
 
 Each node is created by creating a function which will return a pointer to a structure that will signify that node.
 
-Example: 
-=========
-struct Signature
-	{
-	struct AttributeList *attributes;
-	struct Identifier *name;
-	struct DeclarationList *arguments;
-	struct TerminationSet *responses;
-	};
-extern struct Signature *node_signature (
-	struct AttributeList *attributes,
-	struct Identifier *name,
-	struct DeclarationList *arguments,
-	struct TerminationSet *responses);
+#### Example
+
+    struct Signature
+        {
+        struct AttributeList *attributes;
+        struct Identifier *name;
+        struct DeclarationList *arguments;
+        struct TerminationSet *responses;
+        };
+    extern struct Signature *node_signature (
+        struct AttributeList *attributes,
+        struct Identifier *name,
+        struct DeclarationList *arguments,
+        struct TerminationSet *responses);
 	
 	The example above is from the following website: 
 	http://www.ansa.co.uk/ANSATech/95/Primary/155101.pdf
@@ -95,4 +95,3 @@ Parse Tree: are the rules to match the input text where as a syntax tree record 
 Syntax Tree: It will be less sensitivity from the "Parse tree" as it focuses more on the structure of the language not the grammar.
 
 
-### What is the visitor design pattern?
