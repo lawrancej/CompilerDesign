@@ -58,10 +58,10 @@ Introduction
 
 ## Overview
 
+### What is a compiler?
 <!---
 1.1.1 Definition of a Compiler
 -->
-### What is a compiler?
 A compiler translates from a source [language](#what-is-a-language) to a target language.
 
 Examples:
@@ -93,7 +93,7 @@ The back end generates the target language and consists of these phases:
 - [Optimization](#what-is-optimization). Improve [intermediate representation](#what-is-an-intermediate-representation) code.
 - [Code generation](#what-is-code-generation). Produce machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
-## Compiler and interpreter comparison
+## Compiler and interpreters
 <!---
 1.1.3 Comparison between Compiler and Interpreter
 -->
