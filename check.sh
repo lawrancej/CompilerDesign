@@ -11,6 +11,7 @@ usage() {
     echo "dupe       Show sentences with duplicate words."
     echo "diction    Show sentences with poor phrasing."
     echo "long       Show sentences that are too long."
+    echo "uncovered  Show topics without coverage."
     echo "all        Perform all checks."
     echo
     echo "Examples:"
@@ -104,21 +105,18 @@ elif [ $1 = "hyperlink" ]; then
             echo "Broken hyperlink: $innerline"
         done
     done
-    echo
 # Passive voice check, adapted from:
 # http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 elif [ $1 = "passive" ]; then
     grep -E -r -n -i "\\b(am|are|were|being|is|been|was|be)\\b[ ]*(\w+ed|($irregulars))\\b" textbook/$section* | while read line; do
         echo "Passive voice: $line"
     done
-    echo
 # Weasel word check, adapted from the same source.
 # These words make prose worse.
 elif [ $1 = "weasel" ]; then
     egrep -E -r -n -i "\\b($weasels)\\b" textbook/$section* | while read line; do
         echo "Weasel word: $line"
     done
-    echo
 # Count sentence length. Sentences longer than 20 words are too long.
 elif [ $1 = "long" ]; then
     for file in `ls textbook/$section*`; do
@@ -129,7 +127,6 @@ elif [ $1 = "long" ]; then
             fi
         done
     done
-    echo
 # Duplicate word check. Sentences should not repeat themselves.
 elif [ $1 = "dupe" ]; then
     for file in `ls textbook/$section*`; do
@@ -142,16 +139,20 @@ elif [ $1 = "dupe" ]; then
             fi
         done
     done
-    echo
 # Warn about poor phrasing. Requires diction. http://www.gnu.org/software/diction/
 elif [ $1 = "diction" ]; then
     diction -b -s textbook/$section*
+elif [ $1 = "uncovered" ]; then
+    cat textbook/$section* | grep -E -e "^[0-9]\.[0-9]" | sort | uniq -u | while read line; do
+        echo "Topic without coverage: $line"
+    done
 elif [ $1 = "all" ]; then
     $0 hyperlink "$section"
     $0 passive "$section"
     $0 weasel "$section"
     $0 dupe "$section"
     $0 long "$section"
+    $0 uncovered "$section"
     $0 diction "$section"
 else
     usage

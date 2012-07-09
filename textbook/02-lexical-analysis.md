@@ -1,6 +1,47 @@
 
 \pagebreak
 
+<!---
+DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
+
+This section should cover these topics.
+It need not be in this order.
+
+Indicate coverage of topics by copying topic lines verbatim into a comment adjacent to the relevant text.
+Covered topics appear twice in a file: here and adjacent to the relevant text.
+Uncovered topics appear only once in a file (in this comment).
+
+This command checks whether topic lines appear only once in a file.
+
+    ./check.sh uncovered
+
+TOPICS:
+
+2.1 Grammars
+2.1.1 Defined in Language Specification
+2.1.2 Tokens and Lexemes
+2.1.2.1 Defined in Specification
+2.1.2.2 Described Set of Valid Character Sequences
+2.2 Components
+2.2.1 Tokens
+2.2.1.1 Structured Text
+2.2.1.2 Categorized
+2.2.1.3 Example
+2.2.1.3.1 int x = 3;
+2.2.1.3.2 Tokens
+2.2.1.3.2.1 int (variable type)
+2.2.1.3.2.2 x (variable)
+2.2.1.3.2.3 = (operator)
+2.2.1.3.2.4 3 (value)
+2.2.2 Tokenizer
+2.2.3 Scanner
+2.2.3.1 Finite State Machine
+2.2.3.2 Contains Information What Constitutes a Valid Token
+2.2.4 Evaluator
+2.2.4.1 Works with Lexemes
+2.2.4.2 Produces a Value
+-->
+
 Lexical Analysis
 ================
 ### What is a regular language?
