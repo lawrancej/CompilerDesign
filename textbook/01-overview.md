@@ -33,7 +33,8 @@ The front end processes the source language and consists of these phases:
 The back end generates the target language and consists of these phases:
 
 - [Translation](#what-is-a-translator). Convert an abstract syntax tree into an [intermediate representation](#what-is-an-intermediate-representation).
-- [Analysis](#what-is-analysis). Collect information necessary for optimization. 
+- [Analysis](#what-is-analysis). Collect information necessary for optimization.
+
 - [Optimization](#what-is-optimization). Improve [intermediate representation](#what-is-an-intermediate-representation) code.
 - [Code generation](#what-is-code-generation). Produce machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
 
@@ -64,7 +65,7 @@ It depends.
 Because an interpreter never produces an executable, interpreted code is always up to date.
 However, an interpreter must process source code every time it executes, thus it can be slower than compiled machine code.
 
-### The C compiler is written in C. How can that be?
+### The C compiler is in C; how can that be?
 With the exception of the first C compiler, it is possible to write a C compiler in C and then compile it using another existing C compiler.
 Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
 
@@ -115,7 +116,8 @@ Terminal Symbols/Tokens cannot be broken down.
 Example:
 1. s can become sg
 2. s can become gs
-G is terminal because no rule can change the s. S however is nonterminal because there are two rules that can modify the s in the lexical analysis portion.
+G is terminal because no rule can change the s.
+S however is nonterminal because there are two rules that can modify the s in the lexical analysis portion.
 
 ### What is Chomsky's hierarchy?
 The Chomsky hierarchy, as the name implies, is a containment hierarchy of classes of [formal grammars](#what-is-a-grammar).
@@ -149,7 +151,9 @@ $B\to k$
 $AB \to Asd$
 
 Now if we look at the language and we have AB, do we mean that we have A and B or do we mean that we have AB?
-This cannot be determined simply by just using the rules of the grammar. We would need other information. This means that the language is not context free.
+This cannot be determined simply by just using the rules of the grammar.
+We would need other information.
+This means that the language is not context free.
 
 
 ## History of compilers
