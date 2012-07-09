@@ -57,6 +57,10 @@ Add only SVG to version control.
  - Inkscape
  - LibreOffice Draw
 
+#### Style
+
+ - Use Arial 10pt for text.
+
 #### Sizing
 
 In general, save images using US units.
