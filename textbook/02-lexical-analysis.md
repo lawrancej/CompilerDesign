@@ -59,14 +59,13 @@ To find if a language is regular, one must employ a *pumping lemma*:
 
 - All sufficiently long words in a regular language may be "pumped."
 	- A middle section of the word can be repeated any number of times to produce a new word which also lies within the same language.
-	- i.e. abc, abbc, abbbc, etc.
+	- i.e.
+abc, abbc, abbbc, etc.
 - In a regular language $L$, there exists an integer $p$ depending only on said language that every string $w$ of "pumping length" $p$ can be written as $w = xyz$ satisfying the following conditions:
 	1. $|y| \ge 1$
 	2. $|xy| \le p$
 	3. for all $i \ge 0$, $xy^iz \in L$
 	- Where $y$ is the substring that can be pumped.
-
-
 
 [If the language is finite, it is regular](#why-are-all-finite-languages-regular)?
 

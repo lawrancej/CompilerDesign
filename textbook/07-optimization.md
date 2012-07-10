@@ -65,6 +65,20 @@ TOPICS:
 
 -->
 
+
+#### Host Architecture
+##### The Machine Doing the Compilation
+##### Factors
+###### CPU Speed
+	CPU speed is a major factor in compilation times.
+###### Pipelining
+###### Memory Capacity and Architecture
+	Mo' RAM Mo' Betta!
+##### Program Usage
+###### Release vs Debugging
+ In a debug build, the complete symbolic debug information is emitted for testing and debugging purposes. Code optimization is not a priority in debug releases. Release builds do not emit the symbolic debugging info, reducing the size of the final executable file. The speed of execution may vary between debug and release builds depending on the compiler.
+ 
+
 Optimization
 ============
 
