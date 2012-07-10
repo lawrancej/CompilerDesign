@@ -9,12 +9,13 @@ fi
 if [ $# = 0 ]; then
     echo "Build CompilerDesign."
     echo ""
-    echo "Usage:	$0 COMMAND [-v]"
+    echo "Usage:	$0 COMMAND [-v] [section]"
     echo ""
     echo "Where COMMAND is one of the following:"
     echo "pdf           Builds CompilerDesign PDF."
     echo "epub          Builds CompilerDesign EPUB."
     echo "html          Builds CompilerDesign HTML."
+    echo "guide         Builds PDF project documentation."
     echo "clean         Removes the existing generated files."
     echo "check         Generate topic coverage, hyperlink, diction, style report."
     echo "total         Generate leader board by total line contributions."
@@ -38,16 +39,34 @@ else
         echo "Building CompilerDesign"
         cp -R images build
     fi
-    if [ $1 = "pdf" ]; then
+    # Generate guide documentation
+    if [ $1 = "guide" ]; then
+        pandoc -S -o build/guide.pdf --toc README.md CONVENTIONS.md HACKING.md git.md
+    # Generate PDF of textbook
+    elif [ $1 = "pdf" ]; then
         # Convert SVG to PDF for PDF output
-        for image in `ls build/images/*.svg`; do
-            inkscape -f $image -A ${image%.svg}.pdf
-        done
-        sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" title.txt textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
+        # If java is installed, use Batik
+        installed=$(which java)
+        if [ -n "$installed" ]; then
+            java -jar dependencies/batik-1.7/batik-rasterizer.jar build/images/*.svg -m application/pdf
+        else
+            installed=$(which inkscape)
+            if [ -n "$installed" ]; then
+                for image in `ls build/images/*.svg`; do
+                    inkscape -f $image -A ${image%.svg}.pdf
+                done
+            else
+                echo "You must install Java (preferred) or Inkscape first to generate a PDF."
+                exit
+            fi
+        fi
+        sed -E -e "s/images\//build\/images\//; s/images\/(.*)\.svg/images\/\1.pdf/;" title.txt textbook/$section* | pandoc -S -o build/CompilerDesign.pdf  --toc
+    # Generate EPUB of textbook
     elif [ $1 = "epub" ]; then
-        sed -E -e "s/images\//build\/images\//" title.txt textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
+        sed -E -e "s/images\//build\/images\//" title.txt textbook/$section* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc
+    # Generate HTML of textbook
     elif [ $1 = "html" ]; then
-        pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/*
+        pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/$section*
     elif [ $1 = "total" ]; then
         echo "Non-whitespace lines added and removed by author."
         echo ""
