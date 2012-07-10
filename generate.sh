@@ -40,9 +40,21 @@ else
     fi
     if [ $1 = "pdf" ]; then
         # Convert SVG to PDF for PDF output
-        for image in `ls build/images/*.svg`; do
-            inkscape -f $image -A ${image%.svg}.pdf
-        done
+        # If java is installed, use Batik
+        installed=$(which java)
+        if [ -n "$installed" ]; then
+            java -jar dependencies/batik-1.7/batik-rasterizer.jar build/images/*.svg -m application/pdf
+        else
+            installed=$(which inkscape)
+            if [ -n "$installed" ]; then
+                for image in `ls build/images/*.svg`; do
+                    inkscape -f $image -A ${image%.svg}.pdf
+                done
+            else
+                echo "You must install Java (preferred) or Inkscape first to generate a PDF."
+                exit
+            fi
+        fi
         sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" title.txt textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
     elif [ $1 = "epub" ]; then
         sed -E -e "s/images\//build\/images\//" title.txt textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 

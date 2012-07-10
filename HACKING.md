@@ -37,15 +37,20 @@ Therefore, verify everything is working first before generating the textbook.
 
  - [Git (version control).](http://git-scm.com/downloads)
  - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
- - [MiKTeX](http://miktex.org/2.9/setup)
- - [Inkscape](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1.exe)
- - [Diction.](http://gnuwin32.sourceforge.net/packages/diction.htm) Extract binaries and dependencies into the same folder, and add to the path.
+Document converter: produces PDF, HTML, and EPUB.
+ - [MiKTeX.](http://miktex.org/2.9/setup)
+Produces PDF from LaTeX source.
+ - Java.
+The `generate.sh` build script uses Java and Batik (included) to convert svg into pdf if Java is installed.
+ - [Inkscape (optional).](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1.exe)
+The `generate.sh` build script uses inkscape to convert svg into pdf if Java is not installed and you added `C:\Program Files\Inkscape\` to your system PATH.
+ - [Diction.](http://gnuwin32.sourceforge.net/packages/diction.htm)
+Checks English usage.
+Extract binaries and dependencies into the same folder, and add to the path.
    - [Binaries](http://gnuwin32.sourceforge.net/downlinks/diction-bin-zip.php)
    - [Dependencies](http://gnuwin32.sourceforge.net/downlinks/diction-dep-zip.php)
- - Visio
-
-Additionally, you must add `C:\Program Files\Inkscape\` to your system PATH.
-The `generate.sh` build script uses inkscape to convert svg source into pdf.
+ - Visio.
+Draw SVG diagrams.
 
 ## What to install on Linux
 In the terminal, paste this in for your distribution. Generate SVG diagrams with Inkscape, Dia or LibreOffice draw
@@ -61,15 +66,19 @@ In the terminal, paste this in for your distribution. Generate SVG diagrams with
 ## What to install on Mac
 You will need to download and install everything manually.
 
- - [Git (version control)](http://git-scm.com/downloads)
- - [Pandoc](http://johnmacfarlane.net/pandoc/installing.html)
+ - [Git (version control).](http://git-scm.com/downloads)
+ - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
+Document converter: produces PDF, HTML, and EPUB.
  - [MacTeX](http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip) (1GB download)
- - [Inkscape](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1-SNOWLEOPARD.dmg)
- - [LibreOffice Draw](http://www.libreoffice.org/download/)
+Produces PDF from LaTeX source.
+ - Java.
+The `generate.sh` build script uses Java and Batik (included) to convert svg into pdf if Java is installed.
+ - [Inkscape (optional).](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1-SNOWLEOPARD.dmg)
+The `generate.sh` build script uses inkscape to convert svg into pdf if Java is not installed and you added inkscape to your system PATH.
  - [Diction](http://www.moria.de/~michael/diction/)
-
-The `generate.sh` build script uses inkscape to convert svg source into pdf.
-You must be able to type `inkscape` at the Terminal to launch inkscape.
+Checks English usage.
+ - [LibreOffice Draw](http://www.libreoffice.org/download/)
+Draw SVG diagrams.
 
 ## How to contribute.
 The Saylor Foundation has compiled a [free compiler course](http://www.saylor.org/courses/cs304/), but a Creative Commons licensed textbook is not yet available.
@@ -93,5 +102,5 @@ Version control is not a substitute for communication, so we use github's issue 
 Topic branches isolate chunks of work so that it's easier to merge in changes.
 
 ### Send in a pull request for feedback
-Switch to your branch in github, and [send in a pull request](https://github.com/lawrancej/CompilerDesign/pull/new/master) that describes what you did.
+Switch to your branch in github, and send in a pull request that describes what you did.
 Do so when you think your changes are ready to be merged in, but do not hesitate to push works in progress.
