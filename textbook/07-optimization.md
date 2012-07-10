@@ -68,53 +68,58 @@ TOPICS:
 
 #### Host Architecture
 <!--
-	7.1.3.2 Host Architecture
+7.1.3.2 Host Architecture
 -->
 
 ##### The Machine Doing the Compilation
 <!--
-	7.1.3.2.1 The Machine Doing the Compilation
+7.1.3.2.1 The Machine Doing the Compilation
 -->
 
 ##### Factors
 <!--
-	7.1.3.2.2 Factors
+7.1.3.2.2 Factors
 -->
 
 ###### CPU Speed
 <!--
-	7.1.3.2.2.1 CPU Speed
+7.1.3.2.2.1 CPU Speed
 -->
- CPU speed can be a major factor in compilation times. The speed at which a compiler can perform lexical analysis, parsing, code generation, optimization, etcetera, weighs heavily on the effeciciency of the CPU.
+ CPU speed can be a major factor in compilation times.
+The speed at which a compiler can perform lexical analysis, parsing, code generation, optimization, etcetera, weighs heavily on the effeciciency of the CPU.
 
 ###### Pipelining
 <!--
-	7.1.3.2.2.2 Pipelining
+7.1.3.2.2.2 Pipelining
 -->
  Pipelining is a method of optimizing loops via out-of-order execution (instructions are executed in order of data availability rather than code position) where reordering is done by a compiler rather than the processor.
 
 ###### RAM Capacity and Architecture
 <!--
-	7.1.3.2.2.3 Memory Capacity and Architecture
+7.1.3.2.2.3 Memory Capacity and Architecture
 -->
- Like the CPU, RAM speed can be a major factor in compilation times. Many CPU-based operations rely on RAM to temporarily store information in regards to the operations being executed, thus the amount of data that can be stored, and the speed at which it can be read and written, can affect the speed at which these operations will complete.
+ Like the CPU, RAM speed can be a major factor in compilation times.
+Many CPU-based operations rely on RAM to temporarily store information in regards to the operations being executed, thus the amount of data that can be stored, and the speed at which it can be read and written, can affect the speed at which these operations will complete.
 
 ####### Hard Disks
- Certain phases of compilation, such as the reading of source files and headers and writing of object files, are disk-intensive. The read/write spead of the disk can directly effect the rate at which these operations can be executed.
+ Certain phases of compilation, such as the reading of source files and headers and writing of object files, are disk-intensive.
+The read/write spead of the disk can directly effect the rate at which these operations can be executed.
  While disk read/write speeds do not have as large of an impact in compilation times as CPU and RAM performance, they still have an impact on the overall execution time.
 
 ##### Program Usage
 <!--
-	7.1.3.2.3 Program Usage
+7.1.3.2.3 Program Usage
 -->
 
 ###### Release vs Debugging
 <!--
-	7.1.3.2.4.1 Release Is Often Optimized for Performance
-	7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
+7.1.3.2.4.1 Release Is Often Optimized for Performance
+7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
 -->
- In a debug build, the complete symbolic debug information is emitted for testing and debugging purposes. Code optimization is not a priority in debug releases.
- Release builds do not emit the symbolic debugging info, reducing the size of the final executable file. The speed of execution may vary between debug and release builds depending on the compiler.
+ In a debug build, the complete symbolic debug information is emitted for testing and debugging purposes.
+Code optimization is not a priority in debug releases.
+ Release builds do not emit the symbolic debugging info, reducing the size of the final executable file.
+The speed of execution may vary between debug and release builds depending on the compiler.
 
 Optimization
 ============
