@@ -38,13 +38,14 @@ An abstract Syntax Tree is the data structure compilers/interpreters use in orde
 It represents the hirearchy of the programmers code.
 An important note is that not all syntax of the code is displayed in the tree in the case of grouping paranthesis.
 
-Example
-int doSomething(int a)
-{
-	if(a > 10)
-		a = a % 10;
-	return a;
-}
+#### Example
+
+    int doSomething(int a)
+    {
+        if(a > 10)
+            a = a % 10;
+        return a;
+    }
 
 					[program]
 					/       \

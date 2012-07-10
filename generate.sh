@@ -15,6 +15,7 @@ if [ $# = 0 ]; then
     echo "pdf           Builds CompilerDesign PDF."
     echo "epub          Builds CompilerDesign EPUB."
     echo "html          Builds CompilerDesign HTML."
+    echo "guide         Builds PDF project documentation."
     echo "clean         Removes the existing generated files."
     echo "check         Generate topic coverage, hyperlink, diction, style report."
     echo "total         Generate leader board by total line contributions."
@@ -38,11 +39,25 @@ else
         echo "Building CompilerDesign"
         cp -R images build
     fi
-    if [ $1 = "pdf" ]; then
+    if [ $1 = "guide" ]; then
+        pandoc -S -o build/guide.pdf --toc README.md CONVENTIONS.md HACKING.md git.md
+    elif [ $1 = "pdf" ]; then
         # Convert SVG to PDF for PDF output
-        for image in `ls build/images/*.svg`; do
-            inkscape -f $image -A ${image%.svg}.pdf
-        done
+        # If java is installed, use Batik
+        installed=$(which java)
+        if [ -n "$installed" ]; then
+            java -jar dependencies/batik-1.7/batik-rasterizer.jar build/images/*.svg -m application/pdf
+        else
+            installed=$(which inkscape)
+            if [ -n "$installed" ]; then
+                for image in `ls build/images/*.svg`; do
+                    inkscape -f $image -A ${image%.svg}.pdf
+                done
+            else
+                echo "You must install Java (preferred) or Inkscape first to generate a PDF."
+                exit
+            fi
+        fi
         sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" title.txt textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
     elif [ $1 = "epub" ]; then
         sed -E -e "s/images\//build\/images\//" title.txt textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
