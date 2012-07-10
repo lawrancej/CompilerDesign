@@ -26,10 +26,15 @@ TOPICS:
 7.1.2.2 Memory Major Limitation in Other
 7.1.3 Effectiveness
 7.1.3.1 Target Architecture
+		Architectural patterns are patterns that represent general functions required by the system. The target architecture is one of those patterns to show the programmers a base to what they want to achieve. The programmer then programs around this architecture taking into account all of the details. The programmer cannot always accommodate all of the details as they may conflict with the architecture though.
 7.1.3.1.1 The Machine on which the Program Will Run
+			When designing a program, the programmer will always have the target computer in mind. This computer may have fewer capabilities than the one that the software is being programmed on; it may run on your machine, but not the one in which the program will run. 
 7.1.3.1.2 Factors
+			There are many factors in which will decide if the program will run on the computer.
 7.1.3.1.2.1 CPU Registers
+			The first is the CPU Registers, or a small amount of storage given to the processor so that mechanisms other than main memory can be accessed more quickly. This can help the effectiveness of computer programs, as they can store values that are accessed frequently in registers to improve performace.
 7.1.3.1.2.2 Pipelining
+			
 7.1.3.1.2.3 Caches
 7.1.3.1.2.4 Hardware Design
 7.1.3.2 Host Architecture
