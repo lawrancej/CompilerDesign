@@ -9,7 +9,7 @@ fi
 if [ $# = 0 ]; then
     echo "Build CompilerDesign."
     echo ""
-    echo "Usage:	$0 COMMAND [-v]"
+    echo "Usage:	$0 COMMAND [-v] [section]"
     echo ""
     echo "Where COMMAND is one of the following:"
     echo "pdf           Builds CompilerDesign PDF."
@@ -39,8 +39,10 @@ else
         echo "Building CompilerDesign"
         cp -R images build
     fi
+    # Generate guide documentation
     if [ $1 = "guide" ]; then
         pandoc -S -o build/guide.pdf --toc README.md CONVENTIONS.md HACKING.md git.md
+    # Generate PDF of textbook
     elif [ $1 = "pdf" ]; then
         # Convert SVG to PDF for PDF output
         # If java is installed, use Batik
@@ -58,11 +60,13 @@ else
                 exit
             fi
         fi
-        sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" title.txt textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
+        sed -E -e "s/images\//build\/images\//; s/images\/(.*)\.svg/images\/\1.pdf/;" title.txt textbook/$section* | pandoc -S -o build/CompilerDesign.pdf  --toc
+    # Generate EPUB of textbook
     elif [ $1 = "epub" ]; then
-        sed -E -e "s/images\//build\/images\//" title.txt textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
+        sed -E -e "s/images\//build\/images\//" title.txt textbook/$section* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc
+    # Generate HTML of textbook
     elif [ $1 = "html" ]; then
-        pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/*
+        pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/$section*
     elif [ $1 = "total" ]; then
         echo "Non-whitespace lines added and removed by author."
         echo ""

@@ -72,7 +72,7 @@ Examples:
 Follow-up:
 
 - [How do compilers work](#what-are-the-phases-of-a-compiler)?
-- [Who developed the first compiler](#who-is-grace-hopper)?
+- [Who developed the first compiler](#who-was-grace-hopper)?
 
 ### What are the phases of a compiler?
 Compilers consist of several distinct phases split among the front and back end.
@@ -223,10 +223,12 @@ This means that the language is not context free.
 1.1.2 History and Purpose
 -->
 
-### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
+### Who was [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 <!---
 1.1.2.1 Grace Hopper
 -->
+
+![Grace Hopper. Official U.S. Navy Photograph.](images/grace-hopper.jpg)
 
 Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
 Her [distinguished naval career](#what-did-grace-hoppers-naval-career-have-to-do-with-compilers) led to her [contributions to computer science](#what-did-grace-hopper-contribute-to-computer-science).
