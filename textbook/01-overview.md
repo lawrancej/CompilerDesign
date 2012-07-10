@@ -267,3 +267,60 @@ Grace Hopper:
  - Computer History Museum Fellow Award in 1987.
  - Golden Gavel Award at the Toastmasters International convention in 1988.
  - National Medal of Technology in 1991.
+
+#### Purpose
+> TODO: add purpopse
+
+#### Translate Source Language to Target Language
+> TODO: Translate Source Language to Target Language
+
+#### Object Code and Executables
+> TODO: Object Code and Executables
+
+#### Platform Independent Compilers
+> TODO: add Platform Independent Compilers
+
+#### Hardware Compilation
+> TODO: add Hardware Compilation
+
+#### Compiler Design
+
+#### One-Pass vs Multi-Pass
+> TODO: add One-Pass vs Multi-Pass
+
+#### One Pass
+> TODO: add One Pass
+> TODO: add Simple to Implement
+> TODO: add Limited Optimization
+
+#### Multi-Pass
+> TODO: add Multi-Pass
+> TODO: add Enhanced Optimization
+> TODO: add Easier to Prove Correctability
+> TODO: add Source-to-Source Compilation Possible (Translators)
+> TODO: add Source-Bytecode-Native Code
+
+#### Structure
+
+#### Front End
+> TODO: add Front End
+
+#### add Create Intermediate Representation
+> TODO: add Create Intermediate Representation
+
+#### Manages Symbol Table
+> TODO: add Manages Symbol Table
+
+#### Steps
+> TODO: add Preprocessing
+> TODO: add Lexical Analysis
+> TODO: add Syntax Analysis
+> TODO: add Semantic Analysis
+
+#### Back End
+> TODO: add Back End
+
+#### Steps
+> TODO: add Analysis
+> TODO: add Optimization
+> TODO: add Code Generation
