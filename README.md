@@ -20,7 +20,7 @@ Open educational resources are material, such as textbooks, videos, tests, quizz
 Read the [contribution instructions and guidelines](HACKING.md).
 
 ## What is the license?
-[![Creative Commons License](http://i.creativecommons.org/l/by/3.0/80x15.png)](http://creativecommons.org/licenses/by/3.0/) This work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
+This work is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
 
 ## Why does this exist?
 We are developing CompilerDesign open educational resources for two reasons:

@@ -1,5 +1,5 @@
-CompilerDesign Conventions
-==========================
+Conventions
+===========
 This textbook is meant to be:
 
 - An open educational resource. ([CC-BY](http://creativecommons.org/licenses/by/3.0/))
