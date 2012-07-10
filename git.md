@@ -1,19 +1,13 @@
-Git to the point
-================
-Git it? Let's see how to git r done.
+Git Guide
+=========
 
-- [What is git?](#what-is-git)
-- [How do I set up git?](#git-setup)
-- [How do I use git?](#using-git)
-
-What is git?
-------------
+## What is git?
 Git is a popular [distributed](#what-are-distributed-version-control-systems) [version control system](#what-are-version-control-systems).
 
 ### What are version control systems?
 Version control systems store changes to a project over time.
 
-Examples:
+#### Examples:
 
 - [CVS](http://www.nongnu.org/cvs/)
 - [Subversion](http://subversion.apache.org/)
@@ -36,8 +30,7 @@ If there is a central server and it fails, your machine has a local backup of th
 ### Why use git?
 [Because it is better than anything else](http://git-scm.com/about).
 
-Git setup
----------
+## Git setup
 To set up git, follow the walkthrough for your operating system.
 
 - [Mac](http://help.github.com/mac-set-up-git/)
@@ -49,10 +42,10 @@ Be sure to configure your user name and email:
     git config --global user.name "Firstname Lastname"
     git config --global user.email yourEmailAddressGoesHereButDontTypeThisInLiterally@wit.edu
 
-Using git
----------
+## Using git
 Once you've forked and cloned a repository, using git involves several commands that you will master through practice.
 
+### Typical workflow
 Typically your use of git will involve the following steps roughly in this sequence:
 
     git pull upstream master          # Get the latest and greatest. This fetches and merges upstream/master into your current branch.
