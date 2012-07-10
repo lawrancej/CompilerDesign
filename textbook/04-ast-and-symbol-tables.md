@@ -38,21 +38,16 @@ An abstract Syntax Tree is the data structure compilers/interpreters use in orde
 It represents the hirearchy of the programmers code.
 An important note is that not all syntax of the code is displayed in the tree in the case of grouping paranthesis.
 
-Example
-int doSomething(int a)
-{
-	if(a > 10)
-		a = a % 10;
-	return a;
-}
+#### Example
 
-					[program]
-					/       \
-				  [if] 		[return]
-				  /			   \
-				[-]			   [a]
-				/ \
-			  [a] [10]
+    int doSomething(int a)
+    {
+        if(a > 10)
+            a = a % 10;
+        return a;
+    }
+
+![Abstract syntax tree for `doSomething`.](images/ast-example.svg)
 
 An [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) is simply a tree representation of the structure of source code.
 Each node of the tree represents a part of the code.
