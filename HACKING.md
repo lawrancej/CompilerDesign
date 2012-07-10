@@ -26,6 +26,7 @@ Hacking CompilerDesign
         git pull upstream master          # Get the latest and greatest.
         git checkout -b issueXYZ          # Work on an issue in a new topic branch, based off of the upstream master branch.
         ... Hack away ...                 # Your text is free from content, style, grammar and spelling errors, right?
+        ./check.sh all 03                 # Let's see if everything's good in section 03. (Replace the number as necessary.)
         git commit -a -m "Fixed issueXYZ" # Great! Commit your changes.
         git push origin issueXYZ          # Push your changes to your repo. Send in a pull request.
         git checkout master               # Switch back to master. Rinse and repeat.
@@ -38,6 +39,9 @@ Therefore, verify everything is working first before generating the textbook.
  - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
  - [MiKTeX](http://miktex.org/2.9/setup)
  - [Inkscape](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1.exe)
+ - [Diction.](http://gnuwin32.sourceforge.net/packages/diction.htm) Extract binaries and dependencies into the same folder, and add to the path.
+   - [Binaries](http://gnuwin32.sourceforge.net/downlinks/diction-bin-zip.php)
+   - [Dependencies](http://gnuwin32.sourceforge.net/downlinks/diction-dep-zip.php)
  - Visio
 
 Additionally, you must add `C:\Program Files\Inkscape\` to your system PATH.

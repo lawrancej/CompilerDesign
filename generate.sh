@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $# = 2 ]; then
+    section=$2
+else
+    section=""
+fi
+
 if [ $# = 0 ]; then
     echo "Build CompilerDesign."
     echo ""
@@ -10,7 +16,7 @@ if [ $# = 0 ]; then
     echo "epub          Builds CompilerDesign EPUB."
     echo "html          Builds CompilerDesign HTML."
     echo "clean         Removes the existing generated files."
-    echo "check         Generate spelling, diction, style report."
+    echo "check         Generate topic coverage, hyperlink, diction, style report."
     echo "total         Generate leader board by total line contributions."
     echo "totalcommits  Generate leader board by total commits."
     echo "lastweek      Generate leader board by commits within last week."
@@ -24,8 +30,8 @@ else
         rm build/* -r
         exit
     elif [ $1 = "check" ]; then
-        echo "Checking writing quality."
-        ./check.sh all
+        echo "Checking for quality issues."
+        ./check.sh all "$section"
         exit
     fi
     if [ $1 = "pdf" ] || [ $1 = "epub" ] || [ $1 = "html" ]; then
@@ -37,7 +43,7 @@ else
         for image in `ls build/images/*.svg`; do
             inkscape -f $image -A ${image%.svg}.pdf
         done
-        sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
+        sed -E -e "s/images\/(.*)\.svg/build\/images\/\1.pdf/" title.txt textbook/* | pandoc -S -o build/CompilerDesign.pdf  --toc
     elif [ $1 = "epub" ]; then
         sed -E -e "s/images\//build\/images\//" title.txt textbook/* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc 
     elif [ $1 = "html" ]; then

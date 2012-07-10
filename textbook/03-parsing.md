@@ -3,6 +3,51 @@
 >TODO : The next step of the compilation process is parsing.  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.  In this unit, we will define parsing and identify its uses.  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches. 
 
 
+<!---
+DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
+
+This section should cover these topics.
+It need not be in this order.
+
+Indicate coverage of topics by copying topic lines verbatim into a comment adjacent to the relevant text.
+Covered topics appear twice in a file: here and adjacent to the relevant text.
+Uncovered topics appear only once in a file (in this comment).
+
+This command checks whether topic lines appear only once in a file.
+
+    ./check.sh uncovered
+
+TOPICS:
+
+3.1 Parsing Overview
+3.1.1 Function
+3.1.1.1 Input: Tokens from Lexical Analysis
+3.1.1.2 Output: Program Parse Tree
+3.1.2 Examples
+3.1.2.1 Given an Arbitrary Function
+3.1.2.2 Produce:
+3.1.2.2.1 Parser Input
+3.1.2.2.2 Parse Tree
+3.1.3 Context-Free Grammar
+3.2 Top-Down Parsing
+3.2.1 Traversing a Parse Tree
+3.2.1.1 Definition
+3.2.1.2 Example
+3.2.2 Backus-Naur Form Production Rules
+3.2.3 LL Parser
+3.2.4 Process
+3.2.4.1 Starts at Left-most Symbol Yielded from Production Rule
+3.2.4.2 Continues to Next Production Rule for Each Non-Terminal Symbol
+3.2.4.3 Proceeds "Down" the Parse Tree
+3.3 Bottom-Up Parsing
+3.3.1 Bottom-Up
+3.3.1.1 Definition
+3.3.1.2 Example
+3.3.2 Process
+3.3.2.1 Identify Terminal Symbols First
+3.3.2.2 Combine Terminal Symbol to Produce Nonterminals
+-->
+
 Parsing
 =======
 >TODO Parsing Overview

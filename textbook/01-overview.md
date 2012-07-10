@@ -1,12 +1,67 @@
 
 \pagebreak
 
+<!---
+DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
+
+This section should cover these topics.
+It need not be in this order.
+
+Indicate coverage of topics by copying topic lines verbatim into a comment adjacent to the relevant text.
+Covered topics appear twice in a file: here and adjacent to the relevant text.
+Uncovered topics appear only once in a file (in this comment).
+
+This command checks whether topic lines appear only once in a file.
+
+    ./check.sh uncovered
+
+TOPICS:
+
+1.1 Introduction
+1.1.1 Definition of a Compiler
+1.1.2 History and Purpose
+1.1.2.1 Grace Hopper
+1.1.2.2 Purpose
+1.1.2.2.1 Translate Source Language to Target Language
+1.1.2.2.2 Object Code and Executables
+1.1.2.2.3 Platform Independent Compilers
+1.1.3 Comparison between Compiler and Interpreter
+1.1.4 Hardware Compilation
+1.2 Compiler Design
+1.2.1 One-Pass vs Multi-Pass
+1.2.1.1 One Pass
+1.2.1.1.1 Simple to Implement
+1.2.1.1.2 Limited Optimization
+1.2.1.2 Multi-Pass
+1.2.1.2.1 Enhanced Optimization
+1.2.1.2.2 Easier to Prove Correctability
+1.2.1.2.3 Source-to-Source Compilation Possible (Translators)
+1.2.1.2.4 Source-Bytecode-Native Code
+1.2.2 Structure
+1.2.2.1 Front End
+1.2.2.1.1 Create Intermediate Representation
+1.2.2.1.2 Manages Symbol Table
+1.2.2.1.3 Steps
+1.2.2.1.3.1 Preprocessing
+1.2.2.1.3.2 Lexical Analysis
+1.2.2.1.3.3 Syntax Analysis
+1.2.2.1.3.4 Semantic Analysis
+1.2.2.2 Back End
+1.2.2.2.1 Steps
+1.2.2.2.1.1 Analysis
+1.2.2.2.1.2 Optimization
+1.2.2.2.1.3 Code Generation
+-->
+
 Introduction
 ============
 
 ## Overview
 
 ### What is a compiler?
+<!---
+1.1.1 Definition of a Compiler
+-->
 A compiler translates from a source [language](#what-is-a-language) to a target language.
 
 Examples:
@@ -21,6 +76,8 @@ Follow-up:
 
 ### What are the phases of a compiler?
 Compilers consist of several distinct phases split among the front and back end.
+
+![Phases of a compiler](images/compiler-phases.svg)
 
 #### Front end
 The front end processes the source language and consists of these phases:
@@ -37,6 +94,11 @@ The back end generates the target language and consists of these phases:
 
 - [Optimization](#what-is-optimization). Improve [intermediate representation](#what-is-an-intermediate-representation) code.
 - [Code generation](#what-is-code-generation). Produce machine code from an intermediate representation or an [abstract syntax tree](#what-is-an-abstract-syntax-tree).
+
+## Compiler and interpreters
+<!---
+1.1.3 Comparison between Compiler and Interpreter
+-->
 
 ### What is an interpreter?
 An interpreter reads in souce code and executes immediately without producing an executable.
@@ -157,8 +219,15 @@ This means that the language is not context free.
 
 
 ## History of compilers
+<!---
+1.1.2 History and Purpose
+-->
 
 ### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
+<!---
+1.1.2.1 Grace Hopper
+-->
+
 Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
 Her [distinguished naval career](#what-did-grace-hoppers-naval-career-have-to-do-with-compilers) led to her [contributions to computer science](#what-did-grace-hopper-contribute-to-computer-science).
 
