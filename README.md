@@ -48,6 +48,7 @@ By making educational resources open (or free as in freedom), we can do better.
 In time this project will encompass [several components](http://www.saylor.org/contribute/materials/):
 
  - Textbook
+ - Slides
  - Cheat sheets
  - Video lectures
  - [Assessments](http://chronicle.com/article/Stop-Telling-Students-to-Study/131622/)
