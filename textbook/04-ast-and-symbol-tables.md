@@ -47,13 +47,7 @@ An important note is that not all syntax of the code is displayed in the tree in
         return a;
     }
 
-					[program]
-					/       \
-				  [if] 		[return]
-				  /			   \
-				[-]			   [a]
-				/ \
-			  [a] [10]
+![Abstract syntax tree for `doSomething`.](images/ast-example.svg)
 
 An [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) is simply a tree representation of the structure of source code.
 Each node of the tree represents a part of the code.
