@@ -185,8 +185,8 @@ S however is nonterminal because there are two rules that can modify the s in th
 A containment hierarchy is a hierarchical ordering of nested sets that are uniquely different from each other.
 There are two types of containment hierarchy, one where the parent includes its children (subsumptive), and the other where the parent is made up of its children (compositional).
 
-*Subsumptive: all cars are vehicles, but not all vehicles are cars, so the vehicle class subsumes the car class.
-*Compositional: cars contain engines and tires, so the car class is composed of the engine and tire objects. 
+- Subsumptive: all cars are vehicles, but not all vehicles are cars, so the vehicle class subsumes the car class.
+- Compositional: cars contain engines and tires, so the car class is composed of the engine and tire objects. 
 
 ### What is Chomsky's hierarchy?
 The Chomsky hierarchy, as the name implies, is a [containment hierarchy](#what-is-a-containment-hierarchy) of classes of [formal grammars](#what-is-a-grammar).
