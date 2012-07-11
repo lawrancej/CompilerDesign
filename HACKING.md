@@ -13,7 +13,7 @@ Once installed, in Git Bash (or the Terminal in Mac or Linux), configure git:
         git clone https://github.com/YourGithubLoginNameGoesHereButDontTypeThisInLiterally/CompilerDesign.git
         cd CompilerDesign
 
-4. Once in `CompilerDesign`, set up remote repositories and install required dependencies.
+4. Once in `CompilerDesign`, set up remote repositories and install required dependencies (Java, LaTeX, Pandoc, diction, LibreOffice).
 
         ./collaborators.sh setup
         ./generate.sh install

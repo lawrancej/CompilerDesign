@@ -66,10 +66,10 @@ install_dependencies() {
         fi
         echo "Great. Let's remove all the downloaders and installers. "
         read
-        rm dependencies/jre-7u5-windows-i586.exe
-        rm dependencies/pandoc-setup.exe
-        rm dependencies/basic-miktex.exe
-        rm dependencies/libreoffice.msi
+        rm -f dependencies/jre-7u5-windows-i586.exe
+        rm -f dependencies/pandoc-setup.exe
+        rm -f dependencies/basic-miktex.exe
+        rm -f dependencies/libreoffice.msi
         echo "Done!"
     # If it's Linux, ...
     elif [ $OSTYPE == "linux-gnu" ]; then
