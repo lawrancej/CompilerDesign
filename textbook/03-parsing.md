@@ -118,6 +118,22 @@ On the other hand, symbols that appear on a left side are non-terminals and are 
 
 The '::=' means that the symbol on the left must be replaced with the expression on the right
 
+
+### LL Parser
+The LL Parser is a top-down parser that works on some context free grammars. 
+
+The basic operation needs three things:
+	* An input buffer to hold the code to be parsed
+	* A stack structure to store the terminal and non terminal symbols (See above for explanation of terminal and non terminal symbols)
+	* A parsing table which might contain rules such as identifier syntax and reserved words to interpret the next token on the stack
+
+As an aside, LL parsers become LL(k) parsers for k amount of lookahead tokens.
+
+Example: Consider an LL(1) Parser (The first L tells us that this parser is starting at the Leftmost point, the second L tells us that it does Leftmost derivation and the (1) tells us we are using one token of lookahead)
+
+Let the following grammar below represent a context free grammar:
+	
+
 ### What is a pushdown automaton?
 A pushdown automaton (PDA) is a finite state machine with [stack](#what-is-a-stack) memory.
 
