@@ -10,30 +10,133 @@ install_dependencies() {
     # If it's Windows, ...
     if [ $OSTYPE == "msys" ] || [ $OSTYPE == "cygwin" ]; then
         echo "Installing project dependencies for Windows..."
-        # Windows: making life difficult for programmers since 1985.
-        
+        if [ -z "$(which curl)" ]; then
+            echo "ERROR: You must download and install cURL first."
+            echo "Look here: http://curl.haxx.se/download.html#Win32"
+            exit
+        fi
+        if [ -z "$(which java)" ]; then
+            echo "Getting and installing Java..."
+            echo "See: http://java.com/en/download/manual.jsp"
+            
+            curl -L http://javadl.sun.com/webapps/download/AutoDL?BundleId=64152 > dependencies/jre-7u5-windows-i586.exe
+            dependencies/jre-7u5-windows-i586.exe
+            
+            rm dependencies/jre-7u5-windows-i586.exe
+        fi
+        if [ -z "$(which pandoc)" ]; then
+            echo "Getting and installing pandoc 1.9.4.2..."
+            echo "See: http://code.google.com/p/pandoc/downloads/list"
+
+            curl http://pandoc.googlecode.com/files/pandoc-1.9.4.2-setup.exe > dependencies/pandoc-setup.exe
+            dependencies/pandoc-setup.exe
+
+            rm dependencies/pandoc-setup.exe
+        fi
+        if [ -z "$(which latex)" ]; then
+            echo "Getting and installing LaTeX..."
+            echo "See: http://miktex.org/2.9/setup"
+
+            curl -L http://mirrors.ctan.org/systems/win32/miktex/setup/ > dependencies/basic-miktex.exe
+            dependencies/basic-miktex.exe
+
+            rm dependencies/basic-miktex.exe
+        fi
+        if [ -z "$(which diction)" ] || [ ! -e dependencies/diction/bin/diction.exe ]; then
+            echo "Getting and installing diction..."
+            echo "See: http://gnuwin32.sourceforge.net/packages/diction.htm"
+            
+            curl -L http://gnuwin32.sourceforge.net/downlinks/diction-bin-zip.php > dependencies/diction.zip
+            curl -L http://gnuwin32.sourceforge.net/downlinks/diction-dep-zip.php > dependencies/diction-dep.zip
+
+            unzip dependencies/diction.zip -d dependencies/diction
+            unzip dependencies/diction-dep.zip -d dependencies/diction
+
+            rm dependencies/diction.zip
+            rm dependencies/diction-dep.zip
+        fi
+        if [ -z "$(which )" ]; then
+            echo "Getting and installing LibreOffice..."
+            echo "See: http://www.libreoffice.org/download/"
+            
+            curl -L http://download.documentfoundation.org/libreoffice/stable/3.5.5/win/x86/LibO_3.5.5_Win_x86_install_multi.msi > dependencies/libreoffice.msi
+
+            msiexec /i dependencies/libreoffice.msi
+            
+            echo "Once done, come back here and press Enter."
+            read
+            
+            rm dependencies/libreoffice.msi
+        fi
+        echo "Done!"
     # If it's Linux, ...
     elif [ $OSTYPE == "linux-gnu" ]; then
         echo "Installing project dependencies for Linux..."
         # Debian, Ubuntu, Linux Mint
         if [ -n `which apt-get` ]; then
-            sudo apt-get install git pandoc texlive-latex-recommended inkscape dia libreoffice-draw diction
+            sudo apt-get install pandoc texlive-latex-recommended inkscape libreoffice-draw diction
+            sudo apt-get install openjdk-7-jre # on a separate line, in case the user wants to cancel Java
         # Redhat, CentOS
         elif [ -n `which yum` ]; then
-            sudo yum install git pandoc texlive texlive-latex inkscape dia libreoffice diction
-        # Does anybody use arch or Gentoo?
+            sudo yum install pandoc texlive texlive-latex inkscape libreoffice diction 
+            sudo yum install java-1.7.0-openjdk
         else
+            # What to do for Arch or Gentoo?
             echo "Egad! What Linux distro are you using?"
         fi
-    # If it's Mac OS X, ...
-    elif [ $OSTYPE == "darwin" ]; then
+    # If it's Mac OS X, ...git s
+    elif [[ $OSTYPE == darwin* ]]; then
         echo "Installing project dependencies for Mac OS X..."
-        /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
-        brew install git pandoc texlive-latex
+        if [ -z "$(which curl)" ]; then
+            echo "ERROR: You must download and install cURL first."
+            echo "Look here: http://curl.haxx.se/download.html#MacOSX"
+            exit
+        fi
+        if [ -z "$(which brew)" ]; then # Which brew, heh heh
+            echo "Getting and installing homebrew..."
+            echo "See: "
+            /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+        fi
+        if [ -z "$(which pandoc)" ]; then
+            echo "Getting pandoc..."
+            echo "See: http://code.google.com/p/pandoc/downloads/list"
+            curl -L http://pandoc.googlecode.com/files/pandoc-1.9.4.2.dmg > dependencies/pandoc.dmg
+            
+            open dependencies/pandoc.dmg
+            echo "Install pandoc by running the installer."
+            echo "Once done, come back here and push Return."
+            read
+        fi
+        if [ -z "$(which latex)" ]; then
+            echo "Getting LaTeX..."
+            echo "See: "
+            curl -L http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg > dependencies/MacTeX.pkg
+            
+            open dependencies/MacTeX.pkg
+            echo "Push Return to continue."
+            read
+        fi
+        if [ -z "$(which diction)" ]; then
+            brew install diction
+        fi
+        if [ -z "$(which )" ]; then
+            echo "Getting LibreOffice..."
+            echo "See: http://www.libreoffice.org/download/"
+            
+            curl -L http://download.documentfoundation.org/libreoffice/stable/3.5.5/mac/x86/LibO_3.5.5_MacOS_x86_install_en-US.dmg > dependencies/libreoffice.dmg
+            
+            open dependencies/libreoffice.dmg
+
+            echo "Install LibreOffice by running the installer."
+            echo "Once done, come back here and push Return."
+            read
+        fi
+        echo "Done!"
     # Hmm, you're on your own ...
     else
-        echo "I don't know what OS you're using. Is it BSD?"
-        echo "Install git, LaTeX, pandoc, and a diagram editor that imports/exports SVG (e.g., Inkscape, Dia)"
+        echo "I don't know what OS you're using. BSD? Syllable?"
+        echo "Install git, LaTeX, pandoc, LibreOffice and Java"
+        echo "Make $0 better: revise it to handle your OS like it handles Windows, Mac or Linux."
     fi
 }
 
@@ -67,6 +170,9 @@ else
         echo "Checking for quality issues."
         ./check.sh all "$section"
         exit
+    fi
+    if [ $1 = "install" ]; then
+        install_dependencies
     fi
     if [ $1 = "pdf" ] || [ $1 = "epub" ] || [ $1 = "html" ]; then
         echo "Building CompilerDesign"

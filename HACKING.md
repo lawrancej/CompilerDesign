@@ -1,27 +1,29 @@
 Hacking CompilerDesign
 ======================
 ## Getting started
-1. Install the dependencies (Git, Pandoc, LaTeX, Inkscape) for your platform.
-    - [Windows](#what-to-install-on-windows)
-    - [Linux](#what-to-install-on-linux)
-    - [Mac](#what-to-install-on-mac)
+1. [Install `git` for your platform](http://git-scm.com/). Click the Download button.
+Once installed, in Git Bash (or the Terminal in Mac or Linux), configure git:
+
+        git config --global user.name "FirstNameGoesHere LastNameGoesHere"
+        git config --global user.email yourEmailaddressGoesHereButDontTypeThisInLiterally
 
 2. [Fork the project here.](https://github.com/lawrancej/CompilerDesign/fork)
+3. Clone the project locally. In Git Bash (or the Terminal in Mac or Linux), type:
 
-         git clone https://github.com/YourNameGoesHereButDontTypeThisInLiterally/CompilerDesign.git
-         cd CompilerDesign
+        git clone https://github.com/YourGithubLoginNameGoesHereButDontTypeThisInLiterally/CompilerDesign.git
+        cd CompilerDesign
 
-3. Add me as upstream, and add in your collaborators, too.
+4. Once in `CompilerDesign`, set up remote repositories and install required dependencies.
 
-         git remote add upstream https://github.com/lawrancej/CompilerDesign.git
-         ./collaborators.sh setup
+        ./collaborators.sh setup
+        ./generate.sh install
 
-4. Build CompilerDesign, and check your section.
+5. Build CompilerDesign, and check for issues.
 
         ./generate.sh pdf
-        ./check.sh all
+        ./generate.sh check
 
-5. [Learn how to contribute.](#how-to-contribute) See the [git cheat sheet](git.md)
+6. [Learn how to contribute.](#how-to-contribute) See the [git cheat sheet](git.md)
 
         git pull upstream master          # Get the latest and greatest.
         git checkout -b issueXYZ          # Work on an issue in a new topic branch, based off of the upstream master branch.
@@ -30,55 +32,6 @@ Hacking CompilerDesign
         git commit -a -m "Fixed issueXYZ" # Great! Commit your changes.
         git push origin issueXYZ          # Push your changes to your repo. Send in a pull request.
         git checkout master               # Switch back to master. Rinse and repeat.
-
-## What to install on Windows
-You will need to download and install everything manually.
-Therefore, verify everything is working first before generating the textbook.
-
- - [Git (version control).](http://git-scm.com/downloads)
- - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
-Document converter: produces PDF, HTML, and EPUB.
- - [MiKTeX.](http://miktex.org/2.9/setup)
-Produces PDF from LaTeX source.
- - Java.
-The `generate.sh` build script uses Java and Batik (included) to convert svg into pdf if Java is installed.
- - [Inkscape (optional).](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1.exe)
-The `generate.sh` build script uses inkscape to convert svg into pdf if Java is not installed and you added `C:\Program Files\Inkscape\` to your system PATH.
- - [Diction.](http://gnuwin32.sourceforge.net/packages/diction.htm)
-Checks English usage.
-Extract binaries and dependencies into the same folder, and add to the path.
-   - [Binaries](http://gnuwin32.sourceforge.net/downlinks/diction-bin-zip.php)
-   - [Dependencies](http://gnuwin32.sourceforge.net/downlinks/diction-dep-zip.php)
- - Visio.
-Draw SVG diagrams.
-
-## What to install on Linux
-In the terminal, paste this in for your distribution. Generate SVG diagrams with Inkscape, Dia or LibreOffice draw
-
-### Red Hat:
-
-    sudo yum install git pandoc texlive texlive-latex inkscape dia libreoffice diction
-
-### Debian, Ubuntu:
-
-    sudo apt-get install git pandoc texlive-latex-recommended inkscape dia libreoffice-draw diction
-
-## What to install on Mac
-You will need to download and install everything manually.
-
- - [Git (version control).](http://git-scm.com/downloads)
- - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
-Document converter: produces PDF, HTML, and EPUB.
- - [MacTeX](http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip) (1GB download)
-Produces PDF from LaTeX source.
- - Java.
-The `generate.sh` build script uses Java and Batik (included) to convert svg into pdf if Java is installed.
- - [Inkscape (optional).](http://downloads.sourceforge.net/inkscape/Inkscape-0.48.2-1-SNOWLEOPARD.dmg)
-The `generate.sh` build script uses inkscape to convert svg into pdf if Java is not installed and you added inkscape to your system PATH.
- - [Diction](http://www.moria.de/~michael/diction/)
-Checks English usage.
- - [LibreOffice Draw](http://www.libreoffice.org/download/)
-Draw SVG diagrams.
 
 ## How to contribute.
 The Saylor Foundation has compiled a [free compiler course](http://www.saylor.org/courses/cs304/), but a Creative Commons licensed textbook is not yet available.
