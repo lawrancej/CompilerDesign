@@ -7,6 +7,8 @@ else
 fi
 
 install_dependencies() {
+    # TODO: test on OSX
+    # TODO: download batik here and remove it from the repository?
     # If it's Windows, ...
     if [ $OSTYPE == "msys" ] || [ $OSTYPE == "cygwin" ]; then
         echo "Installing project dependencies for Windows..."
