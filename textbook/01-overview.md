@@ -133,7 +133,32 @@ The hierarchy consists of four levels:
 The difference between regular, context-free, and context-sensitive languages is in the structure of strings.
 The difference has nothing to do with meaning or semantics.
 
-> TODO: pumping lemma, examples of regular, context-free, context-sensitive languages (move existing examples here?)
+Context-sensitive
+------------------
+Rules are of the form:
+    ?A? ? ?B?
+    S ? ?
+where
+    A, S ? N
+    ?, ?, B ? (N ? ?)?
+    B ? ?
+
+Context-free
+------------------
+Rules are of the form:
+   A ? ?
+where
+   A ? N
+   ? ? (N ? ?)?
+
+Regular
+------------------
+Rules are of the form:
+  A ? ?
+  A ? ?
+  A ? ?B
+where 
+  A, B ? N and ? ? ?
 
 ### What is an unrestricted grammar?
 An unrestricted grammar's productions can include sequences of terminals and nonterminals in both the left and right hand sides of productions.
