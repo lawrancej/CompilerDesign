@@ -66,6 +66,8 @@ Add only SVG to version control.
 In general, save images using US units.
 Images should be 6 inches (15.24 cm) wide by 4 inches (10.16) tall.
 
+Use `images/blank-figure.svg` as a starting template. Otherwise,
+
  - In Visio, hold down CTRL, click and drag on a page corner.
 Line up against the ruler.
  - In LibreOffice Draw, go to `Format -> Page...`
