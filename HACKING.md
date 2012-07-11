@@ -2,28 +2,28 @@ Hacking CompilerDesign
 ======================
 ## Getting started
 1. [Install `git` for your platform](http://git-scm.com/). Click the Download button.
-Once installed, in Git Bash (or the Terminal in Mac or Linux), configure git:
+2. Once installed, in Git Bash (or the Terminal in Mac or Linux), configure git:
 
         git config --global user.name "FirstNameGoesHere LastNameGoesHere"
         git config --global user.email yourEmailaddressGoesHereButDontTypeThisInLiterally
 
-2. [Fork the project here.](https://github.com/lawrancej/CompilerDesign/fork)
-3. Clone the project locally. In Git Bash (or the Terminal in Mac or Linux), type:
+3. [Fork the project here.](https://github.com/lawrancej/CompilerDesign/fork)
+4. Clone the project locally. In Git Bash (or the Terminal in Mac or Linux), type:
 
         git clone https://github.com/YourGithubLoginNameGoesHereButDontTypeThisInLiterally/CompilerDesign.git
         cd CompilerDesign
 
-4. Once in `CompilerDesign`, set up remote repositories and install required dependencies (Java, LaTeX, Pandoc, diction, LibreOffice).
+5. Once in `CompilerDesign`, set up remote repositories and install required dependencies (Java, LaTeX, Pandoc, diction, LibreOffice).
 
         ./collaborators.sh setup
         ./generate.sh install
 
-5. Build CompilerDesign, and check for issues.
+6. Build CompilerDesign, and check for issues.
 
         ./generate.sh pdf
         ./generate.sh check
 
-6. [Learn how to contribute.](#how-to-contribute) See the [git cheat sheet](git.md)
+7. [Learn how to contribute.](#how-to-contribute) See the [git cheat sheet](git.md)
 
         git pull upstream master          # Get the latest and greatest.
         git checkout -b issueXYZ          # Work on an issue in a new topic branch, based off of the upstream master branch.
