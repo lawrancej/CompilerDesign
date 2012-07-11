@@ -86,7 +86,7 @@ install_dependencies() {
             # What to do for Arch or Gentoo?
             echo "Egad! What Linux distro are you using?"
         fi
-    # If it's Mac OS X, ...git s
+    # If it's Mac OS X, ...
     elif [[ $OSTYPE == darwin* ]]; then
         echo "Installing project dependencies for Mac OS X..."
         if [ -z "$(which curl)" ]; then
@@ -121,7 +121,7 @@ install_dependencies() {
         if [ -z "$(which diction)" ]; then
             brew install diction
         fi
-        if [ -z "$(which )" ]; then
+        if [ -z "unimplemented" ]; then
             echo "Getting LibreOffice..."
             echo "See: http://www.libreoffice.org/download/"
             
@@ -146,7 +146,7 @@ if [ $# = 0 ]; then
     echo "Build CompilerDesign."
     echo ""
     echo "Usage:	$0 COMMAND [-v] [section]"
-    echo ""
+    echo
     echo "Where COMMAND is one of the following:"
     echo "pdf           Builds CompilerDesign PDF."
     echo "epub          Builds CompilerDesign EPUB."
@@ -159,8 +159,9 @@ if [ $# = 0 ]; then
     echo "totalcommits  Generate leader board by total commits."
     echo "lastweek      Generate leader board by commits within last week."
     echo "mergestats    Generate leader board by merges within last week."
+    echo 
     echo "install       Install all dependencies."
-    echo ""
+    echo
     echo "Example: $0 pdf"
 else
     mkdir -p build
