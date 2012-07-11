@@ -217,3 +217,7 @@ Grace Hopper:
  - Computer History Museum Fellow Award in 1987.
  - Golden Gavel Award at the Toastmasters International convention in 1988.
  - National Medal of Technology in 1991.
+
+1.1.2.2 Purpose  
+As we mention in the definition of the compiler is to translate the source language to a source language, so, the purpose of the compiler will be to make these high lever languages easy for the computer to understand because the computer only understand the 0 and 1. In addition, a compiler will let to communicate with hardware.
+
