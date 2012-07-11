@@ -143,7 +143,7 @@ elif [ $1 = "dupe" ]; then
 elif [ $1 = "diction" ]; then
     dictionCommand="$(which diction)"
     if [ -z "$dictionCommand" ]; then
-        dictionCommand="dependencies/diction/bin/diction"
+        dictionCommand="dependencies/diction/bin/diction.exe"
     fi
     if [ ! -e "$dictionCommand" ]; then
         echo "ERROR: install required dependencies first. Run:"

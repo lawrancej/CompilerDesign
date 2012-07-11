@@ -55,13 +55,13 @@ install_dependencies() {
             rm dependencies/diction.zip
             rm dependencies/diction-dep.zip
         fi
-        if [ -z "$(which )" ]; then
+        if [ ! -e "C:\\Program Files\\LibreOffice 3.5" ]; then
             echo "Getting and installing LibreOffice..."
             echo "See: http://www.libreoffice.org/download/"
             
             curl -L http://download.documentfoundation.org/libreoffice/stable/3.5.5/win/x86/LibO_3.5.5_Win_x86_install_multi.msi > dependencies/libreoffice.msi
 
-            msiexec /i dependencies/libreoffice.msi
+            start dependencies/libreoffice.msi
             
             echo "Once done, come back here and press Enter."
             read
