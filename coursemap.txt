@@ -1,0 +1,230 @@
+1.1 Introduction
+1.1.1 Definition of a Compiler
+1.1.2 History and Purpose
+1.1.2.1 Grace Hopper
+1.1.2.2 Purpose
+1.1.2.2.1 Translate Source Language to Target Language
+1.1.2.2.2 Object Code and Executables
+1.1.2.2.3 Platform Independent Compilers
+1.1.3 Comparison between Compiler and Interpreter
+1.1.4 Hardware Compilation
+1.2 Compiler Design
+1.2.1 One-Pass vs. Multi-Pass
+1.2.1.1 One Pass
+1.2.1.1.1 Simple to Implement
+1.2.1.1.2 Limited Optimization
+1.2.1.2 Multi-Pass
+1.2.1.2.1 Enhanced Optimization
+1.2.1.2.2 Easier to Prove Correctability
+1.2.1.2.3 Source-to-Source Compilation Possible (Translators)
+1.2.1.2.4 Source-Bytecode-Native Code
+1.2.2 Structure
+1.2.2.1 Front End
+1.2.2.1.1 Create Intermediate Representation
+1.2.2.1.2 Manages Symbol Table
+1.2.2.1.3 Steps
+1.2.2.1.3.1 Preprocessing
+1.2.2.1.3.2 Lexical Analysis
+1.2.2.1.3.3 Syntax Analysis
+1.2.2.1.3.4 Semantic Analysis
+1.2.2.2 Back End
+1.2.2.2.1 Steps
+1.2.2.2.1.1 Analysis
+1.2.2.2.1.2 Optimization
+1.2.2.2.1.3 Code Generation
+2.1 Grammars
+2.1.1 Defined in Language Specification
+2.1.2 Tokens and Lexemes
+2.1.2.1 Defined in Specification
+2.1.2.2 Described Set of Valid Character Sequences
+2.2 Components
+2.2.1 Tokens
+2.2.1.1 Structured Text
+2.2.1.2 Categorized
+2.2.1.3 Example
+2.2.1.3.1 int x = 3;
+2.2.1.3.2 Tokens
+2.2.1.3.2.1 int (variable type)
+2.2.1.3.2.2 x (variable)
+2.2.1.3.2.3 = (operator)
+2.2.1.3.2.4 3 (value)
+2.2.2 Tokenizer
+2.2.3 Scanner
+2.2.3.1 Finite State Machine
+2.2.3.2 Contains Information What Constitutes a Valid Token
+2.2.4 Evaluator
+2.2.4.1 Works with Lexemes
+2.2.4.2 Produces a Value
+3.1 Parsing Overview
+3.1.1 Function
+3.1.1.1 Input: Tokens from Lexical Analysis
+3.1.1.2 Output: Program Parse Tree
+3.1.2 Examples
+3.1.2.1 Given an Arbitrary Function
+3.1.2.2 Produce:
+3.1.2.2.1 Parser Input
+3.1.2.2.2 Parse Tree
+3.1.3 Context-Free Grammar
+3.2 Top-Down Parsing
+3.2.1 Traversing a Parse Tree
+3.2.1.1 Definition
+3.2.1.2 Example
+3.2.2 Backus-Naur Form Production Rules
+3.2.3 LL Parser
+3.2.4 Process
+3.2.4.1 Starts at Left-most Symbol Yielded from Production Rule
+3.2.4.2 Continues to Next Production Rule for Each Non-Terminal Symbol
+3.2.4.3 Proceeds "Down" the Parse Tree
+3.3 Bottom-Up Parsing
+3.3.1 Bottom-Up
+3.3.1.1 Definition
+3.3.1.2 Example
+3.3.2 Process
+3.3.2.1 Identify Terminal Symbols First
+3.3.2.2 Combine Terminal Symbol to Produce Nonterminals
+4.1 Overview
+4.1.1 Relation to Parse Tree
+4.1.1.1 Input from Parser
+4.1.1.2 Adds Semantic Information to Parse Tree
+4.1.2 Output to Code Generation Phase
+4.2 Process
+4.2.1 Type Checking
+4.2.1.1 Verify Type Constraints
+4.2.1.2 Static Checking
+4.2.1.2.1 Done at Compile Time
+4.2.1.2.2 Dynamic Checking Done at Runtime
+4.2.1.2.3 Example Languages
+4.2.1.2.3.1 Ada
+4.2.1.2.3.2 C++
+4.2.1.2.3.3 Java
+4.2.1.3 Type Safety
+4.2.1.4 Types Specified by the Language Specification
+4.2.2 Object Binding
+4.2.2.1 Associates Variable with its Definition
+4.2.2.2 Resolve Object References
+4.2.3 Assignment Operations
+4.2.3.1 Data Flow Analysis
+4.2.3.2 Definite Assignment Analysis
+4.2.3.2.1 Ensures Variable are Assigned Before Used
+4.2.3.2.2 Allows Potential Optimization
+4.2.4 Produce Errors/Warnings
+4.3 Time/Space Complexity
+5.1 Types
+5.1.1 Types of Types
+5.1.1.1 Primitive
+5.1.1.2 Reference
+5.1.1.3 Null
+5.1.1.4 Object
+5.1.1.5 Function
+5.1.2 Type Checking
+5.1.2.1 Static Typing
+5.1.2.2 Dynamic Typing
+5.1.2.3 Strong Typing
+5.1.2.4 Weak Typing
+5.2 Symbols
+5.2.1 Definition
+5.2.2 Symbol Table
+5.2.2.1 Gives Information about an Identifier
+5.2.2.1.1 Declaration Information
+5.2.2.1.2 Scope
+5.2.2.1.3 Type
+5.2.2.1.4 Memory Address
+5.2.2.2 Implemented as a Hash Table
+5.2.2.3 Contained within the Object File
+5.2.2.3.1 Used by Linker to Resolve References
+5.2.2.3.2 Kept in Object Files for Debug Builds
+5.3 Runtime Organization
+5.3.1 Storage
+5.3.1.1 Allocation
+5.3.1.1.1 Static
+5.3.1.1.2 Dynamic
+5.3.1.2 Local references
+5.3.1.3 Global References
+5.3.2 Runtime
+5.3.2.1 Debugging vs. Release
+5.3.2.2 Runtime Exceptions
+6.1 Overview
+6.1.1 Produces Machine-Executable Code
+6.1.2 Input Parse Tree
+6.1.3 Output Machine Code
+6.1.4 Includes Some Optimization Techniques
+6.2 Process
+6.2.1 Instruction Selection
+6.2.1.1 Transforms Middle-Level IR to Low-Level IR
+6.2.1.1.1 Middle Level IR
+6.2.1.1.1.1 Tree-Based
+6.2.1.1.1.2 Intermediate Representation
+6.2.1.1.2 Low Level IR
+6.2.1.1.2.1 Reduced From Tree
+6.2.1.1.2.2 Close to Target Language (Machine Code)
+6.2.1.2 Templates and Tiles
+6.2.1.2.1 Tiles
+6.2.1.2.1.1 Template That Matches a Portion of IR Tree
+6.2.1.2.1.2 Implemented with a Single Target Instruction
+6.2.1.2.2 Templates
+6.2.1.2.2.1 Convert Code from IR to Target Language
+6.2.1.2.2.2 Open to Optimization
+6.2.1.2.3 Implementation
+6.2.1.2.3.1 Backward Dynamic Programming
+6.2.1.2.3.2 Greedy Algorithms
+6.2.2 Instruction Scheduling
+6.2.2.1 Optimization Technique
+6.2.2.1.1 Reorders Instructions for Optimal Processing
+6.2.2.1.2 Avoid Data Stalls and Code Structure Hazards
+6.2.2.2 Types of Scheduling Algorithms
+6.2.3 Register Allocation
+6.2.3.1 Multiplexes Program Variables to CPU Registers
+6.2.3.1.1 Maximize Program Execution Time
+6.2.3.1.2 Occurrences
+6.2.3.1.2.1 Local
+6.2.3.1.2.2 Global
+6.2.3.1.2.3 Interprocedural
+6.2.3.2 NP-Complete Optimization Problem
+6.2.4 Non-Standard Compilers
+6.2.4.1 Just-In-Time Compilation
+6.2.4.2 Profiling
+7.1 Overview
+7.1.1 Manipulate Execution Parameters to Maximize Performance
+7.1.1.1 Program Runtime
+7.1.1.2 Memory Footprint
+7.1.2 Complexity
+7.1.2.1 Many Optimizations Are NP-Complete
+7.1.2.2 Memory Major Limitation in Other
+7.1.3 Effectiveness
+7.1.3.1 Target Architecture
+7.1.3.1.1 The Machine on which the Program Will Run
+7.1.3.1.2 Factors
+7.1.3.1.2.1 CPU Registers
+7.1.3.1.2.2 Pipelining
+7.1.3.1.2.3 Caches
+7.1.3.1.2.4 Hardware Design
+7.1.3.2 Host Architecture
+7.1.3.2.1 The Machine Doing the Compilation
+7.1.3.2.2 Factors
+7.1.3.2.2.1 CPU Speed
+7.1.3.2.2.2 Pipelining
+7.1.3.2.2.3 Memory Capacity and Architecture
+7.1.3.2.3 Program Usage
+7.1.3.2.4 Release vs. Debugging
+7.1.3.2.4.1 Release Is Often Optimized for Performance
+7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
+7.2 Optimization Categories
+7.2.1 Peephole
+7.2.1.1 Performed after Machine Code Has Been Generated
+7.2.1.2 Connects Adjacent Instructions to See If They Can Be Compressed
+7.2.2 Local
+7.2.3 Loop
+7.2.3.1 Act upon Loops
+7.2.3.2 Potentially High Impact
+7.2.3.3 Reduce Dependence on Memory and Time-intensive Looping
+7.2.4 Language Dependent
+7.2.4.1 Optimize Functions Unique to a Specific Language
+7.2.4.2 Some Optimizations May Be General across Multiple Languages
+7.2.5 Machine Dependent
+7.3 Optimization Techniques
+7.3.1 Exploit Properties of the "Common Case"
+7.3.2 Reduce Redundancy
+7.3.3 Reduce Branching
+7.3.4 Parallelize Operations When Available
+7.3.5 Maximize Memory Efficiency
+7.3.6 Decrease Special Memory Reference Distance

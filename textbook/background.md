@@ -1,3 +1,5 @@
+\pagebreak
+
 Background
 ==========
 What should I know already to write a compiler?
@@ -6,7 +8,6 @@ What should I know already to write a compiler?
 - [How to be a programmer](http://samizdat.mines.edu/howto/HowToBeAProgrammer.html)
 - [Discrete structures](#discrete-structures)
 - [Algorithms and data structures](#algorithms-and-data-structures)
-- [C](#c)
 - [Software Engineering](#software-engineering)
 
 Discrete structures
@@ -38,7 +39,8 @@ An unordered, possibly infinite, collection of unique objects.
 Examples and counterexamples:
 
 - {apple,pear,banana} is a set.
-- {apple,apple,pear} is not a set, because apple is not unique. It's a [bag](#what-is-a-bag).
+- {apple,apple,pear} is not a set, because apple is not unique.
+It's a [bag](#what-is-a-bag).
 - The integers form an infinite set.
 - {1,2,3} is the same set as {3,1,2}, because order does not matter.
 
@@ -90,10 +92,6 @@ Writing a compiler requires working with trees.
 - What is a tree?
 - What is the difference between an inorder, preorder, and postorder traversal?
 
-C
--
-The CompilerKit library will be in C.
-
 ### What is code?
 A [sequence](#what-is-a-sequence) of [instructions](#what-is-an-instruction).
 
@@ -101,6 +99,7 @@ A [sequence](#what-is-a-sequence) of [instructions](#what-is-an-instruction).
 A basic operation that a machine can perform.
 
 Examples:
+
 - Arithmetic instructions (e.g., addition, subtraction, multiplication, division)
 - Logic and bitwise instructions (e.g., and, or, not, exclusive or, shift-left, shift-right)
 - Control instructions (e.g., goto, jump)
