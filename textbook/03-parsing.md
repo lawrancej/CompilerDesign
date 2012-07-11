@@ -1,6 +1,7 @@
 
 \pagebreak
->TODO : The next step of the compilation process is parsing.  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.  In this unit, we will define parsing and identify its uses.  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches. 
+>TODO : The next step of the compilation process is parsing.  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.  In this unit, we will define parsing and identify its uses.  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches.
+
 
 
 <!---
@@ -76,6 +77,11 @@ $S \to \epsilon$
 #### Follow-up questions
 
 - [How can you tell if a language is context-free](#how-can-you-tell-if-a-language-is-context-free)?
+	A language is context-free if it follows context-free grammar. In context-free language, the left side is always single nonterminal producing rules of the form "<A> ::= a", such as <expression> ::= <expression>*<term>. The right side is sequence of terminal and non-terminal symbols. "*" is non-terminal symbol.
+
+	So, a context-free language should always form "<A> ::= a" where left side is always single non terminal symbol.
+
+
 - [Is English context-free](http://cs.haifa.ac.il/~shuly/teaching/08/nlp/complexity.pdf)?
 - [When a language is context free, do terminals have only one meaning](#what-are-the-implications-of-chomskys-hierarchy)?
 - [Is infinite recursion allowed in context-free grammars](#what-is-left-recursion)?
@@ -148,10 +154,9 @@ Follow ups:
 
 ### What is a syntax error?
 
-	Syntax of a language is the rule that determines what is allowed in that language. It specifies how a program can be written using statements, loops and functions etc. This rule also applies to how different types of such loops, statements and functions are constructed. Basically, syntax of a programming language is a vocabulary of that language. A syntatically correct program can be sucessfully compiled and interpreted to a machine language. A syntatically incorrect program cannot be compiled and they are supposed to have syntax errors. Syntax errors are errors in the structure of the language. When writing a program, if syntax of the language is not followed, the program will have syntax error.
+	Syntax of a language is the rule that determines what is allowed in that language. It specifies how a program can be written using statements, loops and functions etc. This rule also applies to how different types of such loops, statements and functions are constructed. Basically, syntax of a programming language is a vocabulary of that language. A syntatically correct program can be sucessfully compiled and interpreted to a machine language. Therefore, a syntatically incorrect program cannot be compiled and they are supposed to have syntax errors. Syntax errors are errors in the structure of the language. When writing a program, if syntax of the language is not followed, the program will have syntax error.
 	
-	For e.g, in java programming language, semicolon(;) is required at the end of every statement. If semicolon is not typed after every statement in java, you will get a syntax error while trying to compile your program. Let's see this in the real statement in java.
-	Let's say, a programmer wants to display "Hello World!" in his monitor using java programming language.
+	For e.g, in java programming language, semicolon(;) is required at the end of every statement. If semicolon is not typed after every statement in java, you will get a syntax error while trying to compile your program. Let's see this in the real statement in java. Let's say, a programmer wants to display "Hello World!" in his monitor using java programming language.
 
 	System.out.println("Hello Word!");
 
@@ -161,10 +166,6 @@ Follow ups:
 
 	In the second example, the program will get syntax error even though "Hello World!" is typed correctly. As we can see, the programmer forgot to type semicolon at the end of the statement. In java, semicolon at the end of the statement is part of its syntax. Hence, a program that doesn't follow the syntax of the language will get a compilation error as the program contains syntax error/s. So, A programmer has to have a detail knowledge of the syntax of the language to be expert in that programming language.
 
-> TODO: this section needs fixing. state what a syntax error is.
-=======
-> TODO: this section needs fixing.
-state what a syntax error is.
 >>>>>>> dd1c67f47aa755610bcb873be41ac2fc980479e1
 
 A parser first tokenizes the source code depending on its syntax.
