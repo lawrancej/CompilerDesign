@@ -160,7 +160,7 @@ A grammar consists of:
 This two production grammar (written in a variant of [Backus Naur Form](#what-is-backus-naur-form)) matches balanced parentheses.
 
 $Parens \to (Parens)*$
-$Parens \to [^()]*$
+$Parens \to [\^()]*$
 
 ### What is a production?
 A production, or rewriting rule, consists of a left hand side (LHS) and a right hand side (RHS).
@@ -181,8 +181,15 @@ Example:
 G is terminal because no rule can change the s.
 S however is nonterminal because there are two rules that can modify the s in the lexical analysis portion.
 
+### What is a containment hierarchy?
+A containment hierarchy is a hierarchical ordering of nested sets that are uniquely different from each other.
+There are two types of containment hierarchy, one where the parent includes its children (subsumptive), and the other where the parent is made up of its children (compositional).
+
+*Subsumptive: all cars are vehicles, but not all vehicles are cars, so the vehicle class subsumes the car class.
+*Compositional: cars contain engines and tires, so the car class is composed of the engine and tire objects. 
+
 ### What is Chomsky's hierarchy?
-The Chomsky hierarchy, as the name implies, is a containment hierarchy of classes of [formal grammars](#what-is-a-grammar).
+The Chomsky hierarchy, as the name implies, is a [containment hierarchy](#what-is-a-containment-hierarchy) of classes of [formal grammars](#what-is-a-grammar).
 The hierarchy consists of four levels:
 
 1. [Unrestricted grammars](#what-is-an-unrestricted-grammar). Recognized by [Turing machines](#what-is-a-turing-machine).
