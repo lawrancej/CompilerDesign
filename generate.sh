@@ -22,7 +22,6 @@ install_dependencies() {
             curl -L http://javadl.sun.com/webapps/download/AutoDL?BundleId=64152 > dependencies/jre-7u5-windows-i586.exe
             dependencies/jre-7u5-windows-i586.exe
             
-            rm dependencies/jre-7u5-windows-i586.exe
         fi
         if [ -z "$(which pandoc)" ]; then
             echo "Getting and installing pandoc 1.9.4.2..."
@@ -31,7 +30,6 @@ install_dependencies() {
             curl http://pandoc.googlecode.com/files/pandoc-1.9.4.2-setup.exe > dependencies/pandoc-setup.exe
             dependencies/pandoc-setup.exe
 
-            rm dependencies/pandoc-setup.exe
         fi
         if [ -z "$(which latex)" ]; then
             echo "Getting and installing LaTeX..."
@@ -40,7 +38,6 @@ install_dependencies() {
             curl -L http://mirrors.ctan.org/systems/win32/miktex/setup/ > dependencies/basic-miktex.exe
             dependencies/basic-miktex.exe
 
-            rm dependencies/basic-miktex.exe
         fi
         if [ -z "$(which diction)" ] || [ ! -e dependencies/diction/bin/diction.exe ]; then
             echo "Getting and installing diction..."
@@ -63,11 +60,16 @@ install_dependencies() {
 
             start dependencies/libreoffice.msi
             
-            echo "Once done, come back here and press Enter."
+            echo "Once you finished installing, come back here and press Enter."
             read
             
-            rm dependencies/libreoffice.msi
         fi
+        echo "Great. Let's remove all the downloaders and installers. "
+        read
+        rm dependencies/jre-7u5-windows-i586.exe
+        rm dependencies/pandoc-setup.exe
+        rm dependencies/basic-miktex.exe
+        rm dependencies/libreoffice.msi
         echo "Done!"
     # If it's Linux, ...
     elif [ $OSTYPE == "linux-gnu" ]; then
