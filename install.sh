@@ -13,8 +13,25 @@ file_open() {
     fi
 }
 
+dep="dependencies"
+
 # Package definitions
+# TODO: move this out of CompilerDesign and into new repo.
+# TODO: add this in as a submodule
+# TODO: redo ./generate.sh to use submodule
+# TODO: put these in their own separate files in a new folder, using this scheme
+# TITLE="Package Name"
+# CHECK="$(which something)$(ls something 2> $dep/log)"
+# URL="http://url/to/project/"
+# DEPENDS=(package names of generic dependencies)
+# WIN_URL="http://url/to/windows/package/download"
+# WIN_FILE="localfilename.zip or localfilename.msi or localfilename.exe"
+# WIN_DEP=(package names of windows-specific dependencies)
+# MAC_URL="http://url/to/mac/package/download"
 java_nfo=( "Java" "$(which java)" "http://java.com/en/download/manual.jsp" )
+# MAC_FILE="localfilename.dmg or localfilename.pkg"
+# MAC_DEP=(package names of mac-specific dependencies)
+
 java_win=( "${java_nfo[@]}" "http://javadl.sun.com/webapps/download/AutoDL?BundleId=64152" "dependencies/jre-7u5-windows-i586.exe" )
 
 pandoc_nfo=( "Pandoc" "$(which pandoc)" "http://johnmacfarlane.net/pandoc/installing.html" )
