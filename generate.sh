@@ -6,6 +6,18 @@ else
     section=""
 fi
 
+file_open() {
+    if [ $OSTYPE == "msys" ] || [ $OSTYPE == "cygwin" ]; then
+        start "$1"
+    elif [ $OSTYPE == "linux-gnu" ]; then
+        gnome-open "$1"
+    elif [[ $OSTYPE == darwin* ]]; then
+        open "$1"
+    else
+        echo "Unable to open file $1. What OS is this, anyway? $OSTYPE?"
+    fi
+}
+
 if [ $# = 0 ]; then
     echo "Build CompilerDesign."
     echo ""
@@ -42,6 +54,7 @@ else
     # Generate guide documentation
     if [ $1 = "guide" ]; then
         pandoc -S -o build/guide.pdf --toc README.md CONVENTIONS.md HACKING.md git.md
+        file_open build/guide.pdf
     # Generate PDF of textbook
     elif [ $1 = "pdf" ]; then
         # Convert SVG to PDF for PDF output
@@ -61,12 +74,15 @@ else
             fi
         fi
         sed -E -e "s/images\//build\/images\//; s/images\/(.*)\.svg/images\/\1.pdf/;" title.txt textbook/$section* | pandoc -S -o build/CompilerDesign.pdf  --toc
+        file_open build/CompilerDesign.pdf
     # Generate EPUB of textbook
     elif [ $1 = "epub" ]; then
         sed -E -e "s/images\//build\/images\//" title.txt textbook/$section* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc
+        file_open build/CompilerDesign.epub
     # Generate HTML of textbook
     elif [ $1 = "html" ]; then
         pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/$section*
+        file_open build/CompilerDesign.html
     elif [ $1 = "total" ]; then
         echo "Non-whitespace lines added and removed by author."
         echo ""
