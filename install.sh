@@ -37,8 +37,8 @@ libreoffice_win=( "${libreoffice_nfo[@]}" "http://download.documentfoundation.or
 libreoffice_mac=( "${libreoffice_nfo[@]}" "http://download.documentfoundation.org/libreoffice/stable/3.5.5/mac/x86/LibO_3.5.5_MacOS_x86_install_en-US.dmg" "dependencies/libreoffice.dmg" )
 
 calibre_nfo=( "Calibre" "$(which calibre)" "http://calibre-ebook.com/download" )
-calibre_win=( "${calibre_nfo[@]}" "http://status.calibre-ebook.com/dist/win32" "calibre.msi" )
-calibre_mac=( "${calibre_nfo[@]}" "http://status.calibre-ebook.com/dist/osx32" "calibre.dmg" )
+calibre_win=( "${calibre_nfo[@]}" "http://status.calibre-ebook.com/dist/win32" "dependencies/calibre.msi" )
+calibre_mac=( "${calibre_nfo[@]}" "http://status.calibre-ebook.com/dist/osx32" "dependencies/calibre.dmg" "open calibre.dmg && echo 'You have to install the command line tools for Calibre by going to Preferences->Advanced->Miscellaneous, once you open Calibre the first time.'" )
 
 brew_mac=( "Brew" "$(which brew)" "http://mxcl.github.com/homebrew/" "" "" "/usr/bin/ruby -e \"$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)\"" )
 

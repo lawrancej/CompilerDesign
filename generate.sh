@@ -109,7 +109,7 @@ else
     # Generate EPUB of textbook
     elif [ $1 = "epub" ]; then
         sed -E -e "s/images\//build\/images\//" title.txt textbook/$section* | pandoc -S --epub-metadata=metadata.xml -o build/CompilerDesign.epub  --toc
-        file_open build/CompilerDesign.epub
+        ebook-viewer build/CompilerDesign.epub
     # Generate HTML of textbook
     elif [ $1 = "html" ]; then
         pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/$section*
