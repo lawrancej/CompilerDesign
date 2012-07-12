@@ -20,6 +20,7 @@ dep="dependencies"
 # TODO: add this in as a submodule
 # TODO: redo ./generate.sh to use submodule
 # TODO: put these in their own separate files in a new folder, using this scheme
+# TODO: passthrough for apt-get, yum, brew
 # TITLE="Package Name"
 # CHECK="$(which something)$(ls something 2> $dep/log)"
 # URL="http://url/to/project/"
