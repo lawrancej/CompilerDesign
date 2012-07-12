@@ -75,7 +75,7 @@ install_package() {
 install_packages() {
     if [ $OSTYPE == "msys" ]; then
         platform="win"
-    elif [ $OSTYPE == darwin* ]; then
+    elif [[ $OSTYPE == darwin* ]]; then
         platform="mac"
     fi
     for package in $@; do
