@@ -1,2 +1,7 @@
 *.html
 build/**
+*.exe
+*.zip
+dependencies/diction/**
+*.dmg
+*.msi
