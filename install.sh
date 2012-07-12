@@ -36,6 +36,10 @@ libreoffice_nfo=( "LibreOffice" "$(ls C:\\Program\ Files\\LibreOffice\ 3.5)$(ls 
 libreoffice_win=( "${libreoffice_nfo[@]}" "http://download.documentfoundation.org/libreoffice/stable/3.5.5/win/x86/LibO_3.5.5_Win_x86_install_multi.msi" "dependencies/libreoffice.msi" )
 libreoffice_mac=( "${libreoffice_nfo[@]}" "http://download.documentfoundation.org/libreoffice/stable/3.5.5/mac/x86/LibO_3.5.5_MacOS_x86_install_en-US.dmg" "dependencies/libreoffice.dmg" )
 
+calibre_nfo=( "Calibre" "$(which calibre)" "http://calibre-ebook.com/download" )
+calibre_win=( "${calibre_nfo[@]}" "http://status.calibre-ebook.com/dist/win32" "calibre.msi" )
+calibre_mac=( "${calibre_nfo[@]}" "http://status.calibre-ebook.com/dist/osx32" "calibre.dmg" )
+
 brew_mac=( "Brew" "$(which brew)" "http://mxcl.github.com/homebrew/" "" "" "/usr/bin/ruby -e \"$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)\"" )
 
 install_package() {
