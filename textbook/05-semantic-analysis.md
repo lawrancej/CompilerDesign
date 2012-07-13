@@ -66,5 +66,7 @@ Static semantics are enforced at compile time.
 
 Runtime semantics are enforced during the execution of the program.
 Examples of this include division by zero and out-of-bound array indexing.
+One disadvantage of runtime semantics is that the object code tends to be slower.
+Conversely, an advantage of these semantics is that it allows for informative error messages, rather than error behavior.
 
 ### What is type-checking?
