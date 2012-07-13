@@ -95,6 +95,10 @@ These proofs may be tested against any language in contempt of questionable cont
 
 ### What is left recursion?
 
+Left recursion is defined as a grammer set where the nonterminal starting symbol will eventually derive itself back to its original form with the starting symbol as the the left-symbol. For example:
+
+	Z -> Zy|e
+
 ### What is the difference between a regular language and a context free language?
 
 [Formal regular expressions](#what-is-a-regular-expression) define [regular languages](#what-is-a-regular-language),
