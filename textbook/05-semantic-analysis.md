@@ -64,4 +64,7 @@ Static semantics are enforced at compile time.
 
 ### What is runtime semantics?
 
+Runtime semantics are enforced during the execution of the program.
+Examples of this include division by zero and out-of-bound array indexing.
+
 ### What is type-checking?
