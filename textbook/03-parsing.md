@@ -79,6 +79,20 @@ $S \to \epsilon$
 
 ### How can you tell if a language is context-free?
 
+The authenticity of a context free language can be determined by a mathematical property known as the pumping lemma that all context free languages have. A language L would be considered context free if an integer pumping length q >= 1 exists so that any string t in L with |t| >= q can be defined as
+
+	t = jmacs
+
+where t is split into the substrings j, m, a, c, and s under the following conditions.
+
+	a. |mac| <= q
+	b. |mc >= 1|
+	      n  n
+	c. jm^ a^ cs is in the language L for every n
+
+These proofs may be tested against any language in contempt of questionable context. All conditions stated above must be met in order for a grammar to be considered context free.
+
+
 ### What is left recursion?
 
 ### What is the difference between a regular language and a context free language?
