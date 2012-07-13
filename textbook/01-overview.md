@@ -299,7 +299,7 @@ As we mention in the definition of the compiler is to translate the source langu
 
 =======
 #### Purpose
-> TODO: add purpopse
+> As we mention in the definition of the compiler is to translate the source language to a source language, so, the purpose of the compiler will be to make these high lever languages easy for the computer to understand because the computer only understand the 0 and 1. In addition, a compiler will let to communicate with hardware.
 
 #### Translate Source Language to Target Language
 > TODO: Translate Source Language to Target Language
