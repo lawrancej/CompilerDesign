@@ -68,6 +68,9 @@ Semantics describes the processes a computer follows when executing a program in
 Static semantics are enforced at compile time.
 Examples of this include undeclared variables and type mismatches.
 These semantical errors can be detected by the parser, or in separate semantic analysis passes.
+<!-- I will add more to this section - Mike D -->
+The semantic analyzer will start by traversing the [abstract syntax tree](#what-is-an-abstract-syntax-tree) created by the parser.
+
 
 
 ### What is runtime semantics?
