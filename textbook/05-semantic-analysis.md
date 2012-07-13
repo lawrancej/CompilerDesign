@@ -60,6 +60,8 @@ Semantics describes the processes a computer follows when executing a program in
 
 ### What is static semantics?
 
+Static semantics are enforced at compile time.
+
 ### What is runtime semantics?
 
 ### What is type-checking?
