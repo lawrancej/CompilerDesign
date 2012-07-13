@@ -57,9 +57,7 @@ Tokens like parenthesis and brackets are not nodes on the tree, and are instead 
 
 If the code cannot be represented accurately as a tree, the parsed language is not [context-free](#what-is-a-context-free-language).
 
-An abstract syntax tree (AST) is a tree representation of the abstract syntactic structure of the code written in any language.
-
-Also, it is the output of a parser.
+In addition to representing the structure of the code, the AST is the output of a parser.
 Every node is a structure of a particular type of node.
 
 Each node is created by creating a function which will return a pointer to a structure that will signify that node.
