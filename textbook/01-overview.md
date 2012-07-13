@@ -72,10 +72,12 @@ Examples:
 Follow-up:
 
 - [How do compilers work](#what-are-the-phases-of-a-compiler)?
-- [Who developed the first compiler](#who-is-grace-hopper)?
+- [Who developed the first compiler](#who-was-grace-hopper)?
 
 ### What are the phases of a compiler?
 Compilers consist of several distinct phases split among the front and back end.
+
+![Phases of a compiler](images/compiler-phases.svg)
 
 #### Front end
 The front end processes the source language and consists of these phases:
@@ -221,10 +223,12 @@ This means that the language is not context free.
 1.1.2 History and Purpose
 -->
 
-### Who is [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
+### Who was [Grace Hopper](http://www.smbc-comics.com/?id=2516)?
 <!---
 1.1.2.1 Grace Hopper
 -->
+
+![Grace Hopper. Official U.S. Navy Photograph.](images/grace-hopper.jpg)
 
 Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
 Her [distinguished naval career](#what-did-grace-hoppers-naval-career-have-to-do-with-compilers) led to her [contributions to computer science](#what-did-grace-hopper-contribute-to-computer-science).
@@ -263,3 +267,60 @@ Grace Hopper:
  - Computer History Museum Fellow Award in 1987.
  - Golden Gavel Award at the Toastmasters International convention in 1988.
  - National Medal of Technology in 1991.
+
+#### Purpose
+> TODO: add purpopse
+
+#### Translate Source Language to Target Language
+> TODO: Translate Source Language to Target Language
+
+#### Object Code and Executables
+> TODO: Object Code and Executables
+
+#### Platform Independent Compilers
+> TODO: add Platform Independent Compilers
+
+#### Hardware Compilation
+> TODO: add Hardware Compilation
+
+#### Compiler Design
+
+#### One-Pass vs Multi-Pass
+> TODO: add One-Pass vs Multi-Pass
+
+#### One Pass
+> TODO: add One Pass
+> TODO: add Simple to Implement
+> TODO: add Limited Optimization
+
+#### Multi-Pass
+> TODO: add Multi-Pass
+> TODO: add Enhanced Optimization
+> TODO: add Easier to Prove Correctability
+> TODO: add Source-to-Source Compilation Possible (Translators)
+> TODO: add Source-Bytecode-Native Code
+
+#### Structure
+
+#### Front End
+> TODO: add Front End
+
+#### add Create Intermediate Representation
+> TODO: add Create Intermediate Representation
+
+#### Manages Symbol Table
+> TODO: add Manages Symbol Table
+
+#### Steps
+> TODO: add Preprocessing
+> TODO: add Lexical Analysis
+> TODO: add Syntax Analysis
+> TODO: add Semantic Analysis
+
+#### Back End
+> TODO: add Back End
+
+#### Steps
+> TODO: add Analysis
+> TODO: add Optimization
+> TODO: add Code Generation
