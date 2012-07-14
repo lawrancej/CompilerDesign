@@ -112,9 +112,23 @@ Regular languages also do not accept arbitrary nesting, like [recursion](#what-i
 Thus, it is impossible to construct a regular expression (but possible to construct a context-free grammar) that matches balanced parentheses.
 
 ### What is a derivation?
-Give examples.
+
+A derivation refers to the way the syntax of a grammar is broken down to create sentence structures based on the rules of the grammar. 
+
+Add examples
+
 
 ### What is a leftmost derivation?
+
+The process of determining a leftmost derivation involves replacing the left hand non-terminal for each step of derivation until all nonterminals have been used.
+
+	X -> J C	J
+	X -> C		J C
+	C -> 5		J C C
+	C -> 6		C C C
+	C -> 7		6 C C
+	C -> 8		6 7 C
+	C -> 9		6 7 8
 
 ### What is a rightmost derivation?
 
