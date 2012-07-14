@@ -244,7 +244,7 @@ This means that the language is not context free.
 1.1.2.1 Grace Hopper
 -->
 
-![Alt Grace Hopper. Official U.S. Navy Photograph.](../images/grace-hopper.jpg)
+[![Alt Grace Hopper. Official U.S. Navy Photograph.](../images/grace-hopper.jpg)](../images/grace-hopper.jpg)
 
 Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
 Her [distinguished naval career](#what-did-grace-hoppers-naval-career-have-to-do-with-compilers) led to her [contributions to computer science](#what-did-grace-hopper-contribute-to-computer-science).
