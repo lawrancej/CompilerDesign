@@ -18,6 +18,11 @@ file_open() {
         echo "Unable to open file $1. What OS is this, anyway? $OSTYPE?"
     fi
 }
+
+# Package definitions
+# TODO: add cross installer in as a submodule
+# TODO: redo ./generate.sh to use said submodule
+
 # Cross platform dependency installer
 install_dependencies() {
     # TODO: test on OSX
