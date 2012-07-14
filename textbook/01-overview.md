@@ -132,9 +132,18 @@ With the exception of the first C compiler, it is possible to write a C compiler
 Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
 
 ### What is bootstrapping and how does it work?
-Bootstrapping is a series of steps that slowly builds up a self-hosting compiler.
+The term “bootstrapping” comes from the saying “to pull yourself up by your bootstraps”, which means to improve yourself as a result of your own efforts. In computing the term is often used to describe the act of building a system using itself, or a previous version of the system. More specifically, when referring to compilers, bootstrapping means writing a compiler in its own target language, creating a self-hosting compiler that can compile its own source code.
 
-> TODO: expand this so to answer how it works.
+The first few versions of a compiler for a new language are written on an existing reliable language until the new compiler become reliable enough to be self-hosting. The first couple of C compilers were written in assembly, but now they are written in C.
+
+Examples of self-hosting compilers:
+- Basic
+- C
+- C++
+- Java
+- Python
+- Scheme
+
 
 ## Theory of computation
 
