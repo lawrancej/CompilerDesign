@@ -25,18 +25,13 @@ TOPICS:
 7.1.2.1 Many Optimizations Are NP-Complete
 7.1.2.2 Memory Major Limitation in Other
 7.1.3 Effectiveness
-<<<<<<< HEAD
+
 7.1.3.1 What is the Target Architecture?
-=======
-7.1.3.1 Target Architecture
-		
->>>>>>> e6569732c7e6e941696f511b0b0ce3f62ce1c249
 		Architectural patterns are patterns that represent general functions required by the system.
 The target architecture is one of those patterns to show the programmers a base to what they want to achieve.
 The programmer then programs around this architecture taking into account all of the details.
 The programmer cannot always accommodate all of the details as they may conflict with the architecture though.
 7.1.3.1.1 The Machine on which the Program Will Run
-<<<<<<< HEAD
 			When designing a program, the programmer will always have the target computer in mind.
 The computer may have fewer capabilities than the one that the software is being programmed on 
 It may run on your own machine, but not the one in which the program will run.
@@ -59,34 +54,7 @@ This leads to effectiveness because it allows for great efficiency.
 			The hardware design is big for effectiveness because, if you don't know what the hardware is going to be, you cannot write for that hardware.
 A good example is like writing in assembly; you cannot write for an intel processor architecture when the computer has an AMD processor.
 It is good to know the hardware design as it leads to an effective program.
-=======
 			
-			When designing a program, the programmer will always have the target computer in mind.
-This computer may have fewer capabilities than the one that the software is being programmed on; it may run on your machine, but not the one in which the program will run.
-
-7.1.3.1.2 Factors
-			
-			There are many factors in which will decide if the program will run on the computer.
-7.1.3.1.2.1 CPU Registers
-			
-			The first is the CPU Registers, or a small amount of storage given to the processor so that mechanisms other than main memory can be accessed more quickly.
-This can help the effectiveness of computer programs, as they can store values that are accessed frequently in registers to improve performace.
-7.1.3.1.2.2 Pipelining
-			
-			A pipeline is a set of data processing elements connected so that the output of one element is the input of the next.
-The idea of this is to get processes done more efficiently, like an assembly line.
-Each element is in charge of doing one part and is often done in parallel with the others so that everything gets done much faster and more efficiently.
-7.1.3.1.2.3 Caches
-			
-			A cache is a method of processing where the computer stores data temporarily until future requests for the data can be served faster.
-Caches are generally smaller due to cost efficiency and efficient use of data.
-This leads to effectiveness because it allows for great efficiency.
-7.1.3.1.2.4 Hardware Design
-			
-			The hardware design is big for effectiveness because, if you don't know what the hardware is going to be, you cannot write for that hardware.
-A good example is like writing in assembly; you cannot write for an intel processor architecture when the computer has an AMD processor.
-It is really good to know the hardware design as it leads to a very effective program.
->>>>>>> e6569732c7e6e941696f511b0b0ce3f62ce1c249
 7.1.3.2 Host Architecture
 7.1.3.2.1 The Machine Doing the Compilation
 7.1.3.2.2 Factors
