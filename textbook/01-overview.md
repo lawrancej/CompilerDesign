@@ -77,7 +77,7 @@ Follow-up:
 ### What are the phases of a compiler?
 Compilers consist of several distinct phases split among the front and back end.
 
-![Phases of a compiler](images/compiler-phases.svg)
+![Alt Phases of a compiler](../images/compiler-phases.svg)
 
 #### Front end
 The front end processes the source language and consists of these phases:
