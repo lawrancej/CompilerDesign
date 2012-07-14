@@ -210,6 +210,11 @@ Examples
 ### What is a token?
 <!--- 2.2.1.3.2 Tokens -->
 A token is a string of characters that are categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
-They are frequently defined by regular expressions. Tokens are generally formed by having a lexical analyzer read the input 
-sent to it, identify the lexemes in the input, then categorizes them into the tokens.
+They are frequently defined by regular expressions. Tokens are generally formed by having a lexical analyzer read the input sent to it, identify the lexemes in the input, then categorizes them into the tokens.
+
+<!--- 
+Consider this example for clarification: 
+Input: int x = 3;
+LexemeToken typeintVariable type: NUMERIC xVariable: IDENTIFIER =Assignment operator3Value: NUMBER;END OF STATEMENT
+
 
