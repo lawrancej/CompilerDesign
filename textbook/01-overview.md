@@ -266,6 +266,8 @@ Grace Hopper:
 #### What did Grace Hopper's naval career have to do with compilers?
 > TODO: answer the question above
 
+The Navy’s David Taylor Model Basin was one of the government agencies that sponsored the development of COBOL. Grace Hopper’s position in the Navy allowed her to work with the latest technology at the time, and it was the Navy that assigned her the task of overseeing the development of a set of programs and procedures for validating COBOL compilers as part of a standardization program for the entire Navy.  
+
  - Sworn into the United States Navy Reserve in 1943.
      - Volunteered to serve in the WAVES.
  - Trained at the Smith College in Northampton, MA.
