@@ -77,7 +77,7 @@ Follow-up:
 ### What are the phases of a compiler?
 Compilers consist of several distinct phases split among the front and back end.
 
-![Alt Phases of a compiler](../images/compiler-phases.svg)
+![Phases of a compiler](../images/compiler-phases.svg)
 
 #### Front end
 The front end processes the source language and consists of these phases:
@@ -244,7 +244,7 @@ This means that the language is not context free.
 1.1.2.1 Grace Hopper
 -->
 
-![Alt Grace Hopper. Official U.S. Navy Photograph.](../images/grace-hopper.jpg)
+![Grace Hopper. Official U.S. Navy Photograph.](../images/grace-hopper.jpg)
 
 Grace Hopper developed the first compiler for a computer programming language and influenced subsequent programming languages.
 Her [distinguished naval career](#what-did-grace-hoppers-naval-career-have-to-do-with-compilers) led to her [contributions to computer science](#what-did-grace-hopper-contribute-to-computer-science).
