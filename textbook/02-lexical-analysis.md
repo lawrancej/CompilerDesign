@@ -215,6 +215,7 @@ They are frequently defined by regular expressions. Tokens are generally formed 
 <!--- 
 Consider this example for clarification: 
 Input: int x = 3;
-LexemeToken typeintVariable type: NUMERIC xVariable: IDENTIFIER =Assignment operator3Value: NUMBER;END OF STATEMENT
+Lexeme, Identifier
+int, Variable type: NUMERIC x, Variable: IDENTIFIER =, Assignment operator3, Value: NUMBER;, END OF STATEMENT
 
 
