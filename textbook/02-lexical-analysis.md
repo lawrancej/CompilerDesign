@@ -217,7 +217,11 @@ They are frequently defined by regular expressions. Tokens are generally formed 
 Consider this example for clarification: 
 Input: int x = 3;
 
-Lexeme, Identifier
-int, Variable type: NUMERIC x, Variable: IDENTIFIER =, Assignment operator3, Value: NUMBER;, END OF STATEMENT
+- int is a numeric variable type.
+- x is an identifier variable.
+- = is an assignment operator.
+- 3 is a number value.
+- ; is the end of a statement.
+
 
 
