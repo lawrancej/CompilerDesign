@@ -122,15 +122,25 @@ Add examples
 
 The process of determining a leftmost derivation involves replacing the left hand non-terminal for each step of derivation until all nonterminals have been used.
 
-	X -> J C	J
-	X -> C		J C
-	C -> 5		J C C
-	C -> 6		C C C
-	C -> 7		6 C C
-	C -> 8		6 7 C
-	C -> 9		6 7 8
+	J -> J M	J
+	J -> M		J M
+	M -> 5		J M M
+	M -> 6		M M M
+	M -> 7		6 M M
+	M -> 8		6 7 M
+	M -> 9		6 7 8
 
 ### What is a rightmost derivation?
+
+The process of determining a rightmost derivation involves replacing the right hand non-terminal for each step of derivation until all nonterminals have been used.
+
+	J -> J M	J
+	J -> M		J M
+	M -> 5		J 5
+	M -> 6		J M 5
+	M -> 7		J 6 5
+	M -> 8		M 6 5
+	M -> 9		7 6 5
 
 ### What is an ambiguous grammar?
 
