@@ -122,6 +122,8 @@ Add examples
 
 The process of determining a leftmost derivation involves replacing the left hand non-terminal for each step of derivation until all nonterminals have been used.
 
+	Grammar		Derivation
+
 	J -> J M	J
 	J -> M		J M
 	M -> 5		J M M
@@ -134,6 +136,8 @@ The process of determining a leftmost derivation involves replacing the left han
 
 The process of determining a rightmost derivation involves replacing the right hand non-terminal for each step of derivation until all nonterminals have been used.
 
+	Grammar		Derivation
+			
 	J -> J M	J
 	J -> M		J M
 	M -> 5		J 5
