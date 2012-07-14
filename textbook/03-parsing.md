@@ -1,4 +1,3 @@
-
 \pagebreak
 
 <!---
@@ -33,7 +32,7 @@ TOPICS:
 3.2.1.2 Example
 3.2.2 Backus-Naur Form Production Rules
 3.2.3 LL Parser
-3.2.4 Process
+3.2.4Process 
 3.2.4.1 Starts at Left-most Symbol Yielded from Production Rule
 3.2.4.2 Continues to Next Production Rule for Each Non-Terminal Symbol
 3.2.4.3 Proceeds "Down" the Parse Tree
@@ -107,6 +106,7 @@ Give examples.
 ### What is a LR(k) grammar?
 
 ### What is Backus-Naur Form?
+<!--3.2.3 LL Parser Kyle Cantrell-->
 
 A BNF specification is a set of derivation rules, written as
 
