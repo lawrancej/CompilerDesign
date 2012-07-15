@@ -78,6 +78,8 @@ $S \to \epsilon$
 
 ### How can you tell if a language is context-free?
 
+A grammar is context-free if left-hand sides of all productions contain exactly one non-terminal symbol.
+
 ### What is left recursion?
 
 ### What is the difference between a regular language and a context free language?
