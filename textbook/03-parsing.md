@@ -167,26 +167,37 @@ Let the following grammar below represent a context free grammar:
 	and since the rule for "b" is to replace "b" with "bS", the stack now becomes:
 	[b,S,a,b,a,b,a,$]
 	
+	
 	Since the input symbol "b" did not match the stack-top symbol S, the "b" is put as the stack-top symbol and not processed further in the first step. Had it been a match, we would further
 	process the terminal symbol as defined by the production rules (for example if the first symbol was S, we could have applied any of the three rules producing a stack
 	of [a,a,b,a,b,a,$] or [a,s,a,b,a,b,a,$]).
+	
+	This yields a Nonterminal stack of:
+	[b,S,S,$]
 	
 	The second step now process the "b" and since the second token is now "S" (the stack-top symbol), the b is removed because the stack-top symbol is "b"
 	and the S is removed because the third rule states that "S" can produce "bS" which is the current top of the stack, leaving the stack to look like:
 	[a,b,a,b,a,$]
 	and the output stream writes rule #3:
 	[3]
+	with the Non terminal stack becoming:
+	[S,$]
 	
 	
 	The third iteration continues on and processes the input character "a". Now since we have two production rules with "a" listed, the parser has a choice. Also, our parser 
 	only has a lookahead of 1. We will assume the parser is lazy and takes the rules sequentially, so our production rule on the input symbol "a" will be refactored by rule 1 which is
 	simply "a". Again the input symbol and stack-top symbol do not match so the "a" is not removed yet but is refactored as so by rule 1 and the stack-top symbol becomes "a":
 	[a,b,a,b,a,$]
+	with the Nonterminal stack:
+	[a,S,$]
 	
 	Now because "a" is the current stack-top symbol, the parser removes it leaving the stack as:
 	[b,a,b,a,$]
+	The nonterminal stack:
+	[S,$]
 	and writing rule #1 to the output stream:
 	[3,1]
+	
 	
 	Again our input symbol is "b" so we process as we did in the first and second iteration. For brevity's sake I will keep it shorthand:
 	
@@ -195,9 +206,13 @@ Let the following grammar below represent a context free grammar:
 	
 	"b" does not match current stack-symbol S, so we push "b" onto the stack and refactor:
 	[b,S,a,b,a,$]
+	Non terminal stack:
+	[b,S,S,$]
 	
 	We process again and since the next two symbols match, the third rule is written to the output stream and the stack becomes:
 	[a,b,a,$]
+	Non terminal stack:
+	[S,$]
 	With the output stream becoming:
 	[3,1,3]
 	
