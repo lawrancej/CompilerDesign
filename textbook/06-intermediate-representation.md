@@ -41,6 +41,42 @@ TOPICS:
 5.3.2.2 Runtime Exceptions
 -->
 
+###### Types
+<!--
+5.1 Types
+-->
+
+###### Types of Types
+<!--
+5.1.1 Types of Types
+-->
+
+###### Primitive
+<!--
+5.1.1.1 Primitive
+-->
+
+###### Reference
+<!--
+5.1.1.2 Reference
+-->
+
+###### Null
+<!--
+5.1.1.3 Null
+-->
+
+###### Object
+<!--
+5.1.1.4 Object
+-->
+
+###### Function
+<!--
+5.1.1.5 Function
+-->
+
+
 Intermediate representations
 ============================
 
