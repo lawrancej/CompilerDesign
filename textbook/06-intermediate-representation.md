@@ -65,6 +65,7 @@ TOPICS:
 <!--
 5.1.1.3 Null
 -->
+Null is the computational equivalent to nothing. It can be used in many ways and implemented differently in different programming languages. Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000).
 
 ###### Object
 <!--
