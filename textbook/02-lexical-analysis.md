@@ -207,11 +207,17 @@ Sequences are typically delimited in some way using characters (i.e.
 #### Follow-up:
 Examples
 
+<!--- 2.1.2 Tokens and Lexemes -->
+### What is a lexeme?
+A lexeme is a string of characters that follow a set of rules in a language, which is then categorized by a [token][#what-is-a-token].
+
 ### What is a token?
 <!--- 2.2.1.3.2 Tokens -->
 A token is a string of characters that are categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
 They are frequently defined by regular expressions. Tokens are generally formed by having a lexical analyzer read the input sent to it, identify the lexemes in the input, then categorizes them into the tokens.
 
+
+#### Example
 <!--- 2.2.1.3.1 int x = 3; -->
 
 Consider this example for clarification: 
