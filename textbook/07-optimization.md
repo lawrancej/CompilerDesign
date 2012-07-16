@@ -24,8 +24,6 @@ TOPICS:
 7.1.2 Complexity
 7.1.2.1 Many Optimizations Are NP-Complete
 7.1.2.2 Memory Major Limitation in Other
-
-<Answered>
 7.1.3 Effectiveness
 7.1.3.1 What is the Target Architecture?
 7.1.3.1.1 The Machine on which the Program Will Run
@@ -44,7 +42,6 @@ TOPICS:
 7.1.3.2.4 Release vs Debugging
 7.1.3.2.4.1 Release Is Often Optimized for Performance
 7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
-</Answered>
 7.2 Optimization Categories
 7.2.1 Peephole
 7.2.1.1 Performed after Machine Code Has Been Generated
