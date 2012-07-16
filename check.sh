@@ -85,6 +85,10 @@ for file in `ls textbook`; do
     sed -i.bak -E -e "s/([a-zA-Z])([.!?]) /\1\2\n/g" textbook/$file
     rm textbook/$file.bak
 done
+# Fix line endings
+if [[ $OS == "Windows_NT" ]]; then
+    dos2unix textbook/*.md
+fi
 
 if [ $# = 2 ]; then
     section=$2
