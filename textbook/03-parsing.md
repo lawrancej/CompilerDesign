@@ -49,12 +49,20 @@ Parsing
 =======
 
 ### 3.1 Parsing Overview
+Syntax Analysis also known as parsing is the process of analyzing tokens and
+recombining them into a syntax tree. 
 
 #### 3.1.1 Function
+Syntax analysis will verify that the input`s syntax is valid. 
 
 ##### 3.1.1.1 Input: Tokens from Lexical Analysis
+Lexical analysis splits input into tokens which the syntax analyzer then
+recombines into a syntax tree.
 
 ##### 3.1.1.2 Output: Program Parse Tree
+Recombining of a syntax parse tree during lexical analysis is done according  to
+the syntax specification. The leaves of the parse tree are the tokens generated
+during lexical analysis.
 
 #### 3.1.2 Examples
 
