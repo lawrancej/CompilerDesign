@@ -24,8 +24,6 @@ TOPICS:
 7.1.2 Complexity
 7.1.2.1 Many Optimizations Are NP-Complete
 7.1.2.2 Memory Major Limitation in Other
-
-<Answered>
 7.1.3 Effectiveness
 7.1.3.1 What is the Target Architecture?
 7.1.3.1.1 The Machine on which the Program Will Run
@@ -34,7 +32,6 @@ TOPICS:
 7.1.3.1.2.2 What is Pipelining?
 7.1.3.1.2.3 What is a Cache?
 7.1.3.1.2.4 What is Hardware Design?
-</Answered>
 7.1.3.2 Host Architecture
 7.1.3.2.1 The Machine Doing the Compilation
 7.1.3.2.2 Factors
@@ -67,62 +64,6 @@ TOPICS:
 7.3.6 Decrease Special Memory Reference Distance
 
 -->
-
-
-#### Host Architecture
-<!--
-7.1.3.2 Host Architecture
--->
-
-##### The Machine Doing the Compilation
-<!--
-7.1.3.2.1 The Machine Doing the Compilation
--->
-
-##### Factors
-<!--
-7.1.3.2.2 Factors
--->
-
-###### CPU Speed
-<!--
-7.1.3.2.2.1 CPU Speed
--->
- CPU speed can be a major factor in compilation times.
-The speed at which a compiler can perform lexical analysis, parsing, code generation, optimization, etcetera, weighs heavily on the effeciciency of the CPU.
-
-###### Pipelining
-<!--
-7.1.3.2.2.2 Pipelining
--->
- Pipelining is a method of optimizing loops via out-of-order execution (instructions are executed in order of data availability rather than code position) where reordering is done by a compiler rather than the processor.
-
-###### RAM Capacity and Architecture
-<!--
-7.1.3.2.2.3 Memory Capacity and Architecture
--->
- Like the CPU, RAM speed can be a major factor in compilation times.
-Many CPU-based operations rely on RAM to temporarily store information in regards to the operations being executed, thus the amount of data that can be stored, and the speed at which it can be read and written, can affect the speed at which these operations will complete.
-
-####### Hard Disks
- Certain phases of compilation, such as the reading of source files and headers and writing of object files, are disk-intensive.
-The read/write spead of the disk can directly effect the rate at which these operations can be executed.
- While disk read/write speeds do not have as large of an impact in compilation times as CPU and RAM performance, they still have an impact on the overall execution time.
-
-##### Program Usage
-<!--
-7.1.3.2.3 Program Usage
--->
-
-###### Release vs Debugging
-<!--
-7.1.3.2.4.1 Release Is Often Optimized for Performance
-7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
--->
- In a debug build, the complete symbolic debug information is emitted for testing and debugging purposes.
-Code optimization is not a priority in debug releases.
- Release builds do not emit the symbolic debugging info, reducing the size of the final executable file.
-The speed of execution may vary between debug and release builds depending on the compiler.
 
 Optimization
 ============
@@ -211,24 +152,44 @@ Examples:
 - `if (false) { /* Dead code */ }`
 
 ### Effectiveness
-
+<!--
+7.1.3 Effectiveness
+-->
 #### What is the Target Architecture?
+<!--
+7.1.3.1 What is the Target Architecture?
+-->
 		Architectural patterns are patterns that represent general functions required by the system.
 The target architecture is one of those patterns to show the programmers a base to what they want to achieve.
 The programmer then programs around this architecture taking into account all of the details.
 The programmer cannot always accommodate all of the details as they may conflict with the architecture though.
+
 ##### The Machine on which the Program Will Run
+<!--
+7.1.3.1.1 The Machine on which the Program Will Run
+-->
 			When designing a program, the programmer will always have the target computer in mind.
 The computer may have fewer capabilities than the one that the software is being programmed on 
 It may run on your own machine, but not the one in which the program will run.
 
 ##### What are the Factors that affect Effectiveness?
+<!--
+7.1.3.1.2  What are the Factors that affect Effectiveness?
+-->
 			The factors in which will decide if the program will run on the computer are: CPU Registers, Pipelining, Cache, and the Hardware Design.
 
 ###### What are CPU Registers?
+<!--
+7.1.3.1.2.1 What are CPU Registers?
+-->
 			The first is the CPU Registers, or a small amount of storage given to the processor so that mechanisms other than main memory can be accessed more quickly.
 This can help the effectiveness of computer programs as they can store values that are accessed frequently in registers to improve performace.
+
 ###### What is Pipelining?
+<!--
+7.1.3.1.2.2 What is Pipelining?
+7.1.3.1.2.3 What is a Cache?
+-->
 			A pipeline is a set of data processing elements connected so that the output of one element is the input of the next.
 The idea of this is to get processes done more efficiently, like an assembly line.
 Each element is in charge of doing one part and is often done in parallel with the others so that everything gets done much faster and more efficiently.
@@ -236,8 +197,66 @@ Each element is in charge of doing one part and is often done in parallel with t
 			A cache is a method of processing where the computer stores data temporarily until future requests for the data can be served faster.
 Caches are generally smaller due to cost efficiency and efficient use of data.
 This leads to effectiveness because it allows for great efficiency.
+
 ###### What is Hardware Design?
+<!--
+7.1.3.1.2.4 What is Hardware Design?
+-->
 			The hardware design is big for effectiveness because, if you don't know what the hardware is going to be, you cannot write for that hardware.
 A good example is like writing in assembly; you cannot write for an intel processor architecture when the computer has an AMD processor.
 It is good to know the hardware design as it leads to an effective program.
 			
+#### Host Architecture
+<!--
+7.1.3.2 Host Architecture
+-->
+
+##### The Machine Doing the Compilation
+<!--
+7.1.3.2.1 The Machine Doing the Compilation
+-->
+
+##### Factors
+<!--
+7.1.3.2.2 Factors
+-->
+
+###### CPU Speed
+<!--
+7.1.3.2.2.1 CPU Speed
+-->
+ CPU speed can be a major factor in compilation times.
+The speed at which a compiler can perform lexical analysis, parsing, code generation, optimization, etcetera, weighs heavily on the effeciciency of the CPU.
+
+###### Pipelining
+<!--
+7.1.3.2.2.2 Pipelining
+-->
+ Pipelining is a method of optimizing loops via out-of-order execution (instructions are executed in order of data availability rather than code position) where reordering is done by a compiler rather than the processor.
+
+###### RAM Capacity and Architecture
+<!--
+7.1.3.2.2.3 Memory Capacity and Architecture
+-->
+ Like the CPU, RAM speed can be a major factor in compilation times.
+Many CPU-based operations rely on RAM to temporarily store information in regards to the operations being executed, thus the amount of data that can be stored, and the speed at which it can be read and written, can affect the speed at which these operations will complete.
+
+####### Hard Disks
+ Certain phases of compilation, such as the reading of source files and headers and writing of object files, are disk-intensive.
+The read/write spead of the disk can directly effect the rate at which these operations can be executed.
+ While disk read/write speeds do not have as large of an impact in compilation times as CPU and RAM performance, they still have an impact on the overall execution time.
+
+##### Program Usage
+<!--
+7.1.3.2.3 Program Usage
+-->
+
+###### Release vs Debugging
+<!--
+7.1.3.2.4.1 Release Is Often Optimized for Performance
+7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
+-->
+ In a debug build, the complete symbolic debug information is emitted for testing and debugging purposes.
+Code optimization is not a priority in debug releases.
+ Release builds do not emit the symbolic debugging info, reducing the size of the final executable file.
+The speed of execution may vary between debug and release builds depending on the compiler.
