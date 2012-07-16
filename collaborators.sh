@@ -27,4 +27,5 @@ else
 			echo $collaborator
 		fi
 	done
+    git remote add upstream https://github.com/lawrancej/CompilerDesign.git
 fi
