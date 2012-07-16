@@ -155,6 +155,7 @@ Examples:
 <!--
 7.1.3 Effectiveness
 -->
+
 #### What is the Target Architecture?
 <!--
 7.1.3.1 What is the Target Architecture?
