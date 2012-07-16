@@ -218,4 +218,5 @@ Sequences are typically delimited in some way using characters (i.e.
 > TODO: Add some examples
 
 ### What is a token?
-> TODO: What is a token?
+
+A token is a single element of a programming language. Tokens could be keywords, operators, or punctuation marks.
