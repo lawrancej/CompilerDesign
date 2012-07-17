@@ -43,9 +43,34 @@ TOPICS:
 7.1.3.2.4.1 Release Is Often Optimized for Performance
 7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
 7.2 Optimization Categories
+Optimization is the process of modifying a software to make an aspect of it work more efficiently. This means that the code will run more quickly and use up less resources than it already does.
 7.2.1 Peephole
-7.2.1.1 Performed after Machine Code Has Been Generated
+Peephole Optimization is a type of optimization that works on very small sets of instructions in generated code at a time. It then refactors sets so that it can be replaced by faster, more efficient code segments.
 7.2.1.2 Connects Adjacent Instructions to See If They Can Be Compressed
+	This optimization method will group together instructions to see if they can be compressed. It will then look at how the memory is being handled and remove unnecessary lines of code.
+7.2.1.1 Performed after Machine Code Has Been Generated
+	This is normally performed after the machine code has been generated. It will optimize the execution of the instruction at the lowest level.
+7.2.1.1.1 EXAMPLE
+		Take the instruction set:
+		a = b + c;
+		d = a + e;
+		
+		What is actually implemented in machine code is:
+		MOV b, R0
+		ADD c, R0
+		MOV R0, a
+		MOV a, R0
+		ADD e, R0
+		MOV R0,d
+		
+		This machine can be optimised. It can be condensed to:
+		MOV b, R0
+		ADD c, R0
+		MOV R0, a
+		ADD e, R0
+		MOV R0, d
+		
+		By taking the code at its base level and optimising it there, the code will run much faster and have to execute even less commands to achieve the same result.
 7.2.2 Local
 7.2.3 Loop
 7.2.3.1 Act upon Loops
