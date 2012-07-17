@@ -40,7 +40,7 @@ TOPICS:
 7.1.3.2.2.3 Memory Capacity and Architecture
 7.1.3.2.3 Program Usage
 7.1.3.2.4 Release vs Debugging
-7.1.3.2.4.1 Release Is Often Optimized for Performance
+7.1.3.2.4.1  Release Is Often Optimized for Performance
 7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
 7.2 Optimization Categories
 7.2.1 Peephole
@@ -188,12 +188,15 @@ This can help the effectiveness of computer programs as they can store values th
 ###### What is Pipelining?
 <!--
 7.1.3.1.2.2 What is Pipelining?
-7.1.3.1.2.3 What is a Cache?
 -->
+
 			A pipeline is a set of data processing elements connected so that the output of one element is the input of the next.
 The idea of this is to get processes done more efficiently, like an assembly line.
 Each element is in charge of doing one part and is often done in parallel with the others so that everything gets done much faster and more efficiently.
 ###### What is a Cache?
+<!--
+7.1.3.1.2.3
+-->
 			A cache is a method of processing where the computer stores data temporarily until future requests for the data can be served faster.
 Caches are generally smaller due to cost efficiency and efficient use of data.
 This leads to effectiveness because it allows for great efficiency.
