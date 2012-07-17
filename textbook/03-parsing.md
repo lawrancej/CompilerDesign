@@ -76,16 +76,14 @@ $S \to \epsilon$
 #### Follow-up questions
 
 - [How can you tell if a language is context-free](#how-can-you-tell-if-a-language-is-context-free)?
-	A language is context-free if it follows context-free grammar. In context-free language, the left side is always single nonterminal producing rules of the form "<A> ::= a", such as <expression> ::= <expression>*<term>. The right side is sequence of terminal and non-terminal symbols. "*" is non-terminal symbol.
-
-	So, a context-free language should always form "<A> ::= a" where left side is always single non terminal symbol.
-
-
 - [Is English context-free](http://cs.haifa.ac.il/~shuly/teaching/08/nlp/complexity.pdf)?
 - [When a language is context free, do terminals have only one meaning](#what-are-the-implications-of-chomskys-hierarchy)?
 - [Is infinite recursion allowed in context-free grammars](#what-is-left-recursion)?
 
 ### How can you tell if a language is context-free?
+	A language is context-free if it follows context-free grammar. In context-free language, the left side is always single nonterminal producing rules of the form "<A> ::= a", such as <expression> ::= <expression>*<term>. The right side is sequence of terminal and non-terminal symbols. "*" is non-terminal symbol.
+
+	So, a context-free language should always form "<A> ::= a" where left side is always single non terminal symbol.
 
 ### What is left recursion?
 
