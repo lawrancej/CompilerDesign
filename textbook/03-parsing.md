@@ -117,9 +117,9 @@ Give examples.
 
 A BNF specification is a set of derivation rules, written as
 
- <symbol> ::= __expression__
+ '<symbol> ::= __expression__'
 
-where <symbol> is a nonterminal, and the __expression__ consists of one or more sequences of symbols; more sequences are separated by the vertical bar, '|', indicating a choice, the whole being a possible substitution for the symbol on the left.
+where '<symbol>' is a nonterminal, and the '__expression__' consists of one or more sequences of symbols; more sequences are separated by the vertical bar, '|', indicating a choice, the whole being a possible substitution for the symbol on the left.
 Symbols that never appear on a left side are terminals.
 On the other hand, symbols that appear on a left side are non-terminals and are always enclosed between the pair <>.
 
