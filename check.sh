@@ -80,8 +80,8 @@ weasels="many|various|very|fairly|several|extremely\
 |excellent|interestingly|significantly\
 |substantially|clearly|vast|relatively|completely"
 
-# Enforce one sentence per line
 for file in `ls textbook`; do
+    # Enforce one sentence per line
     sed -i.bak -E -e "s/([a-zA-Z])([.!?]) /\1\2\n/g" textbook/$file
     rm textbook/$file.bak
 done

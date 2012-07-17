@@ -43,13 +43,17 @@ TOPICS:
 7.1.3.2.4.1 Release Is Often Optimized for Performance
 7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
 7.2 Optimization Categories
-Optimization is the process of modifying a software to make an aspect of it work more efficiently. This means that the code will run more quickly and use up less resources than it already does.
+Optimization is the process of modifying a software to make an aspect of it work more efficiently.
+This means that the code will run more quickly and use up less resources than it already does.
 7.2.1 Peephole
-Peephole Optimization is a type of optimization that works on very small sets of instructions in generated code at a time. It then refactors sets so that it can be replaced by faster, more efficient code segments.
+Peephole Optimization is a type of optimization that works on very small sets of instructions in generated code at a time.
+It then refactors sets so that it can be replaced by faster, more efficient code segments.
 7.2.1.2 Connects Adjacent Instructions to See If They Can Be Compressed
-	This optimization method will group together instructions to see if they can be compressed. It will then look at how the memory is being handled and remove unnecessary lines of code.
+	This optimization method will group together instructions to see if they can be compressed.
+It will then look at how the memory is being handled and remove unnecessary lines of code.
 7.2.1.1 Performed after Machine Code Has Been Generated
-	This is normally performed after the machine code has been generated. It will optimize the execution of the instruction at the lowest level.
+	This is normally performed after the machine code has been generated.
+It will optimize the execution of the instruction at the lowest level.
 7.2.1.1.1 EXAMPLE
 		Take the instruction set:
 		a = b + c;
@@ -63,7 +67,8 @@ Peephole Optimization is a type of optimization that works on very small sets of
 		ADD e, R0
 		MOV R0,d
 		
-		This machine can be optimised. It can be condensed to:
+		This machine can be optimised.
+It can be condensed to:
 		MOV b, R0
 		ADD c, R0
 		MOV R0, a
@@ -186,13 +191,18 @@ Examples:
 <!--
 7.1.2.1 Many Optimizations Are NP-Complete
 -->
-In compiler design, many code optimization problems are NP-complete, or undecidable.  NP-complete problems are decision problems that take a long and inefficient amount of time to find a solution, yet verifying the solution can be done quickly.  NP stands for “nondeterministic polynomial time”, referring to running time of an algorithm that can exhibit different behaviors or different runs.  Undecidable problems are decision problems that a single algorithm is not sufficient to accurately lead to a correct answer.  
+In compiler design, many code optimization problems are NP-complete, or undecidable.
+ NP-complete problems are decision problems that take a long and inefficient amount of time to find a solution, yet verifying the solution can be done quickly.
+ NP stands for "nondeterministic polynomial time", referring to running time of an algorithm that can exhibit different behaviors or different runs.
+ Undecidable problems are decision problems that a single algorithm is not sufficient to accurately lead to a correct answer.
+ 
 
 #### Memory Major Limitation in Other
 <!--
 7.1.2.2 Memory Major Limitation in Other
 -->
-Memory limitations exist for optimization, as optimization is a cpu-heavy and memory heavy process.  In addition, even the programmer’s time to wait for a compiler to complete also places restrictions on optimization.
+Memory limitations exist for optimization, as optimization is a cpu-heavy and memory heavy process.
+ In addition, even the programmer's time to wait for a compiler to complete also places restrictions on optimization.
 
 ### Effectiveness
 <!--

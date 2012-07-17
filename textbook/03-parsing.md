@@ -78,23 +78,29 @@ $S \to \epsilon$
 
 ### How can you tell if a language is context-free?
 
-The authenticity of a context free language can be determined by a mathematical property known as the pumping lemma that all context free languages have. A language L would be considered context free if an integer pumping length q >= 1 exists so that any string t in L with |t| >= q can be defined as
+The authenticity of a context free language can be determined by a mathematical property known as the pumping lemma that all context free languages have.
+A language L would be considered context free if an integer pumping length q >= 1 exists so that any string t in L with |t| >= q can be defined as
 
 	t = jmacs
 
 where t is split into the substrings j, m, a, c, and s under the following conditions.
 
-	a. |mac| <= q
-	b. |mc >= 1|
+	a.
+|mac| <= q
+	b.
+|mc >= 1|
 	      n  n
-	c. jm^ a^ cs is in the language L for every n
+	c.
+jm^ a^ cs is in the language L for every n
 
-These proofs may be tested against any language in contempt of questionable context. All conditions stated above must be met in order for a grammar to be considered context free.
+These proofs may be tested against any language in contempt of questionable context.
+All conditions stated above must be met in order for a grammar to be considered context free.
 
 
 ### What is left recursion?
 
-Left recursion is defined as a grammer set where the nonterminal starting symbol will eventually derive itself back to its original form with the starting symbol as the the left-symbol. For example:
+Left recursion is defined as a grammer set where the nonterminal starting symbol will eventually derive itself back to its original form with the starting symbol as the the left-symbol.
+For example:
 
 	Z -> Zy|e
 
@@ -112,7 +118,8 @@ Thus, it is impossible to construct a regular expression (but possible to constr
 
 ### What is a derivation?
 
-A derivation refers to the way the syntax of a grammar is broken down to create sentence structures based on the rules of the grammar. 
+A derivation refers to the way the syntax of a grammar is broken down to create sentence structures based on the rules of the grammar.
+
 
 Add examples
 
