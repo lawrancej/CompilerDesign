@@ -40,7 +40,7 @@ TOPICS:
 7.1.3.2.2.3 Memory Capacity and Architecture
 7.1.3.2.3 Program Usage
 7.1.3.2.4 Release vs Debugging
-7.1.3.2.4.1  Release Is Often Optimized for Performance
+7.1.3.2.4.1 Release Is Often Optimized for Performance
 7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
 7.2 Optimization Categories
 7.2.1 Peephole
@@ -151,15 +151,34 @@ Examples:
 - Computations that do not affect output
 - `if (false) { /* Dead code */ }`
 
+
+### Complexity
+<!--
+7.1.2 Complexity
+-->
+
+#### Many Optimizations Are NP-Complete 
+<!--
+7.1.2.1 Many Optimizations Are NP-Complete
+-->
+In compiler design, many code optimization problems are NP-complete, or undecidable.  NP-complete problems are decision problems that take a long and inefficient amount of time to find a solution, yet verifying the solution can be done quickly.  NP stands for “nondeterministic polynomial time”, referring to running time of an algorithm that can exhibit different behaviors or different runs.  Undecidable problems are decision problems that a single algorithm is not sufficient to accurately lead to a correct answer.  
+
+#### Memory Major Limitation in Other
+<!--
+7.1.2.2 Memory Major Limitation in Other
+-->
+Memory limitations exist for optimization, as optimization is a cpu-heavy and memory heavy process.  In addition, even the programmer’s time to wait for a compiler to complete also places restrictions on optimization.
+
 ### Effectiveness
 <!--
 7.1.3 Effectiveness
 -->
+
 #### What is the Target Architecture?
 <!--
 7.1.3.1 What is the Target Architecture?
 -->
-		Architectural patterns are patterns that represent general functions required by the system.
+Architectural patterns are patterns that represent general functions required by the system.
 The target architecture is one of those patterns to show the programmers a base to what they want to achieve.
 The programmer then programs around this architecture taking into account all of the details.
 The programmer cannot always accommodate all of the details as they may conflict with the architecture though.
@@ -168,7 +187,7 @@ The programmer cannot always accommodate all of the details as they may conflict
 <!--
 7.1.3.1.1 The Machine on which the Program Will Run
 -->
-			When designing a program, the programmer will always have the target computer in mind.
+When designing a program, the programmer will always have the target computer in mind.
 The computer may have fewer capabilities than the one that the software is being programmed on 
 It may run on your own machine, but not the one in which the program will run.
 
@@ -176,28 +195,26 @@ It may run on your own machine, but not the one in which the program will run.
 <!--
 7.1.3.1.2  What are the Factors that affect Effectiveness?
 -->
-			The factors in which will decide if the program will run on the computer are: CPU Registers, Pipelining, Cache, and the Hardware Design.
+The factors in which will decide if the program will run on the computer are: CPU Registers, Pipelining, Cache, and the Hardware Design.
 
 ###### What are CPU Registers?
 <!--
 7.1.3.1.2.1 What are CPU Registers?
 -->
-			The first is the CPU Registers, or a small amount of storage given to the processor so that mechanisms other than main memory can be accessed more quickly.
+The first is the CPU Registers, or a small amount of storage given to the processor so that mechanisms other than main memory can be accessed more quickly.
 This can help the effectiveness of computer programs as they can store values that are accessed frequently in registers to improve performace.
 
 ###### What is Pipelining?
 <!--
 7.1.3.1.2.2 What is Pipelining?
+7.1.3.1.2.3 What is a Cache?
 -->
-
-			A pipeline is a set of data processing elements connected so that the output of one element is the input of the next.
+A pipeline is a set of data processing elements connected so that the output of one element is the input of the next.
 The idea of this is to get processes done more efficiently, like an assembly line.
 Each element is in charge of doing one part and is often done in parallel with the others so that everything gets done much faster and more efficiently.
+
 ###### What is a Cache?
-<!--
-7.1.3.1.2.3
--->
-			A cache is a method of processing where the computer stores data temporarily until future requests for the data can be served faster.
+A cache is a method of processing where the computer stores data temporarily until future requests for the data can be served faster.
 Caches are generally smaller due to cost efficiency and efficient use of data.
 This leads to effectiveness because it allows for great efficiency.
 
@@ -205,7 +222,7 @@ This leads to effectiveness because it allows for great efficiency.
 <!--
 7.1.3.1.2.4 What is Hardware Design?
 -->
-			The hardware design is big for effectiveness because, if you don't know what the hardware is going to be, you cannot write for that hardware.
+The hardware design is big for effectiveness because, if you don't know what the hardware is going to be, you cannot write for that hardware.
 A good example is like writing in assembly; you cannot write for an intel processor architecture when the computer has an AMD processor.
 It is good to know the hardware design as it leads to an effective program.
 			
@@ -228,7 +245,7 @@ It is good to know the hardware design as it leads to an effective program.
 <!--
 7.1.3.2.2.1 CPU Speed
 -->
- CPU speed can be a major factor in compilation times.
+CPU speed can be a major factor in compilation times.
 The speed at which a compiler can perform lexical analysis, parsing, code generation, optimization, etcetera, weighs heavily on the effeciciency of the CPU.
 
 ###### Pipelining
