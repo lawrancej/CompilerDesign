@@ -86,6 +86,14 @@ else
     if [ $1 = "pdf" ] || [ $1 = "epub" ] || [ $1 = "html" ]; then
         echo "Building CompilerDesign"
         cp -R images build
+        for file in $(ls textbook); do
+            sed -i.bak -E -e '1 s/\xEF\xBB\xBF//' textbook/$file
+            rm textbook/$file.bak
+        done
+        # Fix line endings
+        if [[ $OS == "Windows_NT" ]]; then
+            dos2unix textbook/*.md
+        fi
     fi
     # Generate guide documentation
     if [ $1 = "guide" ]; then
