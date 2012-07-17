@@ -1,52 +1,7 @@
+
 \pagebreak
->TODO : The next step of the compilation process is parsing.  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.  In this unit, we will define parsing and identify its uses.  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches.
+>TODO : The next step of the compilation process is parsing.  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.  In this unit, we will define parsing and identify its uses.  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches. 
 
-
-
-<!---
-DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
-
-This section should cover these topics.
-It need not be in this order.
-
-Indicate coverage of topics by copying topic lines verbatim into a comment adjacent to the relevant text.
-Covered topics appear twice in a file: here and adjacent to the relevant text.
-Uncovered topics appear only once in a file (in this comment).
-
-This command checks whether topic lines appear only once in a file.
-
-    ./check.sh uncovered
-
-TOPICS:
-
-3.1 Parsing Overview
-3.1.1 Function
-3.1.1.1 Input: Tokens from Lexical Analysis
-3.1.1.2 Output: Program Parse Tree
-3.1.2 Examples
-3.1.2.1 Given an Arbitrary Function
-3.1.2.2 Produce:
-3.1.2.2.1 Parser Input
-3.1.2.2.2 Parse Tree
-3.1.3 Context-Free Grammar
-3.2 Top-Down Parsing
-3.2.1 Traversing a Parse Tree
-3.2.1.1 Definition
-3.2.1.2 Example
-3.2.2 Backus-Naur Form Production Rules
-3.2.3 LL Parser
-3.2.4Process 
-3.2.4.1 Starts at Left-most Symbol Yielded from Production Rule
-3.2.4.2 Continues to Next Production Rule for Each Non-Terminal Symbol
-3.2.4.3 Proceeds "Down" the Parse Tree
-3.3 Bottom-Up Parsing
-3.3.1 Bottom-Up
-3.3.1.1 Definition
-3.3.1.2 Example
-3.3.2 Process
-3.3.2.1 Identify Terminal Symbols First
-3.3.2.2 Combine Terminal Symbol to Produce Nonterminals
--->
 
 Parsing
 =======
@@ -81,35 +36,8 @@ $S \to \epsilon$
 - [Is infinite recursion allowed in context-free grammars](#what-is-left-recursion)?
 
 ### How can you tell if a language is context-free?
-	A language is context-free if it follows context-free grammar. In context-free language, the left side is always single nonterminal producing rules of the form "'<A>' ::= a", such as '<expression>' ::= '<expression>'*<term>. The right side is sequence of terminal and non-terminal symbols. "*" is non-terminal symbol.
-
-	So, a context-free language should always form "'<A>' ::= a" where left side is always single non terminal symbol.
-
-The authenticity of a context free language can be determined by a mathematical property known as the pumping lemma that all context free languages have.
-A language L would be considered context free if an integer pumping length q >= 1 exists so that any string t in L with |t| >= q can be defined as
-
-	t = jmacs
-
-where t is split into the substrings j, m, a, c, and s under the following conditions.
-
-	a.
-|mac| <= q
-	b.
-|mc >= 1|
-	      n  n
-	c.
-jm^ a^ cs is in the language L for every n
-
-These proofs may be tested against any language in contempt of questionable context.
-All conditions stated above must be met in order for a grammar to be considered context free.
-
 
 ### What is left recursion?
-
-Left recursion is defined as a grammer set where the nonterminal starting symbol will eventually derive itself back to its original form with the starting symbol as the the left-symbol.
-For example:
-
-	Z -> Zy|e
 
 ### What is the difference between a regular language and a context free language?
 
@@ -124,40 +52,11 @@ Regular languages also do not accept arbitrary nesting, like [recursion](#what-i
 Thus, it is impossible to construct a regular expression (but possible to construct a context-free grammar) that matches balanced parentheses.
 
 ### What is a derivation?
-
-A derivation refers to the way the syntax of a grammar is broken down to create sentence structures based on the rules of the grammar.
-
-
-Add examples
-
+Give examples.
 
 ### What is a leftmost derivation?
 
-The process of determining a leftmost derivation involves replacing the left hand non-terminal for each step of derivation until all nonterminals have been used.
-
-	Grammar		Derivation
-
-	J -> J M	J
-	J -> M		J M
-	M -> 5		J M M
-	M -> 6		M M M
-	M -> 7		6 M M
-	M -> 8		6 7 M
-	M -> 9		6 7 8
-
 ### What is a rightmost derivation?
-
-The process of determining a rightmost derivation involves replacing the right hand non-terminal for each step of derivation until all nonterminals have been used.
-
-	Grammar		Derivation
-			
-	J -> J M	J
-	J -> M		J M
-	M -> 5		J 5
-	M -> 6		J M 5
-	M -> 7		J 6 5
-	M -> 8		M 6 5
-	M -> 9		7 6 5
 
 ### What is an ambiguous grammar?
 
@@ -166,13 +65,12 @@ The process of determining a rightmost derivation involves replacing the right h
 ### What is a LR(k) grammar?
 
 ### What is Backus-Naur Form?
-<!--3.2.3 LL Parser Kyle Cantrell-->
 
 A BNF specification is a set of derivation rules, written as
 
- '<symbol> ::= __expression__'
+ <symbol> ::= __expression__
 
-where '<symbol>' is a nonterminal, and the '__expression__' consists of one or more sequences of symbols; more sequences are separated by the vertical bar, '|', indicating a choice, the whole being a possible substitution for the symbol on the left.
+where <symbol> is a nonterminal, and the __expression__ consists of one or more sequences of symbols; more sequences are separated by the vertical bar, '|', indicating a choice, the whole being a possible substitution for the symbol on the left.
 Symbols that never appear on a left side are terminals.
 On the other hand, symbols that appear on a left side are non-terminals and are always enclosed between the pair <>.
 
@@ -204,10 +102,12 @@ Follow ups:
 - [How do parsers work](#how-do-parsers-work)?
 
 ### What is a syntax error?
+<<<<<<< HEAD
 
-	Syntax of a language is the rule that determines what is allowed in that language. It specifies how a program can be written using statements, loops and functions etc. This rule also applies to how different types of such loops, statements and functions are constructed. Basically, syntax of a programming language is a vocabulary of that language. A syntatically correct program can be sucessfully compiled and interpreted to a machine language. Therefore, a syntatically incorrect program cannot be compiled and they are supposed to have syntax errors. Syntax errors are errors in the structure of the language. When writing a program, if syntax of the language is not followed, the program will have syntax error.
+	Syntax of a language is the rule that determines what is allowed in that language. It specifies how a program can be written using statements, loops and functions etc. This rule also applies to how different types of such loops, statements and functions are constructed. Basically, syntax of a programming language is a vocabulary of that language. A syntatically correct program can be sucessfully compiled and interpreted to a machine language. A syntatically incorrect program cannot be compiled and they are supposed to have syntax errors. Syntax errors are errors in the structure of the language. When writing a program, if syntax of the language is not followed, the program will have syntax error.
 	
-	For e.g, in java programming language, semicolon(;) is required at the end of every statement. If semicolon is not typed after every statement in java, you will get a syntax error while trying to compile your program. Let's see this in the real statement in java. Let's say, a programmer wants to display "Hello World!" in his monitor using java programming language.
+	For e.g, in java programming language, semicolon(;) is required at the end of every statement. If semicolon is not typed after every statement in java, you will get a syntax error while trying to compile your program. Let's see this in the real statement in java.
+	Let's say, a programmer wants to display "Hello World!" in his monitor using java programming language.
 
 	System.out.println("Hello Word!");
 
@@ -217,6 +117,10 @@ Follow ups:
 
 	In the second example, the program will get syntax error even though "Hello World!" is typed correctly. As we can see, the programmer forgot to type semicolon at the end of the statement. In java, semicolon at the end of the statement is part of its syntax. Hence, a program that doesn't follow the syntax of the language will get a compilation error as the program contains syntax error/s. So, A programmer has to have a detail knowledge of the syntax of the language to be expert in that programming language.
 
+> TODO: this section needs fixing. state what a syntax error is.
+=======
+> TODO: this section needs fixing.
+state what a syntax error is.
 >>>>>>> dd1c67f47aa755610bcb873be41ac2fc980479e1
 
 A parser first tokenizes the source code depending on its syntax.
