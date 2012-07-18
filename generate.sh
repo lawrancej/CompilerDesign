@@ -110,7 +110,16 @@ else
         # If java is installed, use Batik
         installed=$(which java)
         if [ -n "$installed" ]; then
-            java -jar dependencies/batik-1.7/batik-rasterizer.jar build/images/*.svg -m application/pdf
+            # Let's generate PDFs for the SVG images that we've changed.
+            images=""
+            for image in $(ls images/*.svg); do
+                if [ "$image" -nt "build/${image%.svg}.pdf" ]; then
+                    images+=$(echo "build/$image" " ")
+                fi
+            done
+            if [ -n "$images" ]; then
+                java -jar dependencies/batik-1.7/batik-rasterizer.jar $images -m application/pdf
+            fi
         else
             installed=$(which inkscape)
             if [ -n "$installed" ]; then
