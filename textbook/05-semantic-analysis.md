@@ -60,6 +60,29 @@ Semantics describes the processes a computer follows when executing a program in
 
 ### What is static semantics?
 
+<!--
+4.2.1.2 Static Checking
+4.2.1.2.1 Done at Compile Time
+-->
+
+Static semantics are enforced at compile time.
+Examples of this include undeclared variables and type mismatches.
+These semantical errors can be detected by the parser, or in separate semantic analysis passes.
+
+<!-- I will add more to this section - Mike D -->
+The semantic analyzer will start by traversing the [abstract syntax tree](#what-is-an-abstract-syntax-tree) created by the parser.
+
+
+
 ### What is runtime semantics?
+
+<!--
+4.2.1.2.2 Dynamic Checking Done at Runtime
+-->
+
+Runtime semantics are enforced during the execution of the program.
+Examples of this include division by zero and out-of-bound array indexing.
+One disadvantage of runtime semantics is that the object code tends to be slower.
+Conversely, an advantage of these semantics is that it allows for informative error messages, rather than error behavior.
 
 ### What is type-checking?
