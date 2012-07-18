@@ -29,7 +29,7 @@ install_dependencies() {
     # TODO: download batik here and remove it from the repository?
     # If it's Windows, ...
     if [ $OSTYPE == "msys" ]; then
-        ./install.sh java pandoc latex diction diction_dep libreoffice calibre
+        ./install.sh java pandoc latex diction diction_dep calibre
     # If it's Debian, Ubuntu, Mint ...
     elif [[ $OSTYPE == "linux-gnu" && -n "$(which apt-get)" ]]; then
         sudo apt-get install pandoc texlive-latex-recommended inkscape libreoffice-draw diction openjdk-7-jre calibre
@@ -38,7 +38,7 @@ install_dependencies() {
         sudo yum install pandoc texlive texlive-latex inkscape libreoffice diction java-1.7.0-openjdk calibre
     # If it's Mac OS X, ...
     elif [[ $OSTYPE == darwin* ]]; then
-        ./install.sh brew pandoc latex diction libreoffice calibre
+        ./install.sh brew pandoc latex diction calibre
     # Hmm, you're on your own ...
     else
         echo "I don't know how to handle $OSTYPE."
