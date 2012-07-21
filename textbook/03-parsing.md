@@ -167,6 +167,9 @@ An ambiguous grammar exists if a string has multiple possible outcomes of its le
       -> x + x + x        -> x + x + x
     
 ### What is a LL(k) grammar?
+ 
+An LL(k) grammar parses sentences from the top down in left to right order of input without returning backwards. The (k) refers to an incoming number of k token strings that the parser is able to take into consideration as it determines rules. Every step of derivation must be already be defined in the grammar's parse tree and k tokens for it to be LL(k) grammar.
+
 
 ### What is a LR(k) grammar?
 
