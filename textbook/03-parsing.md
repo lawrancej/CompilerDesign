@@ -154,6 +154,18 @@ The process of determining a rightmost derivation involves replacing the right h
 
 ### What is an ambiguous grammar?
 
+An ambiguous grammar exists if a string has multiple possible outcomes of its leftmost derivation. That is, the grammar would yield more than one parse tree when determining the outcome of the grammar's derivation. When it comes to compiler interpretation, it must be determined whether or not a string has been declared or not within the scope of the program. There isn't always a correct choice for a compiler to pick when it is processing a language with an ambiguous grammar structure.
+
+    Given the ambiguous grammar, two different means of derivation are shown.
+    
+    X -> X + X|x
+      
+    X -> X + X          X -> X + X
+      -> x + X            -> X + X + X    
+      -> x + X + X        -> x + X + X
+      -> x + x + X        -> x + x + X
+      -> x + x + x        -> x + x + x
+    
 ### What is a LL(k) grammar?
 
 ### What is a LR(k) grammar?
