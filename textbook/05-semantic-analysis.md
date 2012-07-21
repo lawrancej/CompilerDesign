@@ -1,5 +1,5 @@
 
-\pagebreak
+//\pagebreak
 
 <!---
 DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
@@ -52,6 +52,9 @@ Semantic Analysis
 =================
 
 ### What is semantics?
+    <!---
+    4.1 Overview
+    -->
 
 Semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages.
 It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved.
@@ -85,4 +88,32 @@ Examples of this include division by zero and out-of-bound array indexing.
 One disadvantage of runtime semantics is that the object code tends to be slower.
 Conversely, an advantage of these semantics is that it allows for informative error messages, rather than error behavior.
 
+Dynamic checking is also used by higher level languages such as Java and C++ to allow for polymorphism.
+Since objects can be of multiple types and two seperate paths in the code can mean the difference between a shape being a square or circle, it is to difficult to do type checking during compilation.
+Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape a seperate proccess running in our code determines wheter or not circle can be a shape.
+
 ### What is type-checking?
+=======
+###
+    <!---
+	4.1.1 Relation to Parse Tree
+    -->
+
+The Parse Tree is the means by which multi stage compilers check the semantics of a program in a nonlinear fashion.
+Additional a symbol table is added to the Parse Tree during the semantic analysis.
+
+### What is Space Time Complexity
+=======
+###
+<!--
+4.3 Time/Space Complexity
+-->
+When dealing with code there are a few considerations to keep in mind.
+The first being how much memory the application will take and the second being how much time the application will take to run.
+This means that in some instances we trade space for time or time for space.
+In terms of imperative languages we can judge how fast a program is by looking at how many operations the program performs.
+With regards to memory, we can look at how much is allocated at any given point.
+Because we can examine the dynamics of the complexity we can adjust them accordingly by adjusting our algorithims or using different algorithims all together.
+
+For a more in depth anaylsis on how to analyze the space time complexity of a program look at 
+[A Function Semantis for Space and Time by Catherine Hope][http://www.cs.nott.ac.uk/Research/fop/hope-thesis.pdf]
