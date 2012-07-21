@@ -1,5 +1,5 @@
 
-\pagebreak
+//\pagebreak
 
 <!---
 DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
@@ -52,6 +52,9 @@ Semantic Analysis
 =================
 
 ### What is semantics?
+    <!---
+    4.1 Overview
+    -->
 
 Semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages.
 It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved.
@@ -86,3 +89,13 @@ One disadvantage of runtime semantics is that the object code tends to be slower
 Conversely, an advantage of these semantics is that it allows for informative error messages, rather than error behavior.
 
 ### What is type-checking?
+=======
+###
+    <!---
+	4.1.1 Relation to Parse Tree
+    -->
+
+The Parse Tree is the means by which multi stage compilers check the semantics of a program in a nonlinear fashion.
+Additional a symbol table is added to the Parse Tree during the semantic analysis.
+
+
