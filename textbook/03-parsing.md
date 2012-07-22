@@ -168,10 +168,12 @@ An ambiguous grammar exists if a string has multiple possible outcomes of its le
     
 ### What is a LL(k) grammar?
  
-An LL(k) grammar parses sentences from the top down in left to right order of input without returning backwards. The (k) refers to an incoming number of k token strings that the parser is able to take into consideration as it determines rules. Every step of derivation must be already be defined in the grammar's parse tree and k tokens for it to be LL(k) grammar.
+A LL(k) grammar parses sentences from the top down in left to right order of input without returning backwards. The (k) refers to an incoming number of k token strings that the parser is able to take into consideration as it determines rules. Every step of derivation must be already be defined in the grammar's parse tree and k tokens for it to be LL(k) grammar.
 
 
 ### What is a LR(k) grammar?
+
+A LL(k) grammar parses sentences from the bottom up in left to right order of input without returning backwards, and results in a reversed rightmost derivation. Like LL(k) grammars, the (k) refers to a number of k lookahead input as it parses symbols appearing earlier than k.
 
 ### What is Backus-Naur Form?
 <!--3.2.3 LL Parser Kyle Cantrell-->
