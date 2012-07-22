@@ -78,6 +78,30 @@ Null is the computational equivalent to nothing. It can be used in many ways and
 5.1.1.5 Function
 -->
 
+###### Type Checking
+<!--
+5.1.2 Type Checking
+-->
+
+###### Static Typing
+<!--
+5.1.2.1 Static Typing
+-->
+
+###### Dynamic Typing
+<!--
+5.1.2.2 Dynamic Typing
+-->
+
+###### Strong Typing
+<!--
+5.1.2.3 Strong Typing
+-->
+
+###### Weak Typing
+<!--
+5.1.2.4 Weak Typing
+-->
 
 Intermediate representations
 ============================
