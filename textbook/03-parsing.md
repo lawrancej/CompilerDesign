@@ -198,6 +198,8 @@ It manipulates a stack by choosing an indexing variable within the stack, a curr
 
 ### What is a deterministic pushdown automaton?
 
+Deterministic pushdown automaton is a nonlinear pushdown automaton where all future operations and stack combinations are known as soon as parsing has begun. Operarations are only performed on the head of the stack, as the order of the stack is "pushed down" in its determined order as it is processed and parsed. Grammars accepted by deterministic pushdown automatons must not be ambiguous, and not all context free languages can be used unless they are simplified.
+
 ### What is a nondeterministic pushdown automaton?
 
 ### What is a parser?
