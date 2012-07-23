@@ -270,41 +270,42 @@ Grace Hopper:
  - Golden Gavel Award at the Toastmasters International convention in 1988.
  - National Medal of Technology in 1991.
 
-#### Purpose
+## Purpose
 > TODO: add purpopse
 
-#### Translate Source Language to Target Language
+### Translate Source Language to Target Language
 The purpose of a compiler is to translate a program into computer language. 
 
-#### Object Code and Executables
+### Object Code and Executables
 > TODO: Object Code and Executables
 
-#### Platform Independent Compilers
+### Platform Independent Compilers
 > TODO: add Platform Independent Compilers
 
-#### Hardware Compilation
+### Hardware Compilation
 > TODO: add Hardware Compilation
 
-#### Compiler Design
+# Compiler Design
 
-#### One-Pass vs Multi-Pass
+## One-Pass vs Multi-Pass
 > TODO: add One-Pass vs Multi-Pass
 
-#### One Pass
+### One Pass
 > TODO: add One Pass
 > TODO: add Simple to Implement
 > TODO: add Limited Optimization
+A one pass compiler only passes through the parts of each compilation unit once and immediately translates each part into its final machine code. The implementation of a one pass compiler is much easier since there is no need to keep track of special cases and have one well defined understanding of all code. While the one pass method is also much faster it has some inherent disadvantages. One pass compilers are are unable to generate as efficient programs with their limimited scope and need forward declaration of identifiers. Loops, subroutines, and modules can need more than one pass to more effectly optimize them.
 
-#### Multi-Pass
+### Multi-Pass
 > TODO: add Multi-Pass
 > TODO: add Enhanced Optimization
 > TODO: add Easier to Prove Correctability
 > TODO: add Source-to-Source Compilation Possible (Translators)
 > TODO: add Source-Bytecode-Native Code
 
-#### Structure
+## Structure
 
-#### Front End
+### Front End
 > TODO: add Front End
 
 #### add Create Intermediate Representation
@@ -319,7 +320,7 @@ The purpose of a compiler is to translate a program into computer language.
 > TODO: add Syntax Analysis
 > TODO: add Semantic Analysis
 
-#### Back End
+### Back End
 > TODO: add Back End
 
 #### Steps
