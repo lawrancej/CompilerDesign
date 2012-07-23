@@ -72,8 +72,14 @@ Static semantics are enforced at compile time.
 Examples of this include undeclared variables and type mismatches.
 These semantical errors can be detected by the parser, or in separate semantic analysis passes.
 
-<!-- I will add more to this section - Mike D -->
+
 The semantic analyzer will start by traversing the [abstract syntax tree](#what-is-an-abstract-syntax-tree) created by the parser.
+For each scope in the program, the semantic analyzer will process the declarations and add new entries to the [symbol table](#abstract-syntax-trees-and-symbol-tables).
+At this point, the semantic analyzer will report variables with multiple declarations.
+Next, the analyzer will process the statements in the program.
+This serves the dual purpose of finding uses of undeclared variables as well as linking the nodes of the AST to the symbol table.
+Lastly, the semantic analyzer will process all of the statements in the program again.
+This time, the analyzer will use the symbol table information from the previous step to find type errors.
 
 
 
