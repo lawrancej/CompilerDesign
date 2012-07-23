@@ -273,8 +273,8 @@ Grace Hopper:
 #### Purpose
 > TODO: add purpopse
 
- -The purpose of a compiler is to translate a program into computer language. #### Translate Source Language to Target Language
-> TODO: Translate Source Language to Target Language
+#### Translate Source Language to Target Language
+The purpose of a compiler is to translate a program into computer language. 
 
 #### Object Code and Executables
 > TODO: Object Code and Executables
