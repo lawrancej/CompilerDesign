@@ -197,7 +197,32 @@ The hierarchy consists of four levels:
 The difference between regular, context-free, and context-sensitive languages is in the structure of strings.
 The difference has nothing to do with meaning or semantics.
 
-> TODO: pumping lemma, examples of regular, context-free, context-sensitive languages (move existing examples here?)
+Context-sensitive
+------------------
+Rules are of the form:
+    ?A? ? ?B?
+    S ? ?
+where
+    A, S ? N
+    ?, ?, B ? (N ? ?)?
+    B ? ?
+
+Context-free
+------------------
+Rules are of the form:
+   A ? ?
+where
+   A ? N
+   ? ? (N ? ?)?
+
+Regular
+------------------
+Rules are of the form:
+  A ? ?
+  A ? ?
+  A ? ?B
+where 
+  A, B ? N and ? ? ?
 
 ### What is an unrestricted grammar?
 An unrestricted grammar's productions can include sequences of terminals and nonterminals in both the left and right hand sides of productions.
@@ -271,7 +296,10 @@ Grace Hopper:
  - National Medal of Technology in 1991.
 
 ## Purpose
-> TODO: add purpopse
+<!---
+1.1.2.2 Purpose
+-->
+As we mention in the definition of the compiler is to translate the source language to a source language, so, the purpose of the compiler will be to make these high lever languages easy for the computer to understand because the computer only understand the 0 and 1. In addition, a compiler will let to communicate with hardware.
 
 ### Translate Source Language to Target Language
 The purpose of a compiler is to translate a program into computer language. 
