@@ -154,9 +154,26 @@ The process of determining a rightmost derivation involves replacing the right h
 
 ### What is an ambiguous grammar?
 
+An ambiguous grammar exists if a string has multiple possible outcomes of its leftmost derivation. That is, the grammar would yield more than one parse tree when determining the outcome of the grammar's derivation. When it comes to compiler interpretation, it must be determined whether or not a string has been declared or not within the scope of the program. There isn't always a correct choice for a compiler to pick when it is processing a language with an ambiguous grammar structure.
+
+    Given the ambiguous grammar, two different means of derivation are shown.
+    
+    X -> X + X|x
+      
+    X -> X + X          X -> X + X
+      -> x + X            -> X + X + X    
+      -> x + X + X        -> x + X + X
+      -> x + x + X        -> x + x + X
+      -> x + x + x        -> x + x + x
+    
 ### What is a LL(k) grammar?
+ 
+A LL(k) grammar parses sentences from the top down in left to right order of input without returning backwards. The (k) refers to an incoming number of k token strings that the parser is able to take into consideration as it determines rules. Every step of derivation must be already be defined in the grammar's parse tree and k tokens for it to be LL(k) grammar.
+
 
 ### What is a LR(k) grammar?
+
+A LL(k) grammar parses sentences from the bottom up in left to right order of input without returning backwards, and results in a reversed rightmost derivation. Like LL(k) grammars, the (k) refers to a number of k lookahead input as it parses symbols appearing earlier than k.
 
 ### What is Backus-Naur Form?
 <!--3.2.3 LL Parser Kyle Cantrell-->
@@ -181,7 +198,11 @@ It manipulates a stack by choosing an indexing variable within the stack, a curr
 
 ### What is a deterministic pushdown automaton?
 
+Deterministic pushdown automaton is a linear pushdown automaton where all future operations and stack combinations are known as soon as parsing has begun. Operarations are only performed on the head of the stack, as the order of the stack is "pushed down" in its determined order as it is processed and parsed. Grammars accepted by deterministic pushdown automatons must not be ambiguous, since DPDA's only have one possible action at all times, and not all context free languages can be used unless they are simplified.
+
 ### What is a nondeterministic pushdown automaton?
+
+A nondeterministic pushdown automaton will always have a variety of possible outcome for any instance of its input on a stack. NPDAs are capable of handling any context-free grammar and will create multiple branches to test all output possibilities. Some specific instances may even yield multiple outcomes. To handle instances like this, the automaton makes use of backtracking for the most efficient results. Nondeterministic pushdown automatons are slower than deterministic pushdown automatons, because they are capable of handling more complex inputs.
 
 ### What is a parser?
 A parser:
