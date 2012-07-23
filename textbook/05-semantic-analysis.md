@@ -1,5 +1,5 @@
 
-//\pagebreak
+\pagebreak
 
 <!---
 DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
@@ -52,9 +52,9 @@ Semantic Analysis
 =================
 
 ### What is semantics?
-    <!---
-    4.1 Overview
-    -->
+<!---
+4.1 Overview
+-->
 
 Semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages.
 It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved.
@@ -93,18 +93,14 @@ Since objects can be of multiple types and two seperate paths in the code can me
 Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape a seperate proccess running in our code determines wheter or not circle can be a shape.
 
 ### What is type-checking?
-=======
-###
-    <!---
-	4.1.1 Relation to Parse Tree
-    -->
+<!---
+4.1.1 Relation to Parse Tree
+-->
 
 The Parse Tree is the means by which multi stage compilers check the semantics of a program in a nonlinear fashion.
 Additional a symbol table is added to the Parse Tree during the semantic analysis.
 
 ### What is Space Time Complexity
-=======
-###
 <!--
 4.3 Time/Space Complexity
 -->
@@ -116,4 +112,4 @@ With regards to memory, we can look at how much is allocated at any given point.
 Because we can examine the dynamics of the complexity we can adjust them accordingly by adjusting our algorithims or using different algorithims all together.
 
 For a more in depth anaylsis on how to analyze the space time complexity of a program look at 
-[A Function Semantis for Space and Time by Catherine Hope][http://www.cs.nott.ac.uk/Research/fop/hope-thesis.pdf]
+[A Function Semantics for Space and Time by Catherine Hope](http://www.cs.nott.ac.uk/Research/fop/hope-thesis.pdf)
