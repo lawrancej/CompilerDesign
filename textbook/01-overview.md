@@ -132,9 +132,18 @@ With the exception of the first C compiler, it is possible to write a C compiler
 Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
 
 ### What is bootstrapping and how does it work?
-Bootstrapping is a series of steps that slowly builds up a self-hosting compiler.
+The term "bootstrapping" comes from the saying "to pull yourself up by your bootstraps", which means to improve yourself as a result of your own efforts. In computing the term is often used to describe the act of building a system using itself, or a previous version of the system. More specifically, when referring to compilers, bootstrapping means writing a compiler in its own target language, creating a self-hosting compiler that can compile its own source code.
 
-> TODO: expand this so to answer how it works.
+The first few versions of a compiler for a new language are written on an existing reliable language until the new compiler become reliable enough to be self-hosting. The first couple of C compilers were written in assembly, but now they are written in C.
+
+Examples of self-hosting compilers:
+- Basic
+- C
+- C++
+- Java
+- Python
+- Scheme
+
 
 ## Theory of computation
 
@@ -160,7 +169,8 @@ A grammar consists of:
 This two production grammar (written in a variant of [Backus Naur Form](#what-is-backus-naur-form)) matches balanced parentheses.
 
 $Parens \to (Parens)*$
-$Parens \to [^()]*$
+
+$Parens \to [^\wedge ()]*$
 
 ### What is a production?
 A production, or rewriting rule, consists of a left hand side (LHS) and a right hand side (RHS).
@@ -181,8 +191,15 @@ Example:
 G is terminal because no rule can change the s.
 S however is nonterminal because there are two rules that can modify the s in the lexical analysis portion.
 
+### What is a containment hierarchy?
+A containment hierarchy is a hierarchical ordering of nested sets that are uniquely different from each other.
+There are two types of containment hierarchy, one where the parent includes its children (subsumptive), and the other where the parent is made up of its children (compositional).
+
+- Subsumptive: all cars are vehicles, but not all vehicles are cars, so the vehicle class subsumes the car class.
+- Compositional: cars contain engines and tires, so the car class is composed of the engine and tire objects. 
+
 ### What is Chomsky's hierarchy?
-The Chomsky hierarchy, as the name implies, is a containment hierarchy of classes of [formal grammars](#what-is-a-grammar).
+The Chomsky hierarchy, as the name implies, is a [containment hierarchy](#what-is-a-containment-hierarchy) of classes of [formal grammars](#what-is-a-grammar).
 The hierarchy consists of four levels:
 
 1. [Unrestricted grammars](#what-is-an-unrestricted-grammar). Recognized by [Turing machines](#what-is-a-turing-machine).
@@ -276,6 +293,8 @@ Grace Hopper:
 
 #### What did Grace Hopper's naval career have to do with compilers?
 > TODO: answer the question above
+
+The Navy's David Taylor Model Basin was one of the government agencies that sponsored the development of COBOL. Grace Hopper's position in the Navy allowed her to work with the latest technology at the time, and it was the Navy that assigned her the task of overseeing the development of a set of programs and procedures for validating COBOL compilers as part of a standardization program for the entire Navy.  
 
  - Sworn into the United States Navy Reserve in 1943.
      - Volunteered to serve in the WAVES.
