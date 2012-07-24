@@ -60,13 +60,17 @@ TOPICS:
 <!--
 5.1.1.2 Reference
 -->
-A reference is a value that tells a program where specific data exists. References are also known as addresses or pointers because they "point to" the data they are referencing. References may also be offsets to a base reference, in which case the first reference points to data in relationship to the base pointer.
+A reference is a value that tells a program where specific data exists.
+References are also known as addresses or pointers because they "point to" the data they are referencing.
+References may also be offsets to a base reference, in which case the first reference points to data in relationship to the base pointer.
 
 ###### Null
 <!--
 5.1.1.3 Null
 -->
-Null is the computational equivalent to nothing. It can be used in many ways and implemented differently in different programming languages. Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000).
+Null is the computational equivalent to nothing.
+It can be used in many ways and implemented differently in different programming languages.
+Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000).
 
 ###### Object
 <!--
