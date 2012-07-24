@@ -132,9 +132,12 @@ With the exception of the first C compiler, it is possible to write a C compiler
 Writing the first C compiler in C required [bootstrapping](#what-is-bootstrapping-and-how-does-it-work).
 
 ### What is bootstrapping and how does it work?
-The term "bootstrapping" comes from the saying "to pull yourself up by your bootstraps", which means to improve yourself as a result of your own efforts. In computing the term is often used to describe the act of building a system using itself, or a previous version of the system. More specifically, when referring to compilers, bootstrapping means writing a compiler in its own target language, creating a self-hosting compiler that can compile its own source code.
+The term "bootstrapping" comes from the saying "to pull yourself up by your bootstraps", which means to improve yourself as a result of your own efforts.
+In computing the term is often used to describe the act of building a system using itself, or a previous version of the system.
+More specifically, when referring to compilers, bootstrapping means writing a compiler in its own target language, creating a self-hosting compiler that can compile its own source code.
 
-The first few versions of a compiler for a new language are written on an existing reliable language until the new compiler become reliable enough to be self-hosting. The first couple of C compilers were written in assembly, but now they are written in C.
+The first few versions of a compiler for a new language are written on an existing reliable language until the new compiler become reliable enough to be self-hosting.
+The first couple of C compilers were written in assembly, but now they are written in C.
 
 Examples of self-hosting compilers:
 - Basic
@@ -196,7 +199,8 @@ A containment hierarchy is a hierarchical ordering of nested sets that are uniqu
 There are two types of containment hierarchy, one where the parent includes its children (subsumptive), and the other where the parent is made up of its children (compositional).
 
 - Subsumptive: all cars are vehicles, but not all vehicles are cars, so the vehicle class subsumes the car class.
-- Compositional: cars contain engines and tires, so the car class is composed of the engine and tire objects. 
+- Compositional: cars contain engines and tires, so the car class is composed of the engine and tire objects.
+
 
 ### What is Chomsky's hierarchy?
 The Chomsky hierarchy, as the name implies, is a [containment hierarchy](#what-is-a-containment-hierarchy) of classes of [formal grammars](#what-is-a-grammar).
@@ -217,7 +221,8 @@ The difference has nothing to do with meaning or semantics.
 Context-sensitive
 ------------------
 Rules are of the form:
-    ?A? ? ?B?
+    ?A?
+? ?B?
     S ? ?
 where
     A, S ? N
@@ -294,7 +299,9 @@ Grace Hopper:
 #### What did Grace Hopper's naval career have to do with compilers?
 > TODO: answer the question above
 
-The Navy's David Taylor Model Basin was one of the government agencies that sponsored the development of COBOL. Grace Hopper's position in the Navy allowed her to work with the latest technology at the time, and it was the Navy that assigned her the task of overseeing the development of a set of programs and procedures for validating COBOL compilers as part of a standardization program for the entire Navy.  
+The Navy's David Taylor Model Basin was one of the government agencies that sponsored the development of COBOL.
+Grace Hopper's position in the Navy allowed her to work with the latest technology at the time, and it was the Navy that assigned her the task of overseeing the development of a set of programs and procedures for validating COBOL compilers as part of a standardization program for the entire Navy.
+ 
 
  - Sworn into the United States Navy Reserve in 1943.
      - Volunteered to serve in the WAVES.
@@ -321,7 +328,8 @@ The Navy's David Taylor Model Basin was one of the government agencies that spon
 As we mention in the definition of the compiler is to translate the source language to a source language, so, the purpose of the compiler will be to make these high lever languages easy for the computer to understand because the computer only understand the 0 and 1. In addition, a compiler will let to communicate with hardware.
 
 ### Translate Source Language to Target Language
-The purpose of a compiler is to translate a program into computer language. 
+The purpose of a compiler is to translate a program into computer language.
+
 
 ### Object Code and Executables
 Let's first define each of Source code, Object code and Executable and then later we can talk about how they work with the compiler.
@@ -344,7 +352,11 @@ Last, Object Code: is act as the transitional form between the source code and t
 > TODO: add One Pass
 > TODO: add Simple to Implement
 > TODO: add Limited Optimization
-A one pass compiler only passes through the parts of each compilation unit once and immediately translates each part into its final machine code. The implementation of a one pass compiler is much easier since there is no need to keep track of special cases and have one well defined understanding of all code. While the one pass method is also much faster it has some inherent disadvantages. One pass compilers are are unable to generate as efficient programs with their limimited scope and need forward declaration of identifiers. Loops, subroutines, and modules can need more than one pass to more effectly optimize them.
+A one pass compiler only passes through the parts of each compilation unit once and immediately translates each part into its final machine code.
+The implementation of a one pass compiler is much easier since there is no need to keep track of special cases and have one well defined understanding of all code.
+While the one pass method is also much faster it has some inherent disadvantages.
+One pass compilers are are unable to generate as efficient programs with their limimited scope and need forward declaration of identifiers.
+Loops, subroutines, and modules can need more than one pass to more effectly optimize them.
 
 ### Multi-Pass
 > TODO: add Multi-Pass
@@ -352,13 +364,20 @@ A one pass compiler only passes through the parts of each compilation unit once 
 > TODO: add Easier to Prove Correctability
 > TODO: add Source-to-Source Compilation Possible (Translators)
 > TODO: add Source-Bytecode-Native Code
-A multi-pass compiler traverses the program multiple times. Each pass takes the result of the previous pass as input and creates an intermediate output. This retraversal gives the multi-pass compiler a much bigger scope as it allows it to see the entire program being compiled as opposed to a one pass compiler that can only see a small portion of the program being compiled. A multi-pass compiler is easier to prove correct. Each pass is its own unit and self contained which can be checked each pass for correctness independantly of eachother. Each intermediate step is able to perform simpleer, easier to prove correct, opperations on each pass.
+A multi-pass compiler traverses the program multiple times.
+Each pass takes the result of the previous pass as input and creates an intermediate output.
+This retraversal gives the multi-pass compiler a much bigger scope as it allows it to see the entire program being compiled as opposed to a one pass compiler that can only see a small portion of the program being compiled.
+A multi-pass compiler is easier to prove correct.
+Each pass is its own unit and self contained which can be checked each pass for correctness independantly of eachother.
+Each intermediate step is able to perform simpleer, easier to prove correct, opperations on each pass.
 
 
 <!---
-By using intermediate steps and allowing for retraversal the compiler does not have to perform as much optimization in each pass and can instead do smaller optimizations each time. These smaller optimization performed on each step makes it easier to prove the correctness as it is possible to check each intermediate step for correctness independantly of eachoter.
+By using intermediate steps and allowing for retraversal the compiler does not have to perform as much optimization in each pass and can instead do smaller optimizations each time.
+These smaller optimization performed on each step makes it easier to prove the correctness as it is possible to check each intermediate step for correctness independantly of eachoter.
 
-In a multi-pass compiler it is easier to prove that it is correct sicne each pass is its own unit and self contained and we can check each pass for correctness independantly of eachother. Using smaller steps with each pass we can more easily reason about what is going on with les
+In a multi-pass compiler it is easier to prove that it is correct sicne each pass is its own unit and self contained and we can check each pass for correctness independantly of eachother.
+Using smaller steps with each pass we can more easily reason about what is going on with les
 smaller steps make less assumptions?-->
 
 
