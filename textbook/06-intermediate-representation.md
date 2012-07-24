@@ -41,6 +41,68 @@ TOPICS:
 5.3.2.2 Runtime Exceptions
 -->
 
+###### Types
+<!--
+5.1 Types
+-->
+
+###### Types of Types
+<!--
+5.1.1 Types of Types
+-->
+
+###### Primitive
+<!--
+5.1.1.1 Primitive
+-->
+
+###### Reference
+<!--
+5.1.1.2 Reference
+-->
+A reference is a value that tells a program where specific data exists. References are also known as addresses or pointers because they "point to" the data they are referencing. References may also be offsets to a base reference, in which case the first reference points to data in relationship to the base pointer.
+
+###### Null
+<!--
+5.1.1.3 Null
+-->
+Null is the computational equivalent to nothing. It can be used in many ways and implemented differently in different programming languages. Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000).
+
+###### Object
+<!--
+5.1.1.4 Object
+-->
+
+###### Function
+<!--
+5.1.1.5 Function
+-->
+
+###### Type Checking
+<!--
+5.1.2 Type Checking
+-->
+
+###### Static Typing
+<!--
+5.1.2.1 Static Typing
+-->
+
+###### Dynamic Typing
+<!--
+5.1.2.2 Dynamic Typing
+-->
+
+###### Strong Typing
+<!--
+5.1.2.3 Strong Typing
+-->
+
+###### Weak Typing
+<!--
+5.1.2.4 Weak Typing
+-->
+
 Intermediate representations
 ============================
 

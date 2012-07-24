@@ -56,6 +56,17 @@ Lexical Analysis
 
 ### How can you tell if a language is regular?
 > TODO: see Pumping lemma for regular languages
+To find if a language is regular, one must employ a *pumping lemma*:
+
+- All sufficiently long words in a regular language may be "pumped."
+	- A middle section of the word can be repeated any number of times to produce a new word which also lies within the same language.
+	- i.e.
+abc, abbc, abbbc, etc.
+- In a regular language $L$, there exists an integer $p$ depending only on said language that every string $w$ of "pumping length" $p$ can be written as $w = xyz$ satisfying the following conditions:
+	1. $|y| \ge 1$
+	2. $|xy| \le p$
+	3. for all $i \ge 0$, $xy^iz \in L$
+	- Where $y$ is the substring that can be pumped.
 
 [If the language is finite, it is regular](#why-are-all-finite-languages-regular)?
 
@@ -206,5 +217,31 @@ Sequences are typically delimited in some way using characters (i.e.
 
 #### Follow-up:
 Examples
+> TODO: Add some examples
+
+<!--- 2.1.2 Tokens and Lexemes -->
+### What is a lexeme?
+A lexeme is a string of characters that follow a set of rules in a language, which is then categorized by a [token][#what-is-a-token].
 
 ### What is a token?
+
+A token is a single element of a programming language. Tokens could be keywords, operators, or punctuation marks.
+<!--- 2.2.1.3.2 Tokens -->
+A token is a string of characters that are categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
+They are frequently defined by regular expressions. Tokens are generally formed by having a lexical analyzer read the input sent to it, identify the lexemes in the input, then categorizes them into the tokens.
+
+
+#### Example
+<!--- 2.2.1.3.1 int x = 3; -->
+
+Consider this example for clarification: 
+Input: int x = 3;
+
+- int is a numeric variable type.
+- x is an identifier variable.
+- = is an assignment operator.
+- 3 is a number value.
+- ; is the end of a statement.
+
+
+

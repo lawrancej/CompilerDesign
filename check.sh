@@ -80,11 +80,15 @@ weasels="many|various|very|fairly|several|extremely\
 |excellent|interestingly|significantly\
 |substantially|clearly|vast|relatively|completely"
 
-# Enforce one sentence per line
 for file in `ls textbook`; do
+    # Enforce one sentence per line
     sed -i.bak -E -e "s/([a-zA-Z])([.!?]) /\1\2\n/g" textbook/$file
     rm textbook/$file.bak
 done
+# Fix line endings
+if [[ $OS == "Windows_NT" ]]; then
+    dos2unix textbook/*.md
+fi
 
 if [ $# = 2 ]; then
     section=$2
@@ -141,7 +145,18 @@ elif [ $1 = "dupe" ]; then
     done
 # Warn about poor phrasing. Requires diction. http://www.gnu.org/software/diction/
 elif [ $1 = "diction" ]; then
-    diction -b -s textbook/$section*
+    dictionCommand="$(which diction)"
+    if [ -z "$dictionCommand" ]; then
+        dictionCommand="dependencies/diction/bin/diction.exe"
+    fi
+    if [ ! -e "$dictionCommand" ]; then
+        echo "ERROR: install required dependencies first. Run:"
+        echo
+        echo "    ./generate.sh install"
+        echo
+        exit
+    fi
+    "$dictionCommand" -b -s textbook/$section*
 # Check for uncovered topics. To indicate coverage, copy the topic line to wherever the text covers the topic.
 elif [ $1 = "uncovered" ]; then
     cat textbook/$section* | grep -E -e "^[0-9]\.[0-9]" | sort | uniq -u | while read line; do
