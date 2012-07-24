@@ -46,6 +46,21 @@ TOPICS:
 ###### Types of Types
 
 ###### Primitive
+A primitive is defined as the base units that data can be stored in.
+If we look at the C language we see variable types of char, int and double.
+Each one of those is a primitive type.
+Though C also has structures that can combine primitive types into one variable type.
+While the data inside the structure can be primitive, the structure itself is not.
+
+struct Color
+{
+	int red;
+	int green;
+	int blue
+};
+
+Color in this example is not a primitve type, because it is not a base unit of the language.
+Red, green and blue are primitves because they are integers and intergers are a base unit in C.
 
 ###### Reference
 <!--
