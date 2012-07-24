@@ -112,10 +112,12 @@ An additional symbol table is added to the Parse Tree during the semantic analys
 <!--
 4.3 Time/Space Complexity
 -->
-When dealing with code, there are considerations to keep in mind.
-Some of the considerations are how much memory the application will take up and how much time it will take to run.
-This means that, in some instances, we trade space for time or vice versa.
-In terms of imperative languages, we can judge how fast a program is by looking at how many operations the program performs.
+When dealing with code there are a few considerations to keep in mind.
+The first thing to think about is how much memory the application may use.
+The next thing is how much time the application will take to run.
+The goal is, of course, to keep the time and memory usage both as low as possible.
+The problem is that in some instances we trade must space for time or time for space.
+In terms of imperative languages we can judge how fast a program is by looking at how many operations the program performs.
 With regards to memory, we can look at how much is allocated at any given point.
 Because we can examine the dynamics of the complexity, we can adjust these accordingly by changing our algorithims or using different ones all together.
 
