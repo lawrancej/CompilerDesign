@@ -58,7 +58,7 @@ Semantic Analysis
 
 Semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages.
 It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved.
-In such a case that the evaluation would be of syntactically illegal strings, the result would be non-computation.
+In such a case that the evaluation would include syntactically illegal strings, it would not be compilable.
 Semantics describes the processes a computer follows when executing a program in that specific language.
 
 ### What is static semantics?
@@ -85,8 +85,8 @@ The semantic analyzer will start by traversing the [abstract syntax tree](#what-
 
 Runtime semantics are enforced during the execution of the program.
 Examples of this include division by zero and out-of-bound array indexing.
-One disadvantage of runtime semantics is that the object code tends to be slower.
-Conversely, an advantage of these semantics is that it allows for informative error messages, rather than error behavior.
+These semantics will display to the user informative messages in regards to the errors.
+Conversely, the addition of these semantics will often result in slower compile and execution times.
 
 Dynamic checking is also used by higher level languages such as Java and C++ to allow for polymorphism.
 Since objects can be of multiple types, it is to difficult to do type checking during compilation. Two seperate paths in the code can mean the difference between a shape being a square or circle.
@@ -107,8 +107,8 @@ An additional symbol table is added to the Parse Tree during the semantic analys
 When dealing with the complexity of code, there are a few things to keep in mind.
 The first being how much memory the application will take and the second being how much time the application will take to run.
 This means that in some instances we trade space for time or time for space.
-In terms of imperative languages we can judge how fast a program is by looking at how many operations the program performs.
-With regards to memory, we can look at how much is allocated at any given point.
+In terms of imperative languages, we can judge how fast a program is by looking at how many operations the program performs.
+We can look at how much memory is allocated at any given point.
 Because we can examine the dynamics of the complexity we can adjust them accordingly by adjusting our algorithims or using different algorithims all together.
 
 For a more in depth anaylsis on how to analyze the space time complexity of a program look at 
