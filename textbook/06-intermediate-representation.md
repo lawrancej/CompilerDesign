@@ -81,15 +81,88 @@ It can be used in many ways and implemented differently in different programming
 Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000).
 
 ###### Object
+An object is a means to which a programmer can group variables and methods that correlate to one another.
+This is done in order to organize relevant information.
+
+Java
+
+public class Car
+{
+	String name;
+	int number_of_seats;
+	
+	public Car()
+	{
+		name = "Default Car";
+		number_of_seats = 4;
+	}
+	
+	public int get_number_of_seats()
+	{
+		return number_of_seats;
+	}
+}
+
+In this case we see an object denoted in the Java language.
+The object contains variables and functions related around the idea of a Car.
+We have the name of the car and the number of seats in the car as variables.
+We then have a Constructor and a accessor method to get the number of seats in the car.
+
+<!--
+Is there anything else of relevance that should be added to this topic?
+Such as static vs non-static?
+-->
 
 ###### Function
 
+Functions are small pieces of code that can be called from other points in the code.
+Each function consists of a return type, a name, some parameters and other keywords dependent on the language.
+
+In the C language a typical function may look like
+
+int fib(int number)
+{
+	if(number == 1)
+		return 1;
+	if(number == 0)
+		return 0;
+	return fib(n-1)+fib(n-2);
+}
+
+In this example we see a piece of code that is designed to solve for a specific Fibonacci number using recursion.
+This function has a return type int and the name fib.
+It takes in an integer value called number.
+This function also shows how functions can be called from other pieces of code when we look at the return line.
+
+return fib(n-1)+fib(n-2);
+
+In this case we see that the function fib is being called twice with a new parameter.
+
 ###### Type Checking
+
+Type checking is the means of checking variable types and how they are used to make sure that they fall within the given rules of the language.
 
 ###### Static Typing
 
+During the compilation time of an application the compiler may check to make sure all variables that are compared and used are of the correct type.
+If the compiler does this then that means the language uses static typing.
+This allows type errors to be caught early during the debug phase of development.
+It also allows code to run quicker since we know all possible evaluations of the type before runtime.
+
 ###### Dynamic Typing
+
+A langugae that uses Dynamic Typing is one that checks to make sure no invalid type checks are made during the execution of the application.
+This leads to a more roboust program and is a neccessity for languages that use objects.
+The one downside is that it creates a large overhead on the application by requiring type checks every time the application runs.
 
 ###### Strong Typing
 
+A language is said to be strong typed when it has strict rules on how different types interact.
+This means that instead of allowing say a string and int to be added it will throw a type error.
+Strong typing can make a language more secure, but it makes it less roboust.
+
 ###### Weak Typing
+
+A langugae is considered to use weak typing when it has relaxed rules on how types interact.
+Instead of throwing an error when adding an int to a string it will instead return some combination of the two.
+This helps to make a language more roboust, but allows the programmer to fall into more traps.
