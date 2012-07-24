@@ -225,10 +225,12 @@ A lexeme is a string of characters that follow a set of rules in a language, whi
 
 ### What is a token?
 
-A token is a single element of a programming language. Tokens could be keywords, operators, or punctuation marks.
+A token is a single element of a programming language.
+Tokens could be keywords, operators, or punctuation marks.
 <!--- 2.2.1.3.2 Tokens -->
 A token is a string of characters that are categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
-They are frequently defined by regular expressions. Tokens are generally formed by having a lexical analyzer read the input sent to it, identify the lexemes in the input, then categorizes them into the tokens.
+They are frequently defined by regular expressions.
+Tokens are generally formed by having a lexical analyzer read the input sent to it, identify the lexemes in the input, then categorizes them into the tokens.
 
 
 #### Example
