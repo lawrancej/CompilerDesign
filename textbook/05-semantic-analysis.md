@@ -69,7 +69,7 @@ Semantics describes the processes a computer follows when executing a program in
 -->
 
 Static semantics are enforced at compile time.
-Examples of this include undeclared variables and type mismatches.
+Some examples of static semantics are undeclared variables and type mismatches.
 These semantical errors can be detected by the parser, or in separate semantic analysis passes.
 
 <!-- I will add more to this section - Mike D -->
@@ -106,12 +106,12 @@ An additional symbol table is added to the Parse Tree during the semantic analys
 <!--
 4.3 Time/Space Complexity
 -->
-When dealing with code, there are a few considerations to keep in mind.
-Some of the considerations are how much memory the application will take up and how much time the application will take to run.
-This means that, in some instances, we trade space for time or time for space.
+When dealing with code, there are considerations to keep in mind.
+Some of the considerations are how much memory the application will take up and how much time it will take to run.
+This means that, in some instances, we trade space for time or vice versa.
 In terms of imperative languages, we can judge how fast a program is by looking at how many operations the program performs.
 With regards to memory, we can look at how much is allocated at any given point.
-Because we can examine the dynamics of the complexity, we can adjust these dynamics accordingly by changing our algorithims or using different ones all together.
+Because we can examine the dynamics of the complexity, we can adjust these accordingly by changing our algorithims or using different ones all together.
 
 For a more in depth anaylsis on how to analyze the space time complexity of a program look at:
 [A Function Semantics for Space and Time by Catherine Hope](http://www.cs.nott.ac.uk/Research/fop/hope-thesis.pdf)
