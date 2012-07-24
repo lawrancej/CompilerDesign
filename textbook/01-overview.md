@@ -340,8 +340,9 @@ Last, Object Code: is act as the transitional form between the source code and t
 ### Platform Independent Compilers
 Platform Independent compilers compiles the source code irrespective of the platform(operating systems) on which it is being compiled. Java compiler is one example of Platform Independent Compilers. All operating system uses same java compiler. 
 When java compiler compiles the java source code, it outputs java byte code which is not directly executable. The java byte code is interpreted to machine language through JVM(Java Virtual Machine) in respective platform.
+
 ### Hardware Compilation
-> TODO: add Hardware Compilation
+Hardware compilation is the process of compiling a program lagnuage into a digital circuit. Hardware compilers produce implementation of hardware from some specification of hardware. Instead of producing machine code which most of the software compiler do, hardware compiler compiles a program into some hardware designs.
 
 # Compiler Design
 
