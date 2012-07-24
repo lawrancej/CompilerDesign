@@ -89,8 +89,8 @@ One disadvantage of runtime semantics is that the object code tends to be slower
 Conversely, an advantage of these semantics is that it allows for informative error messages, rather than error behavior.
 
 Dynamic checking is also used by higher level languages such as Java and C++ to allow for polymorphism.
-Since objects can be of multiple types and two seperate paths in the code can mean the difference between a shape being a square or circle, it is to difficult to do type checking during compilation.
-Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape a seperate proccess running in our code determines wheter or not circle can be a shape.
+Since objects can be of multiple types, it is to difficult to do type checking during compilation. Two seperate paths in the code can mean the difference between a shape being a square or circle.
+Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape. A seperate proccess running in our code determines wheter or not the circle can be a shape.
 
 ### What is type-checking?
 <!---
@@ -98,13 +98,13 @@ Instead during run time when we create the new Circle object and try to place it
 -->
 
 The Parse Tree is the means by which multi stage compilers check the semantics of a program in a nonlinear fashion.
-Additional a symbol table is added to the Parse Tree during the semantic analysis.
+An additional symbol table is added to the Parse Tree during the semantic analysis.
 
 ### What is Space Time Complexity
 <!--
 4.3 Time/Space Complexity
 -->
-When dealing with code there are a few considerations to keep in mind.
+When dealing with the complexity of code, there are a few things to keep in mind.
 The first being how much memory the application will take and the second being how much time the application will take to run.
 This means that in some instances we trade space for time or time for space.
 In terms of imperative languages we can judge how fast a program is by looking at how many operations the program performs.
