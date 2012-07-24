@@ -215,8 +215,35 @@ Sequences are typically delimited in some way using characters (i.e.
 [,],[|],[~])
 
 #### Follow-up:
+Examples
 > TODO: Add some examples
+
+<!--- 2.1.2 Tokens and Lexemes -->
+### What is a lexeme?
+A lexeme is a string of characters that follow a set of rules in a language, which is then categorized by a [token][#what-is-a-token].
 
 ### What is a token?
 
-A token is a single element of a programming language. Tokens could be keywords, operators, or punctuation marks.
+A token is a single element of a programming language. Tokens could be keywords ( a word that is reserved by a program because the word has a special meaning), operators (elements in a program that are usually used to assist in testing conditions (OR, AND, =, >, etc.)), or punctuation marks.
+A token is a single element of a programming language.
+Tokens could be keywords, operators, or punctuation marks.
+<!--- 2.2.1.3.2 Tokens -->
+A token is a string of characters that are categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
+They are frequently defined by regular expressions.
+Tokens are generally formed by having a lexical analyzer read the input sent to it, identify the lexemes in the input, then categorizes them into the tokens.
+
+
+#### Example
+<!--- 2.2.1.3.1 int x = 3; -->
+
+Consider this example for clarification: 
+Input: int x = 3;
+
+- int is a numeric variable type.
+- x is an identifier variable.
+- = is an assignment operator.
+- 3 is a number value.
+- ; is the end of a statement.
+
+
+

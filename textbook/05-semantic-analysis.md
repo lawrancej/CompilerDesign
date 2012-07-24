@@ -58,7 +58,7 @@ Semantic Analysis
 
 Semantics is the field concerned with the rigorous mathematical study of the meaning of programming languages.
 It does so by evaluating the meaning of syntactically legal strings defined by a specific programming language, showing the computation involved.
-In such a case that the evaluation would be of syntactically illegal strings, the result would be non-computation.
+In such a case that the evaluation would include syntactically illegal strings, it would not be compilable.
 Semantics describes the processes a computer follows when executing a program in that specific language.
 
 ### What is static semantics?
@@ -69,11 +69,17 @@ Semantics describes the processes a computer follows when executing a program in
 -->
 
 Static semantics are enforced at compile time.
-Examples of this include undeclared variables and type mismatches.
+Some examples of static semantics are undeclared variables and type mismatches.
 These semantical errors can be detected by the parser, or in separate semantic analysis passes.
 
-<!-- I will add more to this section - Mike D -->
+
 The semantic analyzer will start by traversing the [abstract syntax tree](#what-is-an-abstract-syntax-tree) created by the parser.
+For each scope in the program, the semantic analyzer will process the declarations and add new entries to the [symbol table](#abstract-syntax-trees-and-symbol-tables). <!-- no symbol table section yet -->
+At this point, the semantic analyzer will report variables with multiple declarations.
+Next, the analyzer will process the statements in the program.
+This serves the dual purpose of finding uses of undeclared variables as well as linking the nodes of the AST to the symbol table.
+Lastly, the semantic analyzer will process all of the statements in the program again.
+This time, the analyzer will use the symbol table information from the previous step to find type errors.
 
 
 
@@ -85,12 +91,14 @@ The semantic analyzer will start by traversing the [abstract syntax tree](#what-
 
 Runtime semantics are enforced during the execution of the program.
 Examples of this include division by zero and out-of-bound array indexing.
-One disadvantage of runtime semantics is that the object code tends to be slower.
-Conversely, an advantage of these semantics is that it allows for informative error messages, rather than error behavior.
+These semantics will display to the user informative messages in regards to the errors.
+Conversely, the addition of these semantics will often result in slower compile and execution times.
 
 Dynamic checking is also used by higher level languages such as Java and C++ to allow for polymorphism.
-Since objects can be of multiple types and two seperate paths in the code can mean the difference between a shape being a square or circle, it is to difficult to do type checking during compilation.
-Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape a seperate proccess running in our code determines wheter or not circle can be a shape.
+Since objects can be of multiple types, it is to difficult to do type checking during compilation.
+Two seperate paths in the code can mean the difference between a shape being a square or circle.
+Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape.
+A seperate proccess running in our code determines wheter or not the circle can be a shape.
 
 ### What is type-checking?
 <!---
@@ -98,18 +106,35 @@ Instead during run time when we create the new Circle object and try to place it
 -->
 
 The Parse Tree is the means by which multi stage compilers check the semantics of a program in a nonlinear fashion.
-Additional a symbol table is added to the Parse Tree during the semantic analysis.
+An additional symbol table is added to the Parse Tree during the semantic analysis.
 
 ### What is Space Time Complexity
 <!--
 4.3 Time/Space Complexity
 -->
 When dealing with code there are a few considerations to keep in mind.
-The first being how much memory the application will take and the second being how much time the application will take to run.
-This means that in some instances we trade space for time or time for space.
+The first thing to think about is how much memory the application may use.
+The next thing is how much time the application will take to run.
+The goal is, of course, to keep the time and memory usage both as low as possible.
+The problem is that in some instances we trade must space for time or time for space.
 In terms of imperative languages we can judge how fast a program is by looking at how many operations the program performs.
 With regards to memory, we can look at how much is allocated at any given point.
-Because we can examine the dynamics of the complexity we can adjust them accordingly by adjusting our algorithims or using different algorithims all together.
+Because we can examine the dynamics of the complexity, we can adjust these accordingly by changing our algorithims or using different ones all together.
 
-For a more in depth anaylsis on how to analyze the space time complexity of a program look at 
+For a more in depth anaylsis on how to analyze the space time complexity of a program look at:
 [A Function Semantics for Space and Time by Catherine Hope](http://www.cs.nott.ac.uk/Research/fop/hope-thesis.pdf)
+
+#### Object Binding
+<!--
+4.2.2 Object Binding
+4.2.2.1 Associates Variable with its Definition
+4.2.2.2 Resolve Object References
+-->
+
+In programming, object binding is the association of objects with identifiers.
+This binding can occur both statically and dynamically.
+In C, a direct function call is statically bound (bound before the program is run).
+In C++, a virtual method call is dynamically bound (bound during runtime).
+Since generally speaking a specific type of a polymorphic object is not known before runtime, the executed function must be dynamically bound.
+
+<!-- late binding vs dynamic dispatch? -->

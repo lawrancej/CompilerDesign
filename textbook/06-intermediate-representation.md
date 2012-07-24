@@ -42,74 +42,54 @@ TOPICS:
 -->
 
 ###### Types
-<!--
-5.1 Types
--->
 
 ###### Types of Types
-<!--
-5.1.1 Types of Types
--->
 
 ###### Primitive
-<!--
-5.1.1.1 Primitive
--->
+A primitive is defined as the base units that data can be stored in.
+If we look at the C language we see variable types of char, int and double.
+Each one of those is a primitive type.
+Though C also has structures that can combine primitive types into one variable type.
+While the data inside the structure can be primitive, the structure itself is not.
+
+struct Color
+{
+	int red;
+	int green;
+	int blue
+};
+
+Color in this example is not a primitve type, because it is not a base unit of the language.
+Red, green and blue are primitves because they are integers and intergers are a base unit in C.
 
 ###### Reference
 <!--
 5.1.1.2 Reference
 -->
-A reference is a value that tells a program where specific data exists. References are also known as addresses or pointers because they "point to" the data they are referencing. References may also be offsets to a base reference, in which case the first reference points to data in relationship to the base pointer.
+A reference is a value that tells a program where specific data exists.
+References are commonly refered to as pointers because they "point to" the data they reference.
+This means that the pointer holds the address of where the data is stored in memory rather than the actual data.
+When using references they can also point to the first element in an array.
+An array in this case be traversed by incrementing the pointer by the size of the type being held by the array.
 
 ###### Null
 <!--
 5.1.1.3 Null
 -->
-Null is the computational equivalent to nothing. It can be used in many ways and implemented differently in different programming languages. Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000).
+Null is the computational equivalent to nothing.
+It can be used in many ways and implemented differently in different programming languages.
+Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000).
 
 ###### Object
-<!--
-5.1.1.4 Object
--->
 
 ###### Function
-<!--
-5.1.1.5 Function
--->
 
 ###### Type Checking
-<!--
-5.1.2 Type Checking
--->
 
 ###### Static Typing
-<!--
-5.1.2.1 Static Typing
--->
 
 ###### Dynamic Typing
-<!--
-5.1.2.2 Dynamic Typing
--->
 
 ###### Strong Typing
-<!--
-5.1.2.3 Strong Typing
--->
 
 ###### Weak Typing
-<!--
-5.1.2.4 Weak Typing
--->
-
-Intermediate representations
-============================
-
-### What is an intermediate representation?
-An intermediate representation is a target language internal to the compiler (like machine code).
-A common intermediate representation simplifies the construction of compilers supporting multiple source and target languages.
-
-### What is a translator?
-
-A translator is a [compiler phase](#what-are-the-phases-of-a-compiler) which converts an [abstract syntax tree](#what-is-an-abstract-syntax-tree) into an [intermediate representation](#what-is-an-intermediate-representation).

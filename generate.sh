@@ -102,7 +102,7 @@ else
     fi
     # Generate guide documentation
     if [ $1 = "guide" ]; then
-        pandoc -S -o build/guide.pdf --toc README.md CONVENTIONS.md HACKING.md git.md
+        pandoc -S -N -o build/guide.pdf --toc README.md CONVENTIONS.md HACKING.md git.md
         file_open build/guide.pdf
     # Generate PDF of textbook
     elif [ $1 = "pdf" ]; then
@@ -139,7 +139,7 @@ else
         ebook-viewer build/CompilerDesign.epub
     # Generate HTML of textbook
     elif [ $1 = "html" ]; then
-        pandoc -s -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/$section*
+        pandoc -s -N -o build/CompilerDesign.html --email-obfuscation=none --section-divs --toc textbook/$section*
         file_open build/CompilerDesign.html
     elif [ $1 = "total" ]; then
         echo "Non-whitespace lines added and removed by author."
