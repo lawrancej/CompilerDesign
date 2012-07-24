@@ -1,5 +1,5 @@
 \pagebreak
->TODO : The next step of the compilation process is parsing.Â  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.Â  In this unit, we will define parsing and identify its uses.Â  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.Â  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches.
+>TODO : The next step of the compilation process is parsing.  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.  In this unit, we will define parsing and identify its uses.  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches.
 
 
 
@@ -149,6 +149,7 @@ A language is context-free if it follows context-free grammar.
 In context-free language, the left side is always single nonterminal producing rules of the form "'<A>' ::= a", such as '<expression>' ::= '<expression>'*<term>. The right side is sequence of terminal and non-terminal symbols.
 "*" is non-terminal symbol.
 
+A grammar is context-free if left-hand sides of all productions contain exactly one non-terminal symbol.
 So, a context-free language should always form "'<A>' ::= a" where left side is always single non terminal symbol.
 
 The authenticity of a context free language can be determined by a mathematical property known as the pumping lemma that all context free languages have.
