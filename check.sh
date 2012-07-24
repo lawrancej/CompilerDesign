@@ -112,7 +112,7 @@ elif [ $1 = "hyperlink" ]; then
 # Passive voice check, adapted from:
 # http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 elif [ $1 = "passive" ]; then
-    grep -E -r -n -i "\\b(am|are|were|being|is|been|was|be)\\b[ ]*(\w+ed|($irregulars))\\b" textbook/$section* | while read line; do
+    grep -E -r -n -i "\\b(am|are|were|being|is|been|was|be)\\b[ ]*(\w+ed|($irregulars))\\b" textbook/$section* | egrep -v '>TODO' | while read line; do
         echo "Passive voice: $line"
     done
 # Weasel word check, adapted from the same source.
