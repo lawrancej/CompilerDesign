@@ -89,8 +89,10 @@ These semantics will display to the user informative messages in regards to the 
 Conversely, the addition of these semantics will often result in slower compile and execution times.
 
 Dynamic checking is also used by higher level languages such as Java and C++ to allow for polymorphism.
-Since objects can be of multiple types, it is to difficult to do type checking during compilation. Two seperate paths in the code can mean the difference between a shape being a square or circle.
-Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape. A seperate proccess running in our code determines wheter or not the circle can be a shape.
+Since objects can be of multiple types, it is to difficult to do type checking during compilation.
+Two seperate paths in the code can mean the difference between a shape being a square or circle.
+Instead during run time when we create the new Circle object and try to place it into a variable defined as a shape.
+A seperate proccess running in our code determines wheter or not the circle can be a shape.
 
 ### What is type-checking?
 <!---
@@ -104,12 +106,11 @@ An additional symbol table is added to the Parse Tree during the semantic analys
 <!--
 4.3 Time/Space Complexity
 -->
-When dealing with the complexity of code, there are a few things to keep in mind.
-The first being how much memory the application will take and the second being how much time the application will take to run.
+When dealing with the complexity of code, there are two main things to keep in mind: how much memory the application will consume and how much time the application will take to run.
 This means that in some instances we trade space for time or time for space.
-In terms of imperative languages, we can judge how fast a program is by looking at how many operations the program performs.
+With regards to imperative languages, we can judge how fast a program is by observing the number of operations the program performs.
 We can look at how much memory is allocated at any given point.
-Because we can examine the dynamics of the complexity we can adjust them accordingly by adjusting our algorithims or using different algorithims all together.
+Because we can examine the dynamics of the complexity we can adjust them accordingly by modifying our algorithims or using different ones altogether.
 
 For a more in depth anaylsis on how to analyze the space time complexity of a program look at 
 [A Function Semantics for Space and Time by Catherine Hope](http://www.cs.nott.ac.uk/Research/fop/hope-thesis.pdf)
