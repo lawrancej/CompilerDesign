@@ -302,6 +302,15 @@ A one pass compiler only passes through the parts of each compilation unit once 
 > TODO: add Easier to Prove Correctability
 > TODO: add Source-to-Source Compilation Possible (Translators)
 > TODO: add Source-Bytecode-Native Code
+A multi-pass compiler traverses the program multiple times. Each pass takes the result of the previous pass as input and creates an intermediate output. This retraversal gives the multi-pass compiler a much bigger scope as it allows it to see the entire program being compiled as opposed to a one pass compiler that can only see a small portion of the program being compiled. A multi-pass compiler is easier to prove correct. Each pass is its own unit and self contained which can be checked each pass for correctness independantly of eachother. Each intermediate step is able to perform simpleer, easier to prove correct, opperations on each pass.
+
+
+<!---
+By using intermediate steps and allowing for retraversal the compiler does not have to perform as much optimization in each pass and can instead do smaller optimizations each time. These smaller optimization performed on each step makes it easier to prove the correctness as it is possible to check each intermediate step for correctness independantly of eachoter.
+
+In a multi-pass compiler it is easier to prove that it is correct sicne each pass is its own unit and self contained and we can check each pass for correctness independantly of eachother. Using smaller steps with each pass we can more easily reason about what is going on with les
+smaller steps make less assumptions?-->
+
 
 ## Structure
 
