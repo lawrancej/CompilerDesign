@@ -123,7 +123,7 @@ A context-free grammar is a [formal grammar](#what-is-a-grammar) in which:
 If the sequence is empty, as in $A \to \epsilon$, the nonterminal [derives](#what-is-a-derivation) the empty string.
 
 #### Examples
-This grammar is [context-free], but [improper](#what-is-an-improper-context-free-grammar), because it is impossible to derive B into just terminal symbols.
+This grammar is [context-free](#what-is-a-context-free-grammar), but [improper](#what-is-an-improper-context-free-grammar), because it is impossible to derive B into just terminal symbols.
 $B \to hB$
 
 This grammar is [context-free](#what-is-a-context-free-grammar) and [regular](#what-is-a-regular-grammar) (it matches `h*`).
