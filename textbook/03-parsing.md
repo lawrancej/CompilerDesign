@@ -79,8 +79,31 @@ $S \to \epsilon$
 ### How can you tell if a language is context-free?
 
 A grammar is context-free if left-hand sides of all productions contain exactly one non-terminal symbol.
+The authenticity of a context free language can be determined by a mathematical property known as the pumping lemma that all context free languages have.
+A language L would be considered context free if an integer pumping length q >= 1 exists so that any string t in L with |t| >= q can be defined as
+
+	t = jmacs
+
+where t is split into the substrings j, m, a, c, and s under the following conditions.
+
+	a.
+|mac| <= q
+	b.
+|mc >= 1|
+	      n  n
+	c.
+jm^ a^ cs is in the language L for every n
+
+These proofs may be tested against any language in contempt of questionable context.
+All conditions stated above must be met in order for a grammar to be considered context free.
+
 
 ### What is left recursion?
+
+Left recursion is defined as a grammer set where the nonterminal starting symbol will eventually derive itself back to its original form with the starting symbol as the the left-symbol.
+For example:
+
+	Z -> Zy|e
 
 ### What is the difference between a regular language and a context free language?
 
@@ -95,11 +118,40 @@ Regular languages also do not accept arbitrary nesting, like [recursion](#what-i
 Thus, it is impossible to construct a regular expression (but possible to construct a context-free grammar) that matches balanced parentheses.
 
 ### What is a derivation?
-Give examples.
+
+A derivation refers to the way the syntax of a grammar is broken down to create sentence structures based on the rules of the grammar.
+
+
+Add examples
+
 
 ### What is a leftmost derivation?
 
+The process of determining a leftmost derivation involves replacing the left hand non-terminal for each step of derivation until all nonterminals have been used.
+
+	Grammar		Derivation
+
+	J -> J M	J
+	J -> M		J M
+	M -> 5		J M M
+	M -> 6		M M M
+	M -> 7		6 M M
+	M -> 8		6 7 M
+	M -> 9		6 7 8
+
 ### What is a rightmost derivation?
+
+The process of determining a rightmost derivation involves replacing the right hand non-terminal for each step of derivation until all nonterminals have been used.
+
+	Grammar		Derivation
+			
+	J -> J M	J
+	J -> M		J M
+	M -> 5		J 5
+	M -> 6		J M 5
+	M -> 7		J 6 5
+	M -> 8		M 6 5
+	M -> 9		7 6 5
 
 ### What is an ambiguous grammar?
 

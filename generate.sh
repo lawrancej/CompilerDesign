@@ -29,7 +29,7 @@ install_dependencies() {
     # TODO: download batik here and remove it from the repository?
     # If it's Windows, ...
     if [ $OSTYPE == "msys" ]; then
-        ./install.sh java pandoc latex diction diction_dep libreoffice calibre
+        ./install.sh java pandoc latex diction diction_dep calibre
     # If it's Debian, Ubuntu, Mint ...
     elif [[ $OSTYPE == "linux-gnu" && -n "$(which apt-get)" ]]; then
         sudo apt-get install pandoc texlive-latex-recommended inkscape libreoffice-draw diction openjdk-7-jre calibre
@@ -38,7 +38,7 @@ install_dependencies() {
         sudo yum install pandoc texlive texlive-latex inkscape libreoffice diction java-1.7.0-openjdk calibre
     # If it's Mac OS X, ...
     elif [[ $OSTYPE == darwin* ]]; then
-        ./install.sh brew pandoc latex diction libreoffice calibre
+        ./install.sh brew pandoc latex diction calibre
     # Hmm, you're on your own ...
     else
         echo "I don't know how to handle $OSTYPE."
@@ -86,6 +86,19 @@ else
     if [ $1 = "pdf" ] || [ $1 = "epub" ] || [ $1 = "html" ]; then
         echo "Building CompilerDesign"
         cp -R images build
+        # Fix stupid issues
+        for file in $(ls textbook); do
+            # Remove UTF8 byte order marker
+            sed -i.bak -E -e '1 s/\xEF\xBB\xBF//' textbook/$file
+            # Remove "smart" quotes
+            sed -i.bak -E -e s/[”“]/'"'/g textbook/$file
+            sed -i.bak -E -e s/[‘’]/"'"/g textbook/$file
+            rm textbook/$file.bak
+        done
+        # Fix line endings
+        if [[ $OS == "Windows_NT" ]]; then
+            dos2unix textbook/*.md
+        fi
     fi
     # Generate guide documentation
     if [ $1 = "guide" ]; then
@@ -97,7 +110,16 @@ else
         # If java is installed, use Batik
         installed=$(which java)
         if [ -n "$installed" ]; then
-            java -jar dependencies/batik-1.7/batik-rasterizer.jar build/images/*.svg -m application/pdf
+            # Let's generate PDFs for the SVG images that we've changed.
+            images=""
+            for image in $(ls images/*.svg); do
+                if [ "$image" -nt "build/${image%.svg}.pdf" ]; then
+                    images+=$(echo "build/$image" " ")
+                fi
+            done
+            if [ -n "$images" ]; then
+                java -jar dependencies/batik-1.7/batik-rasterizer.jar $images -m application/pdf
+            fi
         else
             installed=$(which inkscape)
             if [ -n "$installed" ]; then
