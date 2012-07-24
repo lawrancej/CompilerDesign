@@ -298,11 +298,11 @@ It then refactors sets so that it can be replaced by faster, more efficient code
 	It will optimize the execution of the instruction at the lowest level.
 7.2.1.1.1 EXAMPLE
 -->
-		Take the instruction set:
+Take the instruction set:
 		a = b + c;
 		d = a + e;
 		
-		What is actually implemented in machine code is:
+What is actually implemented in machine code is:
 		MOV b, R0
 		ADD c, R0
 		MOV R0, a
@@ -310,7 +310,7 @@ It then refactors sets so that it can be replaced by faster, more efficient code
 		ADD e, R0
 		MOV R0,d
 		
-		This machine can be optimised.
+This machine can be optimised.
 
 It can be condensed to:
 		MOV b, R0
@@ -319,5 +319,5 @@ It can be condensed to:
 		ADD e, R0
 		MOV R0, d
 		
-		By taking the code at its base level and optimising it there, the code will run much faster and have to execute even less commands to achieve the same result.
+By taking the code at its base level and optimising it there, 	the code will run much faster and have to execute even less 	commands to achieve the same result.
 
