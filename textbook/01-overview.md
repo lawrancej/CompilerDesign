@@ -338,8 +338,8 @@ Executable Code: is the code that runs on your machines, which is usually linked
 Last, Object Code: is act as the transitional form between the source code and the Executable code.
 
 ### Platform Independent Compilers
-> TODO: add Platform Independent Compilers
-
+Platform Independent compilers compiles the source code irrespective of the platform(operating systems) on which it is being compiled. Java compiler is one example of Platform Independent Compilers. All operating system uses same java compiler. 
+When java compiler compiles the java source code, it outputs java byte code which is not directly executable. The java byte code is interpreted to machine language through JVM(Java Virtual Machine) in respective platform.
 ### Hardware Compilation
 > TODO: add Hardware Compilation
 
