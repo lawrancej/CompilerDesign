@@ -5,3 +5,5 @@ build/**
 dependencies/diction/**
 *.dmg
 *.msi
+*.md~
+index.md
