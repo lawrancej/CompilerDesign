@@ -201,7 +201,7 @@ In compiler design, many code optimization problems are NP-complete, or undecida
 <!--
 7.1.2.2 Memory Major Limitation in Other
 -->
-Memory limitations exist for optimization, as optimization is a cpu-heavy and memory heavy process.
+ Memory limitations exist for optimization, as optimization is a cpu-heavy and memory heavy process.
  In addition, even the programmer's time to wait for a compiler to complete also places restrictions on optimization.
 
 ### Effectiveness
