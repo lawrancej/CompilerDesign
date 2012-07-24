@@ -1,4 +1,4 @@
-﻿
+
 \pagebreak
 
 <!---
@@ -161,13 +161,13 @@ Examples:
 <!--
 7.1.2.1 Many Optimizations Are NP-Complete
 -->
-In compiler design, many code optimization problems are NP-complete, or undecidable.  NP-complete problems are decision problems that take a long and inefficient amount of time to find a solution, yet verifying the solution can be done quickly.  NP stands for “nondeterministic polynomial time”, referring to running time of an algorithm that can exhibit different behaviors or different runs.  Undecidable problems are decision problems that a single algorithm is not sufficient to accurately lead to a correct answer.  
+In compiler design, many code optimization problems are NP-complete, or undecidable.  NP-complete problems are decision problems that take a long and inefficient amount of time to find a solution, yet verifying the solution can be done quickly.  NP stands for 'nondeterministic polynomial time'�, referring to running time of an algorithm that can exhibit different behaviors or different runs.  Undecidable problems are decision problems that a single algorithm is not sufficient to accurately lead to a correct answer.  
 
 #### Memory Major Limitation in Other
 <!--
 7.1.2.2 Memory Major Limitation in Other
 -->
-Memory limitations exist for optimization, as optimization is a cpu-heavy and memory heavy process.  In addition, even the programmer’s time to wait for a compiler to complete also places restrictions on optimization.
+Memory limitations exist for optimization, as optimization is a cpu-heavy and memory heavy process.  In addition, even the programmer's time to wait for a compiler to complete also places restrictions on optimization.
 
 ### Effectiveness
 <!--
