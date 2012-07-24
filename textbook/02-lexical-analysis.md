@@ -1,4 +1,3 @@
-
 \pagebreak
 
 <!---
@@ -219,4 +218,4 @@ Sequences are typically delimited in some way using characters (i.e.
 
 ### What is a token?
 
-A token is a single element of a programming language. Tokens could be keywords, operators, or punctuation marks.
+A token is a single element of a programming language. Tokens could be keywords ( a word that is reserved by a program because the word has a special meaning), operators (elements in a program that are usually used to assist in testing conditions (OR, AND, =, >, etc.)), or punctuation marks.
