@@ -1,5 +1,11 @@
+
 \pagebreak
->TODO : The next step of the compilation process is parsing.  Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.  In this unit, we will define parsing and identify its uses.  We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.  By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches.
+
+>TODO : The next step of the compilation process is parsing.
+Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.
+ In this unit, we will define parsing and identify its uses.
+ We will also discuss two parsing strategies, Top-Down Parsing and Bottom-Up Parsing, examining what it means to approach parsing from each standpoint and taking a look at an example of each.
+ By the end of the unit, you will understand parsing techniques with regards to compilers and be able to discuss each of the two main approaches.
 
 
 
@@ -289,129 +295,115 @@ As an aside, LL parsers become LL(k) parsers for k amount of lookahead tokens.
 Example: Consider an LL(1) Parser (The first L tells us that this parser is starting at the Leftmost point, the second L tells us that it does Leftmost derivation and the (1) tells us we are using two tokens of lookahead)
 
 Let the following grammar below represent a context free grammar:
-	S => a | aS | bS
-	
-	or
-	
-	1. S => a
-	2. S => aS
-	3. S => bS
-	
-	Example Strings:
-	a;
-	aa;
-	aabaa;
-	aaaaba;
-	baaaaa;
-	bababa;
-	For our purposes, let us demonstrate an LL(1) Parser on the string "bababa".
-	
-	Now an LL(1) Parser table for this string would look like this:
-	-------------------------------
-	Non-terminal | a | aS | bS | $
-	-------------------------------
-	       S     | 1 |  2 |  3 | -
-	-------------------------------
-	
-	Note that the special symbol $ denotes the end of the input.
-	
-	What the table says is simply that for our non terminal symbol "S" we have three terminal symbols and the special terminator symbol $. The numbers in each of the columns correspond to the production rules stated above.
-	
-	The stack sequence for our string "bababa" is as follows:
-	[b,a,b,a,b,a,$]
-	
-	The first step for the parser is to look at the input symbol "b" and the stack-top symbol S.
-Since "b" is the input symbol, the parser compares that to the stack-top symbol S,
-	and since the rule for "b" is to replace "b" with "bS", the stack now becomes:
-	[b,S,a,b,a,b,a,$]
-	
-	
-	Since the input symbol "b" did not match the stack-top symbol S, the "b" is put as the stack-top symbol and not processed further in the first step.
-Had it been a match, we would further
-	process the terminal symbol as defined by the production rules (for example if the first symbol was S, we could have applied any of the three rules producing a stack
-	of [a,a,b,a,b,a,$] or [a,s,a,b,a,b,a,$]).
-	
-	This yields a Nonterminal stack of:
-	[b,S,S,$]
-	
-	The second step now process the "b" and since the second token is now "S" (the stack-top symbol), the b is removed because the stack-top symbol is "b"
-	and the S is removed because the third rule states that "S" can produce "bS" which is the current top of the stack, leaving the stack to look like:
-	[a,b,a,b,a,$]
-	and the output stream writes rule #3:
-	[3]
-	with the Non terminal stack becoming:
-	[S,$]
-	
-	
-	The third iteration continues on and processes the input character "a". Now since we have two production rules with "a" listed, the parser has a choice.
-Also, our parser 
-	only has a lookahead of 1. We will assume the parser is lazy and takes the rules sequentially, so our production rule on the input symbol "a" will be refactored by rule 1 which is
-	simply "a". Again the input symbol and stack-top symbol do not match so the "a" is not removed yet but is refactored as so by rule 1 and the stack-top symbol becomes "a":
-	[a,b,a,b,a,$]
-	with the Nonterminal stack:
-	[a,S,$]
-	
-	Now because "a" is the current stack-top symbol, the parser removes it leaving the stack as:
-	[b,a,b,a,$]
-	The nonterminal stack:
-	[S,$]
-	and writing rule #1 to the output stream:
-	[3,1]
-	
-	
-	Again our input symbol is "b" so we process as we did in the first and second iteration.
-For brevity's sake I will keep it shorthand:
-	
-	current stack:
-	[b,a,b,a,$]
-	
-	"b" does not match current stack-symbol S, so we push "b" onto the stack and refactor:
-	[b,S,a,b,a,$]
-	Non terminal stack:
-	[b,S,S,$]
-	
-	We process again and since the next two symbols match, the third rule is written to the output stream and the stack becomes:
-	[a,b,a,$]
-	Non terminal stack:
-	[S,$]
-	With the output stream becoming:
-	[3,1,3]
-	
-	And again we encounter "a" as our terminal input symbol and process as we did in the third and fourth iteration:
-	
-	current stack:
-	[a,b,a,$]
-	current non-terminal stack:
-	[S,$]
-	
-	"a" does not match "S" so the parser pushes "a" onto the Non-terminal stack:
-	[a,S,$]
-	
-	After the Non-terminal stack is resituated, we re-evaluate, and because the Non-terminal stack and input stack match, we remove the "a", write output rule #1 and process the current stack:
-	[b,a,$]
-	[3,1,3,1]
-	
-	As you can see where this is going, I'll sum up the next two.
+S => a | aS | bS
 
-	[b,a,$] => [3,1,3,1,3]
-	[a,$]	=> [3,1,3,1,3,1]
-	
-	Once our parser reaches the special terminator character, it knows it has done it's job and is done.
+or
 
-	It's important to note that had we instead chosen rule #2 to replace A, it would have produced the same output.
-In fact, it would be a good excercise to prove this result
-	yourself.
-	Excercises
-	1. Given the same grammar and production rules, what would be the output stream produced by an LL(1) parser for the string "aabaa"?
-	2. If we added a production rule S => acS, what would the parse table and output stream be for the string "aaacaca"?
-	
-	
-	
-	
-	
-	
-	
-	
+1. S => a
+2. S => aS
+3. S => bS
+
+Example Strings:
+a;
+aa;
+aabaa;
+aaaaba;
+baaaaa;
+bababa;
+For our purposes, let us demonstrate an LL(1) Parser on the string "bababa".
+
+Now an LL(1) Parser table for this string would look like this:
+-------------------------------
+Non-terminal | a | aS | bS | `$`
+-------------------------------
+	   S     | 1 |  2 |  3 | -
+-------------------------------
+
+Note that the special symbol `$` denotes the end of the input.
+
+What the table says is simply that for our non terminal symbol "S" we have three terminal symbols and the special terminator symbol `$`. The numbers in each of the columns correspond to the production rules stated above.
+
+The stack sequence for our string "bababa" is as follows:
+[b,a,b,a,b,a,`$`]
+
+The first step for the parser is to look at the input symbol "b" and the stack-top symbol S. Since "b" is the input symbol, the parser compares that to the stack-top symbol S,
+and since the rule for "b" is to replace "b" with "bS", the stack now becomes:
+[b,S,a,b,a,b,a,`$`]
+
+
+Since the input symbol "b" did not match the stack-top symbol S, the "b" is put as the stack-top symbol and not processed further in the first step. Had it been a match, we would further
+process the terminal symbol as defined by the production rules (for example if the first symbol was S, we could have applied any of the three rules producing a stack
+of [a,a,b,a,b,a,`$`] or [a,s,a,b,a,b,a,`$`]).
+
+This yields a Nonterminal stack of:
+[b,S,S,`$`]
+
+The second step now process the "b" and since the second token is now "S" (the stack-top symbol), the b is removed because the stack-top symbol is "b"
+and the S is removed because the third rule states that "S" can produce "bS" which is the current top of the stack, leaving the stack to look like:
+[a,b,a,b,a,`$`]
+and the output stream writes rule #3:
+[3]
+with the Non terminal stack becoming:
+[S,`$`]
+
+
+The third iteration continues on and processes the input character "a". Now since we have two production rules with "a" listed, the parser has a choice. Also, our parser 
+only has a lookahead of 1. We will assume the parser is lazy and takes the rules sequentially, so our production rule on the input symbol "a" will be refactored by rule 1 which is
+simply "a". Again the input symbol and stack-top symbol do not match so the "a" is not removed yet but is refactored as so by rule 1 and the stack-top symbol becomes "a":
+[a,b,a,b,a,`$`]
+with the Nonterminal stack:
+[a,S,`$`]
+
+Now because "a" is the current stack-top symbol, the parser removes it leaving the stack as:
+[b,a,b,a,`$`]
+The nonterminal stack:
+[S,`$`]
+and writing rule #1 to the output stream:
+[3,1]
+
+
+Again our input symbol is "b" so we process as we did in the first and second iteration. For brevity's sake I will keep it shorthand:
+
+current stack:
+[b,a,b,a,`$`]
+
+"b" does not match current stack-symbol S, so we push "b" onto the stack and refactor:
+[b,S,a,b,a,`$`]
+Non terminal stack:
+[b,S,S,`$`]
+
+We process again and since the next two symbols match, the third rule is written to the output stream and the stack becomes:
+[a,b,a,`$`]
+Non terminal stack:
+[S,`$`]
+With the output stream becoming:
+[3,1,3]
+
+And again we encounter "a" as our terminal input symbol and process as we did in the third and fourth iteration:
+
+current stack:
+[a,b,a,`$`]
+current non-terminal stack:
+[S,`$`]
+
+"a" does not match "S" so the parser pushes "a" onto the Non-terminal stack:
+[a,S,`$`]
+
+After the Non-terminal stack is resituated, we re-evaluate, and because the Non-terminal stack and input stack match, we remove the "a", write output rule #1 and process the current stack:
+[b,a,`$`]
+[3,1,3,1]
+
+As you can see where this is going, I'll sum up the next two. 
+[b,a,`$`] => [3,1,3,1,3]
+[a,`$`]	=> [3,1,3,1,3,1]
+
+Once our parser reaches the special terminator character, it knows it has done it's job and is done. 
+It's important to note that had we instead chosen rule #2 to replace A, it would have produced the same output. In fact, it would be a good excercise to prove this result
+yourself.
+Excercises
+1. Given the same grammar and production rules, what would be the output stream produced by an LL(1) parser for the string "aabaa"?
+2. If we added a production rule S => acS, what would the parse table and output stream be for the string "aaacaca"?
+
 
 ### What is a pushdown automaton?
 A pushdown automaton (PDA) is a finite state machine with [stack](#what-is-a-stack) memory.
