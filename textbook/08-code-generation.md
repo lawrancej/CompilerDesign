@@ -67,7 +67,7 @@ TOPICS:
 Code generation
 ===============
 
-##8.1 Overview
+#8.1 Overview
 ####8.1.1 Produces Machine-Executable Code
 ####8.1.2 Input Parse Tree
 ####8.1.3 Output Machine Code
