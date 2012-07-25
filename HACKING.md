@@ -1,61 +1,37 @@
 Hacking CompilerDesign
 ======================
 ## Getting started
-1. Install the dependencies (Git, Pandoc, LaTeX, SVG diagramming software) for your platform.
-    - [Windows](#what-to-install-on-windows)
-    - [Linux](#what-to-install-on-linux)
-    - [Mac](#what-to-install-on-mac)
+1. [Install `git` for your platform](http://git-scm.com/). Click the Download button.
+2. Once installed, in Git Bash (or the Terminal in Mac or Linux), configure git:
 
-2. [Fork the project here.](https://github.com/lawrancej/CompilerDesign/fork)
+        git config --global user.name "FirstNameGoesHere LastNameGoesHere"
+        git config --global user.email yourEmailaddressGoesHereButDontTypeThisInLiterally
 
-         git clone https://github.com/YourNameGoesHereButDontTypeThisInLiterally/CompilerDesign.git
-         cd CompilerDesign
+3. [Fork the project here.](https://github.com/lawrancej/CompilerDesign/fork)
+4. Clone the project locally. In Git Bash (or the Terminal in Mac or Linux), type:
 
-3. Add me as upstream, and add in your collaborators, too.
+        git clone https://github.com/YourGithubLoginNameGoesHereButDontTypeThisInLiterally/CompilerDesign.git
+        cd CompilerDesign
 
-         git remote add upstream https://github.com/lawrancej/CompilerDesign.git
-         ./collaborators.sh setup
+5. Once in `CompilerDesign`, set up remote repositories and install required dependencies (Java, LaTeX, Pandoc, diction, LibreOffice).
 
-4. Build CompilerDesign.
+        ./collaborators.sh setup
+        ./generate.sh install
 
-        ./generate.sh
+6. Build CompilerDesign, and check for issues.
 
-5. [Learn how to contribute.](#how-to-contribute)
+        ./generate.sh pdf
+        ./generate.sh check
+
+7. [Learn how to contribute.](#how-to-contribute) See the [git cheat sheet](git.md)
 
         git pull upstream master          # Get the latest and greatest.
         git checkout -b issueXYZ          # Work on an issue in a new topic branch, based off of the upstream master branch.
         ... Hack away ...                 # Your text is free from content, style, grammar and spelling errors, right?
+        ./check.sh all 03                 # Let's see if everything's good in section 03. (Replace the number as necessary.)
         git commit -a -m "Fixed issueXYZ" # Great! Commit your changes.
         git push origin issueXYZ          # Push your changes to your repo. Send in a pull request.
         git checkout master               # Switch back to master. Rinse and repeat.
-
-## What to install on Windows
-You will need to download and install everything manually.
-Therefore, verify everything is working first before generating the textbook.
-
- - [Git (version control).](http://git-scm.com/downloads)
- - [Pandoc.](http://johnmacfarlane.net/pandoc/installing.html)
- - [MiKTeX](http://miktex.org/2.9/setup)
- - Visio
-
-## What to install on Linux
-In the terminal, paste this in for your distribution. Generate SVG diagrams with Dia or LibreOffice draw
-
-### Red Hat:
-
-    sudo yum install git pandoc texlive texlive-latex dia libreoffice
-
-### Debian, Ubuntu:
-
-    sudo apt-get install git pandoc texlive-latex-recommended dia libreoffice-draw
-
-## What to install on Mac
-You will need to download and install everything manually.
-
- - [Git (version control)](http://git-scm.com/downloads)
- - [Pandoc](http://johnmacfarlane.net/pandoc/installing.html)
- - [MacTeX](http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip) (1GB download)
- - [LibreOffice Draw](http://www.libreoffice.org/download/)
 
 ## How to contribute.
 The Saylor Foundation has compiled a [free compiler course](http://www.saylor.org/courses/cs304/), but a Creative Commons licensed textbook is not yet available.
@@ -79,5 +55,5 @@ Version control is not a substitute for communication, so we use github's issue 
 Topic branches isolate chunks of work so that it's easier to merge in changes.
 
 ### Send in a pull request for feedback
-Switch to your branch in github, and [send in a pull request](https://github.com/lawrancej/CompilerDesign/pull/new/master) that describes what you did.
+Switch to your branch in github, and send in a pull request that describes what you did.
 Do so when you think your changes are ready to be merged in, but do not hesitate to push works in progress.
