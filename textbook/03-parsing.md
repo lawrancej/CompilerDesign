@@ -105,6 +105,8 @@ LL parsers are examples of top-down parsing (diagram here?)
 
 #### 3.2.4.3 Proceeds "Down" the Parse Tree
 
+## 3.3 Bottom-Up
+
 ### 3.3.1 Bottom-Up Parsing
 The second method of parsing is known as bottom-up parsing. Using this method, a parser begins with the input and makes
 an attempt to identify the simplest elements of the language by working backwards.
