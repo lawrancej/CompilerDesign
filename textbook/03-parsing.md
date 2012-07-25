@@ -1,4 +1,3 @@
-
 \pagebreak
 
 >TODO : The next step of the compilation process is parsing.
@@ -58,23 +57,20 @@ Parsing
 =======
 
 ### 3.1 Parsing Overview
-Syntax Analysis also known as parsing is the process of analyzing tokens and
-recombining them into a syntax tree.
-
+The concept of parsing has been around since the advent of written language millenia ago. More formally known as syntactic analysis, parsing is the process of analyzing tokens in order to
+determine its grammatical structure. While it is used to diagram languages such as Latin, it also has extremely important implications for computing.
+Compilers and interpreters use syntactic analysis to make sense of all programming languages, and without it there would be no internal representation of a given language.
+While we take parsing for granted, it is a vital part of any computing system.
 
 #### 3.1.1 Function
-Syntax analysis will verify that the input`s syntax is valid.
-
+Syntactic analysis will verify that the input`s syntax is valid.
 
 ##### 3.1.1.1 Input: Tokens from Lexical Analysis
-Lexical analysis splits input into tokens which the syntax analyzer then
-recombines into a syntax tree.
+Lexical analysis splits input into tokens which the syntax analyzer then recombines into a syntax tree.
 
 ##### 3.1.1.2 Output: Program Parse Tree
-Recombining of a syntax parse tree during lexical analysis is done according  to
-the syntax specification.
-The leaves of the parse tree are the tokens generated
-during lexical analysis.
+Recombining of a syntax parse tree during lexical analysis is done according  to the syntax specification.
+The leaves of the parse tree are the tokens generated during lexical analysis.
 
 #### 3.1.2 Examples
 
@@ -84,13 +80,16 @@ during lexical analysis.
 
 ###### 3.1.2.2.1 Parser Input
 
-###### 3.1.2.2.2 Parse  Tree
+###### 3.1.2.2.2 Parse Tree
 
 #### 3.1.3 Context-Free Grammar
 
 ### 3.2 Top-Down Parsing
+A parser can determine the derived input of a language in two ways. The first of these ways is known as top-down parsing.
+In top-down parsing, tokens are read from left to right. The parse tree is traversed from the highest level (top-down).
 
 #### 3.2.1 Traversing a Parse Tree
+Not surprisingly, the parse tree is traversed from the top down in top-down parsing. 
 
 ##### 3.2.1.1 Definition
 
