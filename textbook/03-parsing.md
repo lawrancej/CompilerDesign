@@ -94,7 +94,7 @@ Not surprisingly, the parse tree is traversed from the top down in top-down pars
 ##### 3.2.1.1 Definition
 
 ##### 3.2.1.2 Example
-
+LL parsers are examples of top-down parsing (diagram here?)
 #### 3.2.2 Backus-Naur Form Production Rules
 
 #### 3.2.3 LL Parser
@@ -108,11 +108,13 @@ Not surprisingly, the parse tree is traversed from the top down in top-down pars
 ##### 3.2.4.3 Proceeds "Down" the Parse Tree
 
 ### 3.3.1 Bottom-Up Parsing
+The second method of parsing is known as bottom-up parsing. Using this method, a parser begins with the input and makes
+an attempt to identify the simplest elements of the language by working backwards.
 
 ##### 3.3.1.1 Definition
 
 ##### 3.3.1.2 Examplel
-
+LR parsers are examples of bottom-up parsing. (diagram here?)
 #### 3.3.2 Process
 
 ##### 3.3.2.1 Identify Terminal Symbols First
