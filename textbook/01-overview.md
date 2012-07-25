@@ -403,10 +403,31 @@ Compiler manages symbol table when it analyzes the source code.
 This is done in several steps.
 
 #### Steps
-> TODO: add Preprocessing
-> TODO: add Lexical Analysis
-> TODO: add Syntax Analysis
-> TODO: add Semantic Analysis
+
+#### Preprocessing
+Preprocessing is process of performing preliminary operation on source code before it gets actually compiled.
+Only few compiler includes this step.
+In this phase, the preprocessor looks through source code to find out specific instruction for compilation process.
+C, C++, C# uses preprocessor.
+
+
+#### Lexical Analysis
+Lexical analysis or scanning is the process where the stream of characters making up the source program is read from left-to-right and grouped into tokens.
+Tokens are sequences of characters with a collective meaning.
+There are usually only a small number of tokens for a programming language: constants (integer, double, char, string, etc.), operators (arithmetic, relational, logical), punctuation, and reserved words.
+Lexical analyzer is responsible for lexical analysis.
+
+#### Syntax Analysis
+In this phase, the token from lexical analysis is parsed to determine the grammatical structure of source code. 
+Syntax analysis is closely related with semantic analysis.
+Normally, a parse tree is built in this process.
+It determines if the source code of the program is syntatically correct or not so that the program can be further processed for semantic analysis.
+ 
+#### Semantic Analysis
+In this phase, semantic information is added into parse tree that was built during syntax analysis.
+Semantic analysis consist of tracking variable type, function type, declaration type and type checking.
+It checks if all of the variables, functions and classes are properly defined or not.
+Typically, symbol table is created during this phase.
 
 ### Back End
 > TODO: add Back End
