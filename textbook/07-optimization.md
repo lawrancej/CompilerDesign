@@ -1,4 +1,3 @@
-
 \pagebreak
 
 <!---
@@ -67,10 +66,54 @@ This means that the code will run more quickly and use up less resources than it
 
 Optimization
 ============
-
-### What is optimization?
+###7.1 Overview
 Optimization is the penultimate [compiler phase](#what-are-the-phases-of-a-compiler).
 Optimizers improve code performance, size, and efficiency toward an optimum.
+
+####7.1.1 Manipulate Execution Parameters to Maximize Performance
+#####7.1.1.1 Program Runtime
+#####7.1.1.2 Memory Footprint
+####7.1.2 Complexity
+#####7.1.2.1 Many Optimizations Are NP-Complete
+#####7.1.2.2 Memory Major Limitation in Other
+####7.1.3 Effectiveness
+#####7.1.3.1 What is the Target Architecture?
+######7.1.3.1.1 The Machine on which the Program Will Run
+######7.1.3.1.2  What are the Factors that affect Effectiveness?
+######7.1.3.1.2.1 What are CPU Registers?
+######7.1.3.1.2.2 What is Pipelining?
+######7.1.3.1.2.3 What is a Cache?
+######7.1.3.1.2.4 What is Hardware Design?
+#####7.1.3.2 Host Architecture
+######7.1.3.2.1 The Machine Doing the Compilation
+######7.1.3.2.2 Factors
+######7.1.3.2.2.1 CPU Speed
+######7.1.3.2.2.2 Pipelining
+######7.1.3.2.2.3 Memory Capacity and Architecture
+######7.1.3.2.3 Program Usage
+######7.1.3.2.4 Release vs Debugging
+######7.1.3.2.4.1 Release Is Often Optimized for Performance
+######7.1.3.2.4.2 Debug Program Contain Debugging Symbols which Slow the Execution
+###7.2 Optimization Categories
+Optimization is the process of modifying a software to make an aspect of it work more efficiently.
+This means that the code will run more quickly and use up less resources than it already does.
+####7.2.1 Peephole
+####7.2.2 Local
+####7.2.3 Loop
+#####7.2.3.1 Act upon Loops
+#####7.2.3.2 Potentially High Impact
+#####7.2.3.3 Reduce Dependence on Memory and Time-intensive Looping
+####7.2.4 Language Dependent
+#####7.2.4.1 Optimize Functions Unique to a Specific Language
+#####7.2.4.2 Some Optimizations May Be General across Multiple Languages
+####7.2.5 Machine Dependent
+###7.3 Optimization Techniques
+####7.3.1 Exploit Properties of the "Common Case"
+####7.3.2 Reduce Redundancy
+####7.3.3 Reduce Branching
+####7.3.4 Parallelize Operations When Available
+####7.3.5 Maximize Memory Efficiency
+####7.3.6 Decrease Special Memory Reference Distance
 
 #### Example optimizations:
 
