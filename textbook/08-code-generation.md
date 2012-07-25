@@ -1,6 +1,4 @@
-Code generation is the final compiler phase. It produces code in the target language, which is typically a machine language (e.g., x86, arm), but may be assembly or even a high-level language.
 
-The code generator is distinct from the parser and the translator.
 =======
 =======
 
@@ -62,12 +60,13 @@ TOPICS:
 8.2.4.2 Profiling
 
 -->
+#Code generation
 
->>>>>>> 6e5fd0d4c08f37c452ae8d1647391a2575390bc2
-Code generation
-===============
 
 ###8.1 Overview
+Code generation is the final compiler phase. It produces code in the target language, which is typically a machine language (e.g., x86, arm), but may be assembly or even a high-level language.
+
+The code generator is distinct from the parser and the translator.
 Code generation is the final [compiler phase](#what-are-the-phases-of-a-compiler).
 It produces code in the target language, which is typically a machine language (e.g., x86, arm), but may be assembly or even a high-level language.
 
