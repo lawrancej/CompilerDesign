@@ -1,5 +1,3 @@
-\pagebreak
-
 >TODO : The next step of the compilation process is parsing.
 Parsing takes input from the Lexical Analysis step and builds a parse tree, which will be used in future steps to develop the machine code.
  In this unit, we will define parsing and identify its uses.
@@ -53,73 +51,75 @@ TOPICS:
 3.3.2.2 Combine Terminal Symbol to Produce Nonterminals
 -->
 
-Parsing
-=======
+#Parsing
 
-### 3.1 Parsing Overview
+## 3.1 Parsing Overview
 The concept of parsing has been around since the advent of written language millenia ago. More formally known as syntactic analysis, parsing is the process of analyzing tokens in order to
 determine its grammatical structure. While it is used to diagram languages such as Latin, it also has extremely important implications for computing.
 Compilers and interpreters use syntactic analysis to make sense of all programming languages, and without it there would be no internal representation of a given language.
 While we take parsing for granted, it is a vital part of any computing system.
 
-#### 3.1.1 Function
+### 3.1.1 Function
 Syntactic analysis will verify that the input`s syntax is valid.
 
-##### 3.1.1.1 Input: Tokens from Lexical Analysis
+#### 3.1.1.1 Input: Tokens from Lexical Analysis
 Lexical analysis splits input into tokens which the syntax analyzer then recombines into a syntax tree.
 
-##### 3.1.1.2 Output: Program Parse Tree
+#### 3.1.1.2 Output: Program Parse Tree
 Recombining of a syntax parse tree during lexical analysis is done according  to the syntax specification.
 The leaves of the parse tree are the tokens generated during lexical analysis.
 
-#### 3.1.2 Examples
+### 3.1.2 Examples
 
-##### 3.1.2.1  Given an Arbitrary Function
+#### 3.1.2.1  Given an Arbitrary Function
 
-##### 3.1.2.2 Produce:
+#### 3.1.2.2 Produce:
 
-###### 3.1.2.2.1 Parser Input
+##### 3.1.2.2.1 Parser Input
 
-###### 3.1.2.2.2 Parse Tree
+##### 3.1.2.2.2 Parse Tree
 
-#### 3.1.3 Context-Free Grammar
+### 3.1.3 Context-Free Grammar
 
-### 3.2 Top-Down Parsing
+## 3.2 Top-Down Parsing
 A parser can determine the derived input of a language in two ways. The first of these ways is known as top-down parsing.
 In top-down parsing, tokens are read from left to right. The parse tree is traversed from the highest level (top-down).
 
-#### 3.2.1 Traversing a Parse Tree
+### 3.2.1 Traversing a Parse Tree
 Not surprisingly, the parse tree is traversed from the top down in top-down parsing. 
 
-##### 3.2.1.1 Definition
+#### 3.2.1.1 Definition
 
-##### 3.2.1.2 Example
+#### 3.2.1.2 Example
 LL parsers are examples of top-down parsing (diagram here?)
-#### 3.2.2 Backus-Naur Form Production Rules
 
-#### 3.2.3 LL Parser
+### 3.2.2 Backus-Naur Form Production Rules
 
-#### 3.2.4 Process
+### 3.2.3 LL Parser
 
-##### 3.2.4.1 Starts at Left-most Symbol Yielded from Production Rule
+### 3.2.4 Process
 
-##### 3.2.4.2 Continues to Next Production Rule for Each Non-Terminal Symbol
+#### 3.2.4.1 Starts at Left-most Symbol Yielded from Production Rule
 
-##### 3.2.4.3 Proceeds "Down" the Parse Tree
+#### 3.2.4.2 Continues to Next Production Rule for Each Non-Terminal Symbol
+
+#### 3.2.4.3 Proceeds "Down" the Parse Tree
 
 ### 3.3.1 Bottom-Up Parsing
 The second method of parsing is known as bottom-up parsing. Using this method, a parser begins with the input and makes
 an attempt to identify the simplest elements of the language by working backwards.
 
-##### 3.3.1.1 Definition
+#### 3.3.1.1 Definition
 
-##### 3.3.1.2 Examplel
+#### 3.3.1.2 Examplel
 LR parsers are examples of bottom-up parsing. (diagram here?)
 #### 3.3.2 Process
 
-##### 3.3.2.1 Identify Terminal Symbols First
+#### 3.3.2.1 Identify Terminal Symbols First
 
-##### 3.3.2.2 Combine Terminal Symbol to Produce Nonterminals
+#### 3.3.2.2 Combine Terminal Symbol to Produce Nonterminals
+
+
 
 
 ### What is a context-free language?
