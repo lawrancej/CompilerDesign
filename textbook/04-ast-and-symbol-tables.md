@@ -1,6 +1,3 @@
-
-\pagebreak
-
 <!---
 DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
 
@@ -30,6 +27,20 @@ TOPICS:
 5.2.2.3.1 Used by Linker to Resolve References
 5.2.2.3.2 Kept in Object Files for Debug Builds
 -->
+#Ast and Symbol Tables
+
+##5.2 Symbols
+###5.2.1 Definition
+###5.2.2 Symbol Table
+####5.2.2.1 Gives Information about an Identifier
+#####5.2.2.1.1 Declaration Information
+#####5.2.2.1.2 Scope
+#####5.2.2.1.3 Type
+#####5.2.2.1.4 Memory Address
+####5.2.2.2 Implemented as a Hash Table
+####5.2.2.3 Contained within the Object File
+#####5.2.2.3.1 Used by Linker to Resolve References
+#####5.2.2.3.2 Kept in Object Files for Debug Builds
 
 Abstract Syntax Trees and Symbol Tables
 =======================================
