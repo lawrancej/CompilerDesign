@@ -86,10 +86,20 @@ Most commonly, Null will equal zero or a pointer to zero (memory location 0x0000
 
 ###### Type Checking
 
+Type checking determines a program's type correctness, either during compile time, a little later as the program is evaluated, or in some cases (Java) both. Type checking ensures that the type of an expression has not changed as it is passed through different instances and evaluations. 
+
 ###### Static Typing
+
+Static type checking determines the type-correctness of a program at compile time. Static typing dictates that if a variable has a certain type, and that variable is passed or assigned to a new variable, then that new variable must also be of the same type. The programming language C, and other languages that explicityly demand types use static typing to quickly establish accuracy in type checking.
 
 ###### Dynamic Typing
 
+Dynamic type checking allows a programming language to use typing more loosely than static type checking, as variable types need to be established until runtime. This allows for a variable to take on different types throughout the execution of code, although a final type is eventually assigned.
+
 ###### Strong Typing
 
+A strong typed programming language has stringent limitations on the way that variables in a program may interact with variables of different types. An easy example of this would be that a string could not mathematically interact with another variable of numerical type. A lot of major high level languages require this kind of typing, but surprisingly there are some exceptions such as PHP and JavaScript which are of weak typing.
+
 ###### Weak Typing
+
+A weakly typed language will allow multiple operations to occur without concern over the type definition of the operands in use. This eases restrictions in what the type of a variable must be, since it might not need to be definied initially. The drawback to this form of type checking is that errors are not always identifiable by the compiler and could lead to difficuly to trace bugs.
