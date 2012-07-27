@@ -1,6 +1,3 @@
-
-\pagebreak
-
 <!---
 DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
 
@@ -46,10 +43,34 @@ TOPICS:
 4.3 Time/Space Complexity
 
 -->
-
-
-Semantic Analysis
-=================
+#Semantic Analysis
+##4.1 Overview
+###4.1.1 Relation to Parse Tree
+####4.1.1.1 Input from Parser
+####4.1.1.2 Adds Semantic Information to Parse Tree
+###4.1.2 Output to Code Generation Phase
+##4.2 Process
+###4.2.1 Type Checking
+####4.2.1.1 Verify Type Constraints
+####4.2.1.2 Static Checking
+#####4.2.1.2.1 Done at Compile Time
+#####4.2.1.2.2 Dynamic Checking Done at Runtime
+#####4.2.1.2.3 Example Languages
+######4.2.1.2.3.1 Ada
+######4.2.1.2.3.2 C++
+######4.2.1.2.3.3 Java
+####4.2.1.3 Type Safety
+####4.2.1.4 Types Specified by the Language Specification
+###4.2.2 Object Binding
+####4.2.2.1 Associates Variable with its Definition
+####4.2.2.2 Resolve Object References
+###4.2.3 Assignment Operations
+####4.2.3.1 Data Flow Analysis
+####4.2.3.2 Definite Assignment Analysis
+#####4.2.3.2.1 Ensures Variable are Assigned Before Used
+#####4.2.3.2.2 Allows Potential Optimization
+###4.2.4 Produce Errors/Warnings
+##4.3 Time/Space Complexity
 
 ### What is semantics?
 <!---
