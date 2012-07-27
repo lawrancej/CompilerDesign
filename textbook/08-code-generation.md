@@ -1,4 +1,3 @@
-
 =======
 =======
 
@@ -75,46 +74,45 @@ The code generator is distinct from the [parser](#what-is-a-parser) and the [tra
 Code generators try to optimize the generated code by doing several different things including using faster instructions, using fewer instructions,
 exploit available registers, and avoid redundant computations.
 
-####8.1.1 Produces Machine-Executable Code
-####8.1.2 Input Parse Tree
-####8.1.3 Output Machine Code
-####8.1.4 Includes Some Optimization Techniques
-###8.2 Process
-####8.2.1 Instruction Selection
-#####8.2.1.1 Transforms Middle-Level IR to Low-Level IR
-######8.2.1.1.1 Middle Level IR
-######8.2.1.1.1.1 Tree-Based
-######8.2.1.1.1.2 Intermediate Representation
-######8.2.1.1.2 Low Level IR
-######8.2.1.1.2.1 Reduced From Tree
-######8.2.1.1.2.2 Close to Target Language (Machine Code)
-#####8.2.1.2 Templates and Tiles
-######8.2.1.2.1 Tiles
-######8.2.1.2.1.1 Template That Matches a Portion of IR Tree
-######8.2.1.2.1.2 Implemented with a Single Target Instruction
-######8.2.1.2.2 Templates
-######8.2.1.2.2.1 Convert Code from IR to Target Language
-######8.2.1.2.2.2 Open to Optimization
-######8.2.1.2.3 Implementation
-######8.2.1.2.3.1 Backward Dynamic Programming
-######8.2.1.2.3.2 Greedy Algorithms
-####8.2.2 Instruction Scheduling
-#####8.2.2.1 Optimization Technique
-######8.2.2.1.1 Reorders Instructions for Optimal Processing
-######8.2.2.1.2 Avoid Data Stalls and Code Structure Hazards
-#####8.2.2.2 Types of Scheduling Algorithms
-####8.2.3 Register Allocation
-#####8.2.3.1 Multiplexes Program Variables to CPU Registers
-######8.2.3.1.1 Maximize Program Execution Time
-######8.2.3.1.2 Occurrences
-######8.2.3.1.2.1 Local
-######8.2.3.1.2.2 Global
-######8.2.3.1.2.3 Interprocedural
-#####8.2.3.2 NP-Complete Optimization Problem
-####8.2.4 Non-Standard Compilers
-#####8.2.4.1 Just-In-Time Compilation
-#####8.2.4.2 Profiling
-
+###8.1.1 Produces Machine-Executable Code
+###8.1.2 Input Parse Tree
+###8.1.3 Output Machine Code
+###8.1.4 Includes Some Optimization Techniques
+##8.2 Process
+###8.2.1 Instruction Selection
+####8.2.1.1 Transforms Middle-Level IR to Low-Level IR
+#####8.2.1.1.1 Middle Level IR
+#####8.2.1.1.1.1 Tree-Based
+#####8.2.1.1.1.2 Intermediate Representation
+#####8.2.1.1.2 Low Level IR
+#####8.2.1.1.2.1 Reduced From Tree
+#####8.2.1.1.2.2 Close to Target Language (Machine Code)
+####8.2.1.2 Templates and Tiles
+#####8.2.1.2.1 Tiles
+#####8.2.1.2.1.1 Template That Matches a Portion of IR Tree
+#####8.2.1.2.1.2 Implemented with a Single Target Instruction
+#####8.2.1.2.2 Templates
+#####8.2.1.2.2.1 Convert Code from IR to Target Language
+#####8.2.1.2.2.2 Open to Optimization
+#####8.2.1.2.3 Implementation
+#####8.2.1.2.3.1 Backward Dynamic Programming
+#####8.2.1.2.3.2 Greedy Algorithms
+###8.2.2 Instruction Scheduling
+####8.2.2.1 Optimization Technique
+#####8.2.2.1.1 Reorders Instructions for Optimal Processing
+#####8.2.2.1.2 Avoid Data Stalls and Code Structure Hazards
+####8.2.2.2 Types of Scheduling Algorithms
+###8.2.3 Register Allocation
+####8.2.3.1 Multiplexes Program Variables to CPU Registers
+#####8.2.3.1.1 Maximize Program Execution Time
+#####8.2.3.1.2 Occurrences
+#####8.2.3.1.2.1 Local
+#####8.2.3.1.2.2 Global
+#####8.2.3.1.2.3 Interprocedural
+####8.2.3.2 NP-Complete Optimization Problem
+###8.2.4 Non-Standard Compilers
+####8.2.4.1 Just-In-Time Compilation
+####8.2.4.2 Profiling
 
 
 >>>>>>> 834e59cdc23433988ce06729e5c192b9e30bc2c5
