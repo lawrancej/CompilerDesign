@@ -1,6 +1,3 @@
-
-\pagebreak
-
 <!---
 DO NOT REMOVE THIS COMMENT OR TOPICS LISTED HERE.
 
@@ -40,6 +37,29 @@ TOPICS:
 5.3.2.1 Debugging vs Release
 5.3.2.2 Runtime Exceptions
 -->
+#Intermediate Representation
+##5.1 Types
+###5.1.1 Types of Types
+####5.1.1.1 Primitive
+####5.1.1.2 Reference
+####5.1.1.3 Null
+####5.1.1.4 Object
+####5.1.1.5 Function
+###5.1.2 Type Checking
+####5.1.2.1 Static Typing
+####5.1.2.2 Dynamic Typing
+####5.1.2.3 Strong Typing
+####5.1.2.4 Weak Typing
+##5.3 Runtime Organization
+###5.3.1 Storage
+####5.3.1.1 Allocation
+#####5.3.1.1.1 Static
+#####5.3.1.1.2 Dynamic
+####5.3.1.2 Local references
+####5.3.1.3 Global References
+###5.3.2 Runtime
+####5.3.2.1 Debugging vs Release
+####5.3.2.2 Runtime Exceptions
 
 ###### Types
 
