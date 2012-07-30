@@ -55,7 +55,6 @@ Lexical Analysis
 - [What is a regular grammar](#what-is-a-regular-grammar)?
 
 ### How can you tell if a language is regular?
-> TODO: see Pumping lemma for regular languages
 To find if a language is regular, one must employ a *pumping lemma*:
 
 - All sufficiently long words in a regular language may be "pumped."
@@ -225,6 +224,7 @@ A lexeme is a string of characters that follow a set of rules in a language, whi
 
 ### What is a token?
 
+A token is a single element of a programming language. Tokens could be keywords ( a word that is reserved by a program because the word has a special meaning), operators (elements in a program that are usually used to assist in testing conditions (OR, AND, =, >, etc.)), or punctuation marks.
 A token is a single element of a programming language.
 Tokens could be keywords, operators, or punctuation marks.
 <!--- 2.2.1.3.2 Tokens -->

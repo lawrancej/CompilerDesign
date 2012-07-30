@@ -338,10 +338,15 @@ Executable Code: is the code that runs on your machines, which is usually linked
 Last, Object Code: is act as the transitional form between the source code and the Executable code.
 
 ### Platform Independent Compilers
-> TODO: add Platform Independent Compilers
+Platform Independent compilers compiles the source code irrespective of the platform(operating systems) on which it is being compiled. 
+Java compiler is one example of Platform Independent Compilers. All operating system uses same java compiler. 
+When java compiler compiles the java source code, it outputs java byte code which is not directly executable. 
+The java byte code is interpreted to machine language through JVM(Java Virtual Machine) in respective platform.
 
 ### Hardware Compilation
-> TODO: add Hardware Compilation
+Hardware compilation is the process of compiling a program lagnuage into a digital circuit. 
+Hardware compilers produce implementation of hardware from some specification of hardware. 
+Instead of producing machine code which most of the software compiler does, hardware compiler compiles a program into some hardware designs.
 
 # Compiler Design
 
@@ -364,23 +369,65 @@ Loops, subroutines, and modules can need more than one pass to more effectly opt
 > TODO: add Easier to Prove Correctability
 > TODO: add Source-to-Source Compilation Possible (Translators)
 > TODO: add Source-Bytecode-Native Code
+A multi-pass compiler traverses the program multiple times.
+Each pass takes the result of the previous pass as input and creates an intermediate output.
+This retraversal gives the multi-pass compiler a much bigger scope as it allows it to see the entire program being compiled as opposed to a one pass compiler that can only see a small portion of the program being compiled.
+A multi-pass compiler is easier to prove correct.
+Each pass is its own unit and self contained which can be checked each pass for correctness independantly of eachother.
+Each intermediate step is able to perform simpleer, easier to prove correct, opperations on each pass.
+
+
+<!---
+By using intermediate steps and allowing for retraversal the compiler does not have to perform as much optimization in each pass and can instead do smaller optimizations each time.
+These smaller optimization performed on each step makes it easier to prove the correctness as it is possible to check each intermediate step for correctness independantly of eachoter.
+
+In a multi-pass compiler it is easier to prove that it is correct sicne each pass is its own unit and self contained and we can check each pass for correctness independantly of eachother.
+Using smaller steps with each pass we can more easily reason about what is going on with les
+smaller steps make less assumptions?-->
+
 
 ## Structure
 
 ### Front End
-> TODO: add Front End
+The front end of compiler analyzes the source code that is being compiled.
+It also creates the intermediate representation(IR) of the source code and manages symbol table.
 
-#### add Create Intermediate Representation
-> TODO: add Create Intermediate Representation
+#### Create Intermediate Representation
+Normally, compiler first translates the source code into some form of intermediate representation of source code.
+Athough it adds another step, IR provides advantage of abstraction and cleaner seperation between front end and back end.
+Compiler analyzes the source code to create intermediate representation of source code in front end.
 
 #### Manages Symbol Table
-> TODO: add Manages Symbol Table
+Symbol table is compile-time data structure which holds information needed to locate and relocate a program's symbolic definitions and references. 
+Compiler manages symbol table when it analyzes the source code.
+This is done in several steps.
 
 #### Steps
-> TODO: add Preprocessing
-> TODO: add Lexical Analysis
-> TODO: add Syntax Analysis
-> TODO: add Semantic Analysis
+
+#### Preprocessing
+Preprocessing is process of performing preliminary operation on source code before it gets actually compiled.
+Only few compiler includes this step.
+In this phase, the preprocessor looks through source code to find out specific instruction for compilation process.
+C, C++, C# uses preprocessor.
+
+
+#### Lexical Analysis
+Lexical analysis or scanning is the process where the stream of characters making up the source program is read from left-to-right and grouped into tokens.
+Tokens are sequences of characters with a collective meaning.
+There are usually only a small number of tokens for a programming language: constants (integer, double, char, string, etc.), operators (arithmetic, relational, logical), punctuation, and reserved words.
+Lexical analyzer is responsible for lexical analysis.
+
+#### Syntax Analysis
+In this phase, the token from lexical analysis is parsed to determine the grammatical structure of source code. 
+Syntax analysis is closely related with semantic analysis.
+Normally, a parse tree is built in this process.
+It determines if the source code of the program is syntatically correct or not so that the program can be further processed for semantic analysis.
+ 
+#### Semantic Analysis
+In this phase, semantic information is added into parse tree that was built during syntax analysis.
+Semantic analysis consist of tracking variable type, function type, declaration type and type checking.
+It checks if all of the variables, functions and classes are properly defined or not.
+Typically, symbol table is created during this phase.
 
 ### Back End
 > TODO: add Back End
