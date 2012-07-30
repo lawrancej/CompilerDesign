@@ -166,3 +166,91 @@ Strong typing can make a language more secure, but it makes it less roboust.
 A langugae is considered to use weak typing when it has relaxed rules on how types interact.
 Instead of throwing an error when adding an int to a string it will instead return some combination of the two.
 This helps to make a language more roboust, but allows the programmer to fall into more traps.
+
+###### Runtime Organization
+When a program runs it needs to store information about the program.
+This could be variables, what functions are being called, where it is in the code or a multitude of other things.
+How this information gets stored in memory is important and can be different for each piece of information
+
+###### Allocation
+
+###### Static
+Static memory is memory that does not change size once initialized.
+This is generally a primitive type.
+No matter what happens we know in C that a char or an int will alwyas be the same size.
+This memory is usually held on the stack.
+
+###### Dynamic
+Dynamic memory is memory that has the capability to change size.
+This is generally things such as StringBuilders in Java or dynamic arrays.
+Memory like this is held on the heap so that it can access more memory if need be.
+
+###### Local references
+A local Reference is a variable that only exists within the function or scope it was created in.
+Take a look at the following C function.
+
+int sum(int num1, int num2)
+{
+	int answer = num1 + num2;
+	return answer;
+}
+
+The variable answer in this case is only a part of the function sum.
+When sum is called the variable will be created.
+When sum returns the value all variables in the scope will be destroyed.
+This also means that the variable can only be accessed locally by other code within the scope.
+Lets take a look at another example.
+
+int sum(int low, int high)
+{
+	int i;
+	int answer = 0;
+	for(i = low;i <= high;i++)
+	{
+		answe += i;
+	}
+	return answer;
+}
+
+Since the for loop is held within the scope of the variable answer the code within the scope of the for loop can access the data of the for loops parent scope.
+
+###### Global References
+A global refernce is data that can be accessed by any piece of code in the program.
+Take a look at the following code.
+
+int number;
+
+void setNumberToSix(void);
+
+void main(void)
+{
+	number = 5;
+	printf("Number: %d\r\n",number);
+	setNumberToSix();
+	printf("Number: %d\r\n",number);
+	return;
+}
+
+void setNumberToSix(void)
+{
+	number = 6;
+}
+
+As the code shows we can access number in both main and setNumberToSix.
+This is because the variable has been set in the global scope.
+Every function can access this variable.
+This does mean we have to be careful though since we can not always garuntee the data in the variable.
+
+###### Runtime
+Memory that is stored during run time is stored in the heap.
+The heap is a giant pool of memory that a program can use any time it wishes.
+An important thing to note is that the program can use any section of the memory at any time.
+
+###### Debugging vs Release
+###### Runtime Exceptions
+When the program is run and memory is being allocated on the fly it is possible that we can run out of memory.
+This would cause a runtime exception.
+
+<!---
+Will insert a diagram showing heap usage here.
+-->
