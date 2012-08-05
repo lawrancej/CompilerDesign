@@ -137,4 +137,5 @@ In C, a direct function call is statically bound (bound before the program is ru
 In C++, a virtual method call is dynamically bound (bound during runtime).
 Since generally speaking a specific type of a polymorphic object is not known before runtime, the executed function must be dynamically bound.
 
-<!-- late binding vs dynamic dispatch? -->
+<!-- late binding vs dynamic dispatch?
+-->

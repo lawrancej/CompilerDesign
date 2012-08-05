@@ -326,12 +326,14 @@ What the table says is simply that for our non terminal symbol "S" we have three
 The stack sequence for our string "bababa" is as follows:
 [b,a,b,a,b,a,`$`]
 
-The first step for the parser is to look at the input symbol "b" and the stack-top symbol S. Since "b" is the input symbol, the parser compares that to the stack-top symbol S,
+The first step for the parser is to look at the input symbol "b" and the stack-top symbol S.
+Since "b" is the input symbol, the parser compares that to the stack-top symbol S,
 and since the rule for "b" is to replace "b" with "bS", the stack now becomes:
 [b,S,a,b,a,b,a,`$`]
 
 
-Since the input symbol "b" did not match the stack-top symbol S, the "b" is put as the stack-top symbol and not processed further in the first step. Had it been a match, we would further
+Since the input symbol "b" did not match the stack-top symbol S, the "b" is put as the stack-top symbol and not processed further in the first step.
+Had it been a match, we would further
 process the terminal symbol as defined by the production rules (for example if the first symbol was S, we could have applied any of the three rules producing a stack
 of [a,a,b,a,b,a,`$`] or [a,s,a,b,a,b,a,`$`]).
 
@@ -347,7 +349,8 @@ with the Non terminal stack becoming:
 [S,`$`]
 
 
-The third iteration continues on and processes the input character "a". Now since we have two production rules with "a" listed, the parser has a choice. Also, our parser 
+The third iteration continues on and processes the input character "a". Now since we have two production rules with "a" listed, the parser has a choice.
+Also, our parser 
 only has a lookahead of 1. We will assume the parser is lazy and takes the rules sequentially, so our production rule on the input symbol "a" will be refactored by rule 1 which is
 simply "a". Again the input symbol and stack-top symbol do not match so the "a" is not removed yet but is refactored as so by rule 1 and the stack-top symbol becomes "a":
 [a,b,a,b,a,`$`]
@@ -362,7 +365,8 @@ and writing rule #1 to the output stream:
 [3,1]
 
 
-Again our input symbol is "b" so we process as we did in the first and second iteration. For brevity's sake I will keep it shorthand:
+Again our input symbol is "b" so we process as we did in the first and second iteration.
+For brevity's sake I will keep it shorthand:
 
 current stack:
 [b,a,b,a,`$`]
@@ -393,12 +397,15 @@ After the Non-terminal stack is resituated, we re-evaluate, and because the Non-
 [b,a,`$`]
 [3,1,3,1]
 
-As you can see where this is going, I'll sum up the next two. 
+As you can see where this is going, I'll sum up the next two.
+
 [b,a,`$`] => [3,1,3,1,3]
 [a,`$`]	=> [3,1,3,1,3,1]
 
-Once our parser reaches the special terminator character, it knows it has done it's job and is done. 
-It's important to note that had we instead chosen rule #2 to replace A, it would have produced the same output. In fact, it would be a good excercise to prove this result
+Once our parser reaches the special terminator character, it knows it has done it's job and is done.
+
+It's important to note that had we instead chosen rule #2 to replace A, it would have produced the same output.
+In fact, it would be a good excercise to prove this result
 yourself.
 Excercises
 1. Given the same grammar and production rules, what would be the output stream produced by an LL(1) parser for the string "aabaa"?
