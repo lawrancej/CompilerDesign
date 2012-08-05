@@ -58,14 +58,14 @@ Lexical Analysis
 To find if a language is regular, one must employ a *pumping lemma*:
 
 - All sufficiently long words in a regular language may be "pumped."
-	- A middle section of the word can be repeated any number of times to produce a new word which also lies within the same language.
+	- A middle section of the word produces a new word that lies within the same language by repeating itself any number of times.
 	- i.e.
 abc, abbc, abbbc, etc.
 - In a regular language $L$, there exists an integer $p$ depending only on said language that every string $w$ of "pumping length" $p$ can be written as $w = xyz$ satisfying the following conditions:
 	1. $|y| \ge 1$
 	2. $|xy| \le p$
 	3. for all $i \ge 0$, $xy^iz \in L$
-	- Where $y$ is the substring that can be pumped.
+	- Where $y$ is the pumpable substring.
 
 [If the language is finite, it is regular](#why-are-all-finite-languages-regular)?
 
@@ -130,7 +130,7 @@ The set of transitions is from (state, character) to state.
 ### What is the difference between deterministic and nondeterministic?
 Deterministic finite automaton's (DFA's) are specific in regard to the input that they accept and the output yielded
 by the automaton.
-The next state that the machine goes to is literally determined by the input string it is given.
+The input string determines the next state that the machine goes to.
 A nondeterministic finite automaton is not as particular, and depending on its state and input, could change into a several 
 possible new states.
 
@@ -143,9 +143,8 @@ Deterministic and nondeterministic are very similar and there is no huge differe
 The main difference is that nondeterministic essentially chooses on a whim which state to go to while deterministic does not do this at random.
 
 ### How to convert an NFA to a DFA?
-Since both automaton's only accept regular languages as input, an NFA is able to be simplified and converted to a DFA.
-
-The process is called a powerset (or subset) construction and it takes the possible states of the NFA and translates them
+Since both automatons only accept regular languages as input, they can simplify an NFA to convert to a DFA.
+The process, referred as a powerset (or subset) construction, takes the possible states of the NFA and translates them
 into a map of states accessible to a DFA.
 This process is not without a cost, since deterministic finite automaton's are 
 much less complex than their nondeterministic counterparts there will always be a loss of potential states in conversion.
@@ -157,12 +156,10 @@ A converted NFA will have N^2 the number of states when converted where N is the
 ### What is a scanner (lexical analyzer)?
 > TODO: Merge these definitions.
 Some of these definitions are misconceptions, which we should include to address why they're wrong.
-A scanner is a program in a parser that converts characters into tokens.
-This already has the information it needs about whatever characters that can be tokenized.
-This then matches any string that was put in to possible tokens and processes said information.
+A scanner is a program in a parser that converts characters into tokens; this program contains information about the characters it can tokenize.
+It matches inputted strings to possible tokens and processes the information.
 
-Lexical analysis or scanning is the process where the stream of characters making up the
-source program is read from left-to-right and grouped into tokens.
+Lexical analysis or scanning is the process where it reads the stream of characters making up the source program from left-to-right and groups them into tokens.
 Tokens are sequences
 of characters with a collective meaning.
 There are usually only a small number of tokens
@@ -170,7 +167,7 @@ for a programming language: constants (integer, double, char, string, etc.), ope
 (arithmetic, relational, logical), punctuation, and reserved words.
 
 A lexical analyzer is a piece of software that takes in a string as input, from that string it generates tokens based off of pre-defined rules.
-This is done to help for the actual compilation proccess later, as well as error checking.
+This helps for the compilation process and error checking later on.
 
 #### Example
 
@@ -205,8 +202,8 @@ Source Program -----> Lexical Analyzer ---------> Token stream
 
 > TODO: Let's use SVG instead of ASCII art.
 
-A Scanner is used within lexical analysis to match token character strings that
-are passed through it.
+The lexcial analysis uses a scanner to match strings passed into it to token character strings.
+
 Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
 so they may quickly process large amounts of data.
 
@@ -218,23 +215,27 @@ Sequences are typically delimited in some way using characters (i.e.
 Examples
 > TODO: Add some examples
 
-<!--- 2.1.2 Tokens and Lexemes -->
+<!--- 2.1.2 Tokens and Lexemes 
+-->
 ### What is a lexeme?
 A lexeme is a string of characters that follow a set of rules in a language, which is then categorized by a [token][#what-is-a-token].
 
 ### What is a token?
 
-A token is a single element of a programming language. Tokens could be keywords ( a word that is reserved by a program because the word has a special meaning), operators (elements in a program that are usually used to assist in testing conditions (OR, AND, =, >, etc.)), or punctuation marks.
+A token is a single element of a programming language.
+Tokens could be keywords ( a word reserved by a program because the word has a special meaning), operators (elements in a program usually used to assist in testing conditions (OR, AND, =, >, etc.)), or punctuation marks.
 A token is a single element of a programming language.
 Tokens could be keywords, operators, or punctuation marks.
-<!--- 2.2.1.3.2 Tokens -->
-A token is a string of characters that are categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
+<!--- 2.2.1.3.2 Tokens 
+-->
+A token is a string of characters categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
 They are frequently defined by regular expressions.
 Tokens are generally formed by having a lexical analyzer read the input sent to it, identify the lexemes in the input, then categorizes them into the tokens.
 
 
 #### Example
-<!--- 2.2.1.3.1 int x = 3; -->
+<!--- 2.2.1.3.1 int x = 3; 
+-->
 
 Consider this example for clarification: 
 Input: int x = 3;
