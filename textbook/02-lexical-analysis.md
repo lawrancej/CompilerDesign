@@ -71,7 +71,9 @@ abc, abbc, abbbc, etc.
 
 ### Why are all finite languages regular?
 > TODO: prove this 
-
+<!---
+2.1 Grammars
+-->
 ### What is a regular grammar?
 A regular grammar is a [formal grammar](#what-is-a-grammar) limited to productions of the following forms:
 
@@ -103,9 +105,11 @@ If `a` and `b` are regular expressions, then the following are also considered s
 Match `a` or `b`.
 - `a*`. Kleene closure.
 Matches `a` zero or more times.
-
-### What is a finite automaton?
-A finite automaton, can only be in a finite number of states in which it transitions between.
+<!---
+2.2.3.1 Finite State Machine
+-->
+### What is a finite state machine?
+A finite state machine, also known as an automaton, can only be in a finite number of states in which it transitions between.
 
 An example is that when an automaton sees a symbol for input.
 It then transitions to another state based on the next input symbol.
@@ -154,7 +158,9 @@ All states of the NFA will still exist, but they will be unreachable from the or
 A converted NFA has N^2 the number of states; N represents the original amount before conversion.
 
 ### What is the derivative of a regular expression?
-
+<!--- 
+2.2.3 Scanner
+-->
 ### What is a scanner (lexical analyzer)?
 > TODO: Merge these definitions.
 Some of these definitions are misconceptions, which we should include to address why they're wrong.
@@ -194,10 +200,8 @@ VARIABLE_TYPE NAME ASSIGNMENT_OPERATOR NAME OPEN_PARENTHESIS NUMBER DIVIDER NUMB
 
 These values are passed to the next step of the compilation process, and the analyzer will understand them.
 
-Scanner, also know as Lexical analyzer or Lexer is a program which performs lexical analysis.
-It converts a sequence of characters into a string with a collective meaning following some rules.
-These rules contain identifier, assignment operator, number etc.
-The lexical analyzer takes a source program as input, and produces a stream of tokens as output.
+
+
 
 Source Program -----> Lexical Analyzer ---------> Token stream
                            |
@@ -207,10 +211,9 @@ Source Program -----> Lexical Analyzer ---------> Token stream
 
 > TODO: Let's use SVG instead of ASCII art.
 
-The lexcial analysis uses a scanner to match strings passed into it to token characters.
+The lexical analysis uses a scanner to match strings passed into it to token characters.
 
-Scanners use finite-state machines (FSM) to hold all possible combinations of tokens
-so they may quickly process large amounts of data.
+Scanners use finite-state machines (FSM) to hold all possible combinations of tokens so they may quickly process large amounts of data.
 
 A program or function which can parse a sequence of characters into usable tokens.
 Sequences are typically delimited in some way using characters (i.e.
@@ -220,18 +223,18 @@ Sequences are typically delimited in some way using characters (i.e.
 Examples
 > TODO: Add some examples
 
-<!--- 2.1.2 Tokens and Lexemes 
+<!--- 
+2.1.2 Tokens and Lexemes
 -->
 ### What is a lexeme?
 A lexeme is a string of characters that follow a set of rules in a language, categorized by a [token][#what-is-a-token].
 
 ### What is a token?
-
 A token is a single element of a programming language.
 Tokens could be keywords ( a word reserved by a program because the word has a special meaning), operators (elements in a program usually used to assist in testing conditions (OR, AND, =, >, etc.)), or punctuation marks.
-A token is a single element of a programming language.
-Tokens could be keywords, operators, or punctuation marks.
-<!--- 2.2.1.3.2 Tokens 
+
+<!--- 
+2.2.1.3.2 Tokens
 -->
 A token is a string of characters categorized based on the types used (e.g., IDENTIFIER, NUMBER, COMMA). 
 They are frequently defined by regular expressions.
@@ -239,17 +242,26 @@ Tokens are generally formed by having a lexical analyzer read the input sent to 
 
 
 #### Example
-<!--- 2.2.1.3.1 int x = 3; 
+<!--- 
+2.2.1.3.1 int x = 3;
 -->
 
+
+<!---
+2.2.1.3.2 Tokens
+2.2.1.3.2.1 int (variable type)
+2.2.1.3.2.2 x (variable)
+2.2.1.3.2.3 = (operator)
+2.2.1.3.2.4 3 (value)
+-->
 Consider this example for clarification: 
 Input: int x = 3;
 
-- int is a numeric variable type.
-- x is an identifier variable.
-- = is an assignment operator.
-- 3 is a value.
-- ; is the end of a statement.
+- int is a numeric variable type token.
+- x is an identifier variable token.
+- = is an assignment operator token.
+- 3 is a value token.
+- ; is the end of a statement token.
 
 
 
