@@ -184,7 +184,7 @@ This helps for the compilation process and error checking later on.
 
 int a = sum(7,3)
 
-The rules are defined as follows:
+Rules:
 
 VARIABLE_TYPE = int | float | double | char
 ASSIGNMENT_OPERATOR = =
@@ -198,7 +198,7 @@ These rules simplify understanding the code sample below:
 
 VARIABLE_TYPE NAME ASSIGNMENT_OPERATOR NAME OPEN_PARENTHESIS NUMBER DIVIDER NUMBER CLOSE_PARANTHESIS
 
-These values are passed to the next step of the compilation process, and the analyzer will understand them.
+The analyzer passes these values to the next step of the compilation process to process.
 
 
 
