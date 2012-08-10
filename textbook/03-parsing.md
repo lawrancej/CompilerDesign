@@ -97,14 +97,18 @@ Thus, it is impossible to construct a regular expression (but possible to constr
 Give examples.
 
 ### What is a leftmost derivation?
+The leftmost derivation is the always the leftmost nonterminal.
 
 ### What is a rightmost derivation?
+The rightmost derivation is always the rightmost nonterminal.
 
 ### What is an ambiguous grammar?
 
 ### What is a LL(k) grammar?
+LL(k) grammar allows parsing by direct construction of a leftmost derivation, and describe even fewer languages.
 
 ### What is a LR(k) grammar?
+
 
 ### What is Backus-Naur Form?
 

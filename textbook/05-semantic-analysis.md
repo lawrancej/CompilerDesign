@@ -67,7 +67,7 @@ Semantics describes the processes a computer follows when executing a program in
     -->
 
 The Parse Tree is the means by which multi stage compilers check the semantics of a program in a nonlinear fashion.
-Additional a symbol table is added to the Parse Tree during the semantic analysis.
+Additionally a symbol table is added to the Parse Tree during the semantic analysis.
 
 ##### What Input is recieved from the parser?
     <!---
@@ -76,11 +76,12 @@ Additional a symbol table is added to the Parse Tree during the semantic analysi
 
 
 
-##### What are static semantics?
+#####
     <!---
     4.1.1.2 Adds Semantic Information to Parse Tree
-
     -->
+	
+	
 #### 
     <!---
 	4.1.2 Output to Code Generation Phase
