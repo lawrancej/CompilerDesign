@@ -108,7 +108,7 @@ The rightmost derivation is always the rightmost nonterminal.
 LL(k) grammar allows parsing by direct construction of a leftmost derivation, and describe even fewer languages.
 
 ### What is a LR(k) grammar?
-
+LR(k)grammar (also known as deterministic context-free grammar) allows parsing with deterministic pushdown automata, but they can only describe deterministic context-free languages.
 
 ### What is Backus-Naur Form?
 
@@ -131,8 +131,10 @@ It manipulates a stack by choosing an indexing variable within the stack, a curr
 > TODO: It'd be nice to have a picture of a pushdown automaton, in a vector format such as SVG.
 
 ### What is a deterministic pushdown automaton?
+A determinisitic pushdown automaton is any pushdown automaton that is fully determined rather than one that has a decision to make between multiple options. As a result of everything being determined all future states can be fully predicted.
 
 ### What is a nondeterministic pushdown automaton?
+A nondeterministic pushdown automaton is any automaton which is not deteriministic. As a result it has at least 2 options which may or may not be mutually exclusive. These pushdown automaton can also handle all context free grammers.
 
 ### What is a parser?
 A parser:
